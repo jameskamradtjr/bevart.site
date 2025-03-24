@@ -65,7 +65,14 @@ Saúde e Segurança Do Trabalho">
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1rem 5%;
+        padding: 1rem 8%;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+      
+      .logo-container {
+        flex: 0 0 auto;
+        margin-right: 3rem;
       }
       
       .logo-container img {
@@ -75,7 +82,7 @@ Saúde e Segurança Do Trabalho">
       
       .nav-links {
         display: flex;
-        gap: 2rem;
+        gap: 2.5rem;
       }
       
       .nav-link {
@@ -290,15 +297,72 @@ Saúde e Segurança Do Trabalho">
       @media (max-width: 992px) {
         .nav-links {
           display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 70px;
+          left: 0;
+          right: 0;
+          background-color: white;
+          padding: 0;
+          box-shadow: var(--shadow-md);
+          text-align: center;
+          z-index: 999;
+        }
+        
+        .nav-link {
+          padding: 0.85rem 0;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+          width: 100%;
+          margin: 0;
+        }
+        
+        .nav-link:last-child {
+          border-bottom: none;
+        }
+        
+        .nav-links.active {
+          display: flex;
+        }
+        
+        .cta-buttons {
+          display: none;
+        }
+        
+        #mobile-cta {
+          margin-top: 0;
+          border-top: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .cta-buttons.active {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          padding: 0.75rem 1rem;
+          gap: 0.75rem;
+        }
+        
+        #mobile-cta .cta-button {
+          padding: 0.4rem 0.75rem;
+          font-size: 0.85rem;
+          min-width: 90px;
+        }
+        
+        #mobile-cta .cta-button.primary {
+          box-shadow: none;
         }
         
         .toggle-menu {
           display: block;
         }
         
+        .hero-section {
+          padding-top: 120px; /* Adjusted for mobile */
+        }
+        
         .hero-container {
           flex-direction: column;
           text-align: center;
+          padding-top: 2rem;
         }
         
         .hero-content {
@@ -344,24 +408,130 @@ Saúde e Segurança Do Trabalho">
       <div class="logo-container">
         <a href="#hero">
           <img src="images/logo_transparent.png" alt="Bevart Logo">
-        </a>
-      </div>
+          </a>
+        </div>
       
-      <div class="nav-links">
-        <a href="#funcoes" class="nav-link">Funções</a>
-        <a href="#precos" class="nav-link">Preços</a>
-        <a href="#depoimentos" class="nav-link">Depoimentos</a>
-        <a href="https://blog.bevart.com.br" class="nav-link" target="_blank">Blog</a>
-      </div>
+      <div class="mobile-menu-container" id="mobile-menu">
+        <div class="nav-links" id="mobile-nav">
+          <a href="#funcoes" class="nav-link">Funções</a>
+          <a href="#precos" class="nav-link">Preços</a>
+          <a href="#depoimentos" class="nav-link">Depoimentos</a>
+          <a href="https://blog.bevart.com.br" class="nav-link" target="_blank">Blog</a>
+          
+          <div class="mobile-cta-buttons">
+            <a href="https://profissionais.bevart.com.br/app/src/login/views/login" class="mobile-cta-button secondary login_bevart" target="_blank">Login</a>
+            <a href="https://profissionais.bevart.com.br/app/src/login/views/login" class="mobile-cta-button primary login_bevart" target="_blank">Começar Grátis</a>
+          </div>
+          </div>
+              </div>
       
-      <div class="cta-buttons">
+      <div class="cta-buttons" id="desktop-cta">
         <a href="https://profissionais.bevart.com.br/app/src/login/views/login" class="cta-button secondary login_bevart" target="_blank">Login</a>
         <a href="https://profissionais.bevart.com.br/app/src/login/views/login" class="cta-button primary login_bevart" target="_blank">Começar Grátis</a>
-      </div>
+            </div>
       
-      <button class="toggle-menu">☰</button>
-    </div>
+      <button class="toggle-menu" id="menu-toggle">☰</button>
+          </div>
   </header>
+  
+  <style>
+    /* ... existing styles ... */
+    
+    .mobile-menu-container {
+      flex: 1;
+    }
+    
+    .mobile-cta-buttons {
+      display: none;
+      padding: 1rem 0;
+      margin-top: 0.5rem;
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    
+    .mobile-cta-button {
+      display: inline-block;
+      padding: 0.4rem 0.75rem;
+      border-radius: 4px;
+      font-weight: 500;
+      font-size: 0.85rem;
+      text-decoration: none;
+      margin: 0 0.25rem;
+      min-width: 90px;
+      transition: all 0.3s ease;
+    }
+    
+    .mobile-cta-button.primary {
+      background-color: var(--primary-color);
+      color: white;
+    }
+    
+    .mobile-cta-button.secondary {
+      background-color: transparent;
+      color: var(--primary-color);
+      border: 1px solid var(--primary-color);
+    }
+    
+    @media (max-width: 992px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: white;
+        padding: 0;
+        box-shadow: var(--shadow-md);
+        text-align: center;
+        z-index: 999;
+      }
+      
+      .nav-link {
+        padding: 0.85rem 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        width: 100%;
+        margin: 0;
+      }
+      
+      .nav-links.active {
+        display: flex;
+      }
+      
+      .nav-links.active .mobile-cta-buttons {
+        display: block;
+      }
+      
+      #desktop-cta {
+        display: none;
+      }
+      
+      .toggle-menu {
+        display: block;
+      }
+      
+      .hero-section {
+        padding-top: 120px; /* Adjusted for mobile */
+      }
+      
+      .hero-container {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 2rem;
+      }
+      
+      .hero-content {
+        margin-bottom: 3rem;
+      }
+      
+      .hero-cta {
+        justify-content: center;
+      }
+      
+      .hero-stats {
+        justify-content: center;
+      }
+    }
+  </style>
   
   <!-- Hero Section -->
   <section class="hero-section" id="hero">
@@ -374,29 +544,29 @@ Saúde e Segurança Do Trabalho">
         <div class="hero-cta">
           <a href="https://profissionais.bevart.com.br/app/src/login/views/login" class="hero-cta-button primary login_bevart">Começar Teste Gratuito</a>
           <a href="#funcoes" class="hero-cta-button secondary">Ver Recursos</a>
-        </div>
+          </div>
         
         <div class="hero-stats">
           <div class="hero-stat">
             <span class="hero-stat-number">100%</span>
             <span class="hero-stat-label">Online</span>
-          </div>
+        </div>
           <div class="hero-stat">
             <span class="hero-stat-number">R$0,00</span>
             <span class="hero-stat-label">Taxa de Implantação</span>
-          </div>
+      </div>
           <div class="hero-stat">
             <span class="hero-stat-number">+500</span>
             <span class="hero-stat-label">Empresas Atendidas</span>
-          </div>
-        </div>
-      </div>
+                </div>
+              </div>
+                </div>
       
       <div class="hero-image animate__animated animate__fadeInRight">
         <img src="images/laptop_PNG101816551.png" alt="Plataforma Bevart">
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
   
   <!-- Features Section Styles -->
   <style>
@@ -563,7 +733,7 @@ Saúde e Segurança Do Trabalho">
         <div class="section-badge">Recursos Completos</div>
         <h2 class="section-title">Tudo o que você precisa em um só lugar</h2>
         <p class="section-subtitle">Conheça as funcionalidades que transformarão a gestão da saúde e segurança do trabalho na sua empresa</p>
-      </div>
+                </div>
       
       <!-- Feature 1 -->
       <div class="feature-row">
@@ -585,12 +755,12 @@ Saúde e Segurança Do Trabalho">
               <span>Organização estruturada por setores e GHEs</span>
             </li>
           </ul>
-        </div>
+              </div>
         
         <div class="feature-image animate__animated animate__fadeInRight" data-animate="fadeInRight">
           <img src="images/Screenshot_65.png" alt="Cadastro de Empresas">
-        </div>
-      </div>
+                </div>
+              </div>
       
       <!-- Feature 2 -->
       <div class="feature-row">
@@ -612,12 +782,12 @@ Saúde e Segurança Do Trabalho">
               <span>Atualização em tempo real</span>
             </li>
           </ul>
-        </div>
+            </div>
         
         <div class="feature-image animate__animated animate__fadeInLeft" data-animate="fadeInLeft">
           <img src="images/Screenshot_66.png" alt="Inventário de Riscos">
+          </div>
         </div>
-      </div>
       
       <!-- Feature 3 -->
       <div class="feature-row">
@@ -639,14 +809,14 @@ Saúde e Segurança Do Trabalho">
               <span>Acompanhamento em tempo real</span>
             </li>
           </ul>
-        </div>
+      </div>
         
         <div class="feature-image animate__animated animate__fadeInRight" data-animate="fadeInRight">
           <img src="images/Screenshot_67.png" alt="PGR e Ordem de Serviço">
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
   
   <!-- More Features Section -->
   <section class="features-section">
@@ -671,12 +841,12 @@ Saúde e Segurança Do Trabalho">
               <span>Personalize capas e layouts</span>
             </li>
           </ul>
-        </div>
+                </div>
         
         <div class="feature-image animate__animated animate__fadeInLeft" data-animate="fadeInLeft">
           <img src="images/Screenshot_68.png" alt="Documentos Personalizáveis">
-        </div>
-      </div>
+              </div>
+                </div>
       
       <!-- Feature 5 -->
       <div class="feature-row">
@@ -698,12 +868,12 @@ Saúde e Segurança Do Trabalho">
               <span>Alertas de vencimento automáticos</span>
             </li>
           </ul>
-        </div>
+              </div>
         
         <div class="feature-image animate__animated animate__fadeInRight" data-animate="fadeInRight">
           <img src="images/Screenshot_69.png" alt="Gestão de EPIs">
-        </div>
-      </div>
+            </div>
+          </div>
       
       <!-- Feature 6 -->
       <div class="feature-row">
@@ -729,10 +899,10 @@ Saúde e Segurança Do Trabalho">
         
         <div class="feature-image animate__animated animate__fadeInLeft" data-animate="fadeInLeft">
           <img src="images/Screenshot_81.png" alt="eSocial Simplificado">
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
   
   <!-- Additional Features Section (Highlights) -->
   <section class="features-section">
@@ -741,7 +911,7 @@ Saúde e Segurança Do Trabalho">
         <div class="section-badge">Diferenciais</div>
         <h2 class="section-title">Recursos exclusivos que você só encontra aqui</h2>
         <p class="section-subtitle">Vantagens que fazem da Bevart a escolha ideal para profissionais de SST exigentes</p>
-      </div>
+                </div>
       
       <style>
         .features-grid {
@@ -821,45 +991,45 @@ Saúde e Segurança Do Trabalho">
           <div class="feature-icon">📋</div>
           <h4 class="feature-card-title">PPP Eletrônico</h4>
           <p class="feature-card-description">Gestão simplificada do PPP com envio automático de alterações ao eSocial via evento S2240, garantindo conformidade contínua.</p>
-        </div>
+              </div>
         
         <!-- Feature Card 2 -->
         <div class="feature-card animate__animated animate__fadeInUp" data-animate="fadeInUp" data-delay="100">
           <div class="feature-icon">🩺</div>
           <h4 class="feature-card-title">Painel de Atendimento Médico</h4>
           <p class="feature-card-description">Atendimento médico completo vinculado ao PCMSO, com prontuário digital, assinatura do paciente e envio de ASOs ao eSocial.</p>
-        </div>
+                </div>
         
         <!-- Feature Card 3 -->
         <div class="feature-card animate__animated animate__fadeInUp" data-animate="fadeInUp" data-delay="200">
           <div class="feature-icon">📊</div>
           <h4 class="feature-card-title">Dashboards e Relatórios</h4>
           <p class="feature-card-description">Análises detalhadas de acidentes, afastamentos, exames e atestados para tomada de decisão baseada em dados.</p>
-        </div>
+              </div>
         
         <!-- Feature Card 4 -->
         <div class="feature-card animate__animated animate__fadeInUp" data-animate="fadeInUp" data-delay="300">
           <div class="feature-icon">📝</div>
           <h4 class="feature-card-title">Checklists Personalizados</h4>
           <p class="feature-card-description">Crie checklists e inspeções personalizados, totalmente integrados à documentação e ao plano de ação.</p>
-        </div>
+            </div>
         
         <!-- Feature Card 5 -->
         <div class="feature-card animate__animated animate__fadeInUp" data-animate="fadeInUp" data-delay="400">
           <div class="feature-icon">📅</div>
           <h4 class="feature-card-title">Gestão de Treinamentos</h4>
           <p class="feature-card-description">Organize eventos de capacitação, adicione funcionários e crie alertas automáticos integrados ao plano de ação.</p>
-        </div>
+          </div>
         
         <!-- Feature Card 6 -->
         <div class="feature-card animate__animated animate__fadeInUp" data-animate="fadeInUp" data-delay="500">
           <div class="feature-icon">💼</div>
           <h4 class="feature-card-title">Controle de Acesso</h4>
           <p class="feature-card-description">Permissões personalizadas para diferentes usuários, permitindo acesso específico por empresa e funcionalidade.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
   
   <!-- Testimonials Section -->
   <section class="features-section" id="depoimentos">
@@ -868,7 +1038,7 @@ Saúde e Segurança Do Trabalho">
         <div class="section-badge">Feedback Real</div>
         <h2 class="section-title">O que nossos clientes dizem</h2>
         <p class="section-subtitle">Histórias de sucesso de quem transformou a gestão SST com nossa plataforma</p>
-      </div>
+                </div>
       
       <style>
         .testimonials-container {
@@ -977,7 +1147,7 @@ Saúde e Segurança Do Trabalho">
       <div class="testimonials-container">
         <div class="testimonial-video animate__animated animate__fadeIn">
           <iframe src="https://www.youtube.com/embed/B0e2ud8Vnlk?mute=0&amp;showinfo=0&amp;controls=1&amp;start=0" frameborder="0" allowfullscreen=""></iframe>
-        </div>
+              </div>
         
         <div class="testimonial-cards">
           <!-- Testimonial 1 -->
@@ -989,9 +1159,9 @@ Saúde e Segurança Do Trabalho">
               <div class="testimonial-info">
                 <h5>Marcos Ribeiro</h5>
                 <p>Técnico de Segurança</p>
+                </div>
               </div>
             </div>
-          </div>
           
           <!-- Testimonial 2 -->
           <div class="testimonial-card animate__animated animate__fadeInUp" data-animate="fadeInUp" data-delay="100">
@@ -1002,9 +1172,9 @@ Saúde e Segurança Do Trabalho">
               <div class="testimonial-info">
                 <h5>Camila Almeida</h5>
                 <p>Médica do Trabalho</p>
-              </div>
-            </div>
           </div>
+        </div>
+      </div>
           
           <!-- Testimonial 3 -->
           <div class="testimonial-card animate__animated animate__fadeInUp" data-animate="fadeInUp" data-delay="200">
@@ -1015,13 +1185,13 @@ Saúde e Segurança Do Trabalho">
               <div class="testimonial-info">
                 <h5>Roberto Lima</h5>
                 <p>Gestor de RH</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
   
   <!-- Pricing Section -->
   <section class="features-section" id="precos">
@@ -1030,7 +1200,7 @@ Saúde e Segurança Do Trabalho">
         <div class="section-badge">Planos Flexíveis</div>
         <h2 class="section-title">Escolha o plano ideal para o seu negócio</h2>
         <p class="section-subtitle">Opções que se adaptam às necessidades da sua empresa, sem custos de implantação</p>
-      </div>
+                </div>
       
       <style>
         .pricing-toggle {
@@ -1227,7 +1397,7 @@ Saúde e Segurança Do Trabalho">
         <span class="pricing-toggle-label active">Mensal</span>
         <div class="pricing-toggle-switch"></div>
         <span class="pricing-toggle-label">Anual <span style="color: var(--primary-color); font-weight: 500;">(-20%)</span></span>
-      </div>
+              </div>
       
       <div class="pricing-cards">
         <!-- Single Plan -->
@@ -1237,7 +1407,7 @@ Saúde e Segurança Do Trabalho">
             <p class="pricing-subtitle">Para profissionais independentes</p>
             <div class="pricing-price" data-monthly="89" data-yearly="71">R$89 <span>/mês</span></div>
             <div class="pricing-period">Faturado mensalmente</div>
-          </div>
+                </div>
           <div class="pricing-body">
             <ul class="pricing-features">
               <li class="pricing-feature">
@@ -1262,8 +1432,8 @@ Saúde e Segurança Do Trabalho">
               </li>
             </ul>
             <a href="https://profissionais.bevart.com.br/app/src/login/views/login" class="pricing-cta login_bevart">Começar agora</a>
-          </div>
-        </div>
+              </div>
+            </div>
         
         <!-- Basic Plan -->
         <div class="pricing-card popular animate__animated animate__fadeInUp" data-animate="fadeInUp" data-delay="100">
@@ -1301,8 +1471,8 @@ Saúde e Segurança Do Trabalho">
               </li>
             </ul>
             <a href="https://profissionais.bevart.com.br/app/src/login/views/login" class="pricing-cta login_bevart">Começar agora</a>
-          </div>
         </div>
+      </div>
         
         <!-- Start Plan -->
         <div class="pricing-card secondary animate__animated animate__fadeInUp" data-animate="fadeInUp" data-delay="200">
@@ -1311,7 +1481,7 @@ Saúde e Segurança Do Trabalho">
             <p class="pricing-subtitle">Para grandes operações</p>
             <div class="pricing-price" data-monthly="699" data-yearly="559">R$699 <span>/mês</span></div>
             <div class="pricing-period">Faturado mensalmente</div>
-          </div>
+                </div>
           <div class="pricing-body">
             <ul class="pricing-features">
               <li class="pricing-feature">
@@ -1344,13 +1514,13 @@ Saúde e Segurança Do Trabalho">
               </li>
             </ul>
             <a href="https://profissionais.bevart.com.br/app/src/login/views/login" class="pricing-cta login_bevart">Começar agora</a>
-          </div>
-        </div>
-      </div>
+              </div>
+                </div>
+              </div>
       
       <p class="pricing-note">Precisa de mais vidas? Entre em contato para um plano personalizado. Sem taxa de implantação em todos os planos.</p>
-    </div>
-  </section>
+      </div>
+    </section>
   
   <!-- FAQ Section -->
   <section class="features-section">
@@ -1359,7 +1529,7 @@ Saúde e Segurança Do Trabalho">
         <div class="section-badge">Dúvidas</div>
         <h2 class="section-title">Perguntas Frequentes</h2>
         <p class="section-subtitle">Respostas para as dúvidas mais comuns sobre nossa plataforma</p>
-      </div>
+                </div>
       
       <style>
         .faq-container {
@@ -1431,11 +1601,11 @@ Saúde e Segurança Do Trabalho">
             <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
             </svg>
-          </div>
+              </div>
           <div class="faq-answer">
             <p>Sim. O sistema oferece um teste grátis por 5 dias, após esse período será necessário escolher um dos planos pagos disponíveis para continuar utilizando todas as funcionalidades.</p>
-          </div>
-        </div>
+                </div>
+              </div>
         
         <!-- FAQ Item 2 -->
         <div class="faq-item animate__animated animate__fadeInUp" data-animate="fadeInUp" data-delay="100">
@@ -1444,7 +1614,7 @@ Saúde e Segurança Do Trabalho">
             <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
             </svg>
-          </div>
+            </div>
           <div class="faq-answer">
             <p>A única limitação está atrelada à quantidade de funcionários gerenciados pela sua conta, conforme o plano contratado. As vidas/funcionários devem ser somados de todas as empresas cadastradas para verificar a quantidade total. O armazenamento é ilimitado em todos os planos.</p>
           </div>
@@ -1457,11 +1627,11 @@ Saúde e Segurança Do Trabalho">
             <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
             </svg>
-          </div>
+      </div>
           <div class="faq-answer">
             <p>Sim! Nossa plataforma oferece flexibilidade total: você pode enviar os eventos diretamente ao eSocial ou apenas gerar os arquivos XML para envio por outros sistemas, conforme sua preferência ou necessidade.</p>
-          </div>
-        </div>
+                </div>
+              </div>
         
         <!-- FAQ Item 4 -->
         <div class="faq-item animate__animated animate__fadeInUp" data-animate="fadeInUp" data-delay="300">
@@ -1470,11 +1640,11 @@ Saúde e Segurança Do Trabalho">
             <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
             </svg>
-          </div>
+                </div>
           <div class="faq-answer">
             <p>Entre em contato conosco informando sua necessidade específica, e teremos prazer em oferecer opções personalizadas com mais vidas, adequadas às dimensões da sua operação.</p>
-          </div>
-        </div>
+              </div>
+            </div>
         
         <!-- FAQ Item 5 -->
         <div class="faq-item animate__animated animate__fadeInUp" data-animate="fadeInUp" data-delay="400">
@@ -1486,8 +1656,8 @@ Saúde e Segurança Do Trabalho">
           </div>
           <div class="faq-answer">
             <p>Sim, oferecemos serviço de migração de dados. Nossa equipe pode auxiliar na transferência de informações do seu sistema atual para a plataforma Bevart, garantindo uma transição suave e sem perda de histórico.</p>
-          </div>
         </div>
+      </div>
         
         <!-- FAQ Item 6 -->
         <div class="faq-item animate__animated animate__fadeInUp" data-animate="fadeInUp" data-delay="500">
@@ -1496,14 +1666,14 @@ Saúde e Segurança Do Trabalho">
             <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
             </svg>
-          </div>
+                </div>
           <div class="faq-answer">
             <p>Não. Nossa solução é 100% online, baseada em nuvem. Você pode acessar de qualquer dispositivo com conexão à internet, utilizando apenas um navegador web, sem necessidade de instalações ou atualizações manuais.</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
   
   <!-- CTA Section -->
   <section class="features-section">
@@ -1608,10 +1778,10 @@ Saúde e Segurança Do Trabalho">
         <div class="cta-buttons">
           <a href="https://profissionais.bevart.com.br/app/src/login/views/login" class="cta-button white login_bevart">Começar teste gratuito</a>
           <a href="https://wa.me/5547989235660?text=Ol%C3%A1%20Bevart" class="cta-button outline">Falar com um especialista</a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
   
   <!-- Footer -->
   <footer class="modern-footer">
@@ -1801,8 +1971,8 @@ Saúde e Segurança Do Trabalho">
             <a href="https://www.instagram.com/bevartsst/" class="footer-social-link" target="_blank">
               <img src="images/3670125.png" alt="Instagram">
             </a>
-          </div>
-        </div>
+                </div>
+              </div>
         
         <div class="footer-column">
           <h4 class="footer-heading">Recursos</h4>
@@ -1814,7 +1984,7 @@ Saúde e Segurança Do Trabalho">
             <li class="footer-link"><a href="#funcoes">Gestão de Treinamentos</a></li>
             <li class="footer-link"><a href="#funcoes">Documentos Personalizados</a></li>
           </ul>
-        </div>
+            </div>
         
         <div class="footer-column">
           <h4 class="footer-heading">Empresa</h4>
@@ -1825,7 +1995,7 @@ Saúde e Segurança Do Trabalho">
             <li class="footer-link"><a href="https://profissionais.bevart.com.br/app/src/login/views/login" class="login_bevart">Login</a></li>
             <li class="footer-link"><a href="https://profissionais.bevart.com.br/app/src/login/views/login" class="login_bevart">Criar Conta</a></li>
           </ul>
-        </div>
+          </div>
         
         <div class="footer-column">
           <h4 class="footer-heading">Contato</h4>
@@ -1834,21 +2004,21 @@ Saúde e Segurança Do Trabalho">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-            </div>
+                </div>
             <div class="footer-contact-text">
               <a href="mailto:contato@bevart.com.br">contato@bevart.com.br</a>
+              </div>
             </div>
-          </div>
           <div class="footer-contact-item">
             <div class="footer-contact-icon">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
-            </div>
+          </div>
             <div class="footer-contact-text">
               <a href="tel:47988702749">(47) 98870-2749</a>
-            </div>
-          </div>
+                </div>
+              </div>
           <div class="footer-contact-item">
             <div class="footer-contact-icon">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1858,20 +2028,20 @@ Saúde e Segurança Do Trabalho">
             </div>
             <div class="footer-contact-text">
               Brasil
-            </div>
           </div>
         </div>
+      </div>
       </div>
       
       <div class="footer-bottom">
         <div class="footer-copyright">
           &copy; 2025 Bevart. Todos os direitos reservados.
-        </div>
+                      </div>
         <div class="footer-legal">
           <a href="#">Termos de Uso</a> · <a href="#">Política de Privacidade</a>
-        </div>
-      </div>
-    </div>
+                </div>
+              </div>
+                </div>
   </footer>
   
   <!-- WhatsApp Float Button -->
@@ -1950,30 +2120,30 @@ Saúde e Segurança Do Trabalho">
   </div>
   
   <!-- Scripts -->
-  <script>
+    <script>
     // URL Parameter Handling for Login Buttons
-    document.addEventListener('DOMContentLoaded', function() {
+      document.addEventListener('DOMContentLoaded', function() {
       // Seleciona todos os elementos com a classe 'login_bevart'
-      var botoes = document.querySelectorAll('.login_bevart');
-      
-      // Captura a URL da página atual e seus parâmetros
-      var parametros = window.location.search;
-      
-      // Itera sobre cada botão para modificar o href
-      botoes.forEach(function(botao) {
-        // Verifica se o href do botão está definido
-        if (botao.href) {
-          // Verifica se já existem parâmetros no link do botão
-          var linkAtual = botao.href;
-          if (linkAtual.indexOf('?') === -1) {
-            // Se não houver parâmetros, adiciona os da página
-            botao.href = linkAtual + parametros;
-          } else {
-            // Se já houver parâmetros, concatena com os existentes
-            botao.href = linkAtual + '&' + parametros.substring(1);
-          }
-        }
-      });
+          var botoes = document.querySelectorAll('.login_bevart');
+  
+          // Captura a URL da página atual e seus parâmetros
+          var parametros = window.location.search;
+  
+          // Itera sobre cada botão para modificar o href
+          botoes.forEach(function(botao) {
+              // Verifica se o href do botão está definido
+              if (botao.href) {
+                  // Verifica se já existem parâmetros no link do botão
+                  var linkAtual = botao.href;
+                  if (linkAtual.indexOf('?') === -1) {
+                      // Se não houver parâmetros, adiciona os da página
+                      botao.href = linkAtual + parametros;
+                  } else {
+                      // Se já houver parâmetros, concatena com os existentes
+                      botao.href = linkAtual + '&' + parametros.substring(1);
+                  }
+              }
+          });
       
       // Header Scroll Effect
       const header = document.querySelector('.modern-header');
@@ -2039,16 +2209,22 @@ Saúde e Segurança Do Trabalho">
       }
       
       // Mobile Menu Toggle
-      const menuToggle = document.querySelector('.toggle-menu');
-      const navLinks = document.querySelector('.nav-links');
-      const ctaButtons = document.querySelector('.cta-buttons');
+      const menuToggle = document.getElementById('menu-toggle');
+      const navLinks = document.getElementById('mobile-nav');
       
       if (menuToggle) {
         menuToggle.addEventListener('click', function() {
           navLinks.classList.toggle('active');
-          ctaButtons.classList.toggle('active');
         });
       }
+      
+      // Close mobile menu when clicking on a nav link
+      const navLinksMobile = document.querySelectorAll('#mobile-nav .nav-link');
+      navLinksMobile.forEach(link => {
+        link.addEventListener('click', function() {
+          navLinks.classList.remove('active');
+        });
+      });
       
       // Smooth Scroll for Anchor Links
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
