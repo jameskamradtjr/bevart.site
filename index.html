@@ -25,26 +25,295 @@ Saúde e Segurança Do Trabalho">
     
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
-    
-    
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="icon" href="favicon.ico">
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    <style>
+      :root {
+        --primary-color: #2563eb;
+        --primary-dark: #1e40af;
+        --accent-color: #3b82f6;
+        --text-dark: #1f2937;
+        --text-light: #f9fafb;
+        --bg-light: #f3f4f6;
+        --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+      
+      body {
+        font-family: 'Inter', sans-serif;
+        color: var(--text-dark);
+        line-height: 1.6;
+      }
+      
+      .modern-header {
+        background-color: rgba(255, 255, 255, 0.95);
+        box-shadow: var(--shadow-sm);
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+        transition: all 0.3s ease;
+      }
+      
+      .modern-header.scrolled {
+        box-shadow: var(--shadow-md);
+      }
+      
+      .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 5%;
+      }
+      
+      .logo-container img {
+        height: 50px;
+        transition: all 0.3s ease;
+      }
+      
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+      }
+      
+      .nav-link {
+        color: var(--text-dark);
+        font-weight: 500;
+        text-decoration: none;
+        position: relative;
+        padding: 0.5rem 0;
+        transition: all 0.3s ease;
+      }
+      
+      .nav-link:hover, .nav-link.active {
+        color: var(--primary-color);
+      }
+      
+      .nav-link:after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: var(--primary-color);
+        transition: width 0.3s ease;
+      }
+      
+      .nav-link:hover:after, .nav-link.active:after {
+        width: 100%;
+      }
+      
+      .cta-buttons {
+        display: flex;
+        gap: 1rem;
+      }
+      
+      .cta-button {
+        padding: 0.5rem 1.5rem;
+        border-radius: 4px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+      
+      .cta-button.primary {
+        background-color: var(--primary-color);
+        color: white;
+      }
+      
+      .cta-button.primary:hover {
+        background-color: var(--primary-dark);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+      }
+      
+      .cta-button.secondary {
+        background-color: transparent;
+        color: var(--primary-color);
+        border: 1px solid var(--primary-color);
+      }
+      
+      .cta-button.secondary:hover {
+        background-color: rgba(37, 99, 235, 0.1);
+        transform: translateY(-2px);
+      }
+      
+      .hero-section {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #f3f4f6 0%, #ffffff 100%);
+        display: flex;
+        align-items: center;
+        padding-top: 80px;
+      }
+      
+      .hero-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 4rem 0;
+      }
+      
+      .hero-content {
+        flex: 1;
+        max-width: 550px;
+      }
+      
+      .hero-image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+      
+      .hero-image img {
+        max-width: 100%;
+        border-radius: 8px;
+        box-shadow: var(--shadow-lg);
+        transform: perspective(1000px) rotateY(-10deg);
+        transition: all 0.5s ease;
+      }
+      
+      .hero-image:hover img {
+        transform: perspective(1000px) rotateY(-5deg) translateY(-10px);
+      }
+      
+      .hero-image:after {
+        content: '';
+        position: absolute;
+        width: 80%;
+        height: 80%;
+        background: var(--primary-color);
+        border-radius: 8px;
+        z-index: -1;
+        opacity: 0.1;
+        transform: rotate(-3deg);
+      }
+      
+      .hero-badge {
+        display: inline-block;
+        background-color: rgba(37, 99, 235, 0.1);
+        color: var(--primary-color);
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-weight: 500;
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+      }
+      
+      .hero-title {
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+        color: var(--text-dark);
+      }
+      
+      .hero-subtitle {
+        font-size: 1.2rem;
+        color: #4b5563;
+        margin-bottom: 2rem;
+      }
+      
+      .hero-cta {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+      
+      .hero-cta-button {
+        padding: 0.75rem 2rem;
+        border-radius: 4px;
+        font-weight: 600;
+        font-size: 1rem;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+      
+      .hero-cta-button.primary {
+        background-color: var(--primary-color);
+        color: white;
+      }
+      
+      .hero-cta-button.primary:hover {
+        background-color: var(--primary-dark);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+      }
+      
+      .hero-cta-button.secondary {
+        background-color: transparent;
+        color: var(--primary-color);
+        border: 1px solid var(--primary-color);
+      }
+      
+      .hero-cta-button.secondary:hover {
+        background-color: rgba(37, 99, 235, 0.1);
+        transform: translateY(-2px);
+      }
+      
+      .hero-stats {
+        display: flex;
+        gap: 2rem;
+      }
+      
+      .hero-stat {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .hero-stat-number {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--primary-color);
+      }
+      
+      .hero-stat-label {
+        font-size: 0.9rem;
+        color: #6b7280;
+      }
+      
+      .toggle-menu {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+      
+      @media (max-width: 992px) {
+        .nav-links {
+          display: none;
+        }
+        
+        .toggle-menu {
+          display: block;
+        }
+        
+        .hero-container {
+          flex-direction: column;
+          text-align: center;
+        }
+        
+        .hero-content {
+          margin-bottom: 3rem;
+        }
+        
+        .hero-cta {
+          justify-content: center;
+        }
+        
+        .hero-stats {
+          justify-content: center;
+        }
+      }
+    </style>
     
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
@@ -63,647 +332,1788 @@ Saúde e Segurança Do Trabalho">
     <meta name="theme-color" content="#478ac9">
     <meta property="og:type" content="website">
   <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
-  <body class="u-body u-xl-mode" data-lang="pt"><!-- Google Tag Manager (noscript) -->
+  <body class="u-body u-xl-mode" data-lang="pt">
+  
+  <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TGM8BGN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) --><header class="u-align-center-sm u-align-center-xs u-clearfix u-header u-header" id="sec-4f00"><div class="u-clearfix u-sheet u-valign-top u-sheet-1">
-        <a href="Software-Bevart.html#carousel_8bf3" class="u-image u-logo u-image-1" data-image-width="1200" data-image-height="1200" title="index">
-          <img src="images/logo_transparent.png" class="u-logo-image u-logo-image-1">
+  <!-- End Google Tag Manager (noscript) -->
+  
+  <!-- Modern Header -->
+  <header class="modern-header">
+    <div class="nav-container">
+      <div class="logo-container">
+        <a href="#hero">
+          <img src="images/logo_transparent.png" alt="Bevart Logo">
         </a>
-        <div class="u-social-icons u-spacing-10 u-social-icons-1">
-          <a class="u-social-url" title="facebook" target="_blank" href="https://facebook.com/bevartsst/"><span class="u-icon u-social-facebook u-social-icon u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-8c9b"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-8c9b"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M73.5,31.6h-9.1c-1.4,0-3.6,0.8-3.6,3.9v8.5h12.6L72,58.3H60.8v40.8H43.9V58.3h-8V43.9h8v-9.2
-            c0-6.7,3.1-17,17-17h12.5v13.9H73.5z"></path></svg></span>
-          </a>
-          <a class="u-social-url" title="youtube" target="_blank" href="https://www.youtube.com/channel/UCCB0dOdHl9bacmjEpPS8HGQ"><span class="u-file-icon u-icon u-social-icon u-social-twitter u-icon-2"><img src="images/3938026.png" alt=""></span>
-          </a>
-          <a class="u-social-url" title="instagram" target="_blank" href="https://www.instagram.com/bevartsst/"><span class="u-file-icon u-icon u-social-icon u-social-instagram u-icon-3"><img src="images/3670125.png" alt=""></span>
-          </a>
-        </div>
-        <nav class="u-align-left u-menu u-menu-one-level u-offcanvas u-menu-1">
-          <div class="menu-collapse" style="font-size: 1rem;">
-            <a class="u-button-style u-custom-text-hover-color u-nav-link" href="#">
-              <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 302 302" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-8a8f"></use></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="svg-8a8f" x="0px" y="0px" viewBox="0 0 302 302" style="enable-background:new 0 0 302 302;" xml:space="preserve" class="u-svg-content"><g><rect y="36" width="302" height="30"></rect><rect y="236" width="302" height="30"></rect><rect y="136" width="302" height="30"></rect>
-</g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-            </a>
-          </div>
-          <div class="u-custom-menu u-nav-container">
-            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-custom-color-1" href="#carousel_a815" style="padding: 10px 20px;">Funções</a></li>
-             <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-custom-color-1" href="#sec-6776" style="padding: 10px 20px;">Preços</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-custom-color-1" href="#carousel_c2fa" style="padding: 10px 20px;">Depoimentos</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-custom-color-1" href="https://blog.bevart.com.br" target="_blank" style="padding: 10px 20px;">Blog</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-custom-color-1 login_bevart" href="https://profissionais.bevart.com.br/app/src/login/views/login" target="_blank" style="padding: 10px 20px;">Login</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-custom-color-1 login_bevart" href="https://profissionais.bevart.com.br/app/src/login/views/login" target="_blank" style="padding: 10px 20px;">Criar Conta</a>
-</li></ul>
-          </div>
-          <div class="u-custom-menu u-nav-container-collapse">
-            <div class="u-align-center u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
-              <div class="u-inner-container-layout u-sidenav-overflow">
-                <div class="u-menu-close"></div>
-                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="#carousel_a815">Funções</a>
-</li>
-<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-custom-color-1" href="#sec-6776" style="padding: 10px 20px;">Preços</a>
-</li>
-<li class="u-nav-item"><a class="u-button-style u-nav-link" href="#carousel_c2fa">Depoimentos</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="https://bevart.com.br/blog.html" target="_blank">Blog</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link login_bevart" href="https://profissionais.bevart.com.br/app/src/login/views/login" target="_blank">Login</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link login_bevart" href="https://profissionais.bevart.com.br/app/src/login/views/login" target="_blank">Criar Conta</a>
-</li></ul>
-              </div>
-            </div>
-            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
-          </div>
-        </nav>
-      </div></header>
-    <section class="u-align-center u-clearfix u-section-1" id="carousel_8bf3">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-align-left u-border-20 u-border-custom-color-1 u-border-no-bottom u-border-no-right u-border-no-top u-container-style u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-group u-opacity u-opacity-30 u-shape-rectangle u-white u-group-1">
-          <div class="u-container-layout u-container-layout-1">
-            <h2 class="u-custom-font u-font-montserrat u-text u-text-1">
-              <span style="font-size: 2.25rem;">Software de Gestão da Saúde e Segurança Do Trabalho</span>
-            </h2>
-            <p class="u-text u-text-default u-text-2">Descomplique a gestão dos documentos e obrigações do SST, com um software <span style="font-weight: 700;">100% online</span>, completo e inovador, para atender as normas, eSocial, e saúde dos trabalhadores, tudo em 1 só lugar. <span style="font-weight: 700;">Sem taxa de implantação</span>.
-            </p>
-            <a href="https://profissionais.bevart.com.br/app/src/login/views/login" class="login_bevart u-active-palette-5-base u-border-active-white u-border-hover-white u-border-none u-btn u-button-style u-custom-color-1 u-hover-palette-1-light-2 u-text-active-grey-25 u-text-body-alt-color u-text-hover-black u-btn-1">Acessar</a>
-          </div>
-        </div>
-        <img class="u-expanded-width-xs u-image u-image-default u-image-1" src="images/laptop_PNG101816551.png" alt="" data-image-width="1260" data-image-height="756">
       </div>
-    </section>
-    <section class="u-clearfix u-section-2" id="carousel_a815">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-row">
-              <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-24 u-layout-cell-1">
-                <div class="u-container-layout u-container-layout-1">
-                  <h5 class="u-text u-text-default u-text-1">Gestão</h5>
-                  <h2 class="u-text u-text-default u-text-2">Cadastro das Empresas</h2>
-                  <p class="u-text u-text-3">Com cadastros simples e rápidos, o sistema facilita o cadastro das empresas, setores, GHEs, com todas as informações necessárias para gestão das normas, documentos, eSocial, poderá <span style="font-weight: 700;">importar de forma simples listas de funcionários em planilhas</span>.
-                  </p>
-                </div>
-              </div>
-              <div class="u-container-style u-layout-cell u-right-cell u-size-36 u-layout-cell-2">
-                <div class="u-container-layout u-container-layout-2">
-                  <div class="u-grey-15 u-opacity u-opacity-50 u-shape u-shape-rectangle u-shape-1"></div>
-                  <img class="u-image u-image-1" data-image-width="1456" data-image-height="754" src="images/Screenshot_65.png">
-                </div>
-              </div>
-            </div>
+      
+      <div class="nav-links">
+        <a href="#funcoes" class="nav-link">Funções</a>
+        <a href="#precos" class="nav-link">Preços</a>
+        <a href="#depoimentos" class="nav-link">Depoimentos</a>
+        <a href="https://blog.bevart.com.br" class="nav-link" target="_blank">Blog</a>
+      </div>
+      
+      <div class="cta-buttons">
+        <a href="https://profissionais.bevart.com.br/app/src/login/views/login" class="cta-button secondary login_bevart" target="_blank">Login</a>
+        <a href="https://profissionais.bevart.com.br/app/src/login/views/login" class="cta-button primary login_bevart" target="_blank">Começar Grátis</a>
+      </div>
+      
+      <button class="toggle-menu">☰</button>
+    </div>
+  </header>
+  
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="hero-container">
+      <div class="hero-content animate__animated animate__fadeInLeft">
+        <div class="hero-badge">SST simplificado para 2025</div>
+        <h1 class="hero-title">Transforme a Gestão de Saúde e Segurança do Trabalho</h1>
+        <p class="hero-subtitle">Centralize documentos, automatize processos e atenda às exigências do eSocial em uma única plataforma. Elimine a burocracia e foque no que realmente importa: a segurança da sua equipe.</p>
+        
+        <div class="hero-cta">
+          <a href="https://profissionais.bevart.com.br/app/src/login/views/login" class="hero-cta-button primary login_bevart">Começar Teste Gratuito</a>
+          <a href="#funcoes" class="hero-cta-button secondary">Ver Recursos</a>
+        </div>
+        
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-number">100%</span>
+            <span class="hero-stat-label">Online</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-number">R$0,00</span>
+            <span class="hero-stat-label">Taxa de Implantação</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-number">+500</span>
+            <span class="hero-stat-label">Empresas Atendidas</span>
           </div>
         </div>
       </div>
-    </section>
-    <section class="u-clearfix u-grey-5 u-section-3" id="sec-afba">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-row">
-              <div class="u-container-style u-layout-cell u-left-cell u-size-36 u-layout-cell-1">
-                <div class="u-container-layout u-container-layout-1">
-                  <div class="u-grey-15 u-opacity u-opacity-50 u-shape u-shape-rectangle u-shape-1"></div>
-                  <img class="u-image u-image-1" data-image-width="1112" data-image-height="621" src="images/Screenshot_66.png">
-                </div>
-              </div>
-              <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-24 u-layout-cell-2">
-                <div class="u-container-layout u-container-layout-2">
-                  <h5 class="u-text u-text-default u-text-1">Segurança</h5>
-                  <h2 class="u-text u-text-default u-text-2">Inventário de Riscos</h2>
-                  <p class="u-text u-text-3">Um inventário com todos os campos necessários para integrar a vários documentos em um único lugar, centralizando os dados e facilitando a gestão, com <span style="font-weight: 700;">campos conforme as obrigações do eSocial, normas e legislações.</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      
+      <div class="hero-image animate__animated animate__fadeInRight">
+        <img src="images/laptop_PNG101816551.png" alt="Plataforma Bevart">
       </div>
-    </section>
-    <section class="u-clearfix u-section-4" id="carousel_43b4">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-row">
-              <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-24 u-layout-cell-1">
-                <div class="u-container-layout u-container-layout-1">
-                  <h5 class="u-text u-text-default u-text-1">Segurança</h5>
-                  <h2 class="u-text u-text-default u-text-2">PGR, Ordem de Serviço</h2>
-                  <p class="u-text u-text-3"> Cadastre os riscos e crie o seu cronograma de ações, estamos preparados para entregar mais que um documento PDF, mas um acompanhamento em tempo real com gráficos, alertas e dashboards.</p>
-                </div>
-              </div>
-              <div class="u-container-style u-layout-cell u-right-cell u-size-36 u-layout-cell-2">
-                <div class="u-container-layout u-container-layout-2">
-                  <div class="u-grey-15 u-opacity u-opacity-50 u-shape u-shape-rectangle u-shape-1"></div>
-                  <img class="u-image u-image-1" data-image-width="1070" data-image-height="536" src="images/Screenshot_67.png">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="u-clearfix u-grey-5 u-section-5" id="carousel_1340">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-row">
-              <div class="u-container-style u-layout-cell u-left-cell u-size-36 u-layout-cell-1">
-                <div class="u-container-layout u-container-layout-1">
-                  <div class="u-grey-15 u-opacity u-opacity-50 u-shape u-shape-rectangle u-shape-1"></div>
-                  <img class="u-image u-image-1" data-image-width="1218" data-image-height="785" src="images/Screenshot_68.png">
-                </div>
-              </div>
-              <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-24 u-layout-cell-2">
-                <div class="u-container-layout u-container-layout-2">
-                  <h5 class="u-text u-text-default u-text-1">Segurança</h5>
-                  <h2 class="u-text u-text-default u-text-2">Personalizar Documentos</h2>
-                  <p class="u-text u-text-3">Além da possibilidade de gerar os documentos como LTCAT, PGR, PCMSO, O.S, Insalubridade, Periculosidade etc, de forma padrão, onde apenas irá clicar em gerar documento, também existe a possibilidade de personalizar os documentos, através de um editor online incorporado ao sistema, e salvar modelos, criar capas, entre outros.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="u-clearfix u-section-6" id="carousel_1c44">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-row">
-              <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-24 u-layout-cell-1">
-                <div class="u-container-layout u-container-layout-1">
-                  <h5 class="u-text u-text-default u-text-1">Segurança</h5>
-                  <h2 class="u-text u-text-default u-text-2">Gestão de EPI</h2>
-                  <p class="u-text u-text-3">Faça o controle de estoque e de entrega dos EPIs, com formulário inovador, onde o funcionário assina digitalmente.</p>
-                </div>
-              </div>
-              <div class="u-container-style u-layout-cell u-right-cell u-size-36 u-layout-cell-2">
-                <div class="u-container-layout u-container-layout-2">
-                  <div class="u-grey-15 u-opacity u-opacity-50 u-shape u-shape-rectangle u-shape-1"></div>
-                  <img class="u-image u-image-1" data-image-width="1076" data-image-height="534" src="images/Screenshot_69.png">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="u-clearfix u-grey-5 u-section-7" id="carousel_8895">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-row">
-              <div class="u-container-style u-layout-cell u-left-cell u-size-36 u-layout-cell-1">
-                <div class="u-container-layout u-container-layout-1">
-                  <div class="u-grey-15 u-opacity u-opacity-50 u-shape u-shape-rectangle u-shape-1"></div>
-                  <img class="u-image u-image-1" data-image-width="1054" data-image-height="523" src="images/Screenshot_71.png">
-                </div>
-              </div>
-              <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-24 u-layout-cell-2">
-                <div class="u-container-layout u-container-layout-2">
-                  <h5 class="u-text u-text-default u-text-1">Segurança</h5>
-                  <h2 class="u-text u-text-default u-text-2">Gestão de Treinamentos</h2>
-                  <p class="u-text u-text-3">Crie eventos, e adicione os funcionários, criando alertas, e informando o mesmo nos planos de ações das empresas.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="u-clearfix u-section-8" id="carousel_5c8f">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-row">
-              <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-24 u-layout-cell-1">
-                <div class="u-container-layout u-container-layout-1">
-                  <h5 class="u-text u-text-default u-text-1">Segurança</h5>
-                  <h2 class="u-text u-text-default u-text-2">Checklist e Inspeção</h2>
-                  <p class="u-text u-text-3">Crie checklists personalizados, conforme a necessidade, e crie inspeções personalizadas, anexando os checklists pré-definidos, uma gestão fácil e completa, integrada a documentos.</p>
-                </div>
-              </div>
-              <div class="u-container-style u-layout-cell u-right-cell u-size-36 u-layout-cell-2">
-                <div class="u-container-layout u-container-layout-2">
-                  <div class="u-grey-15 u-opacity u-opacity-50 u-shape u-shape-rectangle u-shape-1"></div>
-                  <img class="u-image u-image-1" data-image-width="1074" data-image-height="444" src="images/Screenshot_72.png">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="u-clearfix u-grey-5 u-section-9" id="carousel_989b">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-row">
-              <div class="u-container-style u-layout-cell u-left-cell u-size-36 u-layout-cell-1">
-                <div class="u-container-layout u-container-layout-1">
-                  <div class="u-grey-15 u-opacity u-opacity-50 u-shape u-shape-rectangle u-shape-1"></div>
-                  <img class="u-image u-image-1" data-image-width="1067" data-image-height="616" src="images/Screenshot_81.png">
-                </div>
-              </div>
-              <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-24 u-layout-cell-2">
-                <div class="u-container-layout u-container-layout-2">
-                  <h5 class="u-text u-text-default u-text-1">eSocial</h5>
-                  <h2 class="u-text u-text-default u-text-2">Gerar XMLs eSocial em Massa</h2>
-                  <p class="u-text u-text-3">Para facilitar as demandas específicas de empresas e contabilidades que não desejam que o profissional SST envie os eventos diretamente para o eSocial, poderá gerar os XMLs através de um formulário, ou através do cadastro do funcionário, selecionando o processamento do XML, e baixar um arquivo compactado com todos os XMLs.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="u-clearfix u-section-10" id="carousel_89ba">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-row">
-              <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-24 u-layout-cell-1">
-                <div class="u-container-layout u-container-layout-1">
-                  <h5 class="u-text u-text-default u-text-1">eSocial</h5>
-                  <h2 class="u-text u-text-default u-text-2">Gestão do PPP eletrônico</h2>
-                  <p class="u-text u-text-3">Um dos maiores desafios na nova era do SST, será a gestão do PPP, agora as mudanças no ambiente, exposição, entre outros, devem ser enviadas pelo evento S2240 em tempo real para o eSocial, e o sistema bevart está a frente, inovando, e criando ótimas soluções.</p>
-                </div>
-              </div>
-              <div class="u-container-style u-layout-cell u-right-cell u-size-36 u-layout-cell-2">
-                <div class="u-container-layout u-container-layout-2">
-                  <div class="u-grey-15 u-opacity u-opacity-50 u-shape u-shape-rectangle u-shape-1"></div>
-                  <img class="u-image u-image-1" data-image-width="1146" data-image-height="681" src="images/Screenshot_73.png">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="u-clearfix u-grey-5 u-section-11" id="carousel_85a9">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-row">
-              <div class="u-container-style u-layout-cell u-left-cell u-size-36 u-layout-cell-1">
-                <div class="u-container-layout u-container-layout-1">
-                  <div class="u-grey-15 u-opacity u-opacity-50 u-shape u-shape-rectangle u-shape-1"></div>
-                  <img class="u-image u-image-1" data-image-width="809" data-image-height="572" src="images/Screenshot_74.png">
-                </div>
-              </div>
-              <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-24 u-layout-cell-2">
-                <div class="u-container-layout u-container-layout-2">
-                  <h5 class="u-text u-text-default u-text-1">eSocial (<span style="font-weight: 700;">Função Exclusiva</span>)
-                  </h5>
-                  <h2 class="u-text u-text-default u-text-2">Formulários para envios eSocial Avulso</h2>
-                  <p class="u-text u-text-3">Uma função que pode ajudar muito, é o envio avulso de um evento eSocial, são 3 formulários(S2210,S2220,S2240), em caso de um ASO apenas no papel por exemplo, poderá preencher o formulário e enviar esse ASO, ou apenas gerar o XML, e assim também para os outros eventos.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="u-clearfix u-section-12" id="carousel_4a1f">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-row">
-              <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-24 u-layout-cell-1">
-                <div class="u-container-layout u-container-layout-1">
-                  <h5 class="u-text u-text-default u-text-1">Saúde</h5>
-                  <h2 class="u-text u-text-default u-text-2">Painel atendimento Medicina</h2>
-                  <p class="u-text u-text-3">O painel de atendimento do sistema bevart permite um atendimento completo e personalizado, vinculado ao PCMSO da empresa, cada funcionário terá seus exames atrelados, além de gerenciamento de prontuário, anamnese, anexar exames, gerar documentos com certificado digital do médico, e assinatura digital do paciente, além de envio e monitoramento em massa dos eventos eSocial S-2220 ASO.</p>
-                </div>
-              </div>
-              <div class="u-container-style u-layout-cell u-right-cell u-size-36 u-layout-cell-2">
-                <div class="u-container-layout u-container-layout-2">
-                  <div class="u-grey-15 u-opacity u-opacity-50 u-shape u-shape-rectangle u-shape-1"></div>
-                  <img class="u-image u-image-1" data-image-width="806" data-image-height="487" src="images/Screenshot_75.png">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="u-clearfix u-grey-5 u-section-13" id="carousel_462c">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-row">
-              <div class="u-container-style u-layout-cell u-left-cell u-size-36 u-layout-cell-1">
-                <div class="u-container-layout u-container-layout-1">
-                  <div class="u-grey-15 u-opacity u-opacity-50 u-shape u-shape-rectangle u-shape-1"></div>
-                  <img class="u-image u-image-1" data-image-width="860" data-image-height="718" src="images/Screenshot_76.png">
-                </div>
-              </div>
-              <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-24 u-layout-cell-2">
-                <div class="u-container-layout u-container-layout-2">
-                  <h5 class="u-text u-text-default u-text-1">Relatórios</h5>
-                  <h2 class="u-text u-text-default u-text-2">Gráficos e relatórios</h2>
-                  <p class="u-text u-text-3">Vá além da entrega dos documentos, analise os relatórios de acidentes, afastamentos, exames, atestados médicos(CID), e outros relatórios e dashboards.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="u-clearfix u-section-14" id="carousel_3ee8">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-row">
-              <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-24 u-layout-cell-1">
-                <div class="u-container-layout u-container-layout-1">
-                  <h5 class="u-text u-text-default u-text-1">Gestão</h5>
-                  <h2 class="u-text u-text-default u-text-2">Anexar documentos</h2>
-                  <p class="u-text u-text-3">O sistema bevart, disponibiliza um arquivo digital, onde poderá anexar arquivos como os PDFs dos documentos, exames, entre outros, anexando a empresa e até mesmo ao funcionário, e poderá criar um lembrete via e-mail no vencimento do documento, para a empresa e funcionário, além de ter um painel para verificar os vencimentos.</p>
-                </div>
-              </div>
-              <div class="u-container-style u-layout-cell u-right-cell u-size-36 u-layout-cell-2">
-                <div class="u-container-layout u-container-layout-2">
-                  <div class="u-grey-15 u-opacity u-opacity-50 u-shape u-shape-rectangle u-shape-1"></div>
-                  <img class="u-image u-image-1" data-image-width="1054" data-image-height="708" src="images/Screenshot_77.png">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="u-clearfix u-grey-5 u-section-15" id="carousel_e13a">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-row">
-              <div class="u-container-style u-layout-cell u-left-cell u-size-36 u-layout-cell-1">
-                <div class="u-container-layout u-container-layout-1">
-                  <div class="u-grey-15 u-opacity u-opacity-50 u-shape u-shape-rectangle u-shape-1"></div>
-                  <img class="u-image u-image-1" data-image-width="1063" data-image-height="446" src="images/Screenshot_78.png">
-                </div>
-              </div>
-              <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-24 u-layout-cell-2">
-                <div class="u-container-layout u-container-layout-2">
-                  <h5 class="u-text u-text-default u-text-1">Saúde</h5>
-                  <h2 class="u-text u-text-default u-text-2">Gestão dos exames</h2>
-                  <p class="u-text u-text-3">Acompanhe a lista de funcionários que estão com os Exames vencidos e a vencer.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="u-clearfix u-section-16" id="carousel_b0f4">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-row">
-              <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-24 u-layout-cell-1">
-                <div class="u-container-layout u-container-layout-1">
-                  <h5 class="u-text u-text-default u-text-1">Financeiro</h5>
-                  <h2 class="u-text u-text-default u-text-2">Gestão Faturamento</h2>
-                  <p class="u-text u-text-3">Faça a gestão dos pagamentos dos exames, automaticamente, totalmente integrado as configurações da empresa e atendimento, no caso onde necessário faturar no final de um período ou por atendimento.&nbsp;</p>
-                </div>
-              </div>
-              <div class="u-container-style u-layout-cell u-right-cell u-size-36 u-layout-cell-2">
-                <div class="u-container-layout u-container-layout-2">
-                  <div class="u-grey-15 u-opacity u-opacity-50 u-shape u-shape-rectangle u-shape-1"></div>
-                  <img class="u-image u-image-1" data-image-width="1068" data-image-height="587" src="images/Screenshot_79.png">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="u-clearfix u-grey-5 u-section-17" id="carousel_6ab9">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-row">
-              <div class="u-container-style u-layout-cell u-left-cell u-size-36 u-layout-cell-1">
-                <div class="u-container-layout u-container-layout-1">
-                  <div class="u-grey-15 u-opacity u-opacity-50 u-shape u-shape-rectangle u-shape-1"></div>
-                  <img class="u-image u-image-1" data-image-width="1057" data-image-height="641" src="images/Screenshot_80.png">
-                </div>
-              </div>
-              <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-24 u-layout-cell-2">
-                <div class="u-container-layout u-container-layout-2">
-                  <h5 class="u-text u-text-default u-text-1">Gestão</h5>
-                  <h2 class="u-text u-text-default u-text-2">Controle de acesso usuários</h2>
-                  <p class="u-text u-text-3">Poderá criar usuários de acesso ao sistema, com controle personalizado de acesso, além de escolher quais as funções o mesmo terá acesso, também poderá escolher quais empresas terá acesso, facilitando a gestão de terceiros a mesma empresa, no caso de RH e contabilidade.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="u-carousel u-slide u-block-b9ef-1" id="carousel_c2fa" data-interval="5000" data-u-ride="carousel">
-      <ol class="u-absolute-hcenter u-carousel-indicators u-block-b9ef-2">
-        <li data-u-target="#carousel_c2fa" data-u-slide-to="0" class="u-active u-grey-30"></li>
-      </ol>
-      <div class="u-carousel-inner" role="listbox">
-        <div class="u-active u-carousel-item u-clearfix u-section-18-1">
-          <div class="u-clearfix u-sheet u-sheet-1">
-            <h3 class="u-text u-text-default u-text-1">Depoimentos de clientes</h3>
-            <div class="u-video u-video-contain u-video-1">
-              <div class="embed-responsive embed-responsive-1">
-                <iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" class="embed-responsive-item" src="https://www.youtube.com/embed/B0e2ud8Vnlk?mute=0&amp;showinfo=0&amp;controls=0&amp;start=0" frameborder="0" allowfullscreen=""></iframe>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-text-grey-30 u-block-b9ef-3" href="#carousel_c2fa" role="button" data-u-slide="prev">
-        <span aria-hidden="true">
-          <svg class="u-svg-link" viewBox="0 0 477.175 477.175"><path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225
-                    c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"></path></svg>
-        </span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-text-grey-30 u-block-b9ef-4" href="#carousel_c2fa" role="button" data-u-slide="next">
-        <span aria-hidden="true">
-          <svg class="u-svg-link" viewBox="0 0 477.175 477.175"><path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5
-                    c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z"></path></svg>
-        </span>
-        <span class="sr-only">Próximo</span>
-      </a>
-    </section>
-    <section class="u-align-center u-clearfix u-section-19" id="sec-6776">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
-          <div class="u-gutter-0 u-layout">
-            <div class="u-layout-row">
-              <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-20 u-size-20-md u-layout-cell-1">
-                <div class="u-border-2 u-border-grey-50 u-container-layout u-container-layout-1">
-                  <h4 class="u-text u-text-1">Plano Basic</h4>
-                  <h2 class="u-text u-text-2"> R$149/Mensal</h2>
-                  <p class="u-text u-text-3"> Até 100 Vidas&nbsp;<br> Suporte Email<br>Suporte eSocial<br>100% nuvem<br>GB's Ilimitados
-                  </p>
-                </div>
-              </div>
-              <div class="u-align-center u-container-style u-layout-cell u-size-20 u-size-20-md u-layout-cell-2">
-                <div class="u-border-2 u-border-grey-50 u-container-layout u-container-layout-2">
-                  <h4 class="u-text u-text-4">Plano Single</h4>
-                  <h2 class="u-text u-text-5">R$89/Mensal</h2>
-                  <p class="u-text u-text-6">Até 30 Vidas&nbsp;<br> Suporte Email<br>Suporte eSocial<br>100% nuvem<br>GB's Ilimitados<br>
-                  </p>
-                </div>
-              </div>
-              <div class="u-align-center u-container-style u-layout-cell u-right-cell u-size-20 u-size-20-md u-layout-cell-3">
-                <div class="u-border-2 u-border-grey-50 u-container-layout u-container-layout-3">
-                  <h4 class="u-text u-text-7">Plano Start</h4>
-                  <h2 class="u-text u-text-8"> R$699/Mensal</h2>
-                  <p class="u-text u-text-9"> Vidas Ilimitadas&nbsp;<br> Suporte WhatsApp<br>Acompanhamento Individual<br>Suporte eSocial<br>100% nuvem<br>GB's Ilimitados
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="u-align-center u-clearfix u-grey-10 u-section-20" id="sec-10ca">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <h2 class="u-text u-text-default u-text-1"> Perguntas Frequentes</h2>
-        <div class="u-accordion u-expanded-width u-faq u-spacing-10 u-accordion-1">
-          <div class="u-accordion-item">
-            <a class="active u-accordion-link u-active-white u-button-style u-hover-white u-white u-accordion-link-1" id="link-accordion-f600" aria-controls="accordion-f600" aria-selected="true">
-              <span class="u-accordion-link-text"> Preciso de um plano pago?</span><span class="u-accordion-link-icon u-icon u-text-grey-50 u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 448 448" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-3ae2"></use></svg><svg class="u-svg-content" viewBox="0 0 448 448" id="svg-3ae2" style=""><path d="m272 184c-4.417969 0-8-3.582031-8-8v-176h-80v176c0 4.417969-3.582031 8-8 8h-176v80h176c4.417969 0 8 3.582031 8 8v176h80v-176c0-4.417969 3.582031-8 8-8h176v-80zm0 0"></path></svg></span>
-            </a>
-            <div class="u-accordion-active u-accordion-pane u-container-style u-white u-accordion-pane-1" id="accordion-f600" aria-labelledby="link-accordion-f600">
-              <div class="u-container-layout u-container-layout-1">
-                <div class="fr-view u-clearfix u-rich-text u-text">
-                  <p>Sim. O sistema tem a opção de teste grátis por 5 dias, após esse período será necessário escolher um plano pago. </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="u-accordion-item">
-            <a class="u-accordion-link u-active-white u-button-style u-hover-white u-white u-accordion-link-2" id="link-accordion-72f4" aria-controls="accordion-72f4" aria-selected="false">
-              <span class="u-accordion-link-text"> Existe limites?</span><span class="u-accordion-link-icon u-icon u-text-grey-50 u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 448 448" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-05a3"></use></svg><svg class="u-svg-content" viewBox="0 0 448 448" id="svg-05a3" style=""><path d="m272 184c-4.417969 0-8-3.582031-8-8v-176h-80v176c0 4.417969-3.582031 8-8 8h-176v80h176c4.417969 0 8 3.582031 8 8v176h80v-176c0-4.417969 3.582031-8 8-8h176v-80zm0 0"></path></svg></span>
-            </a>
-            <div class="u-accordion-pane u-container-style u-white u-accordion-pane-2" id="accordion-72f4" aria-labelledby="link-accordion-72f4">
-              <div class="u-container-layout u-container-layout-2">
-                <div class="fr-view u-clearfix u-rich-text u-text">
-                  <p id="isPasted">A única limitação está atrelada a quantidade de funcionários gerenciados pela sua conta, conforme o plano contratado. As vidas/funcionários devem ser somados de todas as empresas cadastradas para verificar a quantidade total.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="u-accordion-item">
-            <a class="u-accordion-link u-active-white u-button-style u-hover-white u-white u-accordion-link-3" id="link-accordion-854e" aria-controls="accordion-854e" aria-selected="false">
-              <span class="u-accordion-link-text"> Envia para o eSocial?</span><span class="u-accordion-link-icon u-icon u-text-grey-50 u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 448 448" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-4a3a"></use></svg><svg class="u-svg-content" viewBox="0 0 448 448" id="svg-4a3a" style=""><path d="m272 184c-4.417969 0-8-3.582031-8-8v-176h-80v176c0 4.417969-3.582031 8-8 8h-176v80h176c4.417969 0 8 3.582031 8 8v176h80v-176c0-4.417969 3.582031-8 8-8h176v-80zm0 0"></path></svg></span>
-            </a>
-            <div class="u-accordion-pane u-container-style u-white u-accordion-pane-3" id="accordion-854e" aria-labelledby="link-accordion-854e">
-              <div class="u-container-layout u-container-layout-3">
-                <div class="fr-view u-clearfix u-rich-text u-text">
-                  <p>SIM. Tanto envia para o eSocial, como apenas geramos o XML, como preferir.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="u-accordion-item u-accordion-item-4">
-            <a class="u-accordion-link u-active-white u-button-style u-hover-white u-white u-accordion-link-4" id="link-accordion-854e" aria-controls="accordion-854e" aria-selected="false">
-              <span class="u-accordion-link-text"> Caso precise de mais vidas?</span><span class="u-accordion-link-icon u-icon u-text-grey-50 u-icon-4"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 448 448" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-f7dd"></use></svg><svg class="u-svg-content" viewBox="0 0 448 448" id="svg-f7dd" style=""><path d="m272 184c-4.417969 0-8-3.582031-8-8v-176h-80v176c0 4.417969-3.582031 8-8 8h-176v80h176c4.417969 0 8 3.582031 8 8v176h80v-176c0-4.417969 3.582031-8 8-8h176v-80zm0 0"></path></svg></span>
-            </a>
-            <div class="u-accordion-pane u-container-style u-white u-accordion-pane-4" id="accordion-854e" aria-labelledby="link-accordion-854e">
-              <div class="u-container-layout u-container-layout-4">
-                <div class="fr-view u-clearfix u-rich-text u-text">
-                  <p>Poderá entrar em contato informando a necessiade, que enviamos as opções com mais vidas</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <style class="u-overlap-style">.u-overlap:not(.u-sticky-scroll) .u-header {
-background-color: #f2f2f2 !important
-}</style>
+    </div>
+  </section>
+  
+  <!-- Features Section Styles -->
+  <style>
+    .features-section {
+      padding: 6rem 0;
+      position: relative;
+      overflow: hidden;
+    }
     
+    .features-section:nth-child(even) {
+      background-color: var(--bg-light);
+    }
     
-    <footer class="u-clearfix u-footer u-grey-80" id="sec-ae75"><div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
-          <div class="u-gutter-0 u-layout">
-            <div class="u-layout-row">
-              <div class="u-align-center-sm u-align-center-xs u-align-left-md u-align-left-xl u-container-style u-layout-cell u-left-cell u-size-20 u-size-30-md u-layout-cell-1">
-                <div class="u-container-layout u-valign-bottom u-container-layout-1"><!--position-->
-                  <div data-position="" class="u-position u-position-1"><!--block-->
-                    <div class="u-block">
-                      <div class="u-block-container u-clearfix"><!--block_header-->
-                        <h5 class="u-block-header u-text"><!--block_header_content--> Contato<br>Email:&nbsp;<a href="mailto:contato@bevart.com.br" class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">contato@bevart.com.br</a>
-                          <br>WhatsApp:&nbsp;<a href="tel:47988702749" class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2">(47) 98870-2749</a><!--/block_header_content-->
-                        </h5><!--/block_header--><!--block_content-->
-                        <div class="u-block-content u-text"><!--block_content_content-->
-                          <br>
-                          <br><!--/block_content_content-->
-                        </div><!--/block_content-->
-                      </div>
-                    </div><!--/block-->
-                  </div><!--/position-->
-                </div>
+    .features-container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .section-heading {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    
+    .section-badge {
+      display: inline-block;
+      background-color: rgba(37, 99, 235, 0.1);
+      color: var(--primary-color);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+    
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+    }
+    
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: #4b5563;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .feature-row {
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+      margin-bottom: 8rem;
+    }
+    
+    .feature-row:last-child {
+      margin-bottom: 0;
+    }
+    
+    .feature-row:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    
+    .feature-content {
+      flex: 1;
+    }
+    
+    .feature-badge {
+      display: inline-block;
+      background-color: rgba(37, 99, 235, 0.1);
+      color: var(--primary-color);
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-weight: 500;
+      font-size: 0.8rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .feature-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+    }
+    
+    .feature-description {
+      color: #4b5563;
+      margin-bottom: 1.5rem;
+    }
+    
+    .feature-list {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .feature-list-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.75rem;
+    }
+    
+    .feature-list-icon {
+      color: var(--primary-color);
+      margin-right: 0.75rem;
+    }
+    
+    .feature-image {
+      flex: 1;
+      position: relative;
+    }
+    
+    .feature-image img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: var(--shadow-lg);
+      transition: all 0.5s ease;
+    }
+    
+    .feature-image:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+      background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+      top: 15px;
+      left: 15px;
+      z-index: -1;
+      opacity: 0.2;
+      transition: all 0.5s ease;
+    }
+    
+    .feature-image:hover img {
+      transform: translateY(-10px);
+    }
+    
+    .feature-image:hover:after {
+      top: 20px;
+      left: 20px;
+    }
+    
+    @media (max-width: 992px) {
+      .feature-row {
+        flex-direction: column-reverse !important;
+        gap: 3rem;
+        margin-bottom: 5rem;
+      }
+      
+      .feature-content {
+        text-align: center;
+      }
+      
+      .feature-list-item {
+        justify-content: center;
+      }
+    }
+  </style>
+  
+  <!-- Features Section -->
+  <section class="features-section" id="funcoes">
+    <div class="features-container">
+      <div class="section-heading">
+        <div class="section-badge">Recursos Completos</div>
+        <h2 class="section-title">Tudo o que você precisa em um só lugar</h2>
+        <p class="section-subtitle">Conheça as funcionalidades que transformarão a gestão da saúde e segurança do trabalho na sua empresa</p>
+      </div>
+      
+      <!-- Feature 1 -->
+      <div class="feature-row">
+        <div class="feature-content animate__animated animate__fadeInLeft" data-animate="fadeInLeft">
+          <div class="feature-badge">Gestão</div>
+          <h3 class="feature-title">Cadastro Inteligente das Empresas</h3>
+          <p class="feature-description">Simplifique o cadastro de empresas, setores e GHEs com todas as informações necessárias para gestão completa. Importe facilmente listas de funcionários via planilhas, economizando tempo e recursos.</p>
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <span class="feature-list-icon">✓</span>
+              <span>Cadastros rápidos e intuitivos</span>
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon">✓</span>
+              <span>Importação de funcionários via planilhas</span>
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon">✓</span>
+              <span>Organização estruturada por setores e GHEs</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="feature-image animate__animated animate__fadeInRight" data-animate="fadeInRight">
+          <img src="images/Screenshot_65.png" alt="Cadastro de Empresas">
+        </div>
+      </div>
+      
+      <!-- Feature 2 -->
+      <div class="feature-row">
+        <div class="feature-content animate__animated animate__fadeInRight" data-animate="fadeInRight">
+          <div class="feature-badge">Segurança</div>
+          <h3 class="feature-title">Inventário de Riscos Unificado</h3>
+          <p class="feature-description">Centralize todos os riscos em um único inventário com campos alinhados às exigências do eSocial e normas regulamentadoras. Elimine redundâncias e mantenha toda a documentação consistente.</p>
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <span class="feature-list-icon">✓</span>
+              <span>Conformidade com o eSocial garantida</span>
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon">✓</span>
+              <span>Dados centralizados para todos os documentos</span>
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon">✓</span>
+              <span>Atualização em tempo real</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="feature-image animate__animated animate__fadeInLeft" data-animate="fadeInLeft">
+          <img src="images/Screenshot_66.png" alt="Inventário de Riscos">
+        </div>
+      </div>
+      
+      <!-- Feature 3 -->
+      <div class="feature-row">
+        <div class="feature-content animate__animated animate__fadeInLeft" data-animate="fadeInLeft">
+          <div class="feature-badge">Segurança</div>
+          <h3 class="feature-title">PGR e Ordem de Serviço Dinâmicos</h3>
+          <p class="feature-description">Vá além dos documentos estáticos. Crie cronogramas de ações, monitore o progresso em tempo real e visualize o desempenho com dashboards interativos que facilitam a tomada de decisões.</p>
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <span class="feature-list-icon">✓</span>
+              <span>Gestão visual com gráficos e dashboards</span>
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon">✓</span>
+              <span>Alertas automatizados de prazos</span>
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon">✓</span>
+              <span>Acompanhamento em tempo real</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="feature-image animate__animated animate__fadeInRight" data-animate="fadeInRight">
+          <img src="images/Screenshot_67.png" alt="PGR e Ordem de Serviço">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- More Features Section -->
+  <section class="features-section">
+    <div class="features-container">
+      <!-- Feature 4 -->
+      <div class="feature-row">
+        <div class="feature-content animate__animated animate__fadeInRight" data-animate="fadeInRight">
+          <div class="feature-badge">Personalização</div>
+          <h3 class="feature-title">Documentos Personalizáveis</h3>
+          <p class="feature-description">Além de gerar documentos padrão como LTCAT, PGR e PCMSO com apenas um clique, você pode personalizar completamente o layout e conteúdo através do nosso editor online integrado.</p>
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <span class="feature-list-icon">✓</span>
+              <span>Editor integrado de documentos</span>
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon">✓</span>
+              <span>Salve modelos para reutilização</span>
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon">✓</span>
+              <span>Personalize capas e layouts</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="feature-image animate__animated animate__fadeInLeft" data-animate="fadeInLeft">
+          <img src="images/Screenshot_68.png" alt="Documentos Personalizáveis">
+        </div>
+      </div>
+      
+      <!-- Feature 5 -->
+      <div class="feature-row">
+        <div class="feature-content animate__animated animate__fadeInLeft" data-animate="fadeInLeft">
+          <div class="feature-badge">Segurança</div>
+          <h3 class="feature-title">Gestão Avançada de EPIs</h3>
+          <p class="feature-description">Controle o estoque e as entregas de EPIs com um sistema inovador que inclui assinatura digital dos funcionários, garantindo conformidade e rastreabilidade completa.</p>
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <span class="feature-list-icon">✓</span>
+              <span>Assinatura digital dos funcionários</span>
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon">✓</span>
+              <span>Controle de estoque integrado</span>
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon">✓</span>
+              <span>Alertas de vencimento automáticos</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="feature-image animate__animated animate__fadeInRight" data-animate="fadeInRight">
+          <img src="images/Screenshot_69.png" alt="Gestão de EPIs">
+        </div>
+      </div>
+      
+      <!-- Feature 6 -->
+      <div class="feature-row">
+        <div class="feature-content animate__animated animate__fadeInRight" data-animate="fadeInRight">
+          <div class="feature-badge">eSocial</div>
+          <h3 class="feature-title">eSocial Simplificado</h3>
+          <p class="feature-description">Gere XMLs em massa para envio ao eSocial ou envie diretamente pela plataforma. Nossa solução facilita o cumprimento das obrigações legais com rapidez e segurança.</p>
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <span class="feature-list-icon">✓</span>
+              <span>Geração de XMLs em lote</span>
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon">✓</span>
+              <span>Envio direto ao eSocial</span>
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon">✓</span>
+              <span>Validação prévia dos eventos</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="feature-image animate__animated animate__fadeInLeft" data-animate="fadeInLeft">
+          <img src="images/Screenshot_81.png" alt="eSocial Simplificado">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Additional Features Section (Highlights) -->
+  <section class="features-section">
+    <div class="features-container">
+      <div class="section-heading">
+        <div class="section-badge">Diferenciais</div>
+        <h2 class="section-title">Recursos exclusivos que você só encontra aqui</h2>
+        <p class="section-subtitle">Vantagens que fazem da Bevart a escolha ideal para profissionais de SST exigentes</p>
+      </div>
+      
+      <style>
+        .features-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 2rem;
+          margin-top: 3rem;
+        }
+        
+        .feature-card {
+          background: white;
+          border-radius: 8px;
+          padding: 2rem;
+          box-shadow: var(--shadow-md);
+          transition: all 0.3s ease;
+          position: relative;
+          overflow: hidden;
+        }
+        
+        .feature-card:hover {
+          transform: translateY(-10px);
+          box-shadow: var(--shadow-lg);
+        }
+        
+        .feature-card:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 5px;
+          height: 100%;
+          background: var(--primary-color);
+          border-radius: 5px 0 0 5px;
+        }
+        
+        .feature-icon {
+          background: rgba(37, 99, 235, 0.1);
+          width: 50px;
+          height: 50px;
+          border-radius: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 1.5rem;
+          color: var(--primary-color);
+          font-size: 1.5rem;
+        }
+        
+        .feature-card-title {
+          font-size: 1.25rem;
+          font-weight: 600;
+          margin-bottom: 1rem;
+          color: var(--text-dark);
+        }
+        
+        .feature-card-description {
+          color: #4b5563;
+          font-size: 0.95rem;
+        }
+        
+        @media (max-width: 992px) {
+          .features-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+        
+        @media (max-width: 1200px) and (min-width: 993px) {
+          .features-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+      </style>
+      
+      <div class="features-grid">
+        <!-- Feature Card 1 -->
+        <div class="feature-card animate__animated animate__fadeInUp" data-animate="fadeInUp" data-delay="0">
+          <div class="feature-icon">📋</div>
+          <h4 class="feature-card-title">PPP Eletrônico</h4>
+          <p class="feature-card-description">Gestão simplificada do PPP com envio automático de alterações ao eSocial via evento S2240, garantindo conformidade contínua.</p>
+        </div>
+        
+        <!-- Feature Card 2 -->
+        <div class="feature-card animate__animated animate__fadeInUp" data-animate="fadeInUp" data-delay="100">
+          <div class="feature-icon">🩺</div>
+          <h4 class="feature-card-title">Painel de Atendimento Médico</h4>
+          <p class="feature-card-description">Atendimento médico completo vinculado ao PCMSO, com prontuário digital, assinatura do paciente e envio de ASOs ao eSocial.</p>
+        </div>
+        
+        <!-- Feature Card 3 -->
+        <div class="feature-card animate__animated animate__fadeInUp" data-animate="fadeInUp" data-delay="200">
+          <div class="feature-icon">📊</div>
+          <h4 class="feature-card-title">Dashboards e Relatórios</h4>
+          <p class="feature-card-description">Análises detalhadas de acidentes, afastamentos, exames e atestados para tomada de decisão baseada em dados.</p>
+        </div>
+        
+        <!-- Feature Card 4 -->
+        <div class="feature-card animate__animated animate__fadeInUp" data-animate="fadeInUp" data-delay="300">
+          <div class="feature-icon">📝</div>
+          <h4 class="feature-card-title">Checklists Personalizados</h4>
+          <p class="feature-card-description">Crie checklists e inspeções personalizados, totalmente integrados à documentação e ao plano de ação.</p>
+        </div>
+        
+        <!-- Feature Card 5 -->
+        <div class="feature-card animate__animated animate__fadeInUp" data-animate="fadeInUp" data-delay="400">
+          <div class="feature-icon">📅</div>
+          <h4 class="feature-card-title">Gestão de Treinamentos</h4>
+          <p class="feature-card-description">Organize eventos de capacitação, adicione funcionários e crie alertas automáticos integrados ao plano de ação.</p>
+        </div>
+        
+        <!-- Feature Card 6 -->
+        <div class="feature-card animate__animated animate__fadeInUp" data-animate="fadeInUp" data-delay="500">
+          <div class="feature-icon">💼</div>
+          <h4 class="feature-card-title">Controle de Acesso</h4>
+          <p class="feature-card-description">Permissões personalizadas para diferentes usuários, permitindo acesso específico por empresa e funcionalidade.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Testimonials Section -->
+  <section class="features-section" id="depoimentos">
+    <div class="features-container">
+      <div class="section-heading">
+        <div class="section-badge">Feedback Real</div>
+        <h2 class="section-title">O que nossos clientes dizem</h2>
+        <p class="section-subtitle">Histórias de sucesso de quem transformou a gestão SST com nossa plataforma</p>
+      </div>
+      
+      <style>
+        .testimonials-container {
+          position: relative;
+          padding: 3rem 0;
+        }
+        
+        .testimonial-video {
+          width: 100%;
+          max-width: 800px;
+          margin: 0 auto;
+          border-radius: 12px;
+          overflow: hidden;
+          box-shadow: var(--shadow-lg);
+          position: relative;
+          z-index: 1;
+        }
+        
+        .testimonial-video:after {
+          content: '';
+          position: absolute;
+          width: 90%;
+          height: 90%;
+          background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+          border-radius: 12px;
+          top: 20px;
+          left: 5%;
+          z-index: -1;
+          opacity: 0.2;
+        }
+        
+        .testimonial-video iframe {
+          width: 100%;
+          aspect-ratio: 16/9;
+          border: none;
+          display: block;
+        }
+        
+        .testimonial-cards {
+          display: flex;
+          gap: 2rem;
+          margin-top: 4rem;
+          overflow-x: auto;
+          padding: 1rem 0.5rem;
+        }
+        
+        .testimonial-card {
+          background: white;
+          border-radius: 12px;
+          padding: 2rem;
+          box-shadow: var(--shadow-md);
+          flex: 1;
+          min-width: 300px;
+          transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+          transform: translateY(-10px);
+          box-shadow: var(--shadow-lg);
+        }
+        
+        .testimonial-stars {
+          color: #fbbf24;
+          font-size: 1.25rem;
+          margin-bottom: 1.5rem;
+        }
+        
+        .testimonial-text {
+          font-style: italic;
+          color: #4b5563;
+          margin-bottom: 1.5rem;
+          line-height: 1.7;
+        }
+        
+        .testimonial-author {
+          display: flex;
+          align-items: center;
+        }
+        
+        .testimonial-avatar {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background: #e5e7eb;
+          margin-right: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #6b7280;
+          font-weight: 600;
+        }
+        
+        .testimonial-info h5 {
+          margin: 0;
+          font-weight: 600;
+          color: var(--text-dark);
+        }
+        
+        .testimonial-info p {
+          margin: 0;
+          font-size: 0.875rem;
+          color: #6b7280;
+        }
+      </style>
+      
+      <div class="testimonials-container">
+        <div class="testimonial-video animate__animated animate__fadeIn">
+          <iframe src="https://www.youtube.com/embed/B0e2ud8Vnlk?mute=0&amp;showinfo=0&amp;controls=1&amp;start=0" frameborder="0" allowfullscreen=""></iframe>
+        </div>
+        
+        <div class="testimonial-cards">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card animate__animated animate__fadeInUp" data-animate="fadeInUp" data-delay="0">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"O sistema Bevart revolucionou nossa forma de gerenciar SST. Economizamos tempo, reduzimos custos e aumentamos nossa conformidade com as normas e eSocial."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">MR</div>
+              <div class="testimonial-info">
+                <h5>Marcos Ribeiro</h5>
+                <p>Técnico de Segurança</p>
               </div>
-              <div class="u-align-center-sm u-align-right-md u-container-style u-layout-cell u-size-20 u-size-30-md u-layout-cell-2">
-                <div class="u-container-layout u-valign-middle u-container-layout-2">
-                  <a href="Software-Bevart.html#carousel_8bf3" class="u-image u-logo u-image-1" data-image-width="1200" data-image-height="1200" title="index">
-                    <img src="images/logo_transparent.png" class="u-logo-image u-logo-image-1">
-                  </a>
-                </div>
+            </div>
+          </div>
+          
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card animate__animated animate__fadeInUp" data-animate="fadeInUp" data-delay="100">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"A integração entre os documentos e o envio automático para o eSocial são diferenciais incríveis. A plataforma é muito intuitiva e o suporte é excepcional."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">CA</div>
+              <div class="testimonial-info">
+                <h5>Camila Almeida</h5>
+                <p>Médica do Trabalho</p>
               </div>
-              <div class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-container-style u-layout-cell u-right-cell u-size-20 u-size-30-md u-layout-cell-3">
-                <div class="u-container-layout u-container-layout-3">
-                  <div class="u-social-icons u-spacing-10 u-social-icons-1">
-                    <a class="u-social-url" title="facebook" target="_blank" href="https://facebook.com/bevartsst/"><span class="u-icon u-social-facebook u-social-icon u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-00dc"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-00dc"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M73.5,31.6h-9.1c-1.4,0-3.6,0.8-3.6,3.9v8.5h12.6L72,58.3H60.8v40.8H43.9V58.3h-8V43.9h8v-9.2
-            c0-6.7,3.1-17,17-17h12.5v13.9H73.5z"></path></svg></span>
-                    </a>
-                    <a class="u-social-url" title="youtube" target="_blank" href="https://www.youtube.com/channel/UCCB0dOdHl9bacmjEpPS8HGQ"><span class="u-file-icon u-icon u-social-icon u-social-twitter u-icon-2"><img src="images/3938026.png" alt=""></span>
-                    </a>
-                    <a class="u-social-url" title="instagram" target="_blank" href="https://www.instagram.com/bevartsst/"><span class="u-file-icon u-icon u-social-icon u-social-instagram u-icon-3"><img src="images/3670125.png" alt=""></span>
-                    </a>
-                  </div>
-                </div>
+            </div>
+          </div>
+          
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card animate__animated animate__fadeInUp" data-animate="fadeInUp" data-delay="200">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"Os dashboards e relatórios nos dão visibilidade para tomar decisões melhores. Conseguimos reduzir os acidentes em 35% após implementar o sistema."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">RL</div>
+              <div class="testimonial-info">
+                <h5>Roberto Lima</h5>
+                <p>Gestor de RH</p>
               </div>
             </div>
           </div>
         </div>
-      </div></footer><span style="height: 64px; width: 64px; margin-left: 0px; margin-right: auto; margin-top: 0px; background-image: none; right: 20px; bottom: 20px; padding: 15px;" class="u-back-to-top u-icon u-icon-circle u-opacity u-opacity-85 u-palette-1-base" data-href="#">
-        <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 551.13 551.13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1d98"></use></svg>
-        <svg class="u-svg-content" enable-background="new 0 0 551.13 551.13" viewBox="0 0 551.13 551.13" xmlns="http://www.w3.org/2000/svg" id="svg-1d98"><path d="m275.565 189.451 223.897 223.897h51.668l-275.565-275.565-275.565 275.565h51.668z"></path></svg>
-    </span>
+      </div>
+    </div>
+  </section>
   
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <a href="https://wa.me/5547989235660?text=Ol%C3%A1%20Bevart" style="position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow: 1px 1px 2px #888;
-  z-index:1000;" target="_blank">
-<i style="margin-top:16px" class="fa fa-whatsapp"></i>
-</a>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-          // Seleciona todos os elementos com a classe 'login_gestaoink'
-          var botoes = document.querySelectorAll('.login_bevart');
+  <!-- Pricing Section -->
+  <section class="features-section" id="precos">
+    <div class="features-container">
+      <div class="section-heading">
+        <div class="section-badge">Planos Flexíveis</div>
+        <h2 class="section-title">Escolha o plano ideal para o seu negócio</h2>
+        <p class="section-subtitle">Opções que se adaptam às necessidades da sua empresa, sem custos de implantação</p>
+      </div>
+      
+      <style>
+        .pricing-toggle {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 3rem;
+        }
+        
+        .pricing-toggle-label {
+          font-weight: 500;
+          cursor: pointer;
+        }
+        
+        .pricing-toggle-label.active {
+          color: var(--primary-color);
+          font-weight: 600;
+        }
+        
+        .pricing-toggle-switch {
+          position: relative;
+          width: 60px;
+          height: 30px;
+          background: #e5e7eb;
+          border-radius: 15px;
+          margin: 0 1rem;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+        
+        .pricing-toggle-switch:before {
+          content: '';
+          position: absolute;
+          width: 26px;
+          height: 26px;
+          background: white;
+          border-radius: 50%;
+          top: 2px;
+          left: 2px;
+          transition: all 0.3s ease;
+          box-shadow: var(--shadow-sm);
+        }
+        
+        .pricing-toggle-switch.yearly:before {
+          left: 32px;
+        }
+        
+        .pricing-toggle-switch.yearly {
+          background: var(--primary-color);
+        }
+        
+        .pricing-cards {
+          display: flex;
+          gap: 2rem;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+        
+        .pricing-card {
+          background: white;
+          border-radius: 12px;
+          box-shadow: var(--shadow-md);
+          overflow: hidden;
+          width: 100%;
+          max-width: 350px;
+          transition: all 0.3s ease;
+          position: relative;
+        }
+        
+        .pricing-card:hover {
+          transform: translateY(-10px);
+          box-shadow: var(--shadow-lg);
+        }
+        
+        .pricing-card.popular:before {
+          content: 'Mais Popular';
+          position: absolute;
+          top: 12px;
+          right: -30px;
+          background: var(--primary-color);
+          color: white;
+          padding: 0.25rem 2.5rem;
+          font-size: 0.8rem;
+          font-weight: 500;
+          transform: rotate(45deg);
+          z-index: 1;
+        }
+        
+        .pricing-header {
+          padding: 2rem;
+          background: #f9fafb;
+          text-align: center;
+          border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .pricing-title {
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: var(--text-dark);
+          margin-bottom: 0.5rem;
+        }
+        
+        .pricing-subtitle {
+          color: #6b7280;
+          font-size: 0.9rem;
+          margin-bottom: 1.5rem;
+        }
+        
+        .pricing-price {
+          font-size: 3rem;
+          font-weight: 800;
+          color: var(--primary-color);
+          line-height: 1;
+          margin-bottom: 0.5rem;
+        }
+        
+        .pricing-price span {
+          font-size: 1rem;
+          font-weight: 500;
+          color: #6b7280;
+        }
+        
+        .pricing-period {
+          color: #6b7280;
+          font-size: 0.9rem;
+        }
+        
+        .pricing-body {
+          padding: 2rem;
+        }
+        
+        .pricing-features {
+          list-style: none;
+          padding: 0;
+          margin: 0 0 2rem 0;
+        }
+        
+        .pricing-feature {
+          display: flex;
+          align-items: center;
+          margin-bottom: 1rem;
+          color: #4b5563;
+        }
+        
+        .pricing-feature-icon {
+          color: var(--primary-color);
+          margin-right: 0.75rem;
+        }
+        
+        .pricing-cta {
+          display: block;
+          text-align: center;
+          padding: 0.75rem 1.5rem;
+          background: var(--primary-color);
+          color: white;
+          border-radius: 6px;
+          font-weight: 600;
+          text-decoration: none;
+          transition: all 0.3s ease;
+          width: 100%;
+        }
+        
+        .pricing-card.secondary .pricing-cta {
+          background: transparent;
+          color: var(--primary-color);
+          border: 1px solid var(--primary-color);
+        }
+        
+        .pricing-card.secondary .pricing-cta:hover {
+          background: rgba(37, 99, 235, 0.1);
+        }
+        
+        .pricing-cta:hover {
+          background: var(--primary-dark);
+          transform: translateY(-2px);
+        }
+        
+        .pricing-note {
+          text-align: center;
+          margin-top: 2rem;
+          color: #6b7280;
+          font-size: 0.9rem;
+        }
+        
+        @media (max-width: 992px) {
+          .pricing-cards {
+            flex-direction: column;
+            align-items: center;
+          }
+        }
+      </style>
+      
+      <div class="pricing-toggle">
+        <span class="pricing-toggle-label active">Mensal</span>
+        <div class="pricing-toggle-switch"></div>
+        <span class="pricing-toggle-label">Anual <span style="color: var(--primary-color); font-weight: 500;">(-20%)</span></span>
+      </div>
+      
+      <div class="pricing-cards">
+        <!-- Single Plan -->
+        <div class="pricing-card secondary animate__animated animate__fadeInUp" data-animate="fadeInUp" data-delay="0">
+          <div class="pricing-header">
+            <h3 class="pricing-title">Single</h3>
+            <p class="pricing-subtitle">Para profissionais independentes</p>
+            <div class="pricing-price" data-monthly="89" data-yearly="71">R$89 <span>/mês</span></div>
+            <div class="pricing-period">Faturado mensalmente</div>
+          </div>
+          <div class="pricing-body">
+            <ul class="pricing-features">
+              <li class="pricing-feature">
+                <span class="pricing-feature-icon">✓</span>
+                <span>Até 30 Vidas</span>
+              </li>
+              <li class="pricing-feature">
+                <span class="pricing-feature-icon">✓</span>
+                <span>Suporte por Email</span>
+              </li>
+              <li class="pricing-feature">
+                <span class="pricing-feature-icon">✓</span>
+                <span>Suporte para eSocial</span>
+              </li>
+              <li class="pricing-feature">
+                <span class="pricing-feature-icon">✓</span>
+                <span>100% na nuvem</span>
+              </li>
+              <li class="pricing-feature">
+                <span class="pricing-feature-icon">✓</span>
+                <span>Armazenamento ilimitado</span>
+              </li>
+            </ul>
+            <a href="https://profissionais.bevart.com.br/app/src/login/views/login" class="pricing-cta login_bevart">Começar agora</a>
+          </div>
+        </div>
+        
+        <!-- Basic Plan -->
+        <div class="pricing-card popular animate__animated animate__fadeInUp" data-animate="fadeInUp" data-delay="100">
+          <div class="pricing-header">
+            <h3 class="pricing-title">Basic</h3>
+            <p class="pricing-subtitle">Para empresas em crescimento</p>
+            <div class="pricing-price" data-monthly="149" data-yearly="119">R$149 <span>/mês</span></div>
+            <div class="pricing-period">Faturado mensalmente</div>
+          </div>
+          <div class="pricing-body">
+            <ul class="pricing-features">
+              <li class="pricing-feature">
+                <span class="pricing-feature-icon">✓</span>
+                <span>Até 100 Vidas</span>
+              </li>
+              <li class="pricing-feature">
+                <span class="pricing-feature-icon">✓</span>
+                <span>Suporte por Email</span>
+              </li>
+              <li class="pricing-feature">
+                <span class="pricing-feature-icon">✓</span>
+                <span>Suporte para eSocial</span>
+              </li>
+              <li class="pricing-feature">
+                <span class="pricing-feature-icon">✓</span>
+                <span>100% na nuvem</span>
+              </li>
+              <li class="pricing-feature">
+                <span class="pricing-feature-icon">✓</span>
+                <span>Armazenamento ilimitado</span>
+              </li>
+              <li class="pricing-feature">
+                <span class="pricing-feature-icon">✓</span>
+                <span>Relatórios avançados</span>
+              </li>
+            </ul>
+            <a href="https://profissionais.bevart.com.br/app/src/login/views/login" class="pricing-cta login_bevart">Começar agora</a>
+          </div>
+        </div>
+        
+        <!-- Start Plan -->
+        <div class="pricing-card secondary animate__animated animate__fadeInUp" data-animate="fadeInUp" data-delay="200">
+          <div class="pricing-header">
+            <h3 class="pricing-title">Start</h3>
+            <p class="pricing-subtitle">Para grandes operações</p>
+            <div class="pricing-price" data-monthly="699" data-yearly="559">R$699 <span>/mês</span></div>
+            <div class="pricing-period">Faturado mensalmente</div>
+          </div>
+          <div class="pricing-body">
+            <ul class="pricing-features">
+              <li class="pricing-feature">
+                <span class="pricing-feature-icon">✓</span>
+                <span>Vidas ilimitadas</span>
+              </li>
+              <li class="pricing-feature">
+                <span class="pricing-feature-icon">✓</span>
+                <span>Suporte via WhatsApp</span>
+              </li>
+              <li class="pricing-feature">
+                <span class="pricing-feature-icon">✓</span>
+                <span>Acompanhamento individual</span>
+              </li>
+              <li class="pricing-feature">
+                <span class="pricing-feature-icon">✓</span>
+                <span>Suporte prioritário eSocial</span>
+              </li>
+              <li class="pricing-feature">
+                <span class="pricing-feature-icon">✓</span>
+                <span>100% na nuvem</span>
+              </li>
+              <li class="pricing-feature">
+                <span class="pricing-feature-icon">✓</span>
+                <span>Armazenamento ilimitado</span>
+              </li>
+              <li class="pricing-feature">
+                <span class="pricing-feature-icon">✓</span>
+                <span>API de integração</span>
+              </li>
+            </ul>
+            <a href="https://profissionais.bevart.com.br/app/src/login/views/login" class="pricing-cta login_bevart">Começar agora</a>
+          </div>
+        </div>
+      </div>
+      
+      <p class="pricing-note">Precisa de mais vidas? Entre em contato para um plano personalizado. Sem taxa de implantação em todos os planos.</p>
+    </div>
+  </section>
   
-          // Captura a URL da página atual e seus parâmetros
-          var parametros = window.location.search;
+  <!-- FAQ Section -->
+  <section class="features-section">
+    <div class="features-container">
+      <div class="section-heading">
+        <div class="section-badge">Dúvidas</div>
+        <h2 class="section-title">Perguntas Frequentes</h2>
+        <p class="section-subtitle">Respostas para as dúvidas mais comuns sobre nossa plataforma</p>
+      </div>
+      
+      <style>
+        .faq-container {
+          max-width: 800px;
+          margin: 3rem auto 0;
+        }
+        
+        .faq-item {
+          background: white;
+          border-radius: 8px;
+          margin-bottom: 1rem;
+          box-shadow: var(--shadow-sm);
+          overflow: hidden;
+          transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+          box-shadow: var(--shadow-md);
+        }
+        
+        .faq-question {
+          padding: 1.5rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          cursor: pointer;
+          font-weight: 600;
+          color: var(--text-dark);
+          transition: all 0.3s ease;
+        }
+        
+        .faq-question:hover {
+          color: var(--primary-color);
+        }
+        
+        .faq-arrow {
+          width: 24px;
+          height: 24px;
+          transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-arrow {
+          transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+          padding: 0 1.5rem;
+          max-height: 0;
+          overflow: hidden;
+          transition: all 0.3s ease;
+          color: #4b5563;
+        }
+        
+        .faq-item.active .faq-answer {
+          padding: 0 1.5rem 1.5rem;
+          max-height: 1000px;
+        }
+        
+        .faq-item.active {
+          box-shadow: var(--shadow-md);
+        }
+      </style>
+      
+      <div class="faq-container">
+        <!-- FAQ Item 1 -->
+        <div class="faq-item active animate__animated animate__fadeInUp" data-animate="fadeInUp" data-delay="0">
+          <div class="faq-question">
+            <span>Preciso de um plano pago?</span>
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </div>
+          <div class="faq-answer">
+            <p>Sim. O sistema oferece um teste grátis por 5 dias, após esse período será necessário escolher um dos planos pagos disponíveis para continuar utilizando todas as funcionalidades.</p>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 2 -->
+        <div class="faq-item animate__animated animate__fadeInUp" data-animate="fadeInUp" data-delay="100">
+          <div class="faq-question">
+            <span>Existem limites no sistema?</span>
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </div>
+          <div class="faq-answer">
+            <p>A única limitação está atrelada à quantidade de funcionários gerenciados pela sua conta, conforme o plano contratado. As vidas/funcionários devem ser somados de todas as empresas cadastradas para verificar a quantidade total. O armazenamento é ilimitado em todos os planos.</p>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 3 -->
+        <div class="faq-item animate__animated animate__fadeInUp" data-animate="fadeInUp" data-delay="200">
+          <div class="faq-question">
+            <span>O sistema envia dados para o eSocial?</span>
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </div>
+          <div class="faq-answer">
+            <p>Sim! Nossa plataforma oferece flexibilidade total: você pode enviar os eventos diretamente ao eSocial ou apenas gerar os arquivos XML para envio por outros sistemas, conforme sua preferência ou necessidade.</p>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 4 -->
+        <div class="faq-item animate__animated animate__fadeInUp" data-animate="fadeInUp" data-delay="300">
+          <div class="faq-question">
+            <span>E se eu precisar de mais vidas do que o plano oferece?</span>
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </div>
+          <div class="faq-answer">
+            <p>Entre em contato conosco informando sua necessidade específica, e teremos prazer em oferecer opções personalizadas com mais vidas, adequadas às dimensões da sua operação.</p>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 5 -->
+        <div class="faq-item animate__animated animate__fadeInUp" data-animate="fadeInUp" data-delay="400">
+          <div class="faq-question">
+            <span>É possível migrar dados de outro sistema?</span>
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </div>
+          <div class="faq-answer">
+            <p>Sim, oferecemos serviço de migração de dados. Nossa equipe pode auxiliar na transferência de informações do seu sistema atual para a plataforma Bevart, garantindo uma transição suave e sem perda de histórico.</p>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 6 -->
+        <div class="faq-item animate__animated animate__fadeInUp" data-animate="fadeInUp" data-delay="500">
+          <div class="faq-question">
+            <span>Preciso instalar algo no meu computador?</span>
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </div>
+          <div class="faq-answer">
+            <p>Não. Nossa solução é 100% online, baseada em nuvem. Você pode acessar de qualquer dispositivo com conexão à internet, utilizando apenas um navegador web, sem necessidade de instalações ou atualizações manuais.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   
-          // Itera sobre cada botão para modificar o href
-          botoes.forEach(function(botao) {
-              // Verifica se o href do botão está definido
-              if (botao.href) {
-                  // Verifica se já existem parâmetros no link do botão
-                  var linkAtual = botao.href;
-                  if (linkAtual.indexOf('?') === -1) {
-                      // Se não houver parâmetros, adiciona os da página
-                      botao.href = linkAtual + parametros;
-                  } else {
-                      // Se já houver parâmetros, concatena com os existentes
-                      botao.href = linkAtual + '&' + parametros.substring(1);
-                  }
-              }
-          });
+  <!-- CTA Section -->
+  <section class="features-section">
+    <style>
+      .cta-section {
+        background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+        border-radius: 12px;
+        padding: 4rem;
+        text-align: center;
+        color: white;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .cta-section:before {
+        content: '';
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        top: -150px;
+        right: -150px;
+      }
+      
+      .cta-section:after {
+        content: '';
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        bottom: -100px;
+        left: -100px;
+      }
+      
+      .cta-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+      }
+      
+      .cta-subtitle {
+        font-size: 1.1rem;
+        max-width: 700px;
+        margin: 0 auto 2rem;
+        opacity: 0.9;
+      }
+      
+      .cta-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+      }
+      
+      .cta-button {
+        padding: 1rem 2rem;
+        border-radius: 6px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+      
+      .cta-button.white {
+        background: white;
+        color: var(--primary-color);
+      }
+      
+      .cta-button.white:hover {
+        background: rgba(255, 255, 255, 0.9);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+      }
+      
+      .cta-button.outline {
+        background: transparent;
+        color: white;
+        border: 1px solid white;
+      }
+      
+      .cta-button.outline:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateY(-2px);
+      }
+      
+      @media (max-width: 768px) {
+        .cta-section {
+          padding: 3rem 1.5rem;
+        }
+        
+        .cta-buttons {
+          flex-direction: column;
+        }
+      }
+    </style>
+    
+    <div class="features-container">
+      <div class="cta-section animate__animated animate__fadeIn">
+        <h2 class="cta-title">Pronto para simplificar sua gestão de SST?</h2>
+        <p class="cta-subtitle">Junte-se a centenas de empresas que já transformaram seus processos de Saúde e Segurança do Trabalho com o Bevart.</p>
+        <div class="cta-buttons">
+          <a href="https://profissionais.bevart.com.br/app/src/login/views/login" class="cta-button white login_bevart">Começar teste gratuito</a>
+          <a href="https://wa.me/5547989235660?text=Ol%C3%A1%20Bevart" class="cta-button outline">Falar com um especialista</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="modern-footer">
+    <style>
+      .modern-footer {
+        background-color: #1f2937;
+        color: #e5e7eb;
+        padding: 5rem 0 2rem;
+      }
+      
+      .footer-container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      
+      .footer-top {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3rem;
+        padding-bottom: 3rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        margin-bottom: 2rem;
+      }
+      
+      .footer-logo {
+        display: block;
+        margin-bottom: 1.5rem;
+      }
+      
+      .footer-logo img {
+        height: 50px;
+      }
+      
+      .footer-about {
+        font-size: 0.9rem;
+        opacity: 0.8;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+      }
+      
+      .footer-social {
+        display: flex;
+        gap: 1rem;
+      }
+      
+      .footer-social-link {
+        width: 36px;
+        height: 36px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+      }
+      
+      .footer-social-link:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-3px);
+      }
+      
+      .footer-social-link img {
+        width: 18px;
+        height: 18px;
+      }
+      
+      .footer-heading {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        color: white;
+      }
+      
+      .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .footer-link {
+        margin-bottom: 0.75rem;
+      }
+      
+      .footer-link a {
+        color: #e5e7eb;
+        text-decoration: none;
+        font-size: 0.9rem;
+        opacity: 0.8;
+        transition: all 0.3s ease;
+      }
+      
+      .footer-link a:hover {
+        opacity: 1;
+        color: white;
+      }
+      
+      .footer-contact-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        font-size: 0.9rem;
+      }
+      
+      .footer-contact-icon {
+        width: 36px;
+        height: 36px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0.75rem;
+      }
+      
+      .footer-contact-icon svg {
+        width: 18px;
+        height: 18px;
+        color: white;
+      }
+      
+      .footer-contact-text {
+        opacity: 0.8;
+      }
+      
+      .footer-contact-text a {
+        color: #e5e7eb;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+      
+      .footer-contact-text a:hover {
+        opacity: 1;
+        color: white;
+      }
+      
+      .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.85rem;
+        opacity: 0.6;
+      }
+      
+      .footer-copyright a {
+        color: #e5e7eb;
+        text-decoration: none;
+      }
+      
+      .footer-copyright a:hover {
+        text-decoration: underline;
+      }
+      
+      @media (max-width: 992px) {
+        .footer-top {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      
+      @media (max-width: 576px) {
+        .footer-top {
+          grid-template-columns: 1fr;
+        }
+        
+        .footer-bottom {
+          flex-direction: column;
+          gap: 1rem;
+          text-align: center;
+        }
+      }
+    </style>
+    
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-column">
+          <a href="#" class="footer-logo">
+            <img src="images/logo_transparent.png" alt="Bevart Logo">
+          </a>
+          <p class="footer-about">Plataforma completa para gestão da Saúde e Segurança do Trabalho, com foco em simplificar processos e garantir conformidade com o eSocial.</p>
+          <div class="footer-social">
+            <a href="https://facebook.com/bevartsst/" class="footer-social-link" target="_blank">
+              <img src="images/3938026.png" alt="Facebook">
+            </a>
+            <a href="https://www.youtube.com/channel/UCCB0dOdHl9bacmjEpPS8HGQ" class="footer-social-link" target="_blank">
+              <img src="images/3938026.png" alt="YouTube">
+            </a>
+            <a href="https://www.instagram.com/bevartsst/" class="footer-social-link" target="_blank">
+              <img src="images/3670125.png" alt="Instagram">
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <h4 class="footer-heading">Recursos</h4>
+          <ul class="footer-links">
+            <li class="footer-link"><a href="#funcoes">Inventário de Riscos</a></li>
+            <li class="footer-link"><a href="#funcoes">PGR e PCMSO</a></li>
+            <li class="footer-link"><a href="#funcoes">Gestão de EPIs</a></li>
+            <li class="footer-link"><a href="#funcoes">eSocial Simplificado</a></li>
+            <li class="footer-link"><a href="#funcoes">Gestão de Treinamentos</a></li>
+            <li class="footer-link"><a href="#funcoes">Documentos Personalizados</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4 class="footer-heading">Empresa</h4>
+          <ul class="footer-links">
+            <li class="footer-link"><a href="https://blog.bevart.com.br">Blog</a></li>
+            <li class="footer-link"><a href="#precos">Preços</a></li>
+            <li class="footer-link"><a href="#depoimentos">Depoimentos</a></li>
+            <li class="footer-link"><a href="https://profissionais.bevart.com.br/app/src/login/views/login" class="login_bevart">Login</a></li>
+            <li class="footer-link"><a href="https://profissionais.bevart.com.br/app/src/login/views/login" class="login_bevart">Criar Conta</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4 class="footer-heading">Contato</h4>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div class="footer-contact-text">
+              <a href="mailto:contato@bevart.com.br">contato@bevart.com.br</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+            </div>
+            <div class="footer-contact-text">
+              <a href="tel:47988702749">(47) 98870-2749</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <div class="footer-contact-text">
+              Brasil
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          &copy; 2025 Bevart. Todos os direitos reservados.
+        </div>
+        <div class="footer-legal">
+          <a href="#">Termos de Uso</a> · <a href="#">Política de Privacidade</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- WhatsApp Float Button -->
+  <a href="https://wa.me/5547989235660?text=Ol%C3%A1%20Bevart" class="whatsapp-float" target="_blank">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+    </svg>
+  </a>
+  
+  <style>
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 40px;
+      right: 40px;
+      background-color: #25d366;
+      color: #FFF;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: var(--shadow-lg);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+    
+    .whatsapp-float:hover {
+      background-color: #1da851;
+      transform: scale(1.1);
+    }
+    
+    .whatsapp-float svg {
+      width: 30px;
+      height: 30px;
+    }
+    
+    .back-to-top {
+      position: fixed;
+      bottom: 40px;
+      left: 40px;
+      width: 45px;
+      height: 45px;
+      background-color: var(--primary-color);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: var(--shadow-md);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s ease;
+      z-index: 100;
+    }
+    
+    .back-to-top.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .back-to-top:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-5px);
+    }
+  </style>
+  
+  <!-- Back to Top Button -->
+  <div class="back-to-top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </div>
+  
+  <!-- Scripts -->
+  <script>
+    // URL Parameter Handling for Login Buttons
+    document.addEventListener('DOMContentLoaded', function() {
+      // Seleciona todos os elementos com a classe 'login_bevart'
+      var botoes = document.querySelectorAll('.login_bevart');
+      
+      // Captura a URL da página atual e seus parâmetros
+      var parametros = window.location.search;
+      
+      // Itera sobre cada botão para modificar o href
+      botoes.forEach(function(botao) {
+        // Verifica se o href do botão está definido
+        if (botao.href) {
+          // Verifica se já existem parâmetros no link do botão
+          var linkAtual = botao.href;
+          if (linkAtual.indexOf('?') === -1) {
+            // Se não houver parâmetros, adiciona os da página
+            botao.href = linkAtual + parametros;
+          } else {
+            // Se já houver parâmetros, concatena com os existentes
+            botao.href = linkAtual + '&' + parametros.substring(1);
+          }
+        }
       });
+      
+      // Header Scroll Effect
+      const header = document.querySelector('.modern-header');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+      
+      // FAQ Accordion
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+          const isActive = item.classList.contains('active');
+          
+          // Close all other items
+          faqItems.forEach(otherItem => {
+            if (otherItem !== item) {
+              otherItem.classList.remove('active');
+            }
+          });
+          
+          // Toggle current item
+          if (isActive) {
+            item.classList.remove('active');
+          } else {
+            item.classList.add('active');
+          }
+        });
+      });
+      
+      // Pricing Toggle
+      const pricingToggle = document.querySelector('.pricing-toggle-switch');
+      const monthlyLabel = document.querySelector('.pricing-toggle-label:first-child');
+      const yearlyLabel = document.querySelector('.pricing-toggle-label:last-child');
+      const prices = document.querySelectorAll('.pricing-price');
+      const periods = document.querySelectorAll('.pricing-period');
+      
+      if (pricingToggle) {
+        pricingToggle.addEventListener('click', function() {
+          this.classList.toggle('yearly');
+          monthlyLabel.classList.toggle('active');
+          yearlyLabel.classList.toggle('active');
+          
+          const isYearly = this.classList.contains('yearly');
+          
+          prices.forEach(price => {
+            const monthly = price.getAttribute('data-monthly');
+            const yearly = price.getAttribute('data-yearly');
+            
+            if (isYearly) {
+              price.innerHTML = `R$${yearly} <span>/mês</span>`;
+              price.nextElementSibling.textContent = 'Faturado anualmente';
+            } else {
+              price.innerHTML = `R$${monthly} <span>/mês</span>`;
+              price.nextElementSibling.textContent = 'Faturado mensalmente';
+            }
+          });
+        });
+      }
+      
+      // Mobile Menu Toggle
+      const menuToggle = document.querySelector('.toggle-menu');
+      const navLinks = document.querySelector('.nav-links');
+      const ctaButtons = document.querySelector('.cta-buttons');
+      
+      if (menuToggle) {
+        menuToggle.addEventListener('click', function() {
+          navLinks.classList.toggle('active');
+          ctaButtons.classList.toggle('active');
+        });
+      }
+      
+      // Smooth Scroll for Anchor Links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+      
+      // Back to Top Button
+      const backToTopButton = document.querySelector('.back-to-top');
+      
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 500) {
+          backToTopButton.classList.add('visible');
+        } else {
+          backToTopButton.classList.remove('visible');
+        }
+      });
+      
+      backToTopButton.addEventListener('click', function() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+      
+      // Scroll Animation
+      const animateOnScroll = function() {
+        const elements = document.querySelectorAll('[data-animate]');
+        
+        elements.forEach(element => {
+          const elementPosition = element.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+          const delay = element.getAttribute('data-delay') || 0;
+          
+          if (elementPosition < windowHeight * 0.85) {
+            setTimeout(() => {
+              element.classList.add('animate__animated', `animate__${element.getAttribute('data-animate')}`);
+              element.style.opacity = '1';
+              element.style.visibility = 'visible';
+            }, delay);
+          }
+        });
+      };
+      
+      // Initialize elements as invisible
+      document.querySelectorAll('[data-animate]').forEach(element => {
+        element.style.opacity = '0';
+        element.style.visibility = 'hidden';
+      });
+      
+      // Run on load and scroll
+      window.addEventListener('load', animateOnScroll);
+      window.addEventListener('scroll', animateOnScroll);
+    });
   </script>
-
 </body></html>
