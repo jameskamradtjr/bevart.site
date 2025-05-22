@@ -2166,23 +2166,47 @@ Saúde e Segurança Do Trabalho">
       // Seleciona todos os elementos com a classe 'login_bevart'
           var botoes = document.querySelectorAll('.login_bevart');
   
-          // Captura a URL da página atual e seus parâmetros
-          var parametros = window.location.search;
-  
-          // Itera sobre cada botão para modificar o href
-          botoes.forEach(function(botao) {
-              // Verifica se o href do botão está definido
-              if (botao.href) {
-                  // Verifica se já existem parâmetros no link do botão
-                  var linkAtual = botao.href;
-                  if (linkAtual.indexOf('?') === -1) {
-                      // Se não houver parâmetros, adiciona os da página
-                      botao.href = linkAtual + parametros;
+          // Função para atualizar os links com os parâmetros UTM atuais
+          function atualizarLinksComUTM(elemento) {
+              // Captura a URL da página atual e seus parâmetros
+              var parametros = window.location.search;
+              
+              // Verifica se o href do elemento está definido
+              if (elemento.href) {
+                  // Extrai a parte base do URL (sem parâmetros)
+                  var urlBase = elemento.href.split('?')[0];
+                  
+                  // Verifica se há parâmetros na URL atual
+                  if (parametros) {
+                      // Adiciona os parâmetros da página ao URL base
+                      return urlBase + parametros;
                   } else {
-                      // Se já houver parâmetros, concatena com os existentes
-                      botao.href = linkAtual + '&' + parametros.substring(1);
+                      return urlBase;
                   }
               }
+              return elemento.href;
+          }
+          
+          // Atualiza todos os links no carregamento da página
+          botoes.forEach(function(botao) {
+              botao.href = atualizarLinksComUTM(botao);
+              
+              // Adiciona listener de clique para atualizar novamente no momento do clique
+              botao.addEventListener('click', function(e) {
+                  // Previne navegação imediata
+                  e.preventDefault();
+                  
+                  // Atualiza o href com os parâmetros UTM mais recentes
+                  var novoHref = atualizarLinksComUTM(this);
+                  
+                  // Chama a função de conversão do Google (se existir)
+                  if (typeof gtag_report_conversion === 'function') {
+                      gtag_report_conversion(novoHref);
+                  } else {
+                      // Se não houver função de conversão, navega diretamente
+                      window.location.href = novoHref;
+                  }
+              });
           });
       
       // Header Scroll Effect
