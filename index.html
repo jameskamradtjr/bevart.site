@@ -402,6 +402,43 @@ Saúde e Segurança Do Trabalho">
   gtag('config', 'AW-16829553704');
 </script>
 
+
+
+<!-- Tag de conversão do Google -->
+<script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-16829553704/FNhlCOvg7JUaEKi4-tg-',
+        'transaction_id': '',
+        'event_callback': callback
+    });
+    return false;
+  }
+  
+  // Adiciona o listener após o carregamento da página
+  document.addEventListener('DOMContentLoaded', function () {
+    const btn = document.querySelector('.login_bevart');
+    if (btn) {
+      btn.addEventListener('click', function (e) {
+        // Se o botão tiver um link (ex: <a>), previne a navegação imediata
+        e.preventDefault();
+  
+        // Pega o link (caso seja um botão com redirecionamento)
+        const url = btn.getAttribute('href') || btn.dataset.url || undefined;
+  
+        // Chama a função de conversão
+        gtag_report_conversion(url);
+      });
+    }
+  });
+  </script>
+  
+
  </head>
   <body class="u-body u-xl-mode" data-lang="pt">
   
