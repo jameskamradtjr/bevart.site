@@ -456,6 +456,7 @@ Saúde e Segurança Do Trabalho">
       <div class="mobile-menu-container" id="mobile-menu">
         <div class="nav-links" id="mobile-nav">
           <a href="#funcoes" class="nav-link">Funções</a>
+          <a href="#trilha" class="nav-link">Trilha Visual</a>
           <a href="#precos" class="nav-link">Preços</a>
           <a href="#depoimentos" class="nav-link">Depoimentos</a>
           <a href="https://blog.bevart.com.br" class="nav-link" target="_blank">Blog</a>
@@ -607,6 +608,425 @@ Saúde e Segurança Do Trabalho">
       </div>
     </section>
   
+  <!-- Trail Section -->
+  <section class="trail-section" id="trilha">
+    <div class="trail-wrapper">
+      <div class="section-heading">
+        <div class="section-badge">Jornada Visual</div>
+        <h2 class="section-title">Visualize o Fluxo Completo do Sistema</h2>
+        <p class="section-subtitle">Explore como cada módulo funciona do início ao fim</p>
+      </div>
+      
+      <div class="trail-selector">
+        <button class="trail-btn selected" data-trail="pgr">
+          <span class="trail-icon">📋</span>
+          <span>PGR</span>
+        </button>
+        <button class="trail-btn" data-trail="ltcat">
+          <span class="trail-icon">📊</span>
+          <span>LTCAT</span>
+        </button>
+        <button class="trail-btn" data-trail="pcmso">
+          <span class="trail-icon">⚕️</span>
+          <span>PCMSO</span>
+        </button>
+        <button class="trail-btn" data-trail="esocial">
+          <span class="trail-icon">💼</span>
+          <span>eSocial</span>
+        </button>
+        <button class="trail-btn" data-trail="periculosidade">
+          <span class="trail-icon">⚡</span>
+          <span>Periculosidade</span>
+        </button>
+        <button class="trail-btn" data-trail="insalubridade">
+          <span class="trail-icon">☢️</span>
+          <span>Insalubridade</span>
+        </button>
+        <button class="trail-btn" data-trail="aet">
+          <span class="trail-icon">📐</span>
+          <span>AET</span>
+        </button>
+        <button class="trail-btn" data-trail="psicossocial">
+          <span class="trail-icon">🧠</span>
+          <span>Psicossocial</span>
+        </button>
+        <button class="trail-btn" data-trail="treinamentos">
+          <span class="trail-icon">🎓</span>
+          <span>Treinamentos</span>
+        </button>
+        <button class="trail-btn" data-trail="controle-epi">
+          <span class="trail-icon">🦺</span>
+          <span>Controle EPI</span>
+        </button>
+        <button class="trail-btn" data-trail="atendimento-medico">
+          <span class="trail-icon">🏥</span>
+          <span>Atendimento Médico</span>
+        </button>
+        <button class="trail-btn" data-trail="permissao-trabalho">
+          <span class="trail-icon">📝</span>
+          <span>Permissão Trabalho</span>
+        </button>
+        <button class="trail-btn" data-trail="inspecao">
+          <span class="trail-icon">🔍</span>
+          <span>Inspeção</span>
+        </button>
+        <button class="trail-btn" data-trail="cipa">
+          <span class="trail-icon">👥</span>
+          <span>CIPA</span>
+        </button>
+        <button class="trail-btn" data-trail="documentos">
+          <span class="trail-icon">📄</span>
+          <span>Documentos</span>
+        </button>
+        <button class="trail-btn" data-trail="financeiro">
+          <span class="trail-icon">💰</span>
+          <span>Financeiro</span>
+        </button>
+      </div>
+      
+      <div class="trail-flow" id="trailFlow">
+        <!-- Cards serão inseridos aqui via JavaScript -->
+      </div>
+      
+      <!-- Modal -->
+      <div class="trail-modal" id="trailModal">
+        <div class="trail-modal-content">
+          <span class="trail-modal-close">&times;</span>
+          <div class="trail-modal-icon" id="trailModalIcon"></div>
+          <h2 id="trailModalTitle"></h2>
+          <p id="trailModalDescription"></p>
+          <div class="trail-modal-requirements" id="trailModalRequirements"></div>
+          <a href="https://profissionais.bevart.com.br/app/src/login/views/login" class="trail-modal-btn login_bevart">Começar Agora</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Trail Section Styles -->
+  <style>
+    .trail-section {
+      padding: 6rem 0;
+      background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .trail-wrapper {
+      width: 90%;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    
+    .trail-selector {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 60px;
+      flex-wrap: wrap;
+      margin-top: 3rem;
+    }
+    
+    .trail-btn {
+      background: rgba(37, 99, 235, 0.05);
+      border: 2px solid transparent;
+      border-radius: 12px;
+      padding: 12px 20px;
+      color: var(--text-dark);
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 130px;
+      justify-content: center;
+    }
+    
+    .trail-btn:hover {
+      background: rgba(37, 99, 235, 0.1);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .trail-btn.selected {
+      background: var(--primary-color);
+      color: white;
+      border-color: var(--primary-color);
+      box-shadow: 0 10px 40px rgba(37, 99, 235, 0.3);
+    }
+    
+    .trail-icon {
+      font-size: 1.3rem;
+    }
+    
+    .trail-flow {
+      position: relative;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+      align-items: center;
+    }
+    
+    .trail-section-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      text-align: center;
+      margin: 40px 0 30px;
+      position: relative;
+      padding-bottom: 15px;
+    }
+    
+    .trail-section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+      border-radius: 2px;
+    }
+    
+    .trail-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 60px;
+      position: relative;
+      flex-wrap: wrap;
+    }
+    
+    .trail-card {
+      background: white;
+      border: 2px solid rgba(37, 99, 235, 0.1);
+      border-radius: 20px;
+      padding: 30px;
+      width: 200px;
+      min-height: 200px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+    
+    .trail-card:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 15px 40px rgba(37, 99, 235, 0.2);
+      border-color: var(--primary-color);
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.02) 0%, white 100%);
+    }
+    
+    .trail-card-icon {
+      font-size: 3.5rem;
+      margin-bottom: 15px;
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+    }
+    
+    .trail-card-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      line-height: 1.4;
+      color: var(--text-dark);
+    }
+    
+    .trail-connection-line {
+      position: absolute;
+      background: linear-gradient(90deg, var(--primary-color) 0%, var(--accent-color) 100%);
+      height: 3px;
+      border-radius: 2px;
+      z-index: -1;
+      box-shadow: 0 0 10px rgba(37, 99, 235, 0.3);
+    }
+    
+    .trail-connection-line.vertical {
+      width: 3px;
+      height: 60px;
+      background: linear-gradient(180deg, var(--primary-color) 0%, var(--accent-color) 100%);
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    /* Modal */
+    .trail-modal {
+      display: none;
+      position: fixed;
+      z-index: 10000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(5px);
+      animation: fadeIn 0.3s ease;
+    }
+    
+    .trail-modal.active {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    .trail-modal-content {
+      background: white;
+      border: 2px solid var(--primary-color);
+      border-radius: 24px;
+      padding: 40px;
+      max-width: 600px;
+      width: 90%;
+      position: relative;
+      animation: slideUp 0.3s ease;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+    
+    @keyframes slideUp {
+      from {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    
+    .trail-modal-close {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      font-size: 2rem;
+      cursor: pointer;
+      color: #6b7280;
+      transition: color 0.3s ease;
+    }
+    
+    .trail-modal-close:hover {
+      color: var(--text-dark);
+    }
+    
+    .trail-modal-icon {
+      font-size: 4rem;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .trail-modal-content h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      color: var(--primary-color);
+    }
+    
+    .trail-modal-content p {
+      text-align: center;
+      color: #4b5563;
+      line-height: 1.6;
+      margin-bottom: 25px;
+      font-size: 1rem;
+    }
+    
+    .trail-modal-requirements {
+      background: rgba(37, 99, 235, 0.05);
+      border: 1px solid rgba(37, 99, 235, 0.2);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 25px;
+    }
+    
+    .trail-modal-requirements h3 {
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+      color: var(--primary-color);
+    }
+    
+    .trail-modal-requirements ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .trail-modal-requirements li {
+      padding: 8px 0;
+      color: #4b5563;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .trail-modal-requirements li:before {
+      content: "✓";
+      color: #10b981;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    
+    .trail-modal-btn {
+      width: 100%;
+      padding: 15px;
+      background: var(--primary-color);
+      border: none;
+      border-radius: 12px;
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+      text-decoration: none;
+      display: block;
+      text-align: center;
+    }
+    
+    .trail-modal-btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(37, 99, 235, 0.4);
+    }
+    
+    @media (max-width: 768px) {
+      .trail-selector {
+        gap: 10px;
+      }
+      
+      .trail-btn {
+        min-width: 110px;
+        padding: 10px 15px;
+        font-size: 0.85rem;
+      }
+      
+      .trail-icon {
+        font-size: 1.1rem;
+      }
+      
+      .trail-row {
+        flex-direction: column;
+        gap: 80px;
+      }
+      
+      .trail-card {
+        width: 100%;
+        max-width: 280px;
+      }
+      
+      .trail-connection-line {
+        display: none;
+      }
+    }
+  </style>
+
   <!-- Features Section Styles -->
   <style>
     .features-section {
@@ -2364,6 +2784,646 @@ Saúde e Segurança Do Trabalho">
       // Run on load and scroll
       window.addEventListener('load', animateOnScroll);
       window.addEventListener('scroll', animateOnScroll);
+      
+      // Trail System
+      initializeTrailSystem();
     });
+    
+    // Trail System Functions
+    function initializeTrailSystem() {
+      const commonCards = [
+        {
+          id: 'common-1',
+          icon: '👷‍♂️',
+          title: 'Cadastrar Profissional SST',
+          description: 'Registre os profissionais de Segurança e Saúde do Trabalho com certificado digital.',
+          requirements: ['Certificado Digital A1', 'Assinatura Digital', 'Registro profissional válido']
+        },
+        {
+          id: 'common-2',
+          icon: '🏢',
+          title: 'Cadastrar Empresa',
+          description: 'Configure empresa e unidades com acesso exclusivo para clientes.',
+          requirements: ['Vincular responsável', 'Inventário de Equipamentos', 'Acesso área do cliente']
+        },
+        {
+          id: 'common-3',
+          icon: '🏭',
+          title: 'Cadastrar Setor',
+          description: 'Organize setores com informações de edificações.',
+          requirements: ['Dados de edificação', 'Localização', 'Layout do setor']
+        },
+        {
+          id: 'common-4',
+          icon: '💼',
+          title: 'Cadastrar Função',
+          description: 'Defina funções com descrições S2240 e códigos CBO.',
+          requirements: ['Descrição S2240 para eSocial', 'CBO', 'Atribuições detalhadas']
+        },
+        {
+          id: 'common-5',
+          icon: '👤',
+          title: 'Cadastrar Funcionário',
+          description: 'Registre colaboradores com reconhecimento facial e controle completo.',
+          requirements: ['Reconhecimento Facial', 'Controle PPP/eSocial', 'Histórico completo']
+        },
+        {
+          id: 'common-6',
+          icon: '🏗️',
+          title: 'GHE/Ambiente',
+          description: 'Crie Grupos Homogêneos de Exposição centralizando riscos.',
+          requirements: ['Centralização de Riscos', 'Definição de Exames', 'Agrupamento por exposição']
+        },
+        {
+          id: 'common-7',
+          icon: '⚠️',
+          title: 'Inventário de Riscos',
+          description: 'Mapeie riscos com matriz personalizável.',
+          requirements: ['Matriz de Risco', 'Identificação de perigos', 'Medidas de controle']
+        }
+      ];
+      
+      const specificCards = {
+        pgr: [
+          {
+            id: 'pgr-1',
+            icon: '📋',
+            title: 'Planos de Ação',
+            description: 'Crie e gerencie planos de ação para controle de riscos.',
+            requirements: ['Priorização de riscos', 'Responsáveis definidos', 'Prazos estabelecidos']
+          },
+          {
+            id: 'pgr-2',
+            icon: '📊',
+            title: 'Dashboard PGR',
+            description: 'Visualize indicadores e métricas em tempo real.',
+            requirements: ['Dados registrados', 'Indicadores de desempenho', 'Histórico de evolução']
+          },
+          {
+            id: 'pgr-3',
+            icon: '📄',
+            title: 'Documento PGR',
+            description: 'Gere o documento oficial personalizado.',
+            requirements: ['Etapas concluídas', 'Assinatura digital', 'Aprovação técnica']
+          }
+        ],
+        pcmso: [
+          {
+            id: 'pcmso-1',
+            icon: '👨‍⚕️',
+            title: 'Médico Coordenador',
+            description: 'Cadastre médico com certificado digital.',
+            requirements: ['CRM ativo', 'Medicina do Trabalho', 'Certificado digital médico']
+          },
+          {
+            id: 'pcmso-2',
+            icon: '📅',
+            title: 'Gestão de Exames',
+            description: 'Programe exames com convocação automática.',
+            requirements: ['Calendário de exames', 'Convocação automática', 'Clínicas credenciadas']
+          },
+          {
+            id: 'pcmso-3',
+            icon: '✅',
+            title: 'Emissão de ASO',
+            description: 'Gere ASOs com múltiplas assinaturas.',
+            requirements: ['Exames realizados', 'Assinatura Digital/Facial', 'Aptidão definida']
+          },
+          {
+            id: 'pcmso-4',
+            icon: '💼',
+            title: 'Integração eSocial',
+            description: 'Integre automaticamente dados com eSocial (S-2220).',
+            requirements: ['ASOs emitidos', 'Eventos S-2220', 'Monitoramento ativo']
+          }
+        ],
+        esocial: [
+          {
+            id: 'esocial-1',
+            icon: '🔐',
+            title: 'Configuração eSocial',
+            description: 'Configure certificado digital e credenciais para comunicação.',
+            requirements: ['Certificado digital A1/A3', 'Dados do empregador', 'Ambiente produção/teste']
+          },
+          {
+            id: 'esocial-2',
+            icon: '⚠️',
+            title: 'Eventos S-2210',
+            description: 'Comunicação de Acidente de Trabalho - CAT.',
+            requirements: ['Dados do acidente', 'Atestado médico', 'Validação de leiaute']
+          },
+          {
+            id: 'esocial-3',
+            icon: '🩺',
+            title: 'Eventos S-2220',
+            description: 'Monitoramento da Saúde do Trabalhador - ASO.',
+            requirements: ['ASOs emitidos', 'Exames realizados', 'Médico coordenador']
+          },
+          {
+            id: 'esocial-4',
+            icon: '🚛',
+            title: 'Eventos S-2221',
+            description: 'Exame Toxicológico do Motorista Profissional.',
+            requirements: ['Motoristas cadastrados', 'Exames toxicológicos', 'Laudos médicos']
+          },
+          {
+            id: 'esocial-5',
+            icon: '📊',
+            title: 'Eventos S-2240',
+            description: 'Condições Ambientais do Trabalho - Fatores de Risco.',
+            requirements: ['Inventário de riscos', 'GHE/Ambientes', 'PPP atualizado']
+          },
+          {
+            id: 'esocial-6',
+            icon: '✅',
+            title: 'Conformidade eSocial',
+            description: 'Validação final e monitoramento de conformidade.',
+            requirements: ['Todos eventos enviados', 'Sem pendências', 'Protocolos válidos']
+          }
+        ],
+        psicossocial: [
+          {
+            id: 'psico-1',
+            icon: '📋',
+            title: 'Formulário SUS',
+            description: 'Disponibilize questionário conforme metodologia SUS.',
+            requirements: ['Formulário baseado SUS', 'Questionário anônimo', 'Acesso digital']
+          },
+          {
+            id: 'psico-2',
+            icon: '🧠',
+            title: 'Dashboard de Análise',
+            description: 'Visualize sentimento da empresa com gráficos.',
+            requirements: ['Dados processados', 'Indicadores bem-estar', 'Análise por setor']
+          },
+          {
+            id: 'psico-3',
+            icon: '💡',
+            title: 'Plano de Ação',
+            description: 'Desenvolva ações para mitigar riscos identificados.',
+            requirements: ['Pontos críticos identificados', 'Ações de intervenção', 'Acompanhamento']
+          }
+        ],
+        treinamentos: [
+          {
+            id: 'trein-1',
+            icon: '📚',
+            title: 'Cadastro de Treinamentos',
+            description: 'Configure cursos e treinamentos obrigatórios.',
+            requirements: ['Matriz de treinamentos', 'Carga horária', 'Instrutores qualificados']
+          },
+          {
+            id: 'trein-2',
+            icon: '✅',
+            title: 'Controle de Presença',
+            description: 'Registre presença com reconhecimento facial.',
+            requirements: ['Reconhecimento facial', 'Lista digital', 'Registro de ausências']
+          },
+          {
+            id: 'trein-3',
+            icon: '📜',
+            title: 'Certificados',
+            description: 'Emita certificados com assinatura digital.',
+            requirements: ['Treinamento concluído', 'Presença mínima', 'Certificado personalizado']
+          },
+          {
+            id: 'trein-4',
+            icon: '🔔',
+            title: 'Controle Reciclagem',
+            description: 'Monitore vencimentos e notifique automaticamente.',
+            requirements: ['Histórico de treinamentos', 'Alertas automáticos', 'Dashboard vencimentos']
+          }
+        ],
+        'controle-epi': [
+          {
+            id: 'epi-1',
+            icon: '🦺',
+            title: 'Catálogo de EPIs',
+            description: 'Cadastre EPIs com CAs e especificações.',
+            requirements: ['CA válido', 'Especificações técnicas', 'Fornecedores cadastrados']
+          },
+          {
+            id: 'epi-2',
+            icon: '📦',
+            title: 'Estoque de EPIs',
+            description: 'Controle estoque com níveis mínimos.',
+            requirements: ['Estoque inicial', 'Ponto de pedido', 'Alertas de reposição']
+          },
+          {
+            id: 'epi-3',
+            icon: '✍️',
+            title: 'Ficha de Entrega',
+            description: 'Registre entrega com assinatura digital.',
+            requirements: ['Estoque disponível', 'Treinamento realizado', 'Assinatura digital/facial']
+          },
+          {
+            id: 'epi-4',
+            icon: '📊',
+            title: 'Relatórios de EPIs',
+            description: 'Gere relatórios de distribuição e conformidade.',
+            requirements: ['Histórico completo', 'Indicadores de consumo', 'Análise de custos']
+          }
+        ],
+        ltcat: [
+          {
+            id: 'ltcat-1',
+            icon: '🔍',
+            title: 'Avaliação Agentes Nocivos',
+            description: 'Identifique agentes para aposentadoria especial.',
+            requirements: ['Medições qualitativas', 'Limites de tolerância', 'Normas NR-15/16']
+          },
+          {
+            id: 'ltcat-2',
+            icon: '📝',
+            title: 'Enquadramento Legal',
+            description: 'Enquadre atividades conforme legislação previdenciária.',
+            requirements: ['Análise de exposição', 'Códigos de atividade especial', 'Eficácia EPIs']
+          },
+          {
+            id: 'ltcat-3',
+            icon: '📄',
+            title: 'Documento LTCAT',
+            description: 'Gere o Laudo Técnico completo.',
+            requirements: ['Avaliações concluídas', 'Assinatura técnica', 'ART/TRT registrada']
+          }
+        ],
+        periculosidade: [
+          {
+            id: 'peric-1',
+            icon: '⚡',
+            title: 'Caracterização',
+            description: 'Identifique atividades de risco conforme NR-16.',
+            requirements: ['Análise de processos', 'Anexos NR-16', 'Delimitação de áreas']
+          },
+          {
+            id: 'peric-2',
+            icon: '📋',
+            title: 'Laudo Periculosidade',
+            description: 'Elabore laudo técnico com enquadramento.',
+            requirements: ['Caracterização concluída', 'Base legal', 'Assinatura técnica']
+          },
+          {
+            id: 'peric-3',
+            icon: '💰',
+            title: 'Gestão de Adicional',
+            description: 'Controle pagamento do adicional de periculosidade.',
+            requirements: ['Laudo aprovado', 'Funções enquadradas', 'Integração RH']
+          }
+        ],
+        insalubridade: [
+          {
+            id: 'insalub-1',
+            icon: '☢️',
+            title: 'Caracterização',
+            description: 'Avalie condições insalubres conforme NR-15.',
+            requirements: ['Medições quantitativas', 'Anexos NR-15', 'Limites de tolerância']
+          },
+          {
+            id: 'insalub-2',
+            icon: '📊',
+            title: 'Laudo Insalubridade',
+            description: 'Elabore laudo com grau de insalubridade.',
+            requirements: ['Grau definido (10%, 20%, 40%)', 'Base legal', 'ART/TRT']
+          },
+          {
+            id: 'insalub-3',
+            icon: '💵',
+            title: 'Controle Adicional',
+            description: 'Gerencie adicional de insalubridade.',
+            requirements: ['Laudo emitido', 'Grau por função', 'Integração folha']
+          }
+        ],
+        aet: [
+          {
+            id: 'aet-1',
+            icon: '📐',
+            title: 'Análise Preliminar',
+            description: 'Realize análise ergonômica conforme NR-17.',
+            requirements: ['Inventário de funções', 'Observação de posturas', 'Dados antropométricos']
+          },
+          {
+            id: 'aet-2',
+            icon: '🔍',
+            title: 'Análise da Demanda',
+            description: 'Aprofunde análise em atividades críticas.',
+            requirements: ['Descrição de tarefas', 'Filmagens e fotos', 'Entrevistas']
+          },
+          {
+            id: 'aet-3',
+            icon: '💡',
+            title: 'Recomendações',
+            description: 'Defina melhorias ergonômicas.',
+            requirements: ['Análise completa', 'Medidas de correção', 'Viabilidade técnica']
+          },
+          {
+            id: 'aet-4',
+            icon: '📄',
+            title: 'Documento AET',
+            description: 'Compile relatório completo da AET.',
+            requirements: ['Todas fases concluídas', 'Recomendações definidas', 'Assinatura técnica']
+          }
+        ],
+        'atendimento-medico': [
+          {
+            id: 'amed-1',
+            icon: '🏥',
+            title: 'Cadastro Ambulatório',
+            description: 'Configure ambulatório com profissionais.',
+            requirements: ['Estrutura física', 'Profissionais saúde', 'Equipamentos médicos']
+          },
+          {
+            id: 'amed-2',
+            icon: '📋',
+            title: 'Registro Atendimento',
+            description: 'Registre atendimentos médicos realizados.',
+            requirements: ['Ambulatório configurado', 'Prontuário eletrônico', 'Confidencialidade']
+          },
+          {
+            id: 'amed-3',
+            icon: '💊',
+            title: 'Controle Medicamentos',
+            description: 'Gerencie estoque de medicamentos.',
+            requirements: ['Medicamentos cadastrados', 'Controle validade', 'Responsável técnico']
+          },
+          {
+            id: 'amed-4',
+            icon: '📊',
+            title: 'Indicadores Saúde',
+            description: 'Acompanhe estatísticas de saúde ocupacional.',
+            requirements: ['Histórico atendimentos', 'Taxa absenteísmo', 'Análise de tendências']
+          }
+        ],
+        'permissao-trabalho': [
+          {
+            id: 'pt-1',
+            icon: '📝',
+            title: 'Tipos de Permissão',
+            description: 'Configure tipos de PT e APR.',
+            requirements: ['Atividades críticas', 'Modelos de formulários', 'Responsáveis aprovação']
+          },
+          {
+            id: 'pt-2',
+            icon: '✍️',
+            title: 'Emissão de PT',
+            description: 'Emita permissões para atividades de risco.',
+            requirements: ['APR realizada', 'Medidas de controle', 'Assinaturas múltiplas']
+          },
+          {
+            id: 'pt-3',
+            icon: '🔍',
+            title: 'Acompanhamento',
+            description: 'Monitore permissões ativas e histórico.',
+            requirements: ['PTs emitidas', 'Status de execução', 'Alertas vencimento']
+          },
+          {
+            id: 'pt-4',
+            icon: '📊',
+            title: 'Relatórios',
+            description: 'Gere relatórios estatísticos de permissões.',
+            requirements: ['Histórico completo', 'Tipos frequentes', 'Conformidade']
+          }
+        ],
+        inspecao: [
+          {
+            id: 'insp-1',
+            icon: '📋',
+            title: 'Planos Inspeção',
+            description: 'Crie checklists e roteiros de inspeção.',
+            requirements: ['Áreas a inspecionar', 'Itens verificação', 'Periodicidade']
+          },
+          {
+            id: 'insp-2',
+            icon: '✅',
+            title: 'Execução',
+            description: 'Realize inspeções com app mobile.',
+            requirements: ['Plano definido', 'Acesso mobile', 'Captura de fotos']
+          },
+          {
+            id: 'insp-3',
+            icon: '⚠️',
+            title: 'Não Conformidades',
+            description: 'Documente não conformidades encontradas.',
+            requirements: ['Inspeção realizada', 'Classificação gravidade', 'Evidências']
+          },
+          {
+            id: 'insp-4',
+            icon: '🔄',
+            title: 'Acompanhamento',
+            description: 'Monitore resolução de não conformidades.',
+            requirements: ['NCs registradas', 'Responsáveis atribuídos', 'Verificação eficácia']
+          }
+        ],
+        cipa: [
+          {
+            id: 'cipa-1',
+            icon: '🗳️',
+            title: 'Processo Eleitoral',
+            description: 'Gerencie eleição da CIPA.',
+            requirements: ['Dimensionamento NR-5', 'Edital convocação', 'Sistema votação']
+          },
+          {
+            id: 'cipa-2',
+            icon: '👥',
+            title: 'Gestão Membros',
+            description: 'Cadastre membros eleitos e designados.',
+            requirements: ['Eleição concluída', 'Titulares e suplentes', 'Termo de posse']
+          },
+          {
+            id: 'cipa-3',
+            icon: '📅',
+            title: 'Reuniões',
+            description: 'Programe e registre reuniões da CIPA.',
+            requirements: ['CIPA constituída', 'Pauta de reunião', 'Atas digitais']
+          },
+          {
+            id: 'cipa-4',
+            icon: '🎓',
+            title: 'Treinamento CIPA',
+            description: 'Organize treinamento obrigatório.',
+            requirements: ['Conteúdo NR-5', 'Carga horária mínima', 'Certificados']
+          },
+          {
+            id: 'cipa-5',
+            icon: '📊',
+            title: 'SIPAT',
+            description: 'Planeje Semana de Prevenção de Acidentes.',
+            requirements: ['Programação definida', 'Palestras e atividades', 'Controle participação']
+          }
+        ],
+        documentos: [
+          {
+            id: 'doc-1',
+            icon: '📝',
+            title: 'Editor de Documentos',
+            description: 'Crie modelos com editor avançado.',
+            requirements: ['Editor de texto rico', 'Variáveis dinâmicas', 'Campos personalizados']
+          },
+          {
+            id: 'doc-2',
+            icon: '🎨',
+            title: 'Biblioteca Modelos',
+            description: 'Gerencie templates para reutilização.',
+            requirements: ['Modelos criados', 'Categorização', 'Controle de versão']
+          },
+          {
+            id: 'doc-3',
+            icon: '✍️',
+            title: 'Assinaturas Digitais',
+            description: 'Configure múltiplas assinaturas.',
+            requirements: ['Certificados cadastrados', 'Ordem de assinatura', 'Validade jurídica']
+          },
+          {
+            id: 'doc-4',
+            icon: '📤',
+            title: 'Distribuição',
+            description: 'Envie documentos automaticamente.',
+            requirements: ['Documentos finalizados', 'Lista destinatários', 'Confirmação recebimento']
+          }
+        ],
+        financeiro: [
+          {
+            id: 'fin-1',
+            icon: '💰',
+            title: 'Cadastro Clientes',
+            description: 'Gerencie carteira de clientes SST.',
+            requirements: ['Dados cadastrais', 'Contratos ativos', 'Condições de pagamento']
+          },
+          {
+            id: 'fin-2',
+            icon: '📄',
+            title: 'Faturamento',
+            description: 'Emita notas fiscais e boletos.',
+            requirements: ['Clientes cadastrados', 'Serviços concluídos', 'Emissão NF-e']
+          },
+          {
+            id: 'fin-3',
+            icon: '💳',
+            title: 'Contas a Receber',
+            description: 'Controle pagamentos e inadimplência.',
+            requirements: ['Faturas emitidas', 'Baixa de pagamentos', 'Cobrança automática']
+          },
+          {
+            id: 'fin-4',
+            icon: '📊',
+            title: 'Relatórios Financeiros',
+            description: 'Visualize indicadores financeiros.',
+            requirements: ['Movimentações registradas', 'DRE e fluxo de caixa', 'Análise rentabilidade']
+          }
+        ]
+      };
+      
+      let currentTrail = 'pgr';
+      const modal = document.getElementById('trailModal');
+      const trailFlow = document.getElementById('trailFlow');
+      
+      function renderTrail(trailKey) {
+        trailFlow.innerHTML = '';
+        const allCards = [...commonCards, ...(specificCards[trailKey] || [])];
+        
+        trailFlow.innerHTML += '<h3 class="trail-section-title">Etapas Iniciais (Base de Todos os Módulos)</h3>';
+        renderCards(commonCards, trailFlow);
+        
+        if (specificCards[trailKey] && specificCards[trailKey].length > 0) {
+          trailFlow.innerHTML += '<h3 class="trail-section-title">Etapas Específicas do Módulo</h3>';
+          renderCards(specificCards[trailKey], trailFlow);
+        }
+      }
+      
+      function renderCards(cards, container) {
+        const cardsPerRow = 3;
+        const rows = Math.ceil(cards.length / cardsPerRow);
+        
+        for (let i = 0; i < rows; i++) {
+          const rowDiv = document.createElement('div');
+          rowDiv.className = 'trail-row';
+          
+          const startIdx = i * cardsPerRow;
+          const endIdx = Math.min(startIdx + cardsPerRow, cards.length);
+          const rowCards = cards.slice(startIdx, endIdx);
+          
+          rowCards.forEach((card, idx) => {
+            const cardEl = createCard(card);
+            rowDiv.appendChild(cardEl);
+            
+            if (idx < rowCards.length - 1) {
+              const line = document.createElement('div');
+              line.className = 'trail-connection-line';
+              line.style.width = '40px';
+              rowDiv.appendChild(line);
+            }
+          });
+          
+          container.appendChild(rowDiv);
+          
+          if (i < rows - 1) {
+            const verticalLine = document.createElement('div');
+            verticalLine.className = 'trail-connection-line vertical';
+            container.appendChild(verticalLine);
+          }
+        }
+      }
+      
+      function createCard(cardData) {
+        const card = document.createElement('div');
+        card.className = 'trail-card';
+        
+        card.innerHTML = `
+          <div class="trail-card-icon">${cardData.icon}</div>
+          <div class="trail-card-title">${cardData.title}</div>
+        `;
+        
+        card.addEventListener('click', () => openModal(cardData));
+        
+        return card;
+      }
+      
+      function openModal(cardData) {
+        document.getElementById('trailModalIcon').textContent = cardData.icon;
+        document.getElementById('trailModalTitle').textContent = cardData.title;
+        document.getElementById('trailModalDescription').textContent = cardData.description;
+        
+        const reqDiv = document.getElementById('trailModalRequirements');
+        reqDiv.innerHTML = `
+          <h3>Requisitos:</h3>
+          <ul>
+            ${cardData.requirements.map(req => `<li>${req}</li>`).join('')}
+          </ul>
+        `;
+        
+        modal.classList.add('active');
+      }
+      
+      // Setup trail buttons
+      const buttons = document.querySelectorAll('.trail-btn');
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          buttons.forEach(b => b.classList.remove('selected'));
+          btn.classList.add('selected');
+          currentTrail = btn.dataset.trail;
+          renderTrail(currentTrail);
+        });
+      });
+      
+      // Setup modal close
+      const closeBtn = document.querySelector('.trail-modal-close');
+      closeBtn.addEventListener('click', () => {
+        modal.classList.remove('active');
+      });
+      
+      window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.classList.remove('active');
+        }
+      });
+      
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+          modal.classList.remove('active');
+        }
+      });
+      
+      // Initialize with first trail
+      renderTrail(currentTrail);
+    }
   </script>
 </body></html>
