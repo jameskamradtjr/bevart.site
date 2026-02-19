@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conformidade LGPD - Bevart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+                    colors: {
+                        primary: { 50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe', 300: '#93c5fd', 400: '#60a5fa', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 800: '#1e40af', 900: '#1e3a8a' },
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="font-sans antialiased text-gray-800 bg-gray-50">
+
+    <!-- Simple Nav -->
+    <nav class="bg-white border-b border-gray-200 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="assets/img/logo bevart.svg" alt="Bevart" class="h-8 w-auto">
+            </a>
+            <a href="index.html" class="text-sm font-semibold text-primary-600">Voltar ao site</a>
+        </div>
+    </nav>
+
+    <main class="py-16 md:py-24">
+        <div
+            class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gray-100">
+            <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-8">Conformidade com a LGPD</h1>
+
+            <div class="prose prose-blue max-w-none text-gray-600 space-y-6">
+                <p>A Lei Geral de Proteção de Dados (Lei nº 13.709/2018) é levada a sério no Bevart. Devido à natureza
+                    sensível dos dados de saúde ocupacional, implementamos medidas rigorosas de conformidade.</p>
+
+                <section>
+                    <h2 class="text-xl font-bold text-gray-900 mb-4">1. Tratamento de Dados de Saúde</h2>
+                    <p>Dados de SST são classificados como **dados sensíveis**. O Bevart processa esses dados com a
+                        finalidade exclusiva de cumprimento de obrigações legais (Art. 7º, inciso II e Art. 11, inciso
+                        II, alínea 'a' da LGPD).</p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-bold text-gray-900 mb-4">2. Segurança e Sigilo</h2>
+                    <p>Mantemos protocolos de sigilo médico digital, garantindo que prontuários e exames sejam
+                        acessíveis apenas por profissionais autorizados. Nossa infraestrutura utiliza criptografia de
+                        banco de dados e registros de auditoria (logs) para rastreabilidade total de acessos.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-bold text-gray-900 mb-4">3. Ciclo de Vida dos Dados</h2>
+                    <p>Os dados são mantidos pelo período necessário para atender às exigências técnico-legais de SST
+                        (que podem chegar a 20 anos para históricos de exposição, conforme a legislação previdenciária).
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-bold text-gray-900 mb-4">4. Medidas Administrativas</h2>
+                    <p>Nossa equipe recebe treinamento contínuo sobre segurança da informação e proteção de dados,
+                        garantindo que a cultura de privacidade permeie todas as áreas do Bevart.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-bold text-gray-900 mb-4">5. Responsabilidade</h2>
+                    <p>O Bevart atua como **Operador de Dados**, executando o tratamento sob comando do **Controlador**
+                        (o Usuário/Consultoria de SST). Ambos devem zelar pela conformidade e ética no tratamento das
+                        informações dos colaboradores.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-bold text-gray-900 mb-4">6. Canal de Transparência</h2>
+                    <p>Para qualquer solicitação referente à LGPD, o titular dos dados ou o controlador pode entrar em
+                        contato através do e-mail: <strong>contato@bevart.com.br</strong>.</p>
+                </section>
+
+                <p class="pt-8 text-sm text-gray-400">Última atualização: 18 de Fevereiro de 2026.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+            <p>&copy; 2026 Bevart. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
