@@ -104,14 +104,56 @@
         </div>
         <!-- Mobile menu -->
         <div x-show="mobileOpen" x-transition class="md:hidden pb-4 space-y-2">
-          <a href="#" class="block px-4 py-2.5 rounded-xl text-gray-700 hover:bg-primary-50">Produtos</a>
-          <a href="#fluxo" class="block px-4 py-2.5 rounded-xl text-gray-700 hover:bg-primary-50">Funções</a>
-          <a href="#contato" class="block px-4 py-2.5 rounded-xl text-gray-700 hover:bg-primary-50">Contato</a>
-          <a href="#pricing"
-            class="block w-full text-center btn-primary-gradient text-white px-6 py-2.5 rounded-full text-sm font-semibold mt-2">Começar
-            agora</a>
+          <!-- Mobile menu -->
+          <div x-show="mobileOpen" x-transition class="md:hidden pb-4 space-y-2 border-t border-gray-100/50 mt-4">
+            <div x-data="{ mobileProdOpen: false }" class="py-1">
+              <button @click="mobileProdOpen = !mobileProdOpen"
+                class="flex items-center justify-between w-full px-4 py-2.5 rounded-xl text-gray-700 hover:bg-primary-50 transition font-medium">
+                Produtos
+                <svg class="w-4 h-4 transition-transform duration-300" :class="mobileProdOpen && 'rotate-180'"
+                  fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div x-show="mobileProdOpen" x-transition:enter="transition ease-out duration-200"
+                x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+                class="pl-4 space-y-1 mt-1">
+                <a href="#features"
+                  class="block px-4 py-2 rounded-xl text-sm text-gray-600 hover:bg-primary-50">Engenharia de
+                  Segurança</a>
+                <a href="#features"
+                  class="block px-4 py-2 rounded-xl text-sm text-gray-600 hover:bg-primary-50">Medicina do Trabalho</a>
+                <a href="#features" class="block px-4 py-2 rounded-xl text-sm text-gray-600 hover:bg-primary-50">eSocial
+                  SST (S-2221)</a>
+                <a href="#features" class="block px-4 py-2 rounded-xl text-sm text-gray-600 hover:bg-primary-50">Gestão
+                  de Consultoria (CRM)</a>
+                <a href="#features"
+                  class="block px-4 py-2 rounded-xl text-sm text-primary-600 font-bold hover:bg-primary-50">Bevart AI
+                  (CNAE Inteligente)</a>
+                <a href="#features" class="block px-4 py-2 rounded-xl text-sm text-gray-600 hover:bg-primary-50">Google
+                  Docs & Gemini</a>
+                <a href="#features"
+                  class="block px-4 py-2 rounded-xl text-sm text-gray-600 hover:bg-primary-50">Documentos Digitais</a>
+              </div>
+            </div>
+            <a href="#features"
+              class="block px-4 py-2.5 rounded-xl text-gray-700 hover:bg-primary-50 font-medium">Recursos</a>
+            <a href="#fluxo"
+              class="block px-4 py-2.5 rounded-xl text-gray-700 hover:bg-primary-50 font-medium">Fluxo</a>
+            <a href="#pricing"
+              class="block px-4 py-2.5 rounded-xl text-gray-700 hover:bg-primary-50 font-medium">Preços</a>
+            <a href="#faq" class="block px-4 py-2.5 rounded-xl text-gray-700 hover:bg-primary-50 font-medium">FAQ</a>
+            <a href="#contato"
+              class="block px-4 py-2.5 rounded-xl text-gray-700 hover:bg-primary-50 font-medium">Contato</a>
+            <div class="pt-4 border-t border-gray-100 flex flex-col gap-3 px-2">
+              <a href="https://profissionais.bevart.com.br/app/src/login/views/login"
+                class="block w-full text-center px-4 py-2.5 text-gray-700 font-semibold hover:text-primary-600 transition">Entrar</a>
+              <a href="https://profissionais.bevart.com.br/app/src/login/views/login"
+                class="block w-full text-center btn-primary-gradient text-white px-6 py-3 rounded-full text-sm font-bold shadow-lg shadow-primary-100">Criar
+                conta</a>
+            </div>
+          </div>
         </div>
-      </div>
     </nav>
   </div>
 
@@ -1657,10 +1699,7 @@
     </div>
     <div
       class="relative w-14 h-14 bg-whatsapp text-white rounded-full shadow-2xl flex items-center justify-center transform group-hover:scale-110 transition-all duration-300">
-      <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-        <path
-          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-4.821 4.754a9.624 9.624 0 01-4.706-1.233l-.337-.201-3.486.914.931-3.398-.22-.351A9.605 9.605 0 014.288 9.923c0-5.304 4.316-9.62 9.625-9.62 2.571 0 4.987 1.002 6.805 2.823a9.544 9.544 0 012.812 6.804c0 5.304-4.318 9.62-9.629 9.62m7.306-16.712A11.011 11.011 0 0013.293 2.1c-6.11 0-11.08 4.97-11.08 11.081 0 1.954.51 3.86 1.48 5.56L0 24l5.44-1.428A11.004 11.004 0 0013.29 21.84h.01c6.11 0 11.079-4.97 11.079-11.081 0-2.957-1.15-5.738-3.236-7.822" />
-      </svg>
+      <img src="assets/img/whatsapp.png" alt="WhatsApp" class="w-8 h-8 object-contain">
     </div>
     <!-- Tooltip -->
     <div
