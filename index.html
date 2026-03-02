@@ -1651,6 +1651,36 @@
             </p>
           </div>
         </div>
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+          <button class="faq-button" @click="active === 5 ? active = null : active = 5">
+            <span>Como posso adquirir o Bevart?</span>
+            <svg class="w-5 h-5 transition-transform" :class="active === 5 && 'rotate-180'" fill="none"
+              stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="faq-content" :style="active === 5 ? 'max-height: 800px' : 'max-height: 0'">
+            <p>O Bevart é um sistema 100% web, acessado diretamente pelo seu navegador. O processo é simples: crie sua
+              conta, acesse o sistema e, no menu superior direito em "Meu Plano", escolha seu plano e clique em assinar.
+              O pagamento pode ser via cartão de crédito ou boleto/pix. No boleto ja consta o Pix para liberação
+              imediata. É simples como assinar a Netflix: sem fidelidade e sem taxa de implantação.</p>
+          </div>
+        </div>
+        <!-- FAQ 6 -->
+        <div class="faq-item">
+          <button class="faq-button" @click="active === 6 ? active = null : active = 6">
+            <span>O sistema emite documentos de SST?</span>
+            <svg class="w-5 h-5 transition-transform" :class="active === 6 && 'rotate-180'" fill="none"
+              stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="faq-content" :style="active === 6 ? 'max-height: 500px' : 'max-height: 0'">
+            <p>Sim! Emitimos todos os documentos necessários para a gestão de SST, como PGR, LTCAT, PCMSO, entre outros,
+              de forma automatizada e em conformidade com as NRs.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
