@@ -87,10 +87,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const typingEl = document.getElementById('typing-text');
   if (typingEl) {
     const texts = [
-      'Gestão de SST com inteligência artificial',
-      'Matrizes de risco personalizáveis em segundos',
-      'Compliance em PDF e integração com eSocial',
-      'Transforme sua rotina técnica com o Bevart'
+      'Migre de sistema e ganhe produtividade',
+      'eSocial automático para milhares de vidas',
+      'Documentos SST modernos e personalizáveis',
+      'Escalabilidade real para sua consultoria'
     ];
     let textIndex = 0;
     let charIndex = 0;
