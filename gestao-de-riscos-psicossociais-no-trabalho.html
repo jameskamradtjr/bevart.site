@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Riscos Psicossociais na NR 01 e PGR - Software Bevart</title>
+    <meta name="description"
+        content="Identifique e gerencie riscos psicossociais no trabalho em conformidade com a NR 01. Use formulários recomendados pela ANVISA e Ministério da Saúde integrados ao PGR.">
+    <meta name="keywords"
+        content="riscos psicossociais, risco psicossocial nr 01, risco psicossocial no pgr, gestão de riscos psicossociais, saúde mental no trabalho, burnout, estresse ocupacional, CID F">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+                    colors: {
+                        primary: { 50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe', 300: '#93c5fd', 400: '#60a5fa', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 800: '#1e40af', 900: '#1e3a8a' },
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+
+<body class="font-sans antialiased text-gray-800 overflow-x-hidden">
+
+    <!-- ========== NAVBAR ========== -->
+    <nav class="fixed top-0 left-0 right-0 z-50 px-4 pt-4">
+        <div
+            class="max-w-6xl mx-auto bg-white/80 backdrop-blur-xl rounded-2xl border border-white/40 shadow-lg px-6 h-16 flex items-center justify-between">
+            <a href="index.html">
+                <img src="assets/img/logo bevart.svg" alt="Bevart" class="h-10 w-auto">
+            </a>
+            <a href="https://profissionais.bevart.com.br/app/src/login/views/login"
+                class="btn-primary-gradient text-white px-6 py-2 rounded-full text-sm font-bold">Experimentar Agora</a>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero-gradient pt-32 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-gray-900 mb-6"
+                data-aos="fade-up">
+                Gestão de <span class="gradient-text">Riscos Psicossociais</span> na NR 01
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-600 mb-10 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                Saúde mental é prioridade. Identifique preventivamente fatores que causam estresse, burnout e depressão
+                com ferramentas integradas ao PGR.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
+                <a href="https://profissionais.bevart.com.br/app/src/login/views/login"
+                    class="btn-primary-gradient text-white px-10 py-4 rounded-full text-lg font-bold">Avaliar Riscos
+                    Agora</a>
+                <a href="#solucao" class="btn-outline px-10 py-4 rounded-full text-lg font-semibold">Conhecer
+                    Formulários</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTEXT SECTION ========== -->
+    <section class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">O que são Riscos Psicossociais?</h2>
+                    <p class="text-gray-600 text-lg mb-4">
+                        São as condições de trabalho relacionadas à organização, gestão e relações sociais que podem
+                        causar danos físicos, mentais e sociais aos trabalhadores.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <span
+                                class="w-6 h-6 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center shrink-0 font-bold text-xs">!</span>
+                            <p class="text-gray-700 font-medium">A identificação é <strong>obrigatória no PGR (NR
+                                    01)</strong>.</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span
+                                class="w-6 h-6 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center shrink-0 font-bold text-xs">!</span>
+                            <p class="text-gray-700 font-medium">Impactam diretamente no absenteísmo e rotatividade
+                                (turnover).</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-3xl border border-gray-100 shadow-sm" data-aos="fade-left">
+                    <h3 class="text-xl font-bold mb-4">Principais Fatores de Risco:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-2"><span class="w-2 h-2 bg-primary-500 rounded-full"></span>
+                            <strong>Carga de Trabalho:</strong> Volume excessivo e prazos irreais.
+                        </li>
+                        <li class="flex items-center gap-2"><span class="w-2 h-2 bg-primary-500 rounded-full"></span>
+                            <strong>Gestão:</strong> Falta de autonomia e comunicação falha.
+                        </li>
+                        <li class="flex items-center gap-2"><span class="w-2 h-2 bg-primary-500 rounded-full"></span>
+                            <strong>Relacionamentos:</strong> Assédio moral, sexual e conflitos.
+                        </li>
+                        <li class="flex items-center gap-2"><span class="w-2 h-2 bg-primary-500 rounded-full"></span>
+                            <strong>Contexto:</strong> Insegurança laboral e desequilíbrio vida/trabalho.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PAIN SECTION ========== -->
+    <section class="py-20 bg-rose-50 border-y border-rose-100">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-rose-900 mb-6">As consequências para a empresa e o
+                trabalhador</h2>
+            <p class="text-rose-800 text-lg mb-10">
+                O não gerenciamento desses riscos leva ao aumento expressivo de <strong>atestados médicos (CID
+                    F)</strong> e ao presenteísmo (colaborador presente, mas improdutivo).
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm">
+                    <p class="text-3xl font-black text-rose-600 mb-2">Burnout</p>
+                    <p class="text-sm text-gray-600">Esgotamento profissional severo.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm">
+                    <p class="text-3xl font-black text-rose-600 mb-2">Ansiedade</p>
+                    <p class="text-sm text-gray-600">Transtornos crescentes no ambiente laboral.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm">
+                    <p class="text-3xl font-black text-rose-600 mb-2">Depressão</p>
+                    <p class="text-sm text-gray-600">Causa principal de invalidez moderna.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SOLUTION / BEVART DIFFERENTIATION ========== -->
+    <section id="solucao" class="py-20 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative" data-aos="fade-right">
+                    <div class="aspect-video rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-black">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/QxYRR7-71mk"
+                            title="Risco Psicossocial Bevart" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <!-- Badge decoration -->
+                    <div
+                        class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl border border-gray-100 hidden md:block">
+                        <p class="text-xs font-bold text-primary-600 uppercase mb-1">Diferencial Exclusivo</p>
+                        <p class="text-sm font-bold">Formulários Oficiais Integrados</p>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <h2 class="text-3xl font-extrabold text-gray-900 mb-6">O Diferencial do <span
+                            class="gradient-text">Bevart</span></h2>
+                    <p class="text-gray-600 text-lg mb-8">
+                        Nossa plataforma já conta com um workflow automatizado para identificação e avaliação de riscos
+                        psicossociais, garantindo que você cumpra a norma de forma técnica e segura.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div
+                                class="w-12 h-12 bg-blue-50 text-primary-600 rounded-xl flex items-center justify-center shrink-0">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Formulários ANVISA / MS</h4>
+                                <p class="text-sm text-gray-600 font-medium">Questionários baseados nas diretrizes da
+                                    ANVISA e do Ministério da Saúde do Brasil.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div
+                                class="w-12 h-12 bg-green-50 text-green-600 rounded-xl flex items-center justify-center shrink-0">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Integração Nativa com PGR</h4>
+                                <p class="text-sm text-gray-600 font-medium">Os dados coletados alimentam
+                                    automaticamente o inventário de riscos do seu PGR.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div
+                                class="w-12 h-12 bg-purple-50 text-purple-600 rounded-xl flex items-center justify-center shrink-0">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Gráficos de Pesquisa de Clima</h4>
+                                <p class="text-sm text-gray-600 font-medium">Transforme respostas em Dashboards para
+                                    tomada de decisão estratégica.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-10">
+                        <a href="https://profissionais.bevart.com.br/app/src/login/views/login"
+                            class="btn-primary-gradient text-white px-8 py-3 rounded-full font-bold inline-block">Começar
+                            Agora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CTA FINAL ========== -->
+    <section class="py-20 bg-gray-900 overflow-hidden relative">
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-8">Proteja seus colaboradores e sua empresa.
+            </h2>
+            <p class="text-gray-400 text-xl mb-10">Implemente a gestão de riscos psicossociais hoje mesmo com a
+                tecnologia do Bevart.</p>
+            <a href="https://profissionais.bevart.com.br/app/src/login/views/login"
+                class="bg-white text-primary-600 px-12 py-5 rounded-full text-xl font-bold shadow-2xl hover:bg-gray-100 transition inline-block">Teste
+                Grátis por 5 dias</a>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800 text-center">
+        <div class="max-w-7xl mx-auto px-4">
+            <img src="assets/img/logo bevart.svg" alt="Bevart" class="h-8 mx-auto mb-6 brightness-0 invert opacity-50">
+            <p class="text-sm">© 2026 Bevart - Soluções em Saúde Mental e Psicossocial no Trabalho.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+    </script>
+</body>
+
+</html>
