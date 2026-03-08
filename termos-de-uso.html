@@ -31,6 +31,34 @@
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+  <!-- Google Lead Conversion Tracking -->
+  <script>
+    function gtag_report_conversion(url) {
+      if (typeof gtag !== 'function') {
+        if (typeof url !== 'undefined') { window.location = url; }
+        return false;
+      }
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-17992875515/YUXSCN2X8IQcEPv71YND',
+          'event_callback': callback
+      });
+      return false;
+    }
+
+    // Use event delegation to handle clicks on any login/register buttons
+    document.addEventListener('click', function(e) {
+      const target = e.target.closest('a[href*="profissionais.bevart.com.br/app/src/login/views/login"]');
+      if (target) {
+        e.preventDefault();
+        gtag_report_conversion(target.href);
+      }
+    });
+  </script>
 </head>
 
 <body class="font-sans antialiased text-gray-800 bg-gray-50">
