@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelos de Documentos SST em PDF - Software Bevart</title>
+    <meta name="description"
+        content="Gere documentos de SST profissionais (PGR, PCMSO, LTCAT) em PDF com modelos integrados, personalização total via Google Docs e assinatura digital.">
+    <meta name="keywords"
+        content="modelos de documentos sst, documentos sst pdf, pgr pdf, pcmso pdf, ltcat pdf, software sst documentos, personalização de documentos sst, assinatura digital sst, google docs sst">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+                    colors: {
+                        primary: { 50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe', 300: '#93c5fd', 400: '#60a5fa', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 800: '#1e40af', 900: '#1e3a8a' },
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body class="font-sans antialiased text-gray-800 overflow-x-hidden">
+
+    <!-- ========== NAVBAR ========== -->
+    <div id="navbar-wrapper"
+        class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 pt-4 transition-all duration-500">
+        <nav id="navbar" x-data="{ mobileOpen: false }"
+            class="floating-navbar max-w-6xl mx-auto bg-white/80 backdrop-blur-xl rounded-2xl border border-white/40 transition-all duration-500">
+            <div class="px-5 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <a href="index.html" class="flex items-center">
+                        <img src="assets/img/logo bevart.svg" alt="Bevart" class="h-10 w-auto">
+                    </a>
+                    <div class="hidden md:flex items-center gap-8">
+                        <a href="#integrado"
+                            class="nav-link text-gray-700 font-medium hover:text-primary-600 transition">Sistema
+                            Integrado</a>
+                        <a href="#modelos"
+                            class="nav-link text-gray-700 font-medium hover:text-primary-600 transition">Modelos de
+                            Documentos</a>
+                        <a href="#personalizacao"
+                            class="nav-link text-gray-700 font-medium hover:text-primary-600 transition">Personalização</a>
+                        <a href="#custo-extra"
+                            class="nav-link text-gray-700 font-medium hover:text-primary-600 transition">Equipe
+                            Bevart</a>
+                    </div>
+                    <div class="hidden md:flex items-center gap-3">
+                        <a href="https://profissionais.bevart.com.br/app/src/login/views/login"
+                            class="btn-primary-gradient text-white px-6 py-2.5 rounded-full text-sm font-semibold">Experimentar
+                            Grátis</a>
+                    </div>
+                    <button @click="mobileOpen = !mobileOpen"
+                        class="md:hidden p-2 rounded-xl hover:bg-gray-100/50 transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path x-show="!mobileOpen" d="M4 6h16M4 12h16M4 18h16" />
+                            <path x-show="mobileOpen" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile menu -->
+            <div x-show="mobileOpen" x-transition
+                class="md:hidden pb-4 px-6 space-y-2 border-t border-gray-100/50 mt-4">
+                <a href="#integrado" class="block py-2 text-gray-700 font-medium">Sistema Integrado</a>
+                <a href="#modelos" class="block py-2 text-gray-700 font-medium">Modelos de Documentos</a>
+                <a href="#personalizacao" class="block py-2 text-gray-700 font-medium">Personalização</a>
+                <a href="#custo-extra" class="block py-2 text-gray-700 font-medium">Equipe Bevart</a>
+                <a href="https://profissionais.bevart.com.br/app/src/login/views/login"
+                    class="block w-full text-center btn-primary-gradient text-white px-6 py-3 rounded-full text-sm font-bold mt-4">Criar
+                    conta</a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero-gradient pt-32 pb-20 md:pt-48 md:pb-32 relative overflow-hidden">
+        <!-- Background shapes for premium feel -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+            <div class="absolute -top-24 -left-24 w-96 h-96 bg-primary-200/20 rounded-full blur-3xl opacity-50"></div>
+            <div class="absolute top-1/2 -right-24 w-80 h-80 bg-blue-100/20 rounded-full blur-3xl opacity-50"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="max-w-4xl mx-auto" data-aos="fade-up">
+                <div
+                    class="inline-flex items-center gap-2 bg-white/50 backdrop-blur-md rounded-full px-4 py-1.5 mb-8 border border-white/60 shadow-sm">
+                    <span class="w-2 h-2 bg-primary-500 rounded-full animate-pulse"></span>
+                    <span class="text-xs font-bold text-primary-700 uppercase tracking-widest">Documentação
+                        Inteligente</span>
+                </div>
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black leading-tight text-gray-900 mb-6 uppercase">
+                    Modelos de <span class="gradient-text">Documentos SST</span> em PDF Profissional
+                </h1>
+                <p class="text-gray-600 text-lg md:text-xl mb-12 leading-relaxed max-w-3xl mx-auto font-medium">
+                    Gere laudos, programas e inventários com agilidade. Do cadastro à assinatura digital A1,
+                    o Bevart automatiza sua consultoria com segurança jurídica.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                    <a href="https://profissionais.bevart.com.br/app/src/login/views/login"
+                        class="btn-primary-gradient text-white px-12 py-5 rounded-2xl text-xl font-extrabold shadow-2xl transition-all hover:scale-105 w-full sm:w-auto text-center transform hover:shadow-primary-300">
+                        Começar Agora
+                    </a>
+                    <a href="#pro-personalizacao"
+                        class="bg-white/70 backdrop-blur-md text-gray-900 px-10 py-5 rounded-2xl text-xl font-extrabold hover:bg-white transition-all w-full sm:w-auto border border-white/80 shadow-sm">
+                        Ver Personalização
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SISTEMA INTEGRADO ========== -->
+    <section id="integrado" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Fluxo de Trabalho <span
+                        class="gradient-text">100% Integrado</span></h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">A documentação é o resultado de uma gestão bem feita.
+                    No Bevart, tudo acontece de forma fluida.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="feature-card p-8 rounded-3xl bg-gray-50 border border-gray-100" data-aos="fade-right"
+                    data-aos-delay="100">
+                    <div
+                        class="w-12 h-12 bg-primary-100 text-primary-600 rounded-xl flex items-center justify-center mb-6 font-bold text-xl">
+                        1</div>
+                    <h3 class="text-xl font-bold mb-3">Cadastro Estruturado</h3>
+                    <p class="text-gray-600 text-sm">Cadastre empresas, unidades e funções com facilidade. A base de
+                        dados alimenta todos os laudos automaticamente.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="feature-card p-8 rounded-3xl bg-gray-50 border border-gray-100" data-aos="fade-right"
+                    data-aos-delay="200">
+                    <div
+                        class="w-12 h-12 bg-primary-100 text-primary-600 rounded-xl flex items-center justify-center mb-6 font-bold text-xl">
+                        2</div>
+                    <h3 class="text-xl font-bold mb-3">Inventário & Planos</h3>
+                    <p class="text-gray-600 text-sm">Identifique perigos e riscos. Gere planos de ação dinâmicos
+                        integrados aos inventários de riscos (PGR).</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="feature-card p-8 rounded-3xl bg-gray-50 border border-gray-100" data-aos="fade-right"
+                    data-aos-delay="300">
+                    <div
+                        class="w-12 h-12 bg-primary-100 text-primary-600 rounded-xl flex items-center justify-center mb-6 font-bold text-xl">
+                        3</div>
+                    <h3 class="text-xl font-bold mb-3">Riscos Psicossociais</h3>
+                    <p class="text-gray-600 text-sm">Integração exclusiva com formulários e checklists de riscos
+                        psicossociais e saúde mental no trabalho.</p>
+                </div>
+                <!-- Step 4 -->
+                <div class="feature-card p-8 rounded-3xl bg-gray-50 border border-gray-100" data-aos="fade-right"
+                    data-aos-delay="400">
+                    <div
+                        class="w-12 h-12 bg-primary-100 text-primary-600 rounded-xl flex items-center justify-center mb-6 font-bold text-xl">
+                        4</div>
+                    <h3 class="text-xl font-bold mb-3">Assinatura Digital</h3>
+                    <p class="text-gray-600 text-sm">Use seu certificado digital para assinar os documentos gerados
+                        diretamente na plataforma, com validade jurídica.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== MODELOS DE DOCUMENTOS ========== -->
+    <section id="modelos" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-6">Modelos Padrões de <span
+                            class="gradient-text">Alta Qualidade</span></h2>
+                    <p class="text-gray-600 text-lg mb-8 leading-relaxed">
+                        Esqueça a formatação manual. O Bevart conta com uma biblioteca de modelos prontos que seguem
+                        rigorosamente as exigências das NRs e do eSocial.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3">
+                            <div
+                                class="w-6 h-6 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <span class="font-semibold">PGR (Programa de Gerenciamento de Riscos)</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div
+                                class="w-6 h-6 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <span class="font-semibold">PCMSO (Programa de Controle Médico)</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div
+                                class="w-6 h-6 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <span class="font-semibold">LTCAT (Laudo de Condições Ambientais)</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div
+                                class="w-6 h-6 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <span class="font-semibold">Checklists e Formulários Personalizados</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="relative" data-aos="zoom-in">
+                    <div
+                        class="aspect-[4/3] bg-white rounded-[2rem] shadow-2xl border border-gray-100 overflow-hidden p-4">
+                        <div
+                            class="w-full h-full bg-gray-50 rounded-xl flex items-center justify-center border-2 border-dashed border-gray-200">
+                            <div class="text-center">
+                                <svg class="w-20 h-20 text-primary-200 mx-auto mb-4" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                    </path>
+                                </svg>
+                                <p class="text-gray-400 font-bold uppercase tracking-widest">Visualização do Modelo PDF
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Decorative Badge -->
+                    <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl border border-gray-50">
+                        <p class="text-xs font-black text-primary-600 uppercase mb-1">Padrão eSocial</p>
+                        <p class="text-sm font-bold">Totalmente Validado</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PERSONALIZAÇÃO GOOGLE DOCS ========== -->
+    <section id="personalizacao" class="py-24 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1 relative" data-aos="fade-right">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="space-y-6">
+                            <div
+                                class="bg-gradient-to-br from-blue-600 to-blue-800 h-48 rounded-[2rem] flex flex-col items-center justify-center shadow-2xl transform -rotate-3 transition-transform hover:rotate-0 p-6 text-center group">
+                                <div
+                                    class="w-12 h-12 bg-white/20 rounded-xl mb-4 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <span class="text-white font-black text-lg">Google Docs</span>
+                            </div>
+                            <div
+                                class="bg-gradient-to-br from-gray-800 to-gray-950 h-72 rounded-[2rem] flex flex-col items-center justify-center shadow-2xl transform rotate-2 transition-transform hover:rotate-0 p-6 text-center group">
+                                <div
+                                    class="w-12 h-12 bg-white/10 rounded-xl mb-4 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <span class="text-white font-black text-lg">Exportação PDF</span>
+                            </div>
+                        </div>
+                        <div class="space-y-6 pt-12">
+                            <div
+                                class="bg-gradient-to-br from-primary-500 to-blue-600 h-72 rounded-[2rem] flex flex-col items-center justify-center shadow-2xl transform rotate-1 transition-transform hover:rotate-0 p-6 text-center group">
+                                <div
+                                    class="w-12 h-12 bg-white/20 rounded-xl mb-4 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <span class="text-white font-black text-lg">Configurações</span>
+                            </div>
+                            <div
+                                class="bg-gradient-to-br from-blue-400 to-cyan-500 h-48 rounded-[2rem] flex flex-col items-center justify-center shadow-2xl transform -rotate-2 transition-transform hover:rotate-0 p-6 text-center group">
+                                <div
+                                    class="w-12 h-12 bg-white/20 rounded-xl mb-4 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <span class="text-white font-black text-lg">Variáveis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2" id="pro-personalizacao" data-aos="fade-left">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-6 leading-tight">Total Liberdade com
+                        <span class="gradient-text">Google Docs Integrado</span></h2>
+                    <p class="text-gray-600 text-lg mb-10 leading-relaxed font-medium">
+                        O Bevart remove as barreiras da personalização. Além dos nossos modelos certificados, você tem o
+                        poder de criar o seu próprio padrão de documento.
+                    </p>
+                    <div class="space-y-8">
+                        <div class="flex gap-5">
+                            <div
+                                class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center shrink-0 shadow-sm">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2.5 2.5 0 113.536 3.536L12 14.293l-3 1 1-3 9.707-9.707z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-xl text-gray-900 mb-1">Editor Nativo Poderoso</h4>
+                                <p class="text-gray-600">Utilize todas as funcionalidades do Google Docs — tabelas
+                                    complexas, imagens e formatação rica — sem sair do fluxo Bevart.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-5">
+                            <div
+                                class="w-14 h-14 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center shrink-0 shadow-sm">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-xl text-gray-900 mb-1">Automação com Variáveis</h4>
+                                <p class="text-gray-600">Insira "Tags" inteligentes que o sistema substitui
+                                    automaticamente por dados reais do PGR, Riscos, GHE e Meio Ambiente.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-5">
+                            <div
+                                class="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center shrink-0 shadow-sm">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-xl text-gray-900 mb-1">Padronização da Consultoria</h4>
+                                <p class="text-gray-600">Defina o modelo padrão da sua consultoria uma única vez e
+                                    garanta que todos os documentos gerados sigam sua identidade visual.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== IMPLEMENTAÇÃO DE MODELOS PROPRIOS ========== -->
+    <section id="custo-extra" class="py-24 bg-gray-900 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary-600 rounded-full blur-[120px]">
+            </div>
+        </div>
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-8" data-aos="fade-up">Sua identidade, <span
+                    class="gradient-text">Nossa Tecnologia</span></h2>
+            <p class="text-gray-400 text-xl mb-12" data-aos="fade-up" data-aos-delay="100">
+                Já possui modelos próprios consolidados em sua consultoria? A equipe do Bevart pode implementá-los
+                diretamente para você.
+            </p>
+            <div class="bg-white/5 backdrop-blur-md rounded-[2.5rem] p-10 border border-white/10" data-aos="zoom-in"
+                data-aos-delay="200">
+                <div class="flex flex-col md:flex-row items-center gap-8 text-left">
+                    <div
+                        class="w-20 h-20 bg-primary-500 rounded-3xl flex items-center justify-center shrink-0 shadow-2xl shadow-primary-500/20">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10l5 5v11a2 2 0 01-2 2z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 3v5h5"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Serviço de Implementação sob Demanda</h3>
+                        <p class="text-gray-400 mb-6 font-medium">Com um investimento extra, configuramos seus layouts
+                            específicos dentro do sistema, preservando o histórico e a marca da sua empresa.</p>
+                        <a href="https://wa.me/5547992762391" target="_blank"
+                            class="inline-flex items-center gap-2 text-primary-400 font-bold hover:text-primary-300 transition group uppercase tracking-widest text-sm">
+                            Falar com consultor sobre modelos customizados
+                            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CTA FINAL ========== -->
+    <section class="py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-5xl font-black text-gray-900 mb-8" data-aos="fade-up">Eleve o nível da sua <span
+                    class="gradient-text">Documentação SST</span></h2>
+            <p class="text-gray-600 text-xl mb-12" data-aos="fade-up" data-aos-delay="100">Junte-se a centenas de
+                consultorias que já automatizaram sua entrega de documentos com o Bevart.</p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6" data-aos="fade-up"
+                data-aos-delay="200">
+                <a href="https://profissionais.bevart.com.br/app/src/login/views/login"
+                    class="btn-primary-gradient text-white px-12 py-5 rounded-2xl text-xl font-extrabold shadow-2xl w-full sm:w-auto">
+                    Começar Agora
+                </a>
+                <a href="https://wa.me/5547992762391" target="_blank"
+                    class="bg-gray-100 text-gray-900 px-12 py-5 rounded-2xl text-xl font-extrabold hover:bg-gray-200 transition-all w-full sm:w-auto">
+                    Agendar Demo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-gray-950 text-gray-400 py-16 border-t border-gray-900">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <img src="assets/img/logo bevart.svg" alt="Bevart" class="h-10 mx-auto mb-8 brightness-0 invert opacity-40">
+            <div class="flex flex-wrap justify-center gap-8 mb-12">
+                <a href="index.html" class="hover:text-white transition">Home</a>
+                <a href="gestao-de-riscos-psicossociais-no-trabalho.html" class="hover:text-white transition">Riscos
+                    Psicossociais</a>
+                <a href="sistema-pgr-online.html" class="hover:text-white transition">PGR Online</a>
+                <a href="privacidade.html" class="hover:text-white transition">Privacidade</a>
+            </div>
+            <p class="text-sm">© 2026 Bevart - Inovação e Tecnologia em Saúde e Segurança do Trabalho.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById('navbar');
+            const wrapper = document.getElementById('navbar-wrapper');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+                wrapper.classList.remove('pt-4');
+            } else {
+                navbar.classList.remove('scrolled');
+                wrapper.classList.add('pt-4');
+            }
+        });
+    </script>
+</body>
+
+</html>
