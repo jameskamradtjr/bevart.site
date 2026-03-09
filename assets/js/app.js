@@ -1,14 +1,16 @@
 // ===== FlowEasy Landing Page - App JS =====
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Initialize AOS
-  AOS.init({
-    duration: 800,
-    easing: 'ease-out-cubic',
-    once: true,
-    offset: 80,
-    delay: 100,
-  });
+  // Initialize AOS if library is loaded
+  if (typeof AOS !== 'undefined') {
+    AOS.init({
+      duration: 800,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 80,
+      delay: 100,
+    });
+  }
 
   // ===== Navbar scroll effect =====
   const navbar = document.getElementById('navbar');
@@ -184,5 +186,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.2 });
 
     flowObserver.observe(flowSection);
+  }
+
+  // ===== Cookie Consent Logic =====
+  const cookieConsent = document.getElementById('cookie-consent');
+  const acceptBtn = document.getElementById('accept-cookies');
+
+  if (cookieConsent && acceptBtn) {
+    // Check if user already accepted
+    if (!localStorage.getItem('bevart_cookies_accepted')) {
+      // Small delay to show after initial animations
+      setTimeout(() => {
+        cookieConsent.classList.add('show');
+      }, 2000);
+    }
+
+    acceptBtn.addEventListener('click', () => {
+      localStorage.setItem('bevart_cookies_accepted', 'true');
+      cookieConsent.classList.remove('show');
+    });
   }
 });
