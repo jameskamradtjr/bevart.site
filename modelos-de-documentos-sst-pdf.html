@@ -38,7 +38,7 @@
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
     <link rel="stylesheet" href="assets/css/custom.css">
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  <!-- Google Lead Conversion Tracking -->
+    <!-- Google Lead Conversion Tracking -->
   <script>
     function gtag_report_conversion(url) {
       if (typeof gtag !== 'function') {
@@ -46,23 +46,41 @@
         return false;
       }
       var callback = function () {
-        if (typeof(url) != 'undefined') {
+        if (typeof (url) != 'undefined') {
           window.location = url;
         }
       };
       gtag('event', 'conversion', {
-          'send_to': 'AW-17992875515/YUXSCN2X8IQcEPv71YND',
-          'event_callback': callback
+        'send_to': 'AW-17992875515/YUXSCN2X8IQcEPv71YND',
+        'event_callback': callback
       });
       return false;
     }
 
-    // Use event delegation to handle clicks on any login/register buttons
-    document.addEventListener('click', function(e) {
-      const target = e.target.closest('a[href*="profissionais.bevart.com.br/app/src/login/views/login"]');
-      if (target) {
+    // New function for WhatsApp conversion
+    function gtag_report_whatsapp_conversion() {
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-17992875515/nPR2CPXJyoUcEPv71YND',
+          'value': 1.0,
+          'currency': 'BRL'
+        });
+      }
+    }
+
+    // Use event delegation to handle clicks
+    document.addEventListener('click', function (e) {
+      // Login/Register conversion
+      const loginTarget = e.target.closest('a[href*="profissionais.bevart.com.br/app/src/login/views/login"]');
+      if (loginTarget) {
         e.preventDefault();
-        gtag_report_conversion(target.href);
+        gtag_report_conversion(loginTarget.href);
+      }
+
+      // WhatsApp conversion
+      const waTarget = e.target.closest('a[href*="wa.me"], a[href*="whatsapp.com"]');
+      if (waTarget) {
+        gtag_report_whatsapp_conversion();
       }
     });
   </script>
