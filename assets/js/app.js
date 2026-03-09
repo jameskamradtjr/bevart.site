@@ -191,19 +191,32 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===== Cookie Consent Logic =====
   const cookieConsent = document.getElementById('cookie-consent');
   const acceptBtn = document.getElementById('accept-cookies');
+  const cookieTrigger = document.getElementById('cookie-settings-trigger');
 
-  if (cookieConsent && acceptBtn) {
-    // Check if user already accepted
-    if (!localStorage.getItem('bevart_cookies_accepted')) {
-      // Small delay to show after initial animations
+  if (cookieConsent && acceptBtn && cookieTrigger) {
+    // Initial State: hide trigger if showing banner
+    const isAccepted = localStorage.getItem('bevart_cookies_accepted_v2');
+
+    if (!isAccepted) {
+      cookieTrigger.classList.add('hidden');
       setTimeout(() => {
         cookieConsent.classList.add('show');
-      }, 2000);
+      }, 500);
+    } else {
+      cookieTrigger.classList.remove('hidden');
     }
 
     acceptBtn.addEventListener('click', () => {
-      localStorage.setItem('bevart_cookies_accepted', 'true');
+      localStorage.setItem('bevart_cookies_accepted_v2', 'true');
       cookieConsent.classList.remove('show');
+      setTimeout(() => {
+        cookieTrigger.classList.remove('hidden');
+      }, 500);
+    });
+
+    cookieTrigger.addEventListener('click', () => {
+      cookieConsent.classList.add('show');
+      cookieTrigger.classList.add('hidden');
     });
   }
 });
