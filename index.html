@@ -705,6 +705,304 @@
     </div>
   </section>
 
+  <!-- ========== TELAS DO SISTEMA BEVART ========== -->
+  <section id="telas" class="py-20 md:py-28 bg-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+        <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">Veja algumas telas do sistema Bevart</h2>
+        <p class="text-gray-600 text-lg">Interface moderna e intuitiva projetada para maximizar a produtividade da sua
+          equipe.</p>
+      </div>
+
+      <div x-data="{ activeTab: 0 }" class="flex flex-col lg:flex-row gap-12 items-start">
+        <!-- Tabs Navigation (Left/Top) -->
+        <div
+          class="w-full lg:w-1/3 flex flex-row lg:flex-col gap-2 overflow-x-auto lg:overflow-x-visible pb-4 lg:pb-0 no-scrollbar sticky top-24"
+          data-aos="fade-right">
+          <button @click="activeTab = 0"
+            :class="activeTab === 0 ? 'bg-primary-50 text-primary-700 border-primary-200' : 'bg-transparent text-gray-500 border-transparent hover:bg-gray-50'"
+            class="flex items-center gap-4 px-6 py-4 rounded-2xl border transition-all duration-300 text-left shrink-0 lg:shrink">
+            <div
+              :class="activeTab === 0 ? 'bg-primary-600 text-white shadow-lg shadow-primary-200' : 'bg-gray-100 text-gray-400'"
+              class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+            </div>
+            <span class="font-bold text-sm md:text-base">Atividades Críticas</span>
+          </button>
+
+          <button @click="activeTab = 1"
+            :class="activeTab === 1 ? 'bg-primary-50 text-primary-700 border-primary-200' : 'bg-transparent text-gray-500 border-transparent hover:bg-gray-50'"
+            class="flex items-center gap-4 px-6 py-4 rounded-2xl border transition-all duration-300 text-left shrink-0 lg:shrink">
+            <div
+              :class="activeTab === 1 ? 'bg-primary-600 text-white shadow-lg shadow-primary-200' : 'bg-gray-100 text-gray-400'"
+              class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <span class="font-bold text-sm md:text-base">Saúde Mental</span>
+          </button>
+
+          <button @click="activeTab = 2"
+            :class="activeTab === 2 ? 'bg-primary-50 text-primary-700 border-primary-200' : 'bg-transparent text-gray-500 border-transparent hover:bg-gray-50'"
+            class="flex items-center gap-4 px-6 py-4 rounded-2xl border transition-all duration-300 text-left shrink-0 lg:shrink">
+            <div
+              :class="activeTab === 2 ? 'bg-primary-600 text-white shadow-lg shadow-primary-200' : 'bg-gray-100 text-gray-400'"
+              class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <span class="font-bold text-sm md:text-base">Cadastro Integrado</span>
+          </button>
+
+          <button @click="activeTab = 3"
+            :class="activeTab === 3 ? 'bg-primary-50 text-primary-700 border-primary-200' : 'bg-transparent text-gray-500 border-transparent hover:bg-gray-50'"
+            class="flex items-center gap-4 px-6 py-4 rounded-2xl border transition-all duration-300 text-left shrink-0 lg:shrink">
+            <div
+              :class="activeTab === 3 ? 'bg-primary-600 text-white shadow-lg shadow-primary-200' : 'bg-gray-100 text-gray-400'"
+              class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <span class="font-bold text-sm md:text-base">eSocial SST</span>
+          </button>
+
+          <button @click="activeTab = 4"
+            :class="activeTab === 4 ? 'bg-primary-50 text-primary-700 border-primary-200' : 'bg-transparent text-gray-500 border-transparent hover:bg-gray-50'"
+            class="flex items-center gap-4 px-6 py-4 rounded-2xl border transition-all duration-300 text-left shrink-0 lg:shrink">
+            <div
+              :class="activeTab === 4 ? 'bg-primary-600 text-white shadow-lg shadow-primary-200' : 'bg-gray-100 text-gray-400'"
+              class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <span class="font-bold text-sm md:text-base">CIPA</span>
+          </button>
+
+          <button @click="activeTab = 5"
+            :class="activeTab === 5 ? 'bg-primary-50 text-primary-700 border-primary-200' : 'bg-transparent text-gray-500 border-transparent hover:bg-gray-50'"
+            class="flex items-center gap-4 px-6 py-4 rounded-2xl border transition-all duration-300 text-left shrink-0 lg:shrink">
+            <div
+              :class="activeTab === 5 ? 'bg-primary-600 text-white shadow-lg shadow-primary-200' : 'bg-gray-100 text-gray-400'"
+              class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <span class="font-bold text-sm md:text-base">EPI & Biometria</span>
+          </button>
+
+          <button @click="activeTab = 6"
+            :class="activeTab === 6 ? 'bg-primary-50 text-primary-700 border-primary-200' : 'bg-transparent text-gray-500 border-transparent hover:bg-gray-50'"
+            class="flex items-center gap-4 px-6 py-4 rounded-2xl border transition-all duration-300 text-left shrink-0 lg:shrink">
+            <div
+              :class="activeTab === 6 ? 'bg-primary-600 text-white shadow-lg shadow-primary-200' : 'bg-gray-100 text-gray-400'"
+              class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01m-.01 4h.01" />
+              </svg>
+            </div>
+            <span class="font-bold text-sm md:text-base">Inventário de Riscos</span>
+          </button>
+
+          <button @click="activeTab = 7"
+            :class="activeTab === 7 ? 'bg-primary-50 text-primary-700 border-primary-200' : 'bg-transparent text-gray-500 border-transparent hover:bg-gray-50'"
+            class="flex items-center gap-4 px-6 py-4 rounded-2xl border transition-all duration-300 text-left shrink-0 lg:shrink">
+            <div
+              :class="activeTab === 7 ? 'bg-primary-600 text-white shadow-lg shadow-primary-200' : 'bg-gray-100 text-gray-400'"
+              class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L16 4m0 13V4m0 0L9 7" />
+              </svg>
+            </div>
+            <span class="font-bold text-sm md:text-base">Mapa de Ambientes</span>
+          </button>
+
+          <button @click="activeTab = 8"
+            :class="activeTab === 8 ? 'bg-primary-50 text-primary-700 border-primary-200' : 'bg-transparent text-gray-500 border-transparent hover:bg-gray-50'"
+            class="flex items-center gap-4 px-6 py-4 rounded-2xl border transition-all duration-300 text-left shrink-0 lg:shrink">
+            <div
+              :class="activeTab === 8 ? 'bg-primary-600 text-white shadow-lg shadow-primary-200' : 'bg-gray-100 text-gray-400'"
+              class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </div>
+            <span class="font-bold text-sm md:text-base">Prontuário Médico</span>
+          </button>
+
+        </div>
+
+        <!-- Tab Content Area -->
+        <div class="w-full lg:w-2/3 min-h-[500px]" data-aos="fade-left">
+          <!-- Atividades Críticas -->
+          <div x-show="activeTab === 0" x-transition:enter="transition ease-out duration-300 transform"
+            x-transition:enter-start="opacity-0 translate-y-4" x-transition:enter-end="opacity-100 translate-y-0"
+            class="flex flex-col gap-8">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-gray-50">
+              <img src="assets/telas/atividades criticas.png" alt="Atividades Críticas" class="w-full h-auto">
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">Gerenciamento de Atividades Críticas</h3>
+              <p class="text-gray-600 text-lg leading-relaxed">
+                Controle total sobre operações de risco. Gerencie <strong>AST, NR10, NR12, NR33, NR35</strong> e ordens
+                de serviço em um fluxo unificado e seguro, garantindo que sua equipe esteja sempre em conformidade com
+                as normas vigentes.
+              </p>
+            </div>
+          </div>
+
+          <!-- Saúde Mental -->
+          <div x-show="activeTab === 1" x-transition:enter="transition ease-out duration-300 transform"
+            x-transition:enter-start="opacity-0 translate-y-4" x-transition:enter-end="opacity-100 translate-y-0"
+            class="flex flex-col gap-8">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-gray-50">
+              <img src="assets/telas/avaliacao pgr nr1 risco psicossocial.png" alt="Saúde Mental" class="w-full h-auto">
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">Avaliação Psicossocial & Saúde Mental</h3>
+              <p class="text-gray-600 text-lg leading-relaxed">
+                Pioneirismo na gestão de riscos humanos. Realize avaliações psicossociais integradas ao documento do
+                <strong>PGR</strong>, conforme exigido pela <strong>NR1</strong>. Utilize formulários personalizáveis
+                para mensurar e gerenciar o risco de saúde mental na sua organização.
+              </p>
+            </div>
+          </div>
+
+          <!-- Cadastro Integrado -->
+          <div x-show="activeTab === 2" x-transition:enter="transition ease-out duration-300 transform"
+            x-transition:enter-start="opacity-0 translate-y-4" x-transition:enter-end="opacity-100 translate-y-0"
+            class="flex flex-col gap-8">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-gray-50">
+              <img src="assets/telas/cadastro funcionario.png" alt="Cadastro Integrado" class="w-full h-auto">
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">Central de Inteligência do Colaborador</h3>
+              <p class="text-gray-600 text-lg leading-relaxed">
+                Tudo o que você precisa em um único lugar. Gestão completa de funcionários e terceiros, acompanhamento
+                de treinamentos, exames médicos, histórico de acidentes e integração nativa com o
+                <strong>eSocial</strong>.
+              </p>
+            </div>
+          </div>
+
+          <!-- eSocial SST -->
+          <div x-show="activeTab === 3" x-transition:enter="transition ease-out duration-300 transform"
+            x-transition:enter-start="opacity-0 translate-y-4" x-transition:enter-end="opacity-100 translate-y-0"
+            class="flex flex-col gap-8">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-gray-50">
+              <img src="assets/telas/esocial.png" alt="eSocial SST" class="w-full h-auto">
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">eSocial SST Automatizado</h3>
+              <p class="text-gray-600 text-lg leading-relaxed">
+                Envio simplificado dos eventos <strong>S-2210</strong> (Acidentes), <strong>S-2220</strong> (ASO),
+                <strong>S-2240</strong> (Ambientes) e <strong>S-2221</strong> (Toxicológico). Garanta conformidade total
+                com o eSocial SST de forma rápida e segura.
+              </p>
+            </div>
+          </div>
+
+          <!-- CIPA -->
+          <div x-show="activeTab === 4" x-transition:enter="transition ease-out duration-300 transform"
+            x-transition:enter-start="opacity-0 translate-y-4" x-transition:enter-end="opacity-100 translate-y-0"
+            class="flex flex-col gap-8">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-gray-50">
+              <img src="assets/telas/cipa.png" alt="CIPA" class="w-full h-auto">
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">Gestão Completa de CIPA (NR-5)</h3>
+              <p class="text-gray-600 text-lg leading-relaxed">
+                Gestão completa da Comissão Interna de Prevenção de Acidentes, incluindo a automação de
+                <strong>eleições</strong>, elaboração de atas, acompanhamento de <strong>treinamentos (NR-5)</strong> e
+                planos de trabalho anuais.
+              </p>
+            </div>
+          </div>
+
+          <!-- EPI & Biometria -->
+          <div x-show="activeTab === 5" x-transition:enter="transition ease-out duration-300 transform"
+            x-transition:enter-start="opacity-0 translate-y-4" x-transition:enter-end="opacity-100 translate-y-0"
+            class="flex flex-col gap-8">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-gray-50">
+              <img src="assets/telas/estoque epi.png" alt="EPI & Biometria" class="w-full h-auto">
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">Controle de EPI com Biometria</h3>
+              <p class="text-gray-600 text-lg leading-relaxed">
+                Segurança real na entrega de equipamentos. Gerencie o estoque de EPIs e registre as entregas utilizando
+                <strong>biometria facial</strong>, garantindo a rastreabilidade e a legalidade das fichas de entrega.
+              </p>
+            </div>
+          </div>
+
+          <!-- Inventário de Riscos -->
+          <div x-show="activeTab === 6" x-transition:enter="transition ease-out duration-300 transform"
+            x-transition:enter-start="opacity-0 translate-y-4" x-transition:enter-end="opacity-100 translate-y-0"
+            class="flex flex-col gap-8">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-gray-50">
+              <img src="assets/telas/inventario de risco.png" alt="Inventário de Riscos" class="w-full h-auto">
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">Inventário de Riscos de Última Geração</h3>
+              <p class="text-gray-600 text-lg leading-relaxed">
+                A ferramenta mais moderna do mercado. Integre matrizes personalizadas, cronogramas de ações, medições e
+                documentos técnicos em um fluxo de trabalho inteligente e automatizado.
+              </p>
+            </div>
+          </div>
+
+          <!-- Mapa de Ambientes -->
+          <div x-show="activeTab === 7" x-transition:enter="transition ease-out duration-300 transform"
+            x-transition:enter-start="opacity-0 translate-y-4" x-transition:enter-end="opacity-100 translate-y-0"
+            class="flex flex-col gap-8">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-gray-50">
+              <img src="assets/telas/mapa ambientes.png" alt="Mapa de Ambientes" class="w-full h-auto">
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">Gestão Visual por Mapa de Ambientes</h3>
+              <p class="text-gray-600 text-lg leading-relaxed">
+                Visualize sua empresa como nunca antes. O Mapa do Ambiente <strong>GHE</strong> oferece uma visão
+                geográfica e intuitiva dos riscos por setor, facilitando a tomada de decisão baseada em dados reais.
+              </p>
+            </div>
+          </div>
+
+          <!-- Prontuário Médico -->
+          <div x-show="activeTab === 8" x-transition:enter="transition ease-out duration-300 transform"
+            x-transition:enter-start="opacity-0 translate-y-4" x-transition:enter-end="opacity-100 translate-y-0"
+            class="flex flex-col gap-8">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-gray-50">
+              <img src="assets/telas/prontuario medico audiometria admissional.png" alt="Prontuário Médico"
+                class="w-full h-auto">
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">Prontuário Médico SST Completo</h3>
+              <p class="text-gray-600 text-lg leading-relaxed">
+                Gestão médica de ponta a ponta. Do <strong>PCMSO ao ASO</strong>, controle exames admissionais,
+                periódicos e audiometrias com um prontuário digital seguro e totalmente integrado.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ========== FLUXO DO SISTEMA BEVART ========== -->
   <section id="fluxo"
     class="py-20 md:py-28 bg-gradient-to-b from-gray-900 via-gray-950 to-gray-900 relative overflow-hidden">
