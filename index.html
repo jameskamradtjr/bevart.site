@@ -106,7 +106,7 @@
               class="nav-link text-gray-700 font-medium hover:text-primary-600 transition">Vídeo</a>
             <a href="#features" class="nav-link text-gray-700 font-medium hover:text-primary-600 transition">Funções</a>
             <a href="#fluxo" class="nav-link text-gray-700 font-medium hover:text-primary-600 transition">eSocial</a>
-            <a href="#pricing" class="nav-link text-gray-700 font-medium hover:text-primary-600 transition">Adquirir</a>
+            <a href="#pricing" class="nav-link text-gray-700 font-medium hover:text-primary-600 transition">Preços</a>
             <!-- Aprenda Como Submenu -->
             <div class="relative" @mouseenter="learnOpen=true" @mouseleave="learnOpen=false">
               <button
@@ -185,7 +185,7 @@
             <a href="#fluxo"
               class="block px-4 py-2.5 rounded-xl text-gray-700 hover:bg-primary-50 font-medium">eSocial</a>
             <a href="#pricing"
-              class="block px-4 py-2.5 rounded-xl text-gray-700 hover:bg-primary-50 font-medium">Adquirir</a>
+              class="block px-4 py-2.5 rounded-xl text-gray-700 hover:bg-primary-50 font-medium">Preços</a>
 
             <div x-data="{ mobileLearnOpen: false }" class="py-1">
               <button @click="mobileLearnOpen = !mobileLearnOpen"
@@ -729,7 +729,7 @@
           equipe.</p>
       </div>
 
-      <div x-data="{ activeTab: 0 }" class="flex flex-col lg:flex-row gap-12 items-start">
+      <div x-data="{ activeTab: 0, lightboxOpen: false, lightboxImg: '' }" class="flex flex-col lg:flex-row gap-12 items-start">
         <!-- Tabs Navigation (Left/Top) -->
         <div
           class="w-full lg:w-1/3 flex flex-row lg:flex-col gap-2 overflow-x-auto lg:overflow-x-visible pb-4 lg:pb-0 no-scrollbar sticky top-24"
@@ -884,8 +884,17 @@
           <div x-show="activeTab === 0" x-transition:enter="transition ease-out duration-300 transform"
             x-transition:enter-start="opacity-0 translate-y-4" x-transition:enter-end="opacity-100 translate-y-0"
             class="flex flex-col gap-8">
-            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-gray-50">
-              <img src="assets/telas/atividades criticas.png" alt="Atividades Críticas" class="w-full h-auto">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-gray-50 cursor-zoom-in group/img"
+              @click="lightboxImg = $event.currentTarget.querySelector('img').src; lightboxOpen = true">
+              <img src="assets/telas/atividades criticas.png" alt="Atividades Críticas" class="w-full h-auto transition-all duration-500 group-hover/img:scale-[1.02]">
+              <div class="absolute inset-0 bg-black/25 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                <div class="bg-white/95 backdrop-blur text-gray-900 rounded-full px-4 py-2 flex items-center gap-2 font-bold text-xs shadow-lg transform translate-y-4 group-hover/img:translate-y-0 transition-all duration-300">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                  </svg>
+                  Clique para ampliar
+                </div>
+              </div>
             </div>
             <div>
               <h3 class="text-2xl font-bold text-gray-900 mb-4">Gerenciamento de Atividades Críticas</h3>
@@ -901,8 +910,17 @@
           <div x-show="activeTab === 1" x-transition:enter="transition ease-out duration-300 transform"
             x-transition:enter-start="opacity-0 translate-y-4" x-transition:enter-end="opacity-100 translate-y-0"
             class="flex flex-col gap-8">
-            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-gray-50">
-              <img src="assets/telas/avaliacao pgr nr1 risco psicossocial.png" alt="Saúde Mental" class="w-full h-auto">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-gray-50 cursor-zoom-in group/img"
+              @click="lightboxImg = $event.currentTarget.querySelector('img').src; lightboxOpen = true">
+              <img src="assets/telas/avaliacao pgr nr1 risco psicossocial.png" alt="Saúde Mental" class="w-full h-auto transition-all duration-500 group-hover/img:scale-[1.02]">
+              <div class="absolute inset-0 bg-black/25 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                <div class="bg-white/95 backdrop-blur text-gray-900 rounded-full px-4 py-2 flex items-center gap-2 font-bold text-xs shadow-lg transform translate-y-4 group-hover/img:translate-y-0 transition-all duration-300">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                  </svg>
+                  Clique para ampliar
+                </div>
+              </div>
             </div>
             <div>
               <h3 class="text-2xl font-bold text-gray-900 mb-4">Avaliação Psicossocial & Saúde Mental</h3>
@@ -918,8 +936,17 @@
           <div x-show="activeTab === 2" x-transition:enter="transition ease-out duration-300 transform"
             x-transition:enter-start="opacity-0 translate-y-4" x-transition:enter-end="opacity-100 translate-y-0"
             class="flex flex-col gap-8">
-            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-gray-50">
-              <img src="assets/telas/cadastro funcionario.png" alt="Cadastro Integrado" class="w-full h-auto">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-gray-50 cursor-zoom-in group/img"
+              @click="lightboxImg = $event.currentTarget.querySelector('img').src; lightboxOpen = true">
+              <img src="assets/telas/cadastro funcionario.png" alt="Cadastro Integrado" class="w-full h-auto transition-all duration-500 group-hover/img:scale-[1.02]">
+              <div class="absolute inset-0 bg-black/25 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                <div class="bg-white/95 backdrop-blur text-gray-900 rounded-full px-4 py-2 flex items-center gap-2 font-bold text-xs shadow-lg transform translate-y-4 group-hover/img:translate-y-0 transition-all duration-300">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                  </svg>
+                  Clique para ampliar
+                </div>
+              </div>
             </div>
             <div>
               <h3 class="text-2xl font-bold text-gray-900 mb-4">Central de Inteligência do Colaborador</h3>
@@ -935,8 +962,17 @@
           <div x-show="activeTab === 3" x-transition:enter="transition ease-out duration-300 transform"
             x-transition:enter-start="opacity-0 translate-y-4" x-transition:enter-end="opacity-100 translate-y-0"
             class="flex flex-col gap-8">
-            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-gray-50">
-              <img src="assets/telas/esocial.png" alt="eSocial SST" class="w-full h-auto">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-gray-50 cursor-zoom-in group/img"
+              @click="lightboxImg = $event.currentTarget.querySelector('img').src; lightboxOpen = true">
+              <img src="assets/telas/esocial.png" alt="eSocial SST" class="w-full h-auto transition-all duration-500 group-hover/img:scale-[1.02]">
+              <div class="absolute inset-0 bg-black/25 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                <div class="bg-white/95 backdrop-blur text-gray-900 rounded-full px-4 py-2 flex items-center gap-2 font-bold text-xs shadow-lg transform translate-y-4 group-hover/img:translate-y-0 transition-all duration-300">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                  </svg>
+                  Clique para ampliar
+                </div>
+              </div>
             </div>
             <div>
               <h3 class="text-2xl font-bold text-gray-900 mb-4">eSocial SST Automatizado</h3>
@@ -952,8 +988,17 @@
           <div x-show="activeTab === 4" x-transition:enter="transition ease-out duration-300 transform"
             x-transition:enter-start="opacity-0 translate-y-4" x-transition:enter-end="opacity-100 translate-y-0"
             class="flex flex-col gap-8">
-            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-gray-50">
-              <img src="assets/telas/cipa.png" alt="CIPA" class="w-full h-auto">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-gray-50 cursor-zoom-in group/img"
+              @click="lightboxImg = $event.currentTarget.querySelector('img').src; lightboxOpen = true">
+              <img src="assets/telas/cipa.png" alt="CIPA" class="w-full h-auto transition-all duration-500 group-hover/img:scale-[1.02]">
+              <div class="absolute inset-0 bg-black/25 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                <div class="bg-white/95 backdrop-blur text-gray-900 rounded-full px-4 py-2 flex items-center gap-2 font-bold text-xs shadow-lg transform translate-y-4 group-hover/img:translate-y-0 transition-all duration-300">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                  </svg>
+                  Clique para ampliar
+                </div>
+              </div>
             </div>
             <div>
               <h3 class="text-2xl font-bold text-gray-900 mb-4">Gestão Completa de CIPA (NR-5)</h3>
@@ -969,8 +1014,17 @@
           <div x-show="activeTab === 5" x-transition:enter="transition ease-out duration-300 transform"
             x-transition:enter-start="opacity-0 translate-y-4" x-transition:enter-end="opacity-100 translate-y-0"
             class="flex flex-col gap-8">
-            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-gray-50">
-              <img src="assets/telas/estoque epi.png" alt="EPI & Biometria" class="w-full h-auto">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-gray-50 cursor-zoom-in group/img"
+              @click="lightboxImg = $event.currentTarget.querySelector('img').src; lightboxOpen = true">
+              <img src="assets/telas/estoque epi.png" alt="EPI & Biometria" class="w-full h-auto transition-all duration-500 group-hover/img:scale-[1.02]">
+              <div class="absolute inset-0 bg-black/25 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                <div class="bg-white/95 backdrop-blur text-gray-900 rounded-full px-4 py-2 flex items-center gap-2 font-bold text-xs shadow-lg transform translate-y-4 group-hover/img:translate-y-0 transition-all duration-300">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                  </svg>
+                  Clique para ampliar
+                </div>
+              </div>
             </div>
             <div>
               <h3 class="text-2xl font-bold text-gray-900 mb-4">Controle de EPI com Biometria</h3>
@@ -985,8 +1039,17 @@
           <div x-show="activeTab === 6" x-transition:enter="transition ease-out duration-300 transform"
             x-transition:enter-start="opacity-0 translate-y-4" x-transition:enter-end="opacity-100 translate-y-0"
             class="flex flex-col gap-8">
-            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-gray-50">
-              <img src="assets/telas/inventario de risco.png" alt="Inventário de Riscos" class="w-full h-auto">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-gray-50 cursor-zoom-in group/img"
+              @click="lightboxImg = $event.currentTarget.querySelector('img').src; lightboxOpen = true">
+              <img src="assets/telas/inventario de risco.png" alt="Inventário de Riscos" class="w-full h-auto transition-all duration-500 group-hover/img:scale-[1.02]">
+              <div class="absolute inset-0 bg-black/25 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                <div class="bg-white/95 backdrop-blur text-gray-900 rounded-full px-4 py-2 flex items-center gap-2 font-bold text-xs shadow-lg transform translate-y-4 group-hover/img:translate-y-0 transition-all duration-300">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                  </svg>
+                  Clique para ampliar
+                </div>
+              </div>
             </div>
             <div>
               <h3 class="text-2xl font-bold text-gray-900 mb-4">Inventário de Riscos de Última Geração</h3>
@@ -1001,8 +1064,17 @@
           <div x-show="activeTab === 7" x-transition:enter="transition ease-out duration-300 transform"
             x-transition:enter-start="opacity-0 translate-y-4" x-transition:enter-end="opacity-100 translate-y-0"
             class="flex flex-col gap-8">
-            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-gray-50">
-              <img src="assets/telas/mapa ambientes.png" alt="Mapa de Ambientes" class="w-full h-auto">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-gray-50 cursor-zoom-in group/img"
+              @click="lightboxImg = $event.currentTarget.querySelector('img').src; lightboxOpen = true">
+              <img src="assets/telas/mapa ambientes.png" alt="Mapa de Ambientes" class="w-full h-auto transition-all duration-500 group-hover/img:scale-[1.02]">
+              <div class="absolute inset-0 bg-black/25 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                <div class="bg-white/95 backdrop-blur text-gray-900 rounded-full px-4 py-2 flex items-center gap-2 font-bold text-xs shadow-lg transform translate-y-4 group-hover/img:translate-y-0 transition-all duration-300">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                  </svg>
+                  Clique para ampliar
+                </div>
+              </div>
             </div>
             <div>
               <h3 class="text-2xl font-bold text-gray-900 mb-4">Gestão Visual por Mapa de Ambientes</h3>
@@ -1017,9 +1089,17 @@
           <div x-show="activeTab === 8" x-transition:enter="transition ease-out duration-300 transform"
             x-transition:enter-start="opacity-0 translate-y-4" x-transition:enter-end="opacity-100 translate-y-0"
             class="flex flex-col gap-8">
-            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-gray-50">
-              <img src="assets/telas/prontuario medico audiometria admissional.png" alt="Prontuário Médico"
-                class="w-full h-auto">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-gray-50 cursor-zoom-in group/img"
+              @click="lightboxImg = $event.currentTarget.querySelector('img').src; lightboxOpen = true">
+              <img src="assets/telas/prontuario medico audiometria admissional.png" alt="Prontuário Médico" class="w-full h-auto transition-all duration-500 group-hover/img:scale-[1.02]">
+              <div class="absolute inset-0 bg-black/25 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                <div class="bg-white/95 backdrop-blur text-gray-900 rounded-full px-4 py-2 flex items-center gap-2 font-bold text-xs shadow-lg transform translate-y-4 group-hover/img:translate-y-0 transition-all duration-300">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                  </svg>
+                  Clique para ampliar
+                </div>
+              </div>
             </div>
             <div>
               <h3 class="text-2xl font-bold text-gray-900 mb-4">Prontuário Médico SST Completo</h3>
@@ -1034,8 +1114,17 @@
           <div x-show="activeTab === 9" x-transition:enter="transition ease-out duration-300 transform"
             x-transition:enter-start="opacity-0 translate-y-4" x-transition:enter-end="opacity-100 translate-y-0"
             class="flex flex-col gap-8">
-            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-gray-50">
-              <img src="assets/telas/mapa_empresa.png" alt="Mapa Visual Aninhado" class="w-full h-auto">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-gray-50 cursor-zoom-in group/img"
+              @click="lightboxImg = $event.currentTarget.querySelector('img').src; lightboxOpen = true">
+              <img src="assets/telas/mapa_empresa.png" alt="Mapa Visual Aninhado" class="w-full h-auto transition-all duration-500 group-hover/img:scale-[1.02]">
+              <div class="absolute inset-0 bg-black/25 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                <div class="bg-white/95 backdrop-blur text-gray-900 rounded-full px-4 py-2 flex items-center gap-2 font-bold text-xs shadow-lg transform translate-y-4 group-hover/img:translate-y-0 transition-all duration-300">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                  </svg>
+                  Clique para ampliar
+                </div>
+              </div>
             </div>
             <div>
               <h3 class="text-2xl font-bold text-gray-900 mb-4">Mapa Visual Aninhado da Empresa</h3>
@@ -1047,6 +1136,34 @@
             </div>
           </div>
         </div>
+
+        <!-- Lightbox Modal -->
+        <div x-show="lightboxOpen" 
+             x-transition:enter="transition ease-out duration-300"
+             x-transition:enter-start="opacity-0"
+             x-transition:enter-end="opacity-100"
+             x-transition:leave="transition ease-in duration-200"
+             x-transition:leave-start="opacity-100"
+             x-transition:leave-end="opacity-0"
+             class="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-md p-4 sm:p-10 cursor-zoom-out"
+             @click="lightboxOpen = false"
+             @keydown.escape.window="lightboxOpen = false"
+             style="display: none;">
+             
+             <!-- Botão Fechar -->
+             <button class="absolute top-6 right-6 text-white/80 hover:text-white bg-white/10 hover:bg-white/20 p-3 rounded-full transition-all duration-300 focus:outline-none" aria-label="Fechar">
+               <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+               </svg>
+             </button>
+             
+             <!-- Container da Imagem -->
+             <div class="relative max-w-5xl max-h-[90vh] overflow-hidden rounded-2xl border-4 border-white/10 shadow-2xl flex items-center justify-center bg-gray-950" 
+                  @click.stop>
+               <img :src="lightboxImg" alt="Imagem ampliada" class="max-w-full max-h-[85vh] object-contain select-none">
+             </div>
+        </div>
+      </div>
       </div>
     </div>
   </section>
