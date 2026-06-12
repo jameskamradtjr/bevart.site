@@ -426,6 +426,22 @@
               <p class="text-lg font-black text-gray-900">100% Automático</p>
             </div>
           </div>
+
+          <!-- Floating Badge: Alertas WhatsApp -->
+          <div
+            class="absolute -bottom-10 -left-4 lg:-left-10 bg-white p-5 rounded-3xl shadow-2xl border border-blue-50 hidden md:flex items-center gap-4 animate-float"
+            style="animation-delay: 1.5s;">
+            <div
+              class="w-12 h-12 bg-[#25D366] text-white rounded-2xl flex items-center justify-center shadow-lg shadow-green-200/50">
+              <svg class="w-7 h-7 text-white fill-current" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.057 5.291 5.348 0 11.83 0c3.14 0 6.095 1.223 8.318 3.447C22.373 5.672 23.6 8.627 23.6 11.767c-.002 6.478-5.293 11.77-11.776 11.77a11.71 11.71 0 01-5.963-1.629L0 24zm6.52-5.834a9.78 9.78 0 005.278 1.542h.005c5.385 0 9.764-4.38 9.767-9.77a9.712 9.712 0 00-2.855-6.91 9.728 9.728 0 00-6.924-2.856C6.417 2.172 2.04 6.552 2.037 11.94c-.001 2.01.523 3.977 1.517 5.72l-1.01 3.69 3.774-.99.236.14zM17.472 14.382c-.3-.149-1.772-.874-2.046-.974-.275-.101-.475-.149-.675.15-.2.299-.775.974-.95 1.173-.175.2-.35.224-.65.074-1.127-.565-1.928-1.009-2.697-2.325-.203-.349.203-.324.581-1.082.063-.125.031-.237-.015-.337-.047-.1-.475-1.149-.65-1.572-.171-.413-.344-.357-.472-.363-.123-.006-.264-.007-.406-.007a.78.78 0 00-.563.263c-.19.21-.722.705-.722 1.72 0 1.015.738 1.996.839 2.13.102.136 1.453 2.22 3.52 3.114.492.213.876.34 1.177.436.495.157.945.134 1.3.081.396-.059 1.772-.724 2.022-1.424.25-.699.25-1.3.175-1.424-.075-.124-.275-.2-.575-.349z" />
+              </svg>
+            </div>
+            <div>
+              <p class="text-xs font-black text-gray-400 uppercase tracking-widest">Alertas de Exame</p>
+              <p class="text-lg font-black text-gray-900">Avisos via WhatsApp</p>
+            </div>
+          </div>
         </div>
       </div>
   </section>
@@ -541,15 +557,22 @@
           </div>
           <h3 class="text-lg font-bold text-gray-900 mb-2">Saúde Ocupacional</h3>
           <p class="text-gray-400 text-xs font-bold mb-3 uppercase">PCMSO | ASO | Prontuários | Exames</p>
-          <p class="text-gray-500 text-sm leading-relaxed mb-4">Gestão completa do PCMSO (NR-07), com convocação de
-            exames,
-            prontuário médico digital, anamnese, audiometria e geração automática de ASOs.</p>
-          <div class="p-3 bg-rose-50 rounded-xl border border-rose-100">
-            <div class="flex items-center gap-2 mb-1">
-              <span class="w-2 h-2 bg-rose-500 rounded-full animate-ping"></span>
-              <p class="text-[10px] font-bold text-rose-600 uppercase">Destaque Obrigatório</p>
+          <p class="text-gray-500 text-sm leading-relaxed mb-4">Gestão completa do PCMSO (NR-07), com convocação de exames, prontuário médico digital, anamnese, audiometria, geração automática de ASOs e alertas automáticos por WhatsApp e e-mail.</p>
+          <div class="flex flex-col gap-2">
+            <div class="p-3 bg-rose-50 rounded-xl border border-rose-100">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="w-2 h-2 bg-rose-500 rounded-full animate-ping"></span>
+                <p class="text-[10px] font-bold text-rose-600 uppercase">Destaque Obrigatório</p>
+              </div>
+              <p class="text-xs font-bold text-rose-800">Formulário de Exame Psicológico</p>
             </div>
-            <p class="text-xs font-bold text-rose-800">Formulário de Exame Psicológico</p>
+            <div class="p-3 bg-emerald-50 rounded-xl border border-emerald-100">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+                <p class="text-[10px] font-bold text-emerald-600 uppercase">Alertas Preventivos</p>
+              </div>
+              <p class="text-xs font-bold text-emerald-800">Envios automáticos de alertas de exames a vencer e vencidos por WhatsApp e e-mail.</p>
+            </div>
           </div>
         </div>
         <!-- Card 3: Segurança Operacional -->
@@ -871,6 +894,20 @@
             <span class="font-bold text-sm md:text-base">Prontuário Médico</span>
           </button>
 
+          <button @click="activeTab = 12"
+            :class="activeTab === 12 ? 'bg-primary-50 text-primary-700 border-primary-200' : 'bg-transparent text-gray-500 border-transparent hover:bg-gray-50'"
+            class="flex items-center gap-4 px-6 py-4 rounded-2xl border transition-all duration-300 text-left shrink-0 lg:shrink">
+            <div
+              :class="activeTab === 12 ? 'bg-primary-600 text-white shadow-lg shadow-primary-200' : 'bg-gray-100 text-gray-400'"
+              class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+              </svg>
+            </div>
+            <span class="font-bold text-sm md:text-base">Alertas de Exames (ASO)</span>
+          </button>
+
           <button @click="activeTab = 9"
             :class="activeTab === 9 ? 'bg-primary-50 text-primary-700 border-primary-200' : 'bg-transparent text-gray-500 border-transparent hover:bg-gray-50'"
             class="flex items-center gap-4 px-6 py-4 rounded-2xl border transition-all duration-300 text-left shrink-0 lg:shrink">
@@ -1145,6 +1182,30 @@
               <p class="text-gray-600 text-lg leading-relaxed">
                 Gestão médica de ponta a ponta. Do <strong>PCMSO ao ASO</strong>, controle exames admissionais,
                 periódicos e audiometrias com um prontuário digital seguro e totalmente integrado.
+              </p>
+            </div>
+          </div>
+
+          <!-- Alertas de Exames (ASO) -->
+          <div x-show="activeTab === 12" x-transition:enter="transition ease-out duration-300 transform"
+            x-transition:enter-start="opacity-0 translate-y-4" x-transition:enter-end="opacity-100 translate-y-0"
+            class="flex flex-col gap-8">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-gray-50 cursor-zoom-in group/img"
+              @click="lightboxImg = $event.currentTarget.querySelector('img').src; lightboxOpen = true">
+              <img src="assets/telas/alertas_exames_aso.png" alt="Alertas de Exames (ASO)" class="w-full h-auto transition-all duration-500 group-hover/img:scale-[1.02]">
+              <div class="absolute inset-0 bg-black/25 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                <div class="bg-white/95 backdrop-blur text-gray-900 rounded-full px-4 py-2 flex items-center gap-2 font-bold text-xs shadow-lg transform translate-y-4 group-hover/img:translate-y-0 transition-all duration-300">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                  </svg>
+                  Clique para ampliar
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">Alertas Automáticos de Exames a Vencer e Vencidos</h3>
+              <p class="text-gray-600 text-lg leading-relaxed">
+                Garanta 100% de conformidade com o <strong>PCMSO</strong> sem planilhas manuais. O Bevart envia <strong>alertas preventivos de exames a vencer e vencidos</strong> de forma totalmente automatizada por <strong>WhatsApp e e-mail</strong>. O gestor, a clínica parceira e o próprio colaborador são informados instantaneamente para agendar os exames necessários.
               </p>
             </div>
           </div>
@@ -1636,6 +1697,7 @@
               <span class="flow-tag-sm">ASO</span>
               <span class="flow-tag-sm">Vencimentos</span>
               <span class="flow-tag-sm">Clínicas</span>
+              <span class="flow-tag-sm bg-emerald-500/20 text-emerald-300">WhatsApp & E-mail</span>
             </div>
           </div>
         </div>
