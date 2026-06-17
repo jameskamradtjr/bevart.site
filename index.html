@@ -750,6 +750,18 @@
           <p class="text-gray-400 text-xs font-bold mb-3 uppercase">Questionários | Canal de Denúncias | Inventário</p>
           <p class="text-gray-500 text-sm leading-relaxed">Avaliação de Risco Psicossocial. Temos questionários, canal de denúncias, e integração no inventário de riscos.</p>
         </div>
+        <!-- Card 15: Indicadores de Acidentes -->
+        <div class="feature-card bg-white rounded-2xl p-8 border border-gray-100 shadow-sm" data-aos="fade-up"
+          data-aos-delay="800">
+          <div class="w-14 h-14 bg-pink-50 rounded-2xl flex items-center justify-center mb-5">
+            <svg class="w-7 h-7 text-pink-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Indicadores de Acidentes</h3>
+          <p class="text-gray-400 text-xs font-bold mb-3 uppercase">CAT | eSocial | CIDs | Dashboard</p>
+          <p class="text-gray-500 text-sm leading-relaxed">Área para cadastrar ocorrências e incidentes integrada ao CAT eSocial. Controle de atestados com ranking de CIDs que mais impactam e dashboard de investigação e planos de ação.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -950,6 +962,19 @@
               </svg>
             </div>
             <span class="font-bold text-sm md:text-base">NR-12 Máquinas</span>
+          </button>
+
+          <button @click="activeTab = 13"
+            :class="activeTab === 13 ? 'bg-primary-50 text-primary-700 border-primary-200' : 'bg-transparent text-gray-500 border-transparent hover:bg-gray-50'"
+            class="flex items-center gap-4 px-6 py-4 rounded-2xl border transition-all duration-300 text-left shrink-0 lg:shrink">
+            <div
+              :class="activeTab === 13 ? 'bg-primary-600 text-white shadow-lg shadow-primary-200' : 'bg-gray-100 text-gray-400'"
+              class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+            </div>
+            <span class="font-bold text-sm md:text-base">Indicadores de Acidentes</span>
           </button>
 
         </div>
@@ -1271,6 +1296,30 @@
               <h3 class="text-2xl font-bold text-gray-900 mb-4">NR-12 Máquinas</h3>
               <p class="text-gray-600 text-lg leading-relaxed">
                 Cadastre equipamentos, máquinas, tenha o inventário e gere documentos, integre a GHE e treinamentos à unidade da empresa.
+              </p>
+            </div>
+          </div>
+
+          <!-- Indicadores de Acidentes -->
+          <div x-show="activeTab === 13" x-transition:enter="transition ease-out duration-300 transform"
+            x-transition:enter-start="opacity-0 translate-y-4" x-transition:enter-end="opacity-100 translate-y-0"
+            class="flex flex-col gap-8">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-gray-50 cursor-zoom-in group/img"
+              @click="lightboxImg = $event.currentTarget.querySelector('img').src; lightboxOpen = true">
+              <img src="assets/telas/indicadores de acidentes.png" alt="Indicadores de Acidentes" class="w-full h-auto transition-all duration-500 group-hover/img:scale-[1.02]">
+              <div class="absolute inset-0 bg-black/25 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                <div class="bg-white/95 backdrop-blur text-gray-900 rounded-full px-4 py-2 flex items-center gap-2 font-bold text-xs shadow-lg transform translate-y-4 group-hover/img:translate-y-0 transition-all duration-300">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                  </svg>
+                  Clique para ampliar
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">Indicadores de Acidentes</h3>
+              <p class="text-gray-600 text-lg leading-relaxed">
+                Área para cadastrar ocorrências e incidentes, totalmente integrada ao <strong>CAT eSocial</strong>. Gerencie atestados CID, descubra os CIDs que mais impactam com um ranking de funcionários por atestado, e visualize tudo em um completo <strong>dashboard de acidentes</strong>, investigações e planos de ação.
               </p>
             </div>
           </div>
