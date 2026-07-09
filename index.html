@@ -2,27 +2,6 @@
 <html lang="pt-BR">
 
 <head>
-
-
-  <!-- Meta Pixel Code -->
-  <script>
-    !function (f, b, e, v, n, t, s) {
-      if (f.fbq) return; n = f.fbq = function () {
-        n.callMethod ?
-          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-      };
-      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-      n.queue = []; t = b.createElement(e); t.async = !0;
-      t.src = v; s = b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t, s)
-    }(window, document, 'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1004315305690659');
-    fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=1004315305690659&ev=PageView&noscript=1" /></noscript>
-  <!-- End Meta Pixel Code -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Software SST Bevart - Gestão Completa em SST, NRs e eSocial com IA</title>
@@ -49,52 +28,25 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <link rel="stylesheet" href="assets/css/custom.css">
-  <!-- Google Lead Conversion Tracking -->
+  <!-- Meta Pixel Code -->
   <script>
-    function gtag_report_conversion(url) {
-      if (typeof gtag !== 'function') {
-        if (typeof url !== 'undefined') { window.location = url; }
-        return false;
-      }
-      var callback = function () {
-        if (typeof (url) != 'undefined') {
-          window.location = url;
-        }
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
       };
-      gtag('event', 'conversion', {
-        'send_to': 'AW-17992875515/YUXSCN2X8IQcEPv71YND',
-        'event_callback': callback
-      });
-      return false;
-    }
-
-    // New function for WhatsApp conversion
-    function gtag_report_whatsapp_conversion() {
-      if (typeof gtag === 'function') {
-        gtag('event', 'conversion', {
-          'send_to': 'AW-17992875515/nPR2CPXJyoUcEPv71YND',
-          'value': 1.0,
-          'currency': 'BRL'
-        });
-      }
-    }
-
-    // Use event delegation to handle clicks
-    document.addEventListener('click', function (e) {
-      // Login/Register conversion
-      const loginTarget = e.target.closest('a[href*="profissionais.bevart.com.br/app/src/login/views/login"]');
-      if (loginTarget) {
-        e.preventDefault();
-        gtag_report_conversion(loginTarget.href);
-      }
-
-      // WhatsApp conversion
-      const waTarget = e.target.closest('a[href*="wa.me"], a[href*="whatsapp.com"]');
-      if (waTarget) {
-        gtag_report_whatsapp_conversion();
-      }
-    });
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1004315305690659');
+    fbq('track', 'PageView');
   </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1004315305690659&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
 </head>
 
 <body class="font-sans antialiased text-gray-800 overflow-x-hidden">
