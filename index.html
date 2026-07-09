@@ -33,7 +33,7 @@
     !function (f, b, e, v, n, t, s) {
       if (f.fbq) return; n = f.fbq = function () {
         n.callMethod ?
-        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
       };
       if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
       n.queue = []; t = b.createElement(e); t.async = !0;
@@ -3011,6 +3011,8 @@
   <script src="assets/js/app.js"></script>
 
   <div id="cookie-settings-trigger" class="cookie-settings-trigger hidden">🍪</div>
+
+  <script>(function (d, s, id) { var js = d.createElement(s); js.src = "https://analytics.yggra.com.br/tracker.js?v=" + Date.now(); js.async = true; js.setAttribute('data-id', id); d.head.appendChild(js); })(document, 'script', 'SB-3C21C2');</script>
 </body>
 
 </html>
