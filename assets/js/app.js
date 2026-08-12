@@ -1,222 +1,164 @@
-// ===== FlowEasy Landing Page - App JS =====
+/* =====================================================================
+ * Bevart — comportamento do site
+ *
+ * Carregado por todas as páginas. Cada bloco verifica se o elemento
+ * existe antes de agir, porque as páginas internas têm estruturas
+ * diferentes da home.
+ * ===================================================================== */
 
-document.addEventListener('DOMContentLoaded', () => {
-  // Initialize AOS if library is loaded
-  if (typeof AOS !== 'undefined') {
-    AOS.init({
-      duration: 800,
-      easing: 'ease-out-cubic',
-      once: true,
-      offset: 80,
-      delay: 100,
-    });
-  }
+(function () {
+  'use strict';
 
-  // ===== Navbar scroll effect =====
-  const navbar = document.getElementById('navbar');
-  const navbarWrapper = document.getElementById('navbar-wrapper');
-  let lastScroll = 0;
+  var semMovimento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-
-    if (currentScroll > 50) {
-      navbar.classList.add('scrolled');
-      navbarWrapper.style.paddingTop = '8px';
+  function pronto(fn) {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', fn);
     } else {
-      navbar.classList.remove('scrolled');
-      navbarWrapper.style.paddingTop = '16px';
+      fn();
     }
-
-    lastScroll = currentScroll;
-  });
-
-  // ===== Smooth scroll for anchor links =====
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
-    });
-  });
-
-  // ===== Counter animation for metrics =====
-  const observerOptions = {
-    threshold: 0.5,
-    rootMargin: '0px'
-  };
-
-  const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const counters = entry.target.querySelectorAll('[data-count]');
-        counters.forEach(counter => {
-          animateCounter(counter);
-        });
-        counterObserver.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
-  document.querySelectorAll('.counter-section').forEach(section => {
-    counterObserver.observe(section);
-  });
-
-  function animateCounter(el) {
-    const target = parseInt(el.getAttribute('data-count'));
-    const suffix = el.getAttribute('data-suffix') || '';
-    const prefix = el.getAttribute('data-prefix') || '';
-    const duration = 2000;
-    const step = target / (duration / 16);
-    let current = 0;
-
-    const timer = setInterval(() => {
-      current += step;
-      if (current >= target) {
-        current = target;
-        clearInterval(timer);
-      }
-      el.textContent = prefix + Math.floor(current).toLocaleString('pt-BR') + suffix;
-    }, 16);
   }
 
-  // ===== Typing effect for hero subtitle =====
-  const typingEl = document.getElementById('typing-text');
-  if (typingEl) {
-    const texts = [
-      'Migre de sistema e ganhe produtividade',
-      'eSocial automático para milhares de vidas',
-      'Documentos SST modernos e personalizáveis',
-      'Escalabilidade real para sua consultoria'
-    ];
-    let textIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
+  pronto(function () {
 
-    function typeEffect() {
-      const currentText = texts[textIndex];
-
-      if (isDeleting) {
-        typingEl.textContent = currentText.substring(0, charIndex - 1);
-        charIndex--;
-      } else {
-        typingEl.textContent = currentText.substring(0, charIndex + 1);
-        charIndex++;
-      }
-
-      let typeSpeed = isDeleting ? 30 : 60;
-
-      if (!isDeleting && charIndex === currentText.length) {
-        typeSpeed = 2000;
-        isDeleting = true;
-      } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        textIndex = (textIndex + 1) % texts.length;
-        typeSpeed = 500;
-      }
-
-      setTimeout(typeEffect, typeSpeed);
-    }
-
-    setTimeout(typeEffect, 1500);
-  }
-
-  // ===== FAQ Accordion (using Alpine.js, but fallback) =====
-  document.querySelectorAll('.faq-toggle').forEach(button => {
-    button.addEventListener('click', () => {
-      const content = button.nextElementSibling;
-      const icon = button.querySelector('.faq-icon');
-
-      if (content.style.maxHeight) {
-        content.style.maxHeight = null;
-        icon.style.transform = 'rotate(0deg)';
-      } else {
-        content.style.maxHeight = content.scrollHeight + 'px';
-        icon.style.transform = 'rotate(180deg)';
-      }
-    });
-  });
-
-  // ===== Parallax floating icons =====
-  const parallaxIcons = document.querySelectorAll('.parallax-icon');
-
-  if (parallaxIcons.length > 0) {
-    window.addEventListener('scroll', () => {
-      const scrollY = window.pageYOffset;
-      parallaxIcons.forEach(icon => {
-        const speed = parseFloat(icon.getAttribute('data-speed')) || 0.2;
-        const yOffset = scrollY * speed;
-        icon.style.transform = `translateY(${yOffset}px)`;
+    /* ---------- animações de entrada ---------- */
+    if (typeof AOS !== 'undefined') {
+      AOS.init({
+        duration: semMovimento ? 0 : 600,
+        easing: 'ease-out-cubic',
+        once: true,
+        offset: 60,
+        disable: semMovimento
       });
-    }, { passive: true });
-  }
+    }
 
-  // ===== Flow Section Animation (Vertical Line) =====
-  const flowSection = document.getElementById('fluxo');
-  const flowLine = document.querySelector('.flow-main-line');
+    /* ---------- navbar ao rolar ---------- */
+    var navbar = document.getElementById('navbar');
+    var navbarWrapper = document.getElementById('navbar-wrapper');
 
-  if (flowSection && flowLine) {
-    const flowObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          // Calculate the height to animate to
-          const flowSteps = flowSection.querySelectorAll('.flow-step');
-          if (flowSteps.length > 0) {
-            const firstNode = flowSteps[0].querySelector('.flow-node-center');
-            const lastNode = flowSteps[flowSteps.length - 1].querySelector('.flow-node-center');
+    if (navbar && navbarWrapper) {
+      var aplicarEstadoNavbar = function () {
+        var rolou = window.pageYOffset > 40;
+        navbar.classList.toggle('scrolled', rolou);
+        navbarWrapper.style.paddingTop = rolou ? '8px' : '16px';
+      };
+      aplicarEstadoNavbar();
+      window.addEventListener('scroll', aplicarEstadoNavbar, { passive: true });
+    }
 
-            if (firstNode && lastNode) {
-              const startTop = firstNode.offsetTop + (firstNode.offsetHeight / 2);
-              const endTop = lastNode.offsetTop + (lastNode.offsetHeight / 2);
-              const totalHeight = endTop - startTop;
+    /* ---------- CTA fixo no mobile ----------
+     * Aparece quando o hero sai da tela e some no rodapé, para não
+     * competir com o CTA final. */
+    var stickyCta = document.getElementById('sticky-cta');
+    var fimDoHero = document.getElementById('hero-fim');
+    var ctaFinal = document.getElementById('contato');
 
-              flowLine.style.top = `${startTop}px`;
-              flowLine.style.transition = 'height 2.5s cubic-bezier(0.4, 0, 0.2, 1)';
-              flowLine.style.height = `${totalHeight}px`;
-            }
-          }
-          flowObserver.unobserve(entry.target);
+    if (stickyCta && fimDoHero && 'IntersectionObserver' in window) {
+      var passouDoHero = false;
+      var chegouNoFim = false;
+
+      var atualizarSticky = function () {
+        var mostrar = passouDoHero && !chegouNoFim;
+        stickyCta.classList.toggle('is-visible', mostrar);
+        stickyCta.setAttribute('aria-hidden', mostrar ? 'false' : 'true');
+        document.body.classList.toggle('has-sticky-cta', mostrar);
+      };
+
+      new IntersectionObserver(function (entradas) {
+        // Só conta como "passou" quando o fim do hero ficou ACIMA da tela.
+        // Sem o teste de posição, o CTA apareceria já no topo da página,
+        // porque o sentinela nasce fora da viewport.
+        var e = entradas[0];
+        passouDoHero = !e.isIntersecting && e.boundingClientRect.top < 0;
+        atualizarSticky();
+      }).observe(fimDoHero);
+
+      if (ctaFinal) {
+        new IntersectionObserver(function (entradas) {
+          chegouNoFim = entradas[0].isIntersecting;
+          atualizarSticky();
+          // threshold 0: em telas pequenas a seção final é mais alta que a
+          // viewport e um threshold maior nunca seria atingido.
+        }, { threshold: 0 }).observe(ctaFinal);
+      }
+    }
+
+    /* ---------- vídeo: só carrega o player no clique ---------- */
+    document.querySelectorAll('[data-video]').forEach(function (caixa) {
+      var botao = caixa.querySelector('.bv-video-btn');
+      if (!botao) { return; }
+
+      botao.addEventListener('click', function () {
+        var iframe = document.createElement('iframe');
+        iframe.src = 'https://www.youtube.com/embed/' + caixa.getAttribute('data-video') + '?autoplay=1&rel=0';
+        iframe.title = 'Apresentação da plataforma Bevart';
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+        iframe.allowFullscreen = true;
+        caixa.replaceChild(iframe, botao);
+      });
+    });
+
+    /* ---------- consentimento de cookies ---------- */
+    var banner = document.getElementById('cookie-consent');
+    var aceitar = document.getElementById('accept-cookies');
+    var gatilho = document.getElementById('cookie-settings-trigger');
+
+    if (banner && aceitar && gatilho) {
+      var jaAceitou = false;
+      try { jaAceitou = !!localStorage.getItem('bevart_cookies_accepted_v2'); } catch (e) { /* modo privado */ }
+
+      // No mobile o banner divide o rodapé com o CTA fixo e o WhatsApp.
+      var marcarBanner = function (aberto) {
+        document.body.classList.toggle('cookie-aberto', aberto);
+      };
+
+      if (jaAceitou) {
+        gatilho.classList.remove('hidden');
+      } else {
+        gatilho.classList.add('hidden');
+        setTimeout(function () {
+          banner.classList.add('show');
+          marcarBanner(true);
+        }, 600);
+      }
+
+      aceitar.addEventListener('click', function () {
+        try { localStorage.setItem('bevart_cookies_accepted_v2', 'true'); } catch (e) { /* modo privado */ }
+        banner.classList.remove('show');
+        marcarBanner(false);
+        setTimeout(function () { gatilho.classList.remove('hidden'); }, 400);
+      });
+
+      var abrirPreferencias = function () {
+        banner.classList.add('show');
+        marcarBanner(true);
+        gatilho.classList.add('hidden');
+      };
+
+      gatilho.addEventListener('click', abrirPreferencias);
+      gatilho.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          abrirPreferencias();
         }
       });
-    }, { threshold: 0.2 });
-
-    flowObserver.observe(flowSection);
-  }
-
-  // ===== Cookie Consent Logic =====
-  const cookieConsent = document.getElementById('cookie-consent');
-  const acceptBtn = document.getElementById('accept-cookies');
-  const cookieTrigger = document.getElementById('cookie-settings-trigger');
-
-  if (cookieConsent && acceptBtn && cookieTrigger) {
-    // Initial State: hide trigger if showing banner
-    const isAccepted = localStorage.getItem('bevart_cookies_accepted_v2');
-
-    if (!isAccepted) {
-      cookieTrigger.classList.add('hidden');
-      setTimeout(() => {
-        cookieConsent.classList.add('show');
-      }, 500);
-    } else {
-      cookieTrigger.classList.remove('hidden');
     }
 
-    acceptBtn.addEventListener('click', () => {
-      localStorage.setItem('bevart_cookies_accepted_v2', 'true');
-      cookieConsent.classList.remove('show');
-      setTimeout(() => {
-        cookieTrigger.classList.remove('hidden');
-      }, 500);
+    /* ---------- qual CTA gerou o clique ----------
+     * A conversão em si é registrada pelo bev-tracking.js (Meta) e pelo
+     * gtag_report_conversion (Google Ads). Aqui só marcamos a origem
+     * do clique dentro da página, para saber qual seção converte. */
+    document.querySelectorAll('[data-cta]').forEach(function (link) {
+      link.addEventListener('click', function () {
+        var origem = link.getAttribute('data-cta');
+        if (typeof gtag === 'function') {
+          gtag('event', 'clique_cta', { origem_cta: origem });
+        }
+        if (typeof fbq === 'function') {
+          fbq('trackCustom', 'CliqueCTA', { origem: origem });
+        }
+      });
     });
 
-    cookieTrigger.addEventListener('click', () => {
-      cookieConsent.classList.add('show');
-      cookieTrigger.classList.add('hidden');
-    });
-  }
-});
+  });
+})();
