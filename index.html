@@ -212,6 +212,7 @@
               </button>
               <div x-show="learnOpen" x-transition x-cloak
                 class="absolute top-full right-0 mt-3 w-56 bg-white rounded-2xl shadow-lift border border-gray-100 p-2">
+                <a href="#apresentacao" @click="learnOpen = false" class="bv-menuitem">Vídeo Treinamento</a>
                 <a href="https://blog.bevart.com.br" target="_blank" rel="noopener" class="bv-menuitem">Blog</a>
                 <a href="https://www.youtube.com/@bevartsst6772" target="_blank" rel="noopener"
                   class="bv-menuitem">Canal no YouTube</a>
@@ -246,6 +247,7 @@
           <a href="#produto" @click="mobileOpen = false" class="bv-menuitem-mobile">Por dentro do sistema</a>
           <a href="#para-quem" @click="mobileOpen = false" class="bv-menuitem-mobile">Para quem é</a>
           <a href="#pricing" @click="mobileOpen = false" class="bv-menuitem-mobile">Preços</a>
+          <a href="#apresentacao" @click="mobileOpen = false" class="bv-menuitem-mobile">Vídeo Treinamento</a>
           <a href="#faq" @click="mobileOpen = false" class="bv-menuitem-mobile">Perguntas frequentes</a>
           <a href="https://blog.bevart.com.br" target="_blank" rel="noopener" class="bv-menuitem-mobile">Blog</a>
           <div class="pt-3 mt-2 border-t border-gray-100 flex flex-col gap-2">
@@ -1070,6 +1072,7 @@
 
     <!-- ==================== VÍDEO ==================== -->
     <section id="apresentacao" class="bv-section bg-white">
+      <div id="video" aria-hidden="true"></div>
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-3xl mb-10" data-aos="fade-up">
           <p class="bv-eyebrow">Demonstração</p>
