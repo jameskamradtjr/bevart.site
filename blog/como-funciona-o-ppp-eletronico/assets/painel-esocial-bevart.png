@@ -1,0 +1,1667 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bevart - Plataforma de gestão de SST para consultorias e profissionais</title>
+  <meta name="description"
+    content="Do inventário de riscos ao eSocial em um só fluxo: PGR, PCMSO, LTCAT, exames, treinamentos, EPI, psicossocial e AEP/AET. Crie sua conta e teste 5 dias, sem cartão.">
+  <link rel="canonical" href="https://bevart.com.br/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#2563eb">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Bevart">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://bevart.com.br/">
+  <meta property="og:title" content="Bevart  do risco mapeado ao eSocial entregue">
+  <meta property="og:description"
+    content="Inventário de riscos, documentos, exames, treinamentos, EPI e eventos do eSocial em uma única plataforma de SST.">
+  <meta property="og:image" content="https://bevart.com.br/assets/img/tela_sistema_sst_bevart.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bevart  do risco mapeado ao eSocial entregue">
+  <meta name="twitter:description"
+    content="Inventário de riscos, documentos, exames, treinamentos, EPI e eventos do eSocial em uma única plataforma de SST.">
+  <meta name="twitter:image" content="https://bevart.com.br/assets/img/tela_sistema_sst_bevart.png">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17992875515"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'AW-17992875515');
+    gtag('config', 'G-Z0RJMZR8R2');
+  </script>
+  <!-- Conversões do Google Ads (mesmos rótulos das páginas internas) -->
+  <script>
+    function gtag_report_conversion(url) {
+      if (typeof gtag !== 'function') {
+        if (typeof url !== 'undefined') { window.location = url; }
+        return false;
+      }
+      var callback = function () {
+        if (typeof url !== 'undefined') { window.location = url; }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-17992875515/YUXSCN2X8IQcEPv71YND',
+        'event_callback': callback
+      });
+      return false;
+    }
+
+    function gtag_report_whatsapp_conversion() {
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-17992875515/nPR2CPXJyoUcEPv71YND',
+          'value': 1.0,
+          'currency': 'BRL'
+        });
+      }
+    }
+
+    document.addEventListener('click', function (e) {
+      var cadastro = e.target.closest('a[href*="profissionais.bevart.com.br/app/src/login/views/login"]');
+      if (cadastro) {
+        // Links que abrem em nova aba seguem sozinhos: só registramos a conversão.
+        if (cadastro.target === '_blank') {
+          gtag_report_conversion();
+        } else {
+          e.preventDefault();
+          gtag_report_conversion(cadastro.href);
+        }
+      }
+
+      if (e.target.closest('a[href*="wa.me"], a[href*="whatsapp.com"]')) {
+        gtag_report_whatsapp_conversion();
+      }
+    });
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          colors: {
+            primary: { 50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe', 300: '#93c5fd', 400: '#60a5fa', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 800: '#1e40af', 900: '#1e3a8a' },
+            accent: { 50: '#ecfdf5', 100: '#d1fae5', 200: '#a7f3d0', 400: '#34d399', 500: '#10b981', 600: '#059669', 700: '#047857' },
+            ink: { 700: '#334155', 800: '#1e293b', 900: '#0f172a', 950: '#080d17' },
+            whatsapp: '#25D366',
+            instagram: '#E1306C',
+          },
+          boxShadow: {
+            card: '0 1px 2px 0 rgba(16,24,40,.04), 0 1px 3px 0 rgba(16,24,40,.06)',
+            lift: '0 16px 40px -16px rgba(16,24,40,.22)',
+            product: '0 48px 90px -40px rgba(15,23,42,.42), 0 0 0 1px rgba(15,23,42,.06)',
+          },
+          borderRadius: { '4xl': '1.75rem' },
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Sem JS, o AOS deixaria a página inteira invisível -->
+  <noscript>
+    <style>
+      [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    </style>
+  </noscript>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <link rel="preload" as="image" href="assets/img/tela_sistema_sst_bevart.webp">
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1004315305690659');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1004315305690659&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
+  <!-- Rastreamento de origem: anúncio -> site -> cadastro -->
+  <script src="assets/js/bev-tracking.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://bevart.com.br/#organization",
+        "name": "Bevart",
+        "url": "https://bevart.com.br/",
+        "logo": "https://bevart.com.br/assets/img/logo%20bevart.svg",
+        "email": "contato@bevart.com.br",
+        "telephone": "+55-47-98923-5660",
+        "areaServed": "BR",
+        "sameAs": [
+          "https://www.youtube.com/@bevartsst6772",
+          "https://www.instagram.com/bevartsst/",
+          "https://bevart.com.br/blog/"
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Bevart",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "url": "https://bevart.com.br/",
+        "publisher": { "@id": "https://bevart.com.br/#organization" },
+        "description": "Plataforma de gestão de SST que conecta inventário de riscos, documentos, exames ocupacionais, treinamentos, EPI e eventos do eSocial em um único fluxo.",
+        "offers": [
+          { "@type": "Offer", "name": "Plano 400", "price": "299.00", "priceCurrency": "BRL" },
+          { "@type": "Offer", "name": "Plano Ilimitado", "price": "799.00", "priceCurrency": "BRL" },
+          { "@type": "Offer", "name": "Plano Vitalício", "price": "5000.00", "priceCurrency": "BRL" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="font-sans antialiased text-ink-800 bg-white overflow-x-hidden">
+
+  <a href="#conteudo" class="bv-skip">Ir para o conteúdo</a>
+
+  <!-- ==================== HEADER ==================== -->
+  <div id="navbar-wrapper" class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 pt-4 transition-all duration-300">
+    <nav id="navbar" x-data="{ mobileOpen: false, learnOpen: false }"
+      class="floating-navbar max-w-6xl mx-auto bg-white/85 backdrop-blur-xl rounded-2xl border border-white/50 transition-all duration-300"
+      aria-label="Navegação principal">
+      <div class="px-5 sm:px-6">
+        <div class="flex items-center justify-between h-16">
+          <a href="#top" class="flex items-center shrink-0" aria-label="Bevart  início">
+            <img src="assets/img/logo bevart.svg" alt="Bevart" width="140" height="40" class="h-9 w-auto">
+          </a>
+
+          <div class="hidden lg:flex items-center gap-7">
+            <a href="#features" class="bv-navlink">Recursos</a>
+            <a href="#como" class="bv-navlink">Como funciona</a>
+            <a href="#para-quem" class="bv-navlink">Para quem é</a>
+            <a href="#pricing" class="bv-navlink">Preços</a>
+            <div class="relative" @mouseenter="learnOpen = true" @mouseleave="learnOpen = false">
+              <button type="button" class="bv-navlink flex items-center gap-1" :aria-expanded="learnOpen"
+                @click="learnOpen = !learnOpen">
+                Aprender
+                <svg class="w-4 h-4 transition-transform" :class="learnOpen && 'rotate-180'" fill="none"
+                  stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div x-show="learnOpen" x-transition x-cloak
+                class="absolute top-full right-0 mt-3 w-56 bg-white rounded-2xl shadow-lift border border-gray-100 p-2">
+                <a href="#apresentacao" @click="learnOpen = false" class="bv-menuitem">Vídeo Treinamento</a>
+                <a href="blog/index.html" class="bv-menuitem">Blog</a>
+                <a href="https://www.youtube.com/@bevartsst6772" target="_blank" rel="noopener"
+                  class="bv-menuitem">Canal no YouTube</a>
+                <a href="#sst-ninjas" class="bv-menuitem">Marketplace SST Ninjas</a>
+                <a href="#faq" class="bv-menuitem">Perguntas frequentes</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="hidden lg:flex items-center gap-2">
+            <a href="https://profissionais.bevart.com.br/app/src/login/views/login"
+              class="px-4 py-2 text-sm font-semibold text-ink-700 hover:text-primary-700 transition">Entrar</a>
+            <a href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="header"
+              class="bv-btn bv-btn-primary text-sm">Criar conta grátis</a>
+          </div>
+
+          <button type="button" @click="mobileOpen = !mobileOpen"
+            class="lg:hidden p-2 -mr-2 rounded-xl hover:bg-gray-100 transition" :aria-expanded="mobileOpen"
+            aria-controls="menu-mobile" aria-label="Abrir menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+              aria-hidden="true">
+              <path x-show="!mobileOpen" d="M4 7h16M4 12h16M4 17h16" />
+              <path x-show="mobileOpen" x-cloak d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <div id="menu-mobile" x-show="mobileOpen" x-cloak x-transition
+          class="lg:hidden border-t border-gray-100 py-3 space-y-1">
+          <a href="#features" @click="mobileOpen = false" class="bv-menuitem-mobile">Recursos</a>
+          <a href="#como" @click="mobileOpen = false" class="bv-menuitem-mobile">Como funciona</a>
+          <a href="#produto" @click="mobileOpen = false" class="bv-menuitem-mobile">Por dentro do sistema</a>
+          <a href="#para-quem" @click="mobileOpen = false" class="bv-menuitem-mobile">Para quem é</a>
+          <a href="#pricing" @click="mobileOpen = false" class="bv-menuitem-mobile">Preços</a>
+          <a href="#apresentacao" @click="mobileOpen = false" class="bv-menuitem-mobile">Vídeo Treinamento</a>
+          <a href="#faq" @click="mobileOpen = false" class="bv-menuitem-mobile">Perguntas frequentes</a>
+          <a href="blog/index.html" class="bv-menuitem-mobile">Blog</a>
+          <div class="pt-3 mt-2 border-t border-gray-100 flex flex-col gap-2">
+            <a href="https://profissionais.bevart.com.br/app/src/login/views/login"
+              class="bv-btn bv-btn-ghost w-full justify-center">Entrar</a>
+            <a href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="menu-mobile"
+              class="bv-btn bv-btn-primary w-full justify-center">Criar conta grátis</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <main id="conteudo" x-data="{ shot: null, alt: '' }" @keydown.escape.window="shot = null">
+
+    <!-- ==================== HERO ==================== -->
+    <section id="top" class="relative overflow-hidden pt-28 pb-16 md:pt-36 md:pb-24 bg-white">
+      <div class="bv-hero-bg" aria-hidden="true"></div>
+
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="max-w-3xl">
+          <p class="bv-eyebrow" data-aos="fade-up">Plataforma de gestão de SST</p>
+          <h1 class="mt-4 text-4xl sm:text-5xl lg:text-[3.75rem] font-extrabold tracking-tight text-ink-900 leading-[1.06]"
+            data-aos="fade-up">
+            Do risco mapeado ao eSocial entregue, <span class="text-primary-600">sem refazer nada duas vezes</span>.
+          </h1>
+          <p class="mt-6 text-lg md:text-xl text-ink-700/80 leading-relaxed max-w-2xl" data-aos="fade-up"
+            data-aos-delay="50">
+            O Bevart conecta inventário de riscos, documentos, exames, treinamentos, EPI e eventos do eSocial em um
+            único fluxo. Você cadastra a empresa e o risco uma vez  o sistema mantém o resto coerente, em todas as
+            suas empresas clientes.
+          </p>
+
+          <div class="mt-9 flex flex-col sm:flex-row gap-3 sm:items-center" data-aos="fade-up" data-aos-delay="100">
+            <a href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="hero-primario"
+              class="bv-btn bv-btn-primary bv-btn-lg justify-center">
+              Criar conta grátis
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6l6 6-6 6" />
+              </svg>
+            </a>
+            <a href="#produto" class="bv-btn bv-btn-ghost bv-btn-lg justify-center">Ver o sistema por dentro</a>
+          </div>
+          <p class="mt-4 text-sm text-ink-700/60" data-aos="fade-up" data-aos-delay="150">
+            5 dias com acesso completo · sem cartão de crédito · sem taxa de implantação
+          </p>
+        </div>
+
+        <!-- Composição de produto -->
+        <div class="mt-14 md:mt-20 relative" data-aos="fade-up" data-aos-delay="200">
+          <div class="bv-frame">
+            <div class="bv-frame-bar">
+              <span class="bv-dot bg-[#ff5f57]"></span>
+              <span class="bv-dot bg-[#febc2e]"></span>
+              <span class="bv-dot bg-[#28c840]"></span>
+              <div class="bv-frame-url">
+                <svg class="w-3.5 h-3.5 text-accent-600" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                    clip-rule="evenodd" />
+                </svg>
+                profissionais.bevart.com.br
+              </div>
+            </div>
+            <img src="assets/img/tela_sistema_sst_bevart.webp"
+              alt="Painel do Bevart com indicadores de SST, documentos e pendências da empresa" width="1875"
+              height="859" fetchpriority="high" decoding="async" class="w-full h-auto block">
+          </div>
+
+          <!-- Cadeia do risco: o mecanismo do produto, não um número inventado -->
+          <div class="bv-chain" data-aos="fade-up" data-aos-delay="250">
+            <span class="bv-chain-label">Um risco identificado gera</span>
+            <span class="bv-chain-item">Documento</span>
+            <span class="bv-chain-sep" aria-hidden="true">→</span>
+            <span class="bv-chain-item">Exame</span>
+            <span class="bv-chain-sep" aria-hidden="true">→</span>
+            <span class="bv-chain-item">Treinamento</span>
+            <span class="bv-chain-sep" aria-hidden="true">→</span>
+            <span class="bv-chain-item">EPI</span>
+            <span class="bv-chain-sep" aria-hidden="true">→</span>
+            <span class="bv-chain-item">Plano de ação</span>
+            <span class="bv-chain-sep" aria-hidden="true">→</span>
+            <span class="bv-chain-item bv-chain-item--accent">eSocial</span>
+          </div>
+        </div>
+      </div>
+      <div id="hero-fim" aria-hidden="true"></div>
+    </section>
+
+    <!-- ==================== FAIXA DE COBERTURA ==================== -->
+    <section class="py-12 border-y border-gray-100 bg-gray-50/60">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p class="text-center text-xs font-semibold uppercase tracking-[0.14em] text-ink-700/50 mb-6">
+          Construído sobre as normas que você entrega todos os dias
+        </p>
+        <div class="flex flex-wrap justify-center gap-2">
+          <span class="bv-tag">NR-01 · PGR</span>
+          <span class="bv-tag">NR-05 · CIPA</span>
+          <span class="bv-tag">NR-06 · EPI</span>
+          <span class="bv-tag">NR-07 · PCMSO</span>
+          <span class="bv-tag">NR-10 · Elétrica</span>
+          <span class="bv-tag">NR-12 · Máquinas</span>
+          <span class="bv-tag">NR-15 · Insalubridade</span>
+          <span class="bv-tag">NR-16 · Periculosidade</span>
+          <span class="bv-tag">NR-17 · Ergonomia</span>
+          <span class="bv-tag">NR-33 · Confinado</span>
+          <span class="bv-tag">NR-35 · Altura</span>
+          <span class="bv-tag bv-tag--accent">eSocial S-2210 · S-2220 · S-2240</span>
+          <span class="bv-tag bv-tag--accent">Certificado digital A1</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROBLEMA ==================== -->
+    <section id="problema" class="bv-section bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mb-14" data-aos="fade-up">
+          <p class="bv-eyebrow">O problema real</p>
+          <h2 class="bv-h2 mt-4">O trabalho difícil não é emitir o documento. É manter tudo coerente depois.</h2>
+          <p class="mt-5 text-lg text-ink-700/75 leading-relaxed">
+            Qualquer sistema gera um PDF. O que consome as suas horas é o que acontece entre uma entrega e a próxima 
+            e é exatamente aí que a maioria das operações de SST perde dinheiro.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-5">
+          <div class="bv-card p-7" data-aos="fade-up">
+            <span class="bv-num">01</span>
+            <h3 class="bv-h3 mt-4">A informação mora em cinco lugares</h3>
+            <p class="mt-2 text-ink-700/75 leading-relaxed">
+              A planilha dos riscos, a pasta do PGR, a agenda de exames, o controle de treinamentos e o portal do
+              eSocial. Mudou um risco? Alguém precisa lembrar de atualizar os outros quatro.
+            </p>
+          </div>
+          <div class="bv-card p-7" data-aos="fade-up" data-aos-delay="50">
+            <span class="bv-num">02</span>
+            <h3 class="bv-h3 mt-4">Todo mês recomeça do zero</h3>
+            <p class="mt-2 text-ink-700/75 leading-relaxed">
+              Exame vencendo, treinamento expirando, evento periódico para transmitir. O controle é manual, o alerta
+              depende de memória e o custo do esquecimento é sempre maior que o do trabalho.
+            </p>
+          </div>
+          <div class="bv-card p-7" data-aos="fade-up" data-aos-delay="100">
+            <span class="bv-num">03</span>
+            <h3 class="bv-h3 mt-4">Quanto mais clientes, pior fica</h3>
+            <p class="mt-2 text-ink-700/75 leading-relaxed">
+              A rotina que funciona com 5 empresas trava com 30. Sem base única, crescer significa contratar gente para
+              repetir o mesmo cadastro em lugares diferentes.
+            </p>
+          </div>
+          <div class="bv-card p-7" data-aos="fade-up" data-aos-delay="150">
+            <span class="bv-num">04</span>
+            <h3 class="bv-h3 mt-4">A prova só aparece na hora da auditoria</h3>
+            <p class="mt-2 text-ink-700/75 leading-relaxed">
+              Quando o fiscal, o cliente ou o advogado pede o histórico  quem assinou, quando venceu, o que foi feito 
+              começa a garimpagem em pastas e e-mails.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SOLUÇÃO / MECANISMO ==================== -->
+    <section id="fluxo" class="bv-section bg-ink-950 relative overflow-hidden">
+      <div class="bv-grid-pattern" aria-hidden="true"></div>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="max-w-3xl mb-14" data-aos="fade-up">
+          <p class="bv-eyebrow text-primary-400">Como o Bevart resolve</p>
+          <h2 class="bv-h2 mt-4 text-white">Um inventário de riscos. Seis saídas que se atualizam junto.</h2>
+          <p class="mt-5 text-lg text-white/60 leading-relaxed">
+            No Bevart o inventário não é um capítulo do PGR  é a fonte de dados do sistema inteiro. Você identifica o
+            risco, classifica por probabilidade × severidade e vincula a NR. O resto deriva daí.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="bv-dark-card" data-aos="fade-up">
+            <div class="bv-dark-icon">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <h3 class="text-white font-semibold mt-4">Documentos</h3>
+            <p class="mt-2 text-sm text-white/55 leading-relaxed">PGR, LTCAT, insalubridade, periculosidade, PPP, ordem
+              de serviço e APR gerados a partir do inventário  não redigitados.</p>
+          </div>
+          <div class="bv-dark-card" data-aos="fade-up" data-aos-delay="50">
+            <div class="bv-dark-icon">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+              </svg>
+            </div>
+            <h3 class="text-white font-semibold mt-4">Plano de ação</h3>
+            <p class="mt-2 text-sm text-white/55 leading-relaxed">Medida corretiva, responsável, prazo e evidência
+              ligados ao risco que os originou. Pendente e vencido ficam visíveis.</p>
+          </div>
+          <div class="bv-dark-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="bv-dark-icon">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </div>
+            <h3 class="text-white font-semibold mt-4">PCMSO e exames</h3>
+            <p class="mt-2 text-sm text-white/55 leading-relaxed">Exames por função e risco, periodicidade, ASO e
+              alertas de vencimento enviados por WhatsApp e e-mail.</p>
+          </div>
+          <div class="bv-dark-card" data-aos="fade-up" data-aos-delay="150">
+            <div class="bv-dark-icon">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+            </div>
+            <h3 class="text-white font-semibold mt-4">Treinamentos</h3>
+            <p class="mt-2 text-sm text-white/55 leading-relaxed">Matriz obrigatória por função, controle de validade e
+              emissão de certificados  com o risco como origem da exigência.</p>
+          </div>
+          <div class="bv-dark-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="bv-dark-icon">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M20.618 5.984A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h3 class="text-white font-semibold mt-4">EPI</h3>
+            <p class="mt-2 text-sm text-white/55 leading-relaxed">EPI sugerido pelo risco, CA válido, ficha de entrega
+              digital assinada com reconhecimento facial e controle de troca.</p>
+          </div>
+          <div class="bv-dark-card bv-dark-card--accent" data-aos="fade-up" data-aos-delay="250">
+            <div class="bv-dark-icon bv-dark-icon--accent">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.858 15.355-5.858 21.213 0" />
+              </svg>
+            </div>
+            <h3 class="text-white font-semibold mt-4">eSocial SST</h3>
+            <p class="mt-2 text-sm text-white/55 leading-relaxed">S-2210 (CAT), S-2220 (monitoramento) e S-2240
+              (condições ambientais) transmitidos com certificado digital A1.</p>
+          </div>
+        </div>
+
+        <!-- Prova visual da cadeia -->
+        <div class="mt-14" data-aos="fade-up">
+          <button type="button" class="bv-shot bv-shot--dark w-full"
+            aria-label="Ampliar o mapa de quadros aninhados do Bevart"
+            @click="shot='assets/telas/mapa_empresa.png'; alt='Mapa de quadros aninhados do Bevart ligando GHE, riscos, documentos, EPI, treinamentos e exames'">
+            <img src="assets/telas/mapa_empresa.png"
+              alt="Mapa de quadros aninhados do Bevart: cada GHE mostra os riscos e, dentro deles, os documentos, NRs, planos de ação, EPIs, treinamentos e exames vinculados"
+              width="1770" height="911" loading="lazy" decoding="async">
+            <span class="bv-shot-hint">Clique para ampliar</span>
+          </button>
+          <p class="mt-4 text-center text-sm text-white/45">
+            O mapa da empresa mostra a cadeia inteira: cada GHE, os riscos dentro dele e, ligados a cada risco, os
+            documentos, NRs, planos de ação, EPIs, treinamentos e exames.
+          </p>
+        </div>
+
+        <p class="mt-14 text-center text-white/70 text-lg max-w-2xl mx-auto" data-aos="fade-up">
+          Mudou o risco, muda tudo o que depende dele. É essa a diferença entre um gerador de documentos e uma
+          plataforma de gestão.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== COMO FUNCIONA ==================== -->
+    <section id="como" class="bv-section bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mb-14" data-aos="fade-up">
+          <p class="bv-eyebrow">Como funciona</p>
+          <h2 class="bv-h2 mt-4">Três passos até a primeira empresa em conformidade.</h2>
+          <p class="mt-5 text-lg text-ink-700/75 leading-relaxed">
+            O mesmo caminho vale para a segunda, a décima e a trigésima  o que muda é o tempo, que cai a cada empresa
+            cadastrada.
+          </p>
+        </div>
+
+        <div class="space-y-6">
+          <article class="bv-step" data-aos="fade-up">
+            <div class="bv-step-text">
+              <span class="bv-step-num">Passo 1</span>
+              <h3 class="bv-h3 mt-3">Cadastre a empresa e a estrutura</h3>
+              <p class="mt-3 text-ink-700/75 leading-relaxed">
+                O CNAE traz grau de risco e enquadramento das NRs. Você define setores, funções, ambientes e GHE, e
+                importa os funcionários. A IA do Bevart acelera o cadastro a partir de um prompt.
+              </p>
+              <ul class="bv-checks mt-5">
+                <li>CNAE, grau de risco e dados para o eSocial</li>
+                <li>Setores, funções, ambientes e GHE</li>
+                <li>Obras e ambientes externos separados da matriz</li>
+              </ul>
+            </div>
+            <button type="button" class="bv-shot" aria-label="Ampliar tela de cadastro de funcionário"
+              @click="shot='assets/telas/cadastro funcionario.webp'; alt='Cadastro de funcionário no Bevart'">
+              <img src="assets/telas/cadastro funcionario.webp"
+                alt="Tela de cadastro de funcionário do Bevart, com dados pessoais, função e setor" width="1823"
+                height="616" loading="lazy" decoding="async">
+              <span class="bv-shot-hint">Clique para ampliar</span>
+            </button>
+          </article>
+
+          <article class="bv-step bv-step--reverse" data-aos="fade-up">
+            <div class="bv-step-text">
+              <span class="bv-step-num">Passo 2</span>
+              <h3 class="bv-h3 mt-3">Monte o inventário de riscos</h3>
+              <p class="mt-3 text-ink-700/75 leading-relaxed">
+                Identifique o perigo, classifique por probabilidade × severidade e vincule a NR aplicável. Cada risco
+                fica ligado ao GHE e aos trabalhadores expostos  e passa a alimentar todo o resto da plataforma.
+              </p>
+              <ul class="bv-checks mt-5">
+                <li>Matriz de risco com NR vinculada</li>
+                <li>Riscos físicos, químicos, biológicos, ergonômicos e psicossociais</li>
+                <li>Plano de ação com responsável, prazo e evidência</li>
+              </ul>
+            </div>
+            <button type="button" class="bv-shot" aria-label="Ampliar tela do inventário de riscos"
+              @click="shot='assets/telas/inventario de risco.webp'; alt='Inventário de riscos do Bevart'">
+              <img src="assets/telas/inventario de risco.webp"
+                alt="Inventário de riscos do Bevart com classificação por probabilidade e severidade" width="1805"
+                height="628" loading="lazy" decoding="async">
+              <span class="bv-shot-hint">Clique para ampliar</span>
+            </button>
+          </article>
+
+          <article class="bv-step" data-aos="fade-up">
+            <div class="bv-step-text">
+              <span class="bv-step-num">Passo 3</span>
+              <h3 class="bv-h3 mt-3">Entregue, transmita e acompanhe</h3>
+              <p class="mt-3 text-ink-700/75 leading-relaxed">
+                Documentos gerados e assinados com certificado A1, exames e treinamentos programados, eventos enviados
+                ao eSocial e um painel que mostra o que está pendente antes de virar problema.
+              </p>
+              <ul class="bv-checks mt-5">
+                <li>S-2210, S-2220, S-2221 e S-2240 com certificado digital</li>
+                <li>Alertas de exame a vencer por WhatsApp e e-mail</li>
+                <li>Área do cliente para a empresa acompanhar os documentos</li>
+              </ul>
+            </div>
+            <button type="button" class="bv-shot" aria-label="Ampliar tela de eventos do eSocial"
+              @click="shot='assets/telas/esocial.webp'; alt='Eventos do eSocial SST no Bevart'">
+              <img src="assets/telas/esocial.webp" alt="Painel de eventos do eSocial SST no Bevart com status de envio"
+                width="1824" height="832" loading="lazy" decoding="async">
+              <span class="bv-shot-hint">Clique para ampliar</span>
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== MÓDULOS ==================== -->
+    <section id="features" class="bv-section bg-gray-50/70 border-y border-gray-100">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mb-14" data-aos="fade-up">
+          <p class="bv-eyebrow">Recursos</p>
+          <h2 class="bv-h2 mt-4">Tudo o que a sua operação entrega, no mesmo lugar.</h2>
+          <p class="mt-5 text-lg text-ink-700/75 leading-relaxed">
+            Seis frentes que compartilham a mesma base de dados. Nada de sistema paralelo para o financeiro, para o
+            psicossocial ou para o campo.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div class="bv-card p-7 h-full flex flex-col" data-aos="fade-up">
+            <div class="bv-icon bg-primary-50 text-primary-600">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <h3 class="bv-h3 mt-5">Riscos e documentos</h3>
+            <ul class="bv-list mt-4 flex-1">
+              <li>Inventário de riscos e matriz de classificação</li>
+              <li>PGR (NR-01) e planos de ação</li>
+              <li>LTCAT, insalubridade (NR-15) e periculosidade (NR-16)</li>
+              <li>PPP, ordem de serviço e APR</li>
+              <li>Modelos de documentos com IA, PDF e Google Docs</li>
+            </ul>
+            <div class="mt-5 flex flex-wrap gap-x-4 gap-y-1 text-sm">
+              <a href="sistema-pgr-online.html" class="bv-link">PGR online</a>
+              <a href="ltcat-online-sistema.html" class="bv-link">LTCAT digital</a>
+              <a href="modelos-de-documentos-sst-pdf.html" class="bv-link">Modelos de documentos</a>
+            </div>
+          </div>
+
+          <div class="bv-card p-7 h-full flex flex-col" data-aos="fade-up" data-aos-delay="50">
+            <div class="bv-icon bg-rose-50 text-rose-600">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </div>
+            <h3 class="bv-h3 mt-5">Saúde ocupacional</h3>
+            <ul class="bv-list mt-4 flex-1">
+              <li>PCMSO (NR-07) e convocação de exames</li>
+              <li>ASO gerado automaticamente</li>
+              <li>Prontuário digital, anamnese e audiometria</li>
+              <li>Formulário de exame psicológico</li>
+              <li>Alertas de exame a vencer por WhatsApp e e-mail</li>
+            </ul>
+            <div class="mt-5 text-sm">
+              <a href="sistema-pcmso-e-aso-online.html" class="bv-link">PCMSO e ASO online</a>
+            </div>
+          </div>
+
+          <div class="bv-card p-7 h-full flex flex-col" data-aos="fade-up" data-aos-delay="100">
+            <div class="bv-icon bg-violet-50 text-violet-600">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              </svg>
+            </div>
+            <h3 class="bv-h3 mt-5">Psicossocial e ergonomia</h3>
+            <ul class="bv-list mt-4 flex-1">
+              <li>Avaliação de riscos psicossociais (NR-01)</li>
+              <li>Questionários e canal de denúncias</li>
+              <li>Ergonomia do AEP à AET (NR-17)</li>
+              <li>Indicadores de acidentes, CAT e ranking de CID</li>
+              <li>CIPA (NR-05)</li>
+            </ul>
+            <div class="mt-5 text-sm">
+              <a href="gestao-de-riscos-psicossociais-no-trabalho.html" class="bv-link">Riscos psicossociais</a>
+            </div>
+          </div>
+
+          <div class="bv-card p-7 h-full flex flex-col" data-aos="fade-up" data-aos-delay="150">
+            <div class="bv-icon bg-amber-50 text-amber-600">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 class="bv-h3 mt-5">Operação e campo</h3>
+            <ul class="bv-list mt-4 flex-1">
+              <li>EPI com reconhecimento facial e ficha digital (NR-06)</li>
+              <li>Inventário de máquinas (NR-12) e prontuário elétrico (NR-10)</li>
+              <li>PET de espaço confinado (NR-33) e trabalho em altura (NR-35)</li>
+              <li>Atividades críticas e permissões de trabalho</li>
+              <li>Obras, ambientes externos e gestão de terceiros</li>
+            </ul>
+            <div class="mt-5 flex flex-wrap gap-x-4 gap-y-1 text-sm">
+              <a href="controle-de-epi-com-reconhecimento-facial.html" class="bv-link">EPI com facial</a>
+              <a href="gestao-de-treinamentos-sst.html" class="bv-link">Treinamentos NR</a>
+            </div>
+          </div>
+
+          <div class="bv-card p-7 h-full flex flex-col" data-aos="fade-up" data-aos-delay="200">
+            <div class="bv-icon bg-accent-50 text-accent-600">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h3 class="bv-h3 mt-5">eSocial e conformidade</h3>
+            <ul class="bv-list mt-4 flex-1">
+              <li>S-2210 (CAT), S-2220, S-2221 e S-2240</li>
+              <li>Transmissão com certificado digital A1</li>
+              <li>PPP digital em um clique</li>
+              <li>Assinatura eletrônica de documentos</li>
+              <li>Histórico de envios para auditoria</li>
+            </ul>
+            <div class="mt-5 flex flex-wrap gap-x-4 gap-y-1 text-sm">
+              <a href="esocial-sst-para-empresas.html" class="bv-link">eSocial SST</a>
+              <a href="multa-esocial-sst-como-evitar.html" class="bv-link">Como evitar multas</a>
+            </div>
+          </div>
+
+          <div class="bv-card p-7 h-full flex flex-col" data-aos="fade-up" data-aos-delay="250">
+            <div class="bv-icon bg-indigo-50 text-indigo-600">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h3a1 1 0 011 1v6a1 1 0 01-1 1h-3a1 1 0 01-1-1v-6z" />
+              </svg>
+            </div>
+            <h3 class="bv-h3 mt-5">Gestão da consultoria</h3>
+            <ul class="bv-list mt-4 flex-1">
+              <li>CRM com funil, propostas e contratos</li>
+              <li>Kanban de projetos e implantações</li>
+              <li>Financeiro, mensalidades e faturamento</li>
+              <li>Área do cliente para acesso aos documentos</li>
+              <li>Marca branca no plano Ilimitado</li>
+            </ul>
+            <div class="mt-5 text-sm">
+              <a href="#pricing" class="bv-link">Ver planos</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PRODUTO POR DENTRO ==================== -->
+    <div>
+
+      <section id="produto" class="bv-section bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-3xl mb-14" data-aos="fade-up">
+            <p class="bv-eyebrow">Por dentro do sistema</p>
+            <h2 class="bv-h2 mt-4">Quatro telas que explicam o Bevart melhor do que qualquer texto.</h2>
+            <p class="mt-5 text-lg text-ink-700/75 leading-relaxed">
+              São telas reais da plataforma. Clique para ampliar qualquer uma delas.
+            </p>
+          </div>
+
+          <div class="space-y-20">
+
+            <!-- Inventário + planos de ação -->
+            <article class="bv-deep" data-aos="fade-up">
+              <div class="bv-deep-text">
+                <span class="bv-pill">Inventário de riscos · NR-01</span>
+                <h3 class="bv-h3 mt-4 text-2xl">O risco vira plano de ação, não uma linha na planilha</h3>
+                <p class="mt-4 text-ink-700/75 leading-relaxed">
+                  Cada perigo identificado recebe classificação, NR vinculada e trabalhadores expostos. A partir dele
+                  nasce a medida corretiva, com responsável, prazo e evidência  e o acompanhamento fica visível até
+                  a conclusão.
+                </p>
+                <ul class="bv-checks mt-5">
+                  <li>Probabilidade × severidade com nível de risco calculado</li>
+                  <li>Ações pendentes e vencidas em destaque</li>
+                  <li>Base direta do PGR, do LTCAT e do S-2240</li>
+                </ul>
+              </div>
+              <button type="button" class="bv-shot" aria-label="Ampliar tela do inventário de riscos"
+                @click="shot='assets/telas/inventario de risco.webp'; alt='Inventário de riscos do Bevart'">
+                <img src="assets/telas/inventario de risco.webp"
+                  alt="Inventário de riscos do Bevart com nível de risco por perigo identificado" width="1805"
+                  height="628" loading="lazy" decoding="async">
+                <span class="bv-shot-hint">Clique para ampliar</span>
+              </button>
+            </article>
+
+            <!-- Psicossocial -->
+            <article class="bv-deep bv-deep--reverse" data-aos="fade-up">
+              <div class="bv-deep-text">
+                <span class="bv-pill">Riscos psicossociais · NR-01</span>
+                <h3 class="bv-h3 mt-4 text-2xl">Psicossocial avaliado e inventariado, não improvisado</h3>
+                <p class="mt-4 text-ink-700/75 leading-relaxed">
+                  Aplique questionários, receba relatos pelo canal de denúncias e transforme o resultado em risco
+                  inventariado, com plano de ação como qualquer outro agente  do jeito que a NR-01 exige.
+                </p>
+                <ul class="bv-checks mt-5">
+                  <li>Questionários aplicáveis por setor e função</li>
+                  <li>Canal de denúncias integrado</li>
+                  <li>Resultado integrado ao inventário de riscos</li>
+                </ul>
+                <a href="gestao-de-riscos-psicossociais-no-trabalho.html" class="bv-link mt-5 inline-flex">Ver a página
+                  de riscos psicossociais</a>
+              </div>
+              <button type="button" class="bv-shot" aria-label="Ampliar tela de avaliação psicossocial"
+                @click="shot='assets/telas/avaliacao pgr nr1 risco psicossocial.webp'; alt='Avaliação de risco psicossocial no Bevart'">
+                <img src="assets/telas/avaliacao pgr nr1 risco psicossocial.webp"
+                  alt="Avaliação de risco psicossocial no Bevart, com fatores avaliados e classificação" width="1813"
+                  height="780" loading="lazy" decoding="async">
+                <span class="bv-shot-hint">Clique para ampliar</span>
+              </button>
+            </article>
+
+            <!-- Ergonomia AEP -> AET -->
+            <article class="bv-deep" data-aos="fade-up">
+              <div class="bv-deep-text">
+                <span class="bv-pill">Ergonomia · NR-17</span>
+                <h3 class="bv-h3 mt-4 text-2xl">Do AEP à AET dentro da mesma plataforma</h3>
+                <p class="mt-4 text-ink-700/75 leading-relaxed">
+                  Comece pela Avaliação Ergonômica Preliminar e evolua para a Análise Ergonômica do Trabalho quando o
+                  risco exigir. Termômetro ergonômico, radar de percepção dos trabalhadores (OSHA / Nórdico) e mapa
+                  anatômico de queixas, tudo ligado ao inventário e aos planos de ação.
+                </p>
+                <div class="grid sm:grid-cols-3 gap-3 mt-6">
+                  <div class="bv-mini bv-mini--blue">
+                    <p class="bv-mini-title">Física</p>
+                    <p class="bv-mini-text">Postura, esforço, cargas, repetitividade</p>
+                  </div>
+                  <div class="bv-mini bv-mini--teal">
+                    <p class="bv-mini-title">Organizacional</p>
+                    <p class="bv-mini-text">Pausas, ritmo, turnos, metas</p>
+                  </div>
+                  <div class="bv-mini bv-mini--violet">
+                    <p class="bv-mini-title">Cognitiva</p>
+                    <p class="bv-mini-text">Sobrecarga mental, estresse, atenção</p>
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="bv-shot" aria-label="Ampliar tela de análise ergonômica"
+                @click="shot='assets/telas/analise_ergonomica_bevart.webp'; alt='Dashboard de análise ergonômica do Bevart'">
+                <img src="assets/telas/analise_ergonomica_bevart.webp"
+                  alt="Dashboard de análise ergonômica do Bevart com termômetro ergonômico e mapa anatômico"
+                  width="1852" height="1041" loading="lazy" decoding="async">
+                <span class="bv-shot-hint">Clique para ampliar</span>
+              </button>
+            </article>
+
+            <!-- Indicadores -->
+            <article class="bv-deep bv-deep--reverse" data-aos="fade-up">
+              <div class="bv-deep-text">
+                <span class="bv-pill">Indicadores · CAT e atestados</span>
+                <h3 class="bv-h3 mt-4 text-2xl">O que aconteceu, por que aconteceu e o que foi feito</h3>
+                <p class="mt-4 text-ink-700/75 leading-relaxed">
+                  Registre ocorrências e incidentes com envio de CAT pelo eSocial, controle atestados por CID e veja
+                  no painel quais causas mais afastam gente  com investigação e plano de ação vinculados.
+                </p>
+                <ul class="bv-checks mt-5">
+                  <li>Ocorrências, incidentes e investigação</li>
+                  <li>Ranking dos CIDs de maior impacto</li>
+                  <li>CAT integrada ao evento S-2210</li>
+                </ul>
+              </div>
+              <button type="button" class="bv-shot" aria-label="Ampliar tela de indicadores de acidentes"
+                @click="shot='assets/telas/indicadores de acidentes.webp'; alt='Dashboard de indicadores de acidentes do Bevart'">
+                <img src="assets/telas/indicadores de acidentes.webp"
+                  alt="Dashboard de indicadores de acidentes do Bevart com ocorrências e afastamentos" width="1821"
+                  height="1059" loading="lazy" decoding="async">
+                <span class="bv-shot-hint">Clique para ampliar</span>
+              </button>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== GALERIA ==================== -->
+      <section id="telas" class="bv-section bg-gray-50/70 border-y border-gray-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-3xl mb-12" data-aos="fade-up">
+            <p class="bv-eyebrow">Mais telas</p>
+            <h2 class="bv-h2 mt-4">O resto da plataforma, sem maquiagem.</h2>
+          </div>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <button type="button" class="bv-thumb" aria-label="Ampliar tela de alertas de exames e ASO"
+              @click="shot='assets/telas/alertas_exames_aso.webp'; alt='Alertas de exames e ASO no Bevart'"
+              data-aos="fade-up">
+              <img src="assets/telas/alertas_exames_aso.webp"
+                alt="Tela de alertas de exames e ASO a vencer no Bevart" width="1845" height="932" loading="lazy"
+                decoding="async">
+              <span class="bv-thumb-label">Alertas de exames e ASO</span>
+            </button>
+            <button type="button" class="bv-thumb" aria-label="Ampliar tela de atividades críticas"
+              @click="shot='assets/telas/atividades criticas.webp'; alt='Atividades críticas no Bevart'"
+              data-aos="fade-up" data-aos-delay="50">
+              <img src="assets/telas/atividades criticas.webp"
+                alt="Tela de atividades críticas do Bevart com NR-10, NR-33 e NR-35" width="1722" height="637"
+                loading="lazy" decoding="async">
+              <span class="bv-thumb-label">Atividades críticas</span>
+            </button>
+            <button type="button" class="bv-thumb" aria-label="Ampliar tela de estoque e entrega de EPI"
+              @click="shot='assets/telas/estoque epi.webp'; alt='Estoque e entrega de EPI no Bevart'" data-aos="fade-up"
+              data-aos-delay="100">
+              <img src="assets/telas/estoque epi.webp" alt="Tela de estoque e ficha de entrega de EPI no Bevart"
+                width="1804" height="778" loading="lazy" decoding="async">
+              <span class="bv-thumb-label">EPI e ficha de entrega</span>
+            </button>
+            <button type="button" class="bv-thumb" aria-label="Ampliar tela de prontuário médico"
+              @click="shot='assets/telas/prontuario medico audiometria admissional.webp'; alt='Prontuário médico e audiometria no Bevart'"
+              data-aos="fade-up">
+              <img src="assets/telas/prontuario medico audiometria admissional.webp"
+                alt="Prontuário médico com audiometria admissional no Bevart" width="1495" height="871" loading="lazy"
+                decoding="async">
+              <span class="bv-thumb-label">Prontuário e audiometria</span>
+            </button>
+            <button type="button" class="bv-thumb" aria-label="Ampliar tela de máquinas NR-12"
+              @click="shot='assets/telas/nr12-maquinas.webp'; alt='Inventário de máquinas NR-12 no Bevart'"
+              data-aos="fade-up" data-aos-delay="50">
+              <img src="assets/telas/nr12-maquinas.webp" alt="Inventário de máquinas e equipamentos NR-12 no Bevart"
+                width="1883" height="943" loading="lazy" decoding="async">
+              <span class="bv-thumb-label">Máquinas e NR-12</span>
+            </button>
+            <button type="button" class="bv-thumb" aria-label="Ampliar tela da CIPA"
+              @click="shot='assets/telas/cipa.png'; alt='Gestão da CIPA no Bevart'" data-aos="fade-up"
+              data-aos-delay="100">
+              <img src="assets/telas/cipa.png" alt="Tela de gestão da CIPA no Bevart" width="1813" height="607"
+                loading="lazy" decoding="async">
+              <span class="bv-thumb-label">CIPA</span>
+            </button>
+            <button type="button" class="bv-thumb" aria-label="Ampliar mapa de ambientes"
+              @click="shot='assets/telas/mapa ambientes.webp'; alt='Mapa de ambientes e GHE no Bevart'"
+              data-aos="fade-up">
+              <img src="assets/telas/mapa ambientes.webp" alt="Mapa de ambientes e GHE no Bevart" width="1266"
+                height="590" loading="lazy" decoding="async">
+              <span class="bv-thumb-label">Mapa de ambientes e GHE</span>
+            </button>
+            <button type="button" class="bv-thumb" aria-label="Ampliar tela de eventos do eSocial"
+              @click="shot='assets/telas/esocial.webp'; alt='Eventos do eSocial SST no Bevart'" data-aos="fade-up"
+              data-aos-delay="50">
+              <img src="assets/telas/esocial.webp" alt="Tela de eventos do eSocial SST no Bevart" width="1824"
+                height="832" loading="lazy" decoding="async">
+              <span class="bv-thumb-label">Eventos do eSocial</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Lightbox -->
+      <div x-show="shot" x-cloak x-transition.opacity role="dialog" aria-modal="true" aria-label="Tela ampliada"
+        class="fixed inset-0 z-[100] bg-ink-950/90 backdrop-blur-sm flex items-center justify-center p-4 sm:p-10 cursor-zoom-out"
+        @click="shot = null">
+        <button type="button" @click.stop="shot = null" aria-label="Fechar"
+          class="absolute top-5 right-5 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        <!-- template x-if: sem isso o img nasceria com src vazio e o
+             navegador dispararia uma requisição abortada no carregamento. -->
+        <template x-if="shot">
+          <img :src="shot" :alt="alt" class="max-w-full max-h-[86vh] object-contain rounded-xl shadow-2xl" @click.stop>
+        </template>
+      </div>
+    </div>
+
+    <!-- ==================== PARA QUEM É ==================== -->
+    <section id="para-quem" class="bv-section bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mb-14" data-aos="fade-up">
+          <p class="bv-eyebrow">Para quem é</p>
+          <h2 class="bv-h2 mt-4">Feito para quem responde pela SST  de várias empresas ou da sua.</h2>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-5">
+          <div class="bv-card bv-card--featured p-8 flex flex-col" data-aos="fade-up">
+            <span class="bv-pill bv-pill--primary">Perfil principal</span>
+            <h3 class="bv-h3 mt-4 text-xl">Consultorias de SST</h3>
+            <p class="mt-3 text-ink-700/75 leading-relaxed flex-1">
+              Você atende dezenas de empresas com times pequenos. O Bevart guarda cada cliente numa base própria, com
+              CRM, projetos, financeiro e marca branca  e mantém o padrão técnico igual em todas elas.
+            </p>
+            <ul class="bv-checks mt-5">
+              <li>Uma base por empresa cliente, sem misturar</li>
+              <li>CRM, Kanban de projetos e financeiro no mesmo login</li>
+              <li>Marca branca disponível no plano Ilimitado</li>
+            </ul>
+          </div>
+
+          <div class="bv-card p-8 flex flex-col" data-aos="fade-up" data-aos-delay="50">
+            <h3 class="bv-h3 text-xl">Empresas com SESMT ou RH</h3>
+            <p class="mt-3 text-ink-700/75 leading-relaxed flex-1">
+              Você precisa provar conformidade e não depender de planilha. Centralize riscos, exames, treinamentos,
+              EPI e eventos do eSocial, e acompanhe as pendências antes que virem autuação.
+            </p>
+            <ul class="bv-checks mt-5">
+              <li>Painel de pendências por unidade e obra</li>
+              <li>Alertas automáticos de exame e treinamento</li>
+              <li>Histórico pronto para auditoria e fiscalização</li>
+            </ul>
+          </div>
+
+          <div class="bv-card p-8 flex flex-col" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="bv-h3 text-xl">Profissionais autônomos</h3>
+            <p class="mt-3 text-ink-700/75 leading-relaxed flex-1">
+              Engenheiros, técnicos e médicos do trabalho que atendem por conta própria. Comece com poucas empresas,
+              use o certificado A1 para assinar e apareça no marketplace SST Ninjas.
+            </p>
+            <ul class="bv-checks mt-5">
+              <li>Assinatura eletrônica com certificado A1</li>
+              <li>Documentos e eventos sem depender de terceiros</li>
+              <li>Perfil no marketplace SST Ninjas</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PLANILHA VS BEVART ==================== -->
+    <section id="diferenciais" class="bv-section bg-gray-50/70 border-y border-gray-100">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mb-12" data-aos="fade-up">
+          <p class="bv-eyebrow">Diferença na prática</p>
+          <h2 class="bv-h2 mt-4">Planilha e pasta compartilhada versus base única.</h2>
+        </div>
+
+        <div class="bv-compare" data-aos="fade-up">
+          <div class="bv-compare-head">
+            <span></span>
+            <span class="text-ink-700/60">Planilha + pastas + portal</span>
+            <span class="text-primary-700 font-semibold">Com o Bevart</span>
+          </div>
+          <div class="bv-compare-row">
+            <span class="bv-compare-label">Atualizar um risco</span>
+            <span>Refazer o PGR, o exame, o treinamento e o EPI, um por um</span>
+            <span class="bv-compare-good">Atualiza no inventário e propaga para o que depende dele</span>
+          </div>
+          <div class="bv-compare-row">
+            <span class="bv-compare-label">Exame vencendo</span>
+            <span>Depende de alguém olhar a planilha a tempo</span>
+            <span class="bv-compare-good">Alerta automático por WhatsApp e e-mail</span>
+          </div>
+          <div class="bv-compare-row">
+            <span class="bv-compare-label">Documento assinado</span>
+            <span>Imprimir, assinar, digitalizar, arquivar</span>
+            <span class="bv-compare-good">Assinatura eletrônica com certificado digital A1</span>
+          </div>
+          <div class="bv-compare-row">
+            <span class="bv-compare-label">Evento do eSocial</span>
+            <span>Redigitar dados no portal do governo</span>
+            <span class="bv-compare-good">S-2210, S-2220 e S-2240 direto da base já preenchida</span>
+          </div>
+          <div class="bv-compare-row">
+            <span class="bv-compare-label">Prova em auditoria</span>
+            <span>Garimpar pastas, e-mails e versões antigas</span>
+            <span class="bv-compare-good">Histórico por empresa, documento e responsável</span>
+          </div>
+          <div class="bv-compare-row">
+            <span class="bv-compare-label">Passar de 5 para 30 empresas</span>
+            <span>Contratar para repetir o mesmo cadastro</span>
+            <span class="bv-compare-good">Mesmo fluxo, com a estrutura já modelada</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== VÍDEO ==================== -->
+    <section id="apresentacao" class="bv-section bg-white">
+      <div id="video" aria-hidden="true"></div>
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mb-10" data-aos="fade-up">
+          <p class="bv-eyebrow">Demonstração</p>
+          <h2 class="bv-h2 mt-4">Prefere ver alguém usando?</h2>
+          <p class="mt-5 text-lg text-ink-700/75 leading-relaxed">
+            Uma volta completa pela plataforma, do cadastro da empresa à transmissão dos eventos.
+          </p>
+        </div>
+
+        <div class="bv-video" data-video="dgxkBTFDQtM" data-aos="fade-up">
+          <button type="button" class="bv-video-btn" aria-label="Reproduzir apresentação da plataforma Bevart">
+            <img src="https://i.ytimg.com/vi/dgxkBTFDQtM/maxresdefault.jpg"
+              alt="Miniatura do vídeo de apresentação da plataforma Bevart" width="1280" height="720" loading="lazy"
+              decoding="async">
+            <span class="bv-video-play" aria-hidden="true">
+              <svg class="w-7 h-7 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SST NINJAS ==================== -->
+    <section id="sst-ninjas" class="bv-section bg-gray-50/70 border-y border-gray-100">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bv-card p-8 md:p-12" data-aos="fade-up">
+          <div class="grid lg:grid-cols-2 gap-10 items-center">
+            <div>
+              <p class="bv-eyebrow text-accent-700">Marketplace incluído</p>
+              <h2 class="bv-h2 mt-4 text-3xl">Seu perfil no SST Ninjas, sem custo adicional</h2>
+              <p class="mt-5 text-ink-700/75 leading-relaxed">
+                Quem usa o Bevart entra no marketplace SST Ninjas, onde empresas procuram profissionais e consultorias
+                de SST por região e especialidade. É canal de aquisição junto com a ferramenta de trabalho.
+              </p>
+              <div class="mt-8 flex flex-col sm:flex-row gap-3">
+                <a href="https://sstninjas.bevart.com.br/profissionais" target="_blank" rel="noopener"
+                  class="bv-btn bv-btn-primary justify-center">Conhecer o SST Ninjas</a>
+                <a href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="ninjas"
+                  class="bv-btn bv-btn-ghost justify-center">Criar conta grátis</a>
+              </div>
+            </div>
+            <ul class="grid sm:grid-cols-2 gap-4">
+              <li class="bv-feature-mini">
+                <h3>Visibilidade regional</h3>
+                <p>Apareça para empresas próximas à sua região ou área de atuação.</p>
+              </li>
+              <li class="bv-feature-mini">
+                <h3>Reputação por avaliação</h3>
+                <p>Construa seu histórico com as avaliações de quem já contratou.</p>
+              </li>
+              <li class="bv-feature-mini">
+                <h3>Propostas diretas</h3>
+                <p>Receba solicitações de orçamento pelo próprio marketplace.</p>
+              </li>
+              <li class="bv-feature-mini">
+                <h3>Rede de profissionais</h3>
+                <p>Encontre parceiros para atender demandas fora da sua especialidade.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONFIANÇA ==================== -->
+    <section id="seguranca" class="bv-section bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mb-12" data-aos="fade-up">
+          <p class="bv-eyebrow">Confiança</p>
+          <h2 class="bv-h2 mt-4">Onde ficam seus dados e o que você assume ao contratar.</h2>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div class="bv-card p-6" data-aos="fade-up">
+            <h3 class="font-semibold text-ink-900">100% web</h3>
+            <p class="mt-2 text-sm text-ink-700/75 leading-relaxed">Nada para instalar ou manter. Acesso pelo navegador,
+              de qualquer lugar, com login por usuário e perfil de acesso.</p>
+          </div>
+          <div class="bv-card p-6" data-aos="fade-up" data-aos-delay="50">
+            <h3 class="font-semibold text-ink-900">Certificado digital A1</h3>
+            <p class="mt-2 text-sm text-ink-700/75 leading-relaxed">Assinatura eletrônica de documentos e transmissão
+              dos eventos do eSocial com o certificado do profissional responsável.</p>
+          </div>
+          <div class="bv-card p-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="font-semibold text-ink-900">LGPD e privacidade</h3>
+            <p class="mt-2 text-sm text-ink-700/75 leading-relaxed">
+              Tratamento de dados descrito na
+              <a href="lgpd.html" class="bv-link">política de LGPD</a> e na
+              <a href="privacidade.html" class="bv-link">política de privacidade</a>.
+            </p>
+          </div>
+          <div class="bv-card p-6" data-aos="fade-up" data-aos-delay="150">
+            <h3 class="font-semibold text-ink-900">Sem amarras</h3>
+            <p class="mt-2 text-sm text-ink-700/75 leading-relaxed">Sem taxa de implantação, sem fidelidade e
+              cancelamento quando você quiser. Suporte por chat e e-mail em todos os planos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PREÇOS ==================== -->
+    <section id="pricing" class="bv-section bg-gray-50/70 border-y border-gray-100">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mb-14" data-aos="fade-up">
+          <p class="bv-eyebrow">Planos</p>
+          <h2 class="bv-h2 mt-4">Preço por vidas, não por módulo.</h2>
+          <p class="mt-5 text-lg text-ink-700/75 leading-relaxed">
+            Todos os planos incluem todos os módulos e a integração com o eSocial. Você começa com 5 dias grátis e
+            assina depois, sem taxa de implantação.
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-6 items-stretch">
+          <!-- Plano 400 -->
+          <div class="bv-price" data-aos="fade-up">
+            <h3 class="text-lg font-bold text-ink-900">Plano 400</h3>
+            <p class="mt-1 text-sm text-ink-700/70">Para quem está começando ou atende poucas empresas</p>
+            <p class="mt-6"><span class="bv-price-value">R$ 299</span><span class="bv-price-period">/mês</span></p>
+            <ul class="bv-checks mt-7 flex-1">
+              <li>Até 400 vidas</li>
+              <li>Todos os módulos e NRs</li>
+              <li>Integração completa com o eSocial</li>
+              <li>Suporte por chat e e-mail</li>
+              <li>Sem taxa de implantação e sem fidelidade</li>
+            </ul>
+            <a href="https://pay.kiwify.com.br/2vJZeoX" data-cta="plano-400"
+              class="bv-btn bv-btn-ghost w-full justify-center mt-8">Assinar o Plano 400</a>
+          </div>
+
+          <!-- Plano Ilimitado -->
+          <div class="bv-price bv-price--featured" data-aos="fade-up" data-aos-delay="50">
+            <span class="bv-price-badge">Mais escolhido por consultorias</span>
+            <h3 class="text-lg font-bold text-ink-900">Plano Ilimitado</h3>
+            <p class="mt-1 text-sm text-ink-700/70">Para consultorias e empresas de maior porte</p>
+            <p class="mt-6"><span class="bv-price-value">R$ 799</span><span class="bv-price-period">/mês</span></p>
+            <ul class="bv-checks mt-7 flex-1">
+              <li>Vidas ilimitadas</li>
+              <li>Usuários administrativos ilimitados</li>
+              <li>Marca branca (white label)</li>
+              <li>Suporte prioritário</li>
+              <li>Sem taxa de implantação e sem fidelidade</li>
+            </ul>
+            <a href="https://pay.kiwify.com.br/hCTrAuO" data-cta="plano-ilimitado"
+              class="bv-btn bv-btn-primary w-full justify-center mt-8">Assinar o Plano Ilimitado</a>
+          </div>
+
+          <!-- Vitalício -->
+          <div class="bv-price bv-price--dark" data-aos="fade-up" data-aos-delay="100">
+            <span class="bv-price-badge bv-price-badge--amber">Por tempo limitado</span>
+            <h3 class="text-lg font-bold text-white">Plano Vitalício</h3>
+            <p class="mt-1 text-sm text-white/60">Pagamento único, sem mensalidade</p>
+            <p class="mt-6"><span class="bv-price-value text-white">R$ 5.000</span><span
+                class="bv-price-period text-white/50">/único</span></p>
+            <ul class="bv-checks bv-checks--dark mt-7 flex-1">
+              <li>Até 3.000 vidas inclusas</li>
+              <li>Sem mensalidade para sempre</li>
+              <li>Todas as atualizações de NRs</li>
+              <li>Acesso à comunidade VIP Bevart</li>
+              <li>Sem taxa de implantação</li>
+            </ul>
+            <a href="https://pay.kiwify.com.br/UJrDg4p" data-cta="plano-vitalicio"
+              class="bv-btn bv-btn-onDark w-full justify-center mt-8">Quero o acesso vitalício</a>
+          </div>
+        </div>
+
+        <div class="mt-8 bv-card p-6 md:p-8 flex flex-col md:flex-row gap-5 md:items-start" data-aos="fade-up">
+          <div class="bv-icon bg-primary-50 text-primary-600 shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"
+              aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-ink-900">O que acontece depois da assinatura</h3>
+            <p class="mt-2 text-ink-700/75 leading-relaxed">
+              Assim que o pagamento é identificado, você recebe por e-mail o login de acesso, o link da plataforma e o
+              vídeo de treinamento completo. O mesmo e-mail usado na compra vira a sua credencial no Bevart. Se
+              preferir, também dá para assinar por dentro da plataforma, no menu <strong>Meu Plano</strong>, com cartão
+              ou boleto com Pix.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FAQ ==================== -->
+    <section id="faq" class="bv-section bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-12" data-aos="fade-up">
+          <p class="bv-eyebrow">Perguntas frequentes</p>
+          <h2 class="bv-h2 mt-4">O que costumam perguntar antes de assinar.</h2>
+        </div>
+
+        <div class="faq-accordion" x-data="{ active: null }" data-aos="fade-up">
+          <div class="faq-item">
+            <button type="button" class="faq-button" @click="active = active === 1 ? null : 1"
+              :aria-expanded="active === 1">
+              <span>O que é o Bevart, exatamente?</span>
+              <svg class="w-5 h-5 shrink-0 transition-transform" :class="active === 1 && 'rotate-180'" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-content" :style="active === 1 ? 'max-height: 500px' : 'max-height: 0'">
+              <p>Uma plataforma web de gestão de SST. Ela reúne o inventário de riscos, os documentos (PGR, LTCAT,
+                laudos), a saúde ocupacional (PCMSO, ASO, prontuário), treinamentos, EPI, planos de ação e a
+                transmissão dos eventos do eSocial em um único fluxo de trabalho.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-button" @click="active = active === 2 ? null : 2"
+              :aria-expanded="active === 2">
+              <span>Serve para consultoria ou para empresa?</span>
+              <svg class="w-5 h-5 shrink-0 transition-transform" :class="active === 2 && 'rotate-180'" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-content" :style="active === 2 ? 'max-height: 500px' : 'max-height: 0'">
+              <p>Para os dois. A plataforma foi desenhada para consultorias e profissionais que atendem várias empresas
+                 cada cliente fica em uma base separada, com CRM, projetos e financeiro. Empresas que gerem a própria
+                SST usam a mesma estrutura para uma única organização, com suas unidades e obras.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-button" @click="active = active === 3 ? null : 3"
+              :aria-expanded="active === 3">
+              <span>Preciso instalar alguma coisa?</span>
+              <svg class="w-5 h-5 shrink-0 transition-transform" :class="active === 3 && 'rotate-180'" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-content" :style="active === 3 ? 'max-height: 500px' : 'max-height: 0'">
+              <p>Não. O Bevart é 100% web, acessado pelo navegador. Não há instalação, servidor local nem manutenção do
+                seu lado.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-button" @click="active = active === 4 ? null : 4"
+              :aria-expanded="active === 4">
+              <span>Como funciona o teste de 5 dias?</span>
+              <svg class="w-5 h-5 shrink-0 transition-transform" :class="active === 4 && 'rotate-180'" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-content" :style="active === 4 ? 'max-height: 500px' : 'max-height: 0'">
+              <p>Você cria a conta gratuitamente e tem acesso a todos os recursos por 5 dias. Não pedimos cartão de
+                crédito no cadastro. Ao entrar, você já encontra o vídeo de treinamento para começar. Depois do
+                período, escolhe o plano que faz sentido.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-button" @click="active = active === 5 ? null : 5"
+              :aria-expanded="active === 5">
+              <span>O sistema envia os eventos direto para o eSocial?</span>
+              <svg class="w-5 h-5 shrink-0 transition-transform" :class="active === 5 && 'rotate-180'" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-content" :style="active === 5 ? 'max-height: 500px' : 'max-height: 0'">
+              <p>Sim. A integração é por webservice, com o seu certificado digital A1, para os eventos S-2210 (CAT),
+                S-2220 (monitoramento da saúde) e S-2240 (condições ambientais do trabalho).</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-button" @click="active = active === 6 ? null : 6"
+              :aria-expanded="active === 6">
+              <span>Consigo migrar os dados do sistema que uso hoje?</span>
+              <svg class="w-5 h-5 shrink-0 transition-transform" :class="active === 6 && 'rotate-180'" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-content" :style="active === 6 ? 'max-height: 500px' : 'max-height: 0'">
+              <p>Sim. Existe importação em massa por planilha Excel para funcionários, riscos e exames, o que reduz
+                bastante o trabalho de migração.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-button" @click="active = active === 7 ? null : 7"
+              :aria-expanded="active === 7">
+              <span>Dá para avaliar riscos psicossociais?</span>
+              <svg class="w-5 h-5 shrink-0 transition-transform" :class="active === 7 && 'rotate-180'" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-content" :style="active === 7 ? 'max-height: 500px' : 'max-height: 0'">
+              <p>Sim. Há questionários de avaliação psicossocial, canal de denúncias e integração do resultado ao
+                inventário de riscos, com plano de ação como em qualquer outro agente de risco.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-button" @click="active = active === 8 ? null : 8"
+              :aria-expanded="active === 8">
+              <span>O Bevart faz AEP e AET de ergonomia?</span>
+              <svg class="w-5 h-5 shrink-0 transition-transform" :class="active === 8 && 'rotate-180'" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-content" :style="active === 8 ? 'max-height: 600px' : 'max-height: 0'">
+              <p>Sim. O módulo de ergonomia (NR-17) cobre da Avaliação Ergonômica Preliminar (AEP) até a Análise
+                Ergonômica do Trabalho (AET), com classificação de ergonomia física, organizacional e cognitiva,
+                termômetro ergonômico, radar de percepção dos trabalhadores e mapa anatômico de queixas  integrado ao
+                inventário de riscos e aos planos de ação.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-button" @click="active = active === 9 ? null : 9"
+              :aria-expanded="active === 9">
+              <span>Como funcionam os planos de ação?</span>
+              <svg class="w-5 h-5 shrink-0 transition-transform" :class="active === 9 && 'rotate-180'" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-content" :style="active === 9 ? 'max-height: 500px' : 'max-height: 0'">
+              <p>Cada medida corretiva nasce ligada ao risco que a originou e recebe responsável, prazo e evidência. O
+                acompanhamento mostra o que está pendente e o que já venceu, e o conjunto alimenta o PGR.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-button" @click="active = active === 10 ? null : 10"
+              :aria-expanded="active === 10">
+              <span>Quais documentos o sistema emite?</span>
+              <svg class="w-5 h-5 shrink-0 transition-transform" :class="active === 10 && 'rotate-180'" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-content" :style="active === 10 ? 'max-height: 600px' : 'max-height: 0'">
+              <p>PGR, LTCAT, laudos de insalubridade e periculosidade, PCMSO, ASO, PPP, ordem de serviço, APR,
+                permissões de trabalho, fichas de EPI e certificados de treinamento, entre outros. Há ainda uma área de
+                criação de documentos com IA, exportação em PDF e integração com o Google Docs.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-button" @click="active = active === 11 ? null : 11"
+              :aria-expanded="active === 11">
+              <span>Como funciona a contratação e o pagamento?</span>
+              <svg class="w-5 h-5 shrink-0 transition-transform" :class="active === 11 && 'rotate-180'" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-content" :style="active === 11 ? 'max-height: 600px' : 'max-height: 0'">
+              <p>Você pode assinar pelos links desta página ou dentro da plataforma, no menu <strong>Meu Plano</strong>.
+                O pagamento é por cartão de crédito ou boleto  o boleto já traz o Pix para liberação imediata. Não há
+                taxa de implantação nem fidelidade, e o cancelamento é quando você quiser.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-button" @click="active = active === 12 ? null : 12"
+              :aria-expanded="active === 12">
+              <span>Como é o suporte?</span>
+              <svg class="w-5 h-5 shrink-0 transition-transform" :class="active === 12 && 'rotate-180'" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-content" :style="active === 12 ? 'max-height: 500px' : 'max-height: 0'">
+              <p>Todos os planos têm suporte por chat dentro da plataforma e por e-mail. O plano Ilimitado tem
+                atendimento prioritário. Há também o vídeo de treinamento completo e o canal no YouTube com materiais
+                de apoio.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CTA FINAL ==================== -->
+    <section id="contato" class="bv-section bg-ink-950 relative overflow-hidden">
+      <div class="bv-grid-pattern" aria-hidden="true"></div>
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative" data-aos="fade-up">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white leading-tight">
+          Comece pela primeira empresa. O resto do fluxo já está pronto.
+        </h2>
+        <p class="mt-5 text-lg text-white/60 leading-relaxed">
+          Crie sua conta, cadastre uma empresa real e veja o inventário de riscos virar documento, exame, treinamento e
+          evento do eSocial.
+        </p>
+        <div class="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
+          <a href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="final"
+            class="bv-btn bv-btn-primary bv-btn-lg justify-center">Criar conta grátis</a>
+          <a href="#pricing" class="bv-btn bv-btn-onDark bv-btn-lg justify-center">Ver os planos</a>
+        </div>
+        <p class="mt-4 text-sm text-white/45">5 dias com acesso completo · sem cartão de crédito</p>
+      </div>
+    </section>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "O que é o Bevart, exatamente?", "acceptedAnswer": { "@type": "Answer", "text": "Uma plataforma web de gestão de SST. Ela reúne o inventário de riscos, os documentos (PGR, LTCAT, laudos), a saúde ocupacional (PCMSO, ASO, prontuário), treinamentos, EPI, planos de ação e a transmissão dos eventos do eSocial em um único fluxo de trabalho." } },
+        { "@type": "Question", "name": "Serve para consultoria ou para empresa?", "acceptedAnswer": { "@type": "Answer", "text": "Para os dois. A plataforma foi desenhada para consultorias e profissionais que atendem várias empresas, com cada cliente em uma base separada, e também atende empresas que gerem a própria SST, com suas unidades e obras." } },
+        { "@type": "Question", "name": "Preciso instalar alguma coisa?", "acceptedAnswer": { "@type": "Answer", "text": "Não. O Bevart é 100% web, acessado pelo navegador. Não há instalação, servidor local nem manutenção do seu lado." } },
+        { "@type": "Question", "name": "Como funciona o teste de 5 dias?", "acceptedAnswer": { "@type": "Answer", "text": "Você cria a conta gratuitamente e tem acesso a todos os recursos por 5 dias, sem cartão de crédito no cadastro. Depois do período, escolhe o plano que faz sentido." } },
+        { "@type": "Question", "name": "O sistema envia os eventos direto para o eSocial?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. A integração é por webservice, com certificado digital A1, para os eventos S-2210 (CAT), S-2220 (monitoramento da saúde) e S-2240 (condições ambientais do trabalho)." } },
+        { "@type": "Question", "name": "Consigo migrar os dados do sistema que uso hoje?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Existe importação em massa por planilha Excel para funcionários, riscos e exames." } },
+        { "@type": "Question", "name": "Dá para avaliar riscos psicossociais?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Há questionários de avaliação psicossocial, canal de denúncias e integração do resultado ao inventário de riscos, com plano de ação." } },
+        { "@type": "Question", "name": "O Bevart faz AEP e AET de ergonomia?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. O módulo de ergonomia (NR-17) cobre da Avaliação Ergonômica Preliminar (AEP) até a Análise Ergonômica do Trabalho (AET), com ergonomia física, organizacional e cognitiva, termômetro ergonômico, radar de percepção e mapa anatômico de queixas, integrado ao inventário de riscos e aos planos de ação." } },
+        { "@type": "Question", "name": "Como funcionam os planos de ação?", "acceptedAnswer": { "@type": "Answer", "text": "Cada medida corretiva nasce ligada ao risco que a originou e recebe responsável, prazo e evidência, com acompanhamento do que está pendente e vencido." } },
+        { "@type": "Question", "name": "Quais documentos o sistema emite?", "acceptedAnswer": { "@type": "Answer", "text": "PGR, LTCAT, laudos de insalubridade e periculosidade, PCMSO, ASO, PPP, ordem de serviço, APR, permissões de trabalho, fichas de EPI e certificados de treinamento, além de uma área de criação de documentos com IA, PDF e Google Docs." } },
+        { "@type": "Question", "name": "Como funciona a contratação e o pagamento?", "acceptedAnswer": { "@type": "Answer", "text": "A assinatura pode ser feita pelos links do site ou dentro da plataforma, no menu Meu Plano, com cartão de crédito ou boleto com Pix. Não há taxa de implantação nem fidelidade." } },
+        { "@type": "Question", "name": "Como é o suporte?", "acceptedAnswer": { "@type": "Answer", "text": "Todos os planos têm suporte por chat dentro da plataforma e por e-mail, com atendimento prioritário no plano Ilimitado, além do vídeo de treinamento e do canal no YouTube." } }
+      ]
+    }
+    </script>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-ink-950 text-white/55 pt-16 pb-10 border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+        <div class="lg:col-span-2">
+          <img src="assets/img/logo bevart.svg" alt="Bevart" width="140" height="40"
+            class="h-8 w-auto brightness-0 invert">
+          <p class="mt-4 text-sm leading-relaxed max-w-xs">
+            Plataforma de gestão de SST que liga o inventário de riscos aos documentos, exames, treinamentos, EPI e
+            eventos do eSocial.
+          </p>
+          <div class="mt-6 flex items-center gap-3">
+            <a href="https://www.youtube.com/@bevartsst6772" target="_blank" rel="noopener" class="bv-social"
+              aria-label="Canal do Bevart no YouTube">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/bevartsst/" target="_blank" rel="noopener" class="bv-social"
+              aria-label="Instagram do Bevart">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.336 3.608 1.31s1.248 2.242 1.31 3.608c.058 1.266.07 1.646.07 4.849 0 3.203-.012 3.583-.07 4.849-.062 1.366-.336 2.633-1.31 3.608s-2.242 1.248-3.608 1.31c-1.266.058-1.646.07-4.849.07-3.203 0-3.583-.012-4.849-.07-1.366-.062-2.633-.336-3.608-1.31s-1.248-2.242-1.31-3.608c-.058-1.266-.07-1.646-.07-4.849 0-3.203.012-3.583.07-4.849.062-1.366.336-2.633 1.31-3.608s2.242-1.248 3.608-1.31c1.266-.058 1.646-.07 4.849-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-white font-semibold text-sm mb-4">Plataforma</h3>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="#features" class="bv-footer-link">Recursos</a></li>
+            <li><a href="#como" class="bv-footer-link">Como funciona</a></li>
+            <li><a href="#produto" class="bv-footer-link">Por dentro do sistema</a></li>
+            <li><a href="#pricing" class="bv-footer-link">Preços</a></li>
+            <li><a href="#faq" class="bv-footer-link">Perguntas frequentes</a></li>
+            <li><a href="https://sstninjas.bevart.com.br/profissionais" target="_blank" rel="noopener"
+                class="bv-footer-link">Marketplace SST Ninjas</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-white font-semibold text-sm mb-4">Soluções</h3>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="sistema-pgr-online.html" class="bv-footer-link">Sistema PGR online</a></li>
+            <li><a href="sistema-pcmso-e-aso-online.html" class="bv-footer-link">PCMSO e ASO online</a></li>
+            <li><a href="ltcat-online-sistema.html" class="bv-footer-link">Laudo LTCAT digital</a></li>
+            <li><a href="gestao-de-riscos-psicossociais-no-trabalho.html" class="bv-footer-link">Riscos
+                psicossociais</a></li>
+            <li><a href="controle-de-epi-com-reconhecimento-facial.html" class="bv-footer-link">EPI com reconhecimento
+                facial</a></li>
+            <li><a href="gestao-de-treinamentos-sst.html" class="bv-footer-link">Gestão de treinamentos</a></li>
+            <li><a href="modelos-de-documentos-sst-pdf.html" class="bv-footer-link">Modelos de documentos</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-white font-semibold text-sm mb-4">eSocial e conteúdo</h3>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="esocial-sst-para-empresas.html" class="bv-footer-link">eSocial SST para empresas</a></li>
+            <li><a href="esocial-sst-para-construtoras.html" class="bv-footer-link">SST para construtoras</a></li>
+            <li><a href="sst-no-esocial-como-enviar-eventos.html" class="bv-footer-link">Como enviar os eventos</a></li>
+            <li><a href="multa-esocial-sst-como-evitar.html" class="bv-footer-link">Como evitar multas</a></li>
+            <li><a href="blog/index.html" class="bv-footer-link">Blog</a></li>
+            <li><a href="https://www.youtube.com/@bevartsst6772" target="_blank" rel="noopener"
+                class="bv-footer-link">Canal no YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex flex-col md:flex-row items-center gap-2 md:gap-6 text-sm">
+          <p>&copy; 2026 Bevart. Todos os direitos reservados.</p>
+          <p class="text-white/40">
+            <a href="/cdn-cgi/l/email-protection#c3a0acadb7a2b7ac83a1a6b5a2b1b7eda0acaeeda1b1" class="bv-footer-link"><span class="__cf_email__" data-cfemail="25464a4b5144514a654740534457510b464a480b4757">[email&#160;protected]</span></a>
+            · (47) 98923-5660
+          </p>
+        </div>
+        <div class="flex items-center gap-5 text-sm">
+          <a href="termos-de-uso.html" class="bv-footer-link">Termos de uso</a>
+          <a href="privacidade.html" class="bv-footer-link">Privacidade</a>
+          <a href="lgpd.html" class="bv-footer-link">LGPD</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== CTA FIXO (MOBILE) ==================== -->
+  <div id="sticky-cta" class="bv-sticky-cta" aria-hidden="true">
+    <div>
+      <p class="text-xs text-ink-700/60">5 dias grátis · sem cartão</p>
+      <p class="text-sm font-semibold text-ink-900">Teste o Bevart hoje</p>
+    </div>
+    <a href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="sticky-mobile"
+      class="bv-btn bv-btn-primary text-sm">Criar conta</a>
+  </div>
+
+  <!-- ==================== WHATSAPP ==================== -->
+  <div x-data="{ waOpen: false }">
+    <div x-show="waOpen" x-cloak class="fixed inset-0 z-[100] flex items-center justify-center p-4" role="dialog"
+      aria-modal="true" aria-label="Fale com o Bevart" @keydown.escape.window="waOpen = false">
+      <div class="fixed inset-0 bg-ink-950/60 backdrop-blur-sm" @click="waOpen = false"></div>
+      <div class="relative bg-white rounded-3xl shadow-2xl w-full max-w-lg overflow-hidden" x-transition>
+        <div class="px-6 py-5 border-b border-gray-100 flex items-center justify-between">
+          <h2 class="text-lg font-bold text-ink-900">Como podemos ajudar?</h2>
+          <button type="button" @click="waOpen = false" class="text-gray-400 hover:text-gray-600 transition"
+            aria-label="Fechar">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+              aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="p-5 space-y-3 max-h-[70vh] overflow-y-auto">
+          <a href="#pricing" @click="waOpen = false" class="bv-wa-option">
+            <h3>Ver preços e planos</h3>
+            <p>Os valores estão nesta página, sem precisar falar com ninguém.</p>
+          </a>
+          <a href="https://profissionais.bevart.com.br/app/src/login/views/login" target="_blank" rel="noopener"
+            data-cta="whatsapp-modal" @click="waOpen = false" class="bv-wa-option">
+            <h3>Testar o sistema agora</h3>
+            <p>Conta grátis por 5 dias, sem cartão. O vídeo de treinamento está lá dentro.</p>
+          </a>
+          <a href="https://profissionais.bevart.com.br/app/marketplace/documentos/views/marketplace" target="_blank"
+            rel="noopener" @click="waOpen = false" class="bv-wa-option">
+            <h3>Ver modelos de documentos</h3>
+            <p>Conheça os modelos que a plataforma gera antes de assinar.</p>
+          </a>
+          <a href="https://wa.me/5547989235660?text=vim%20pelo%20site%20do%20bevart" target="_blank" rel="noopener"
+            @click="waOpen = false" class="bv-wa-option bv-wa-option--green">
+            <h3>Falar com um consultor</h3>
+            <p>Dúvida específica sobre a sua operação? Chame no WhatsApp.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <button type="button" @click="waOpen = true" id="wa-button" class="bv-wa-button" aria-label="Fale conosco">
+      <img src="assets/img/whatsapp.png" alt="" width="32" height="32" class="w-7 h-7 object-contain">
+    </button>
+  </div>
+
+  <!-- Cookie Consent -->
+  <div id="cookie-consent" class="cookie-consent">
+    <h4>Cookies e privacidade</h4>
+    <p>Usamos cookies para entender como o site é usado e melhorar sua experiência. Ao clicar em "Aceitar", você
+      concorda com o uso de cookies.</p>
+    <div class="flex justify-start">
+      <button id="accept-cookies" class="btn-accept">Aceitar</button>
+    </div>
+  </div>
+  <div id="cookie-settings-trigger" class="cookie-settings-trigger hidden" role="button" tabindex="0"
+    aria-label="Configurações de cookies">🍪</div>
+
+  <!-- Scripts -->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script defer src="assets/js/app.js"></script>
+  <script>(function (d, s, id) { var js = d.createElement(s); js.src = "https://analytics.yggra.com.br/tracker.js?v=" + Date.now(); js.async = true; js.setAttribute('data-id', id); d.head.appendChild(js); })(document, 'script', 'SB-3C21C2');</script>
+</body>
+
+</html>

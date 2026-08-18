@@ -2,123 +2,33 @@
 <!-- =====================================================================
      TEMPLATE DE POST — Blog Bevart
 
-     Copie este arquivo para blog/<slug-do-post>/index.html e troque todos
-     os {{CAMPOS}}. Depois registre o post em blog/posts.json e rode:
+     Copie para blog/<slug>/index.html, troque os {{CAMPOS}}, registre o
+     post em blog/posts.json e rode:
 
          node blog/_build/capa.mjs <slug>
          node blog/_build/build.mjs
+         node blog/_build/verificar.mjs
 
-     Regras que não podem ser quebradas:
-     · um único <h1> na página, igual ao "titulo" do posts.json;
-     · canonical absoluto, com barra no fim: https://bevart.com.br/blog/<slug>/;
-     · link de navegação SEMPRE terminando em index.html, nunca em barra
-       (../categoria/x/index.html) — pasta só abre quando há servidor;
-     · datas em ISO (AAAA-MM-DD) iguais às do posts.json;
-     · a estrutura do texto vive dentro de <div class="bv-prose">;
-     · não mexa no conteúdo entre os marcadores <!-- build:... -->:
-       o build reescreve header, footer, relacionados e prev/next.
+     O QUE VOCÊ ESCREVE: breadcrumb, H1, dek, capa, "essencial em 30
+     segundos" e o conteúdo dentro de <div class="bv-prose">. Só isso.
 
-     Blocos disponíveis para o texto (ver blog/_templates/blocos.html):
-     callout, callout--alerta, callout--dica, takeaways, inline-cta,
-     tabela, figura com legenda, citação e FAQ.
+     O QUE O BUILD ESCREVE (não digite nada entre os marcadores):
+     head (title, metas, OG, JSON-LD), cabeçalho, assinatura, botões de
+     compartilhar, caixa do autor, aside com sumário, anterior/próximo,
+     "continue lendo", CTA final e rodapé. Tudo vem do posts.json.
+
+     O FAQPage do JSON-LD é montado a partir do FAQ visível na página:
+     escreva as perguntas em <section class="bv-faq"> e pronto.
+
+     Regras: um único <h1>; link de navegação sempre terminando em
+     index.html, nunca em barra; imagem do corpo dentro de <figure> com
+     alt descritivo, width, height e loading="lazy".
      ===================================================================== -->
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{TITULO_SEO}} | Blog Bevart</title>
-  <meta name="description" content="{{META_DESCRIPTION}}">
-  <link rel="canonical" href="https://bevart.com.br/blog/{{SLUG}}/">
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
-  <meta name="theme-color" content="#2563eb">
-  <meta name="author" content="Bevart">
-
-  <meta property="og:type" content="article">
-  <meta property="og:site_name" content="Blog Bevart">
-  <meta property="og:locale" content="pt_BR">
-  <meta property="og:url" content="https://bevart.com.br/blog/{{SLUG}}/">
-  <meta property="og:title" content="{{TITULO}}">
-  <meta property="og:description" content="{{META_DESCRIPTION}}">
-  <meta property="og:image" content="{{OG_IMAGE}}">
-  <meta property="article:published_time" content="{{DATA_PUBLICACAO}}T09:00:00-03:00">
-  <meta property="article:modified_time" content="{{DATA_ATUALIZACAO}}T09:00:00-03:00">
-  <meta property="article:section" content="{{CATEGORIA_NOME}}">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{TITULO}}">
-  <meta name="twitter:description" content="{{META_DESCRIPTION}}">
-  <meta name="twitter:image" content="{{OG_IMAGE}}">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="../../assets/img/favicon.png">
-  <link rel="stylesheet" href="../assets/css/blog.css">
-  <link rel="alternate" type="application/rss+xml" title="Blog Bevart" href="../feed.xml">
-
-  <script defer src="../assets/js/analytics.js"></script>
-  <script defer src="../assets/js/blog.js"></script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://bevart.com.br/#organization",
-        "name": "Bevart",
-        "url": "https://bevart.com.br/",
-        "logo": "https://bevart.com.br/assets/img/logo%20bevart.svg"
-      },
-      {
-        "@type": "BlogPosting",
-        "@id": "https://bevart.com.br/blog/{{SLUG}}/#post",
-        "headline": "{{TITULO}}",
-        "description": "{{META_DESCRIPTION}}",
-        "image": ["{{OG_IMAGE}}"],
-        "datePublished": "{{DATA_PUBLICACAO}}T09:00:00-03:00",
-        "dateModified": "{{DATA_ATUALIZACAO}}T09:00:00-03:00",
-        "inLanguage": "pt-BR",
-        "articleSection": "{{CATEGORIA_NOME}}",
-        "keywords": "{{TAGS_SEPARADAS_POR_VIRGULA}}",
-        "wordCount": {{NUMERO_DE_PALAVRAS}},
-        "author": { "@id": "https://bevart.com.br/#organization" },
-        "publisher": { "@id": "https://bevart.com.br/#organization" },
-        "isPartOf": { "@id": "https://bevart.com.br/blog/#blog" },
-        "mainEntityOfPage": "https://bevart.com.br/blog/{{SLUG}}/"
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Bevart", "item": "https://bevart.com.br/" },
-          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://bevart.com.br/blog/" },
-          { "@type": "ListItem", "position": 3, "name": "{{CATEGORIA_NOME}}", "item": "https://bevart.com.br/blog/categoria/{{CATEGORIA_SLUG}}/" },
-          { "@type": "ListItem", "position": 4, "name": "{{TITULO}}", "item": "https://bevart.com.br/blog/{{SLUG}}/" }
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "{{PERGUNTA_1}}",
-            "acceptedAnswer": { "@type": "Answer", "text": "{{RESPOSTA_1}}" }
-          },
-          {
-            "@type": "Question",
-            "name": "{{PERGUNTA_2}}",
-            "acceptedAnswer": { "@type": "Answer", "text": "{{RESPOSTA_2}}" }
-          },
-          {
-            "@type": "Question",
-            "name": "{{PERGUNTA_3}}",
-            "acceptedAnswer": { "@type": "Answer", "text": "{{RESPOSTA_3}}" }
-          }
-        ]
-      }
-    ]
-  }
-  </script>
+  <!-- build:head -->
+  <!-- /build:head -->
 </head>
 
 <body>
@@ -144,17 +54,8 @@
         <h1>{{TITULO}}</h1>
         <p class="bv-dek">{{DEK}}</p>
 
-        <div class="bv-byline">
-          <span class="bv-avatar" aria-hidden="true">BV</span>
-          <span class="bv-byline__who">
-            <strong>Equipe Bevart</strong>
-            <span>Especialistas em SST e eSocial</span>
-          </span>
-          <span class="bv-meta" style="margin-left:auto">
-            <time datetime="{{DATA_PUBLICACAO}}">{{DATA_LEGIVEL}}</time>
-            <span class="bv-meta__sep">{{TEMPO_LEITURA}} min de leitura</span>
-          </span>
-        </div>
+        <!-- build:byline -->
+        <!-- /build:byline -->
       </header>
 
       <figure class="bv-cover bv-wrap">
@@ -174,7 +75,7 @@
           </div>
 
           <div class="bv-prose">
-            <p>{{PARAGRAFO_DE_ABERTURA — responda a dúvida central nas primeiras 3 linhas}}</p>
+            <p>{{ABERTURA — responda a dúvida central nas primeiras 3 linhas}}</p>
 
             <h2>{{H2_1}}</h2>
             <p>{{...}}</p>
@@ -183,7 +84,7 @@
             <p>{{...}}</p>
 
             <div class="bv-inline-cta">
-              <h3>{{CHAMADA_DO_PRODUTO}}</h3>
+              <h3>{{CHAMADA_LIGADA_AO_PARÁGRAFO_ANTERIOR}}</h3>
               <p>{{COMO_O_BEVART_RESOLVE_ISSO_EM_UMA_FRASE}}</p>
               <a class="bv-btn bv-btn--light" href="https://profissionais.bevart.com.br/app/src/login/views/login"
                 data-cta="blog-post-meio">Criar conta grátis</a>
@@ -215,85 +116,26 @@
             </section>
           </div>
 
-          <div class="bv-share" data-share>
-            <span class="bv-share__label">Compartilhar</span>
-            <a data-rede="linkedin" href="#" aria-label="Compartilhar no LinkedIn">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path
-                  d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.6c0-1.34-.03-3.07-1.9-3.07-1.9 0-2.2 1.46-2.2 2.97V21H9z" />
-              </svg>
-              <span>LinkedIn</span>
-            </a>
-            <a data-rede="whatsapp" href="#" aria-label="Compartilhar no WhatsApp">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path
-                  d="M12 2a10 10 0 0 0-8.6 15.06L2 22l5.07-1.33A10 10 0 1 0 12 2zm5.5 14.2c-.24.67-1.4 1.28-1.93 1.32-.5.05-.97.23-3.27-.68-2.75-1.08-4.5-3.9-4.63-4.08-.14-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.25-.27.55-.34.73-.34h.52c.17 0 .4-.06.62.48.24.57.8 1.97.87 2.11.07.14.11.3.02.48-.09.18-.14.3-.27.46l-.4.47c-.14.14-.28.29-.12.57.16.27.71 1.17 1.53 1.9 1.05.93 1.94 1.22 2.22 1.36.27.14.43.12.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.6-.14.25.09 1.57.74 1.84.88.27.14.45.2.51.32.07.11.07.66-.17 1.32z" />
-              </svg>
-              <span>WhatsApp</span>
-            </a>
-            <a data-rede="x" href="#" aria-label="Compartilhar no X">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path
-                  d="M18.9 2H22l-7.1 8.1L23.2 22h-6.5l-5.1-6.6L5.8 22H2.7l7.6-8.7L1.2 2h6.6l4.6 6.1zM17.8 20.2h1.7L7.3 3.7H5.5z" />
-              </svg>
-              <span>X</span>
-            </a>
-            <button type="button" data-rede="copiar">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.5 1.5" />
-                <path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.5-1.5" />
-              </svg>
-              <span>Copiar link</span>
-            </button>
-          </div>
+          <!-- build:share -->
+          <!-- /build:share -->
 
-          <aside class="bv-author">
-            <span class="bv-avatar" aria-hidden="true">BV</span>
-            <div>
-              <h2>Equipe Bevart</h2>
-              <p>Time de produto e conteúdo do Bevart, plataforma que liga o inventário de riscos aos documentos,
-                exames, treinamentos, EPI e eventos do eSocial. Escrevemos a partir do que vemos na rotina de
-                consultorias e técnicos de segurança.</p>
-            </div>
-          </aside>
+          <!-- build:autor -->
+          <!-- /build:autor -->
 
           <!-- build:prevnext -->
           <!-- /build:prevnext -->
         </div>
 
-        <aside class="bv-toc">
-          <nav id="sumario" aria-label="Sumário do artigo" hidden>
-            <p class="bv-toc__title">Neste artigo</p>
-          </nav>
-          <div class="bv-toc__aside">
-            <p><strong>Faz isso na mão hoje?</strong> O Bevart conecta riscos, documentos, exames e eSocial em um fluxo
-              só.</p>
-            <a class="bv-btn bv-btn--primary" href="https://profissionais.bevart.com.br/app/src/login/views/login"
-              data-cta="blog-post-sidebar">Testar 5 dias grátis</a>
-          </div>
-        </aside>
+        <!-- build:sidebar -->
+        <!-- /build:sidebar -->
       </div>
     </article>
 
     <!-- build:relacionados -->
     <!-- /build:relacionados -->
 
-    <section class="bv-section">
-      <div class="bv-wrap">
-        <div class="bv-band">
-          <div>
-            <h2>{{CTA_FINAL_TITULO}}</h2>
-            <p>{{CTA_FINAL_TEXTO}}</p>
-          </div>
-          <div class="bv-band__actions">
-            <a class="bv-btn bv-btn--light bv-btn--lg"
-              href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="blog-post-fim">Criar conta
-              grátis</a>
-            <a class="bv-btn bv-btn--outline-light bv-btn--lg" href="../../index.html#pricing">Ver planos</a>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- build:ctafinal -->
+    <!-- /build:ctafinal -->
   </main>
 
   <!-- build:footer -->

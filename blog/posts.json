@@ -85,31 +85,6 @@
   ],
   "posts": [
     {
-      "slug": "como-evitar-multas-psicossociais-com-o-sistema-bevart-a-nova-nr-1-ja-esta-em-vigor",
-      "titulo": "Como evitar multas psicossociais com o sistema Bevart",
-      "dek": "A nova NR-1 colocou riscos psicossociais e ergonômicos dentro do GRO. O fiscal não quer só documento: quer ver prevenção acontecendo — e isso precisa estar registrado.",
-      "descricao": "A nova NR-1 exige riscos psicossociais no GRO. Veja como medir clima, gerar indicadores e provar prevenção com inventário e plano de ação no Bevart.",
-      "categoria": "psicossocial-e-ergonomia",
-      "tags": [
-        "NR-1",
-        "riscos psicossociais",
-        "GRO",
-        "PGR",
-        "ergonomia",
-        "fiscalização"
-      ],
-      "palavraChave": "multas riscos psicossociais NR-1",
-      "autor": "james-kamradt-jr",
-      "publicado": "2026-05-22",
-      "atualizado": "2026-08-18",
-      "tempoLeitura": 7,
-      "capa": "assets/capa.svg",
-      "capaAlt": "Ilustração sobre riscos psicossociais no GRO e na nova NR-1",
-      "destaque": false,
-      "rascunho": false,
-      "origem": "https://blog.bevart.com.br/como-evitar-multas-psicossociais-com-o-sistema-bevart-a-nova-nr-1-ja-esta-em-vigor/"
-    },
-    {
       "slug": "como-montar-o-pgr-inventario-de-riscos-e-plano-de-acao",
       "titulo": "Como montar o PGR: inventário de riscos e plano de ação na prática",
       "dek": "O PGR trava quando o inventário vira lista solta e o plano de ação vira promessa. Este guia mostra o caminho completo, do levantamento de perigos ao acompanhamento das medidas.",
@@ -126,7 +101,7 @@
       "autor": "equipe-bevart",
       "publicado": "2026-08-18",
       "atualizado": "2026-08-18",
-      "tempoLeitura": 11,
+      "tempoLeitura": 9,
       "capa": "assets/capa.svg",
       "capaAlt": "Ilustração do fluxo do PGR: perigos, inventário de riscos e plano de ação",
       "destaque": true,
@@ -149,7 +124,7 @@
       "autor": "equipe-bevart",
       "publicado": "2026-08-18",
       "atualizado": "2026-08-18",
-      "tempoLeitura": 9,
+      "tempoLeitura": 6,
       "capa": "assets/capa.svg",
       "capaAlt": "Ilustração dos três eventos de SST do eSocial",
       "destaque": false,
@@ -171,11 +146,430 @@
       "autor": "equipe-bevart",
       "publicado": "2026-08-18",
       "atualizado": "2026-08-18",
-      "tempoLeitura": 8,
+      "tempoLeitura": 4,
       "capa": "assets/capa.svg",
       "capaAlt": "Ilustração do calendário de exames ocupacionais ligado ao PCMSO",
       "destaque": false,
       "rascunho": false
+    },
+    {
+      "slug": "como-evitar-multas-psicossociais-com-o-sistema-bevart-a-nova-nr-1-ja-esta-em-vigor",
+      "titulo": "Como evitar multas psicossociais com o sistema Bevart",
+      "dek": "A nova NR-1 colocou riscos psicossociais e ergonômicos dentro do GRO. O fiscal não quer só documento: quer ver prevenção acontecendo — e isso precisa estar registrado.",
+      "descricao": "A nova NR-1 exige riscos psicossociais no GRO. Veja como medir clima, gerar indicadores e provar prevenção com inventário e plano de ação no Bevart.",
+      "categoria": "psicossocial-e-ergonomia",
+      "tags": [
+        "NR-1",
+        "riscos psicossociais",
+        "GRO",
+        "PGR",
+        "ergonomia",
+        "fiscalização"
+      ],
+      "palavraChave": "multas riscos psicossociais NR-1",
+      "autor": "james-kamradt-jr",
+      "publicado": "2026-05-22",
+      "atualizado": "2026-08-18",
+      "tempoLeitura": 6,
+      "capa": "assets/capa.svg",
+      "capaAlt": "Ilustração sobre riscos psicossociais no GRO e na nova NR-1",
+      "destaque": false,
+      "rascunho": false,
+      "origem": "https://blog.bevart.com.br/como-evitar-multas-psicossociais-com-o-sistema-bevart-a-nova-nr-1-ja-esta-em-vigor/"
+    },
+    {
+      "slug": "envio-do-evento-toxicologico-s-2221-no-esocial-de-forma-simples-com-o-bevart",
+      "titulo": "Envio do evento toxicológico S-2221 no eSocial com o Bevart",
+      "tituloSeo": "Como enviar o evento S-2221 (exame toxicológico) no eSocial",
+      "breadcrumb": "Evento S-2221",
+      "dek": "O exame toxicológico do motorista profissional tem evento próprio no eSocial. Veja onde ele fica no sistema, quais campos o layout exige e o que fazer quando o envio volta com erro.",
+      "descricao": "Passo a passo do evento S-2221 no eSocial: onde fica no Bevart, os campos do exame toxicológico, o ambiente de produção e como corrigir erro de envio.",
+      "categoria": "esocial",
+      "tags": [
+        "eSocial",
+        "S-2221",
+        "exame toxicológico",
+        "motorista profissional"
+      ],
+      "palavraChave": "evento S-2221 eSocial",
+      "autor": "james-kamradt-jr",
+      "publicado": "2025-03-13",
+      "atualizado": "2026-08-18",
+      "tempoLeitura": 4,
+      "capa": "assets/capa.svg",
+      "capaAlt": "Ilustração do envio do evento S-2221 ao eSocial",
+      "destaque": false,
+      "rascunho": false,
+      "origem": "https://blog.bevart.com.br/envio-do-evento-toxicologico-s-2221-no-esocial-de-forma-simples-com-o-bevart/",
+      "sidebar": "Todos os eventos de SST no mesmo painel, com log de retorno e reenvio.",
+      "cta": {
+        "titulo": "Eventos de SST sem redigitação",
+        "texto": "S-2210, S-2220, S-2221 e S-2240 saem do cadastro que você já mantém, com XML e log de retorno no mesmo painel. Teste 5 dias, sem cartão."
+      }
+    },
+    {
+      "slug": "do-pcmso-ao-aso-audiometria-e-esocial-com-o-bevart",
+      "titulo": "Do PCMSO ao ASO, audiometria e eSocial: o caminho completo no Bevart",
+      "tituloSeo": "Do PCMSO ao ASO, audiometria e eSocial",
+      "breadcrumb": "Do PCMSO ao eSocial",
+      "dek": "Um percurso só, do cadastro do GHE até o evento transmitido: como o risco vira exame, o exame vira atendimento, o atendimento vira ASO assinado e o ASO vira S-2220.",
+      "descricao": "O fluxo completo de saúde ocupacional: GHE, geração do PCMSO, atendimento médico, audiometria, ASO assinado digitalmente e envio do S-2220 ao eSocial.",
+      "categoria": "pcmso-e-exames",
+      "tags": [
+        "PCMSO",
+        "ASO",
+        "audiometria",
+        "GHE",
+        "S-2220",
+        "assinatura digital"
+      ],
+      "palavraChave": "PCMSO ASO audiometria eSocial",
+      "autor": "james-kamradt-jr",
+      "publicado": "2025-03-05",
+      "atualizado": "2026-08-18",
+      "tempoLeitura": 6,
+      "capa": "assets/capa.svg",
+      "capaAlt": "Ilustração do fluxo do PCMSO ao eSocial",
+      "destaque": false,
+      "rascunho": false,
+      "origem": "https://blog.bevart.com.br/do-pcmso-ao-aso-audiometria-e-esocial-com-o-bevart/",
+      "sidebar": "Do GHE ao S-2220 sem trocar de sistema no meio do caminho.",
+      "cta": {
+        "titulo": "Saúde ocupacional em um fluxo só",
+        "texto": "GHE, PCMSO, atendimento, audiometria, ASO assinado e S-2220 transmitido — a mesma informação do começo ao fim. Teste 5 dias, sem cartão."
+      }
+    },
+    {
+      "slug": "descubra-a-area-do-cliente-do-bevart-um-diferencial-exclusivo-para-a-gestao-de-sst",
+      "titulo": "Área do cliente: o portal que a sua consultoria entrega",
+      "tituloSeo": "Área do cliente do Bevart para consultorias de SST",
+      "breadcrumb": "Área do cliente",
+      "dek": "Em vez de mandar PDF por WhatsApp e responder \"cadê o ASO?\" toda semana, cada cliente entra com o próprio login e encontra documento assinado, exame a vencer e plano de ação.",
+      "descricao": "Como dar a cada cliente da consultoria um acesso próprio para baixar documentos assinados, ver exames a vencer e acompanhar os planos de ação do PGR.",
+      "categoria": "gestao-de-sst",
+      "tags": [
+        "área do cliente",
+        "consultoria de SST",
+        "documentos",
+        "planos de ação"
+      ],
+      "palavraChave": "área do cliente consultoria SST",
+      "autor": "james-kamradt-jr",
+      "publicado": "2025-02-28",
+      "atualizado": "2026-08-18",
+      "tempoLeitura": 4,
+      "capa": "assets/capa.svg",
+      "capaAlt": "Ilustração da área do cliente do Bevart",
+      "destaque": false,
+      "rascunho": false,
+      "origem": "https://blog.bevart.com.br/descubra-a-area-do-cliente-do-bevart-um-diferencial-exclusivo-para-a-gestao-de-sst/",
+      "sidebar": "Cada cliente com acesso próprio a documentos, exames e planos de ação.",
+      "cta": {
+        "titulo": "Sua consultoria entregando mais que PDF",
+        "texto": "Área exclusiva por cliente, documentos assinados, exames a vencer e planos de ação acompanhados por quem executa. Teste 5 dias, sem cartão."
+      }
+    },
+    {
+      "slug": "como-gerenciar-o-estoque-e-emitir-ficha-de-entrega-de-epi-no-bevart",
+      "titulo": "Estoque de EPI e ficha de entrega com biometria facial",
+      "tituloSeo": "Como controlar estoque de EPI e emitir ficha de entrega",
+      "breadcrumb": "Estoque e ficha de EPI",
+      "dek": "Cadastrar o EPI, dar baixa no estoque e emitir a ficha assinada — sem papel, sem planilha paralela e com a foto do recebimento anexada ao PDF.",
+      "descricao": "Como cadastrar EPI no estoque, registrar entrega e devolução com biometria facial e emitir a ficha em PDF com a foto do recebimento anexada.",
+      "categoria": "treinamentos-e-epi",
+      "tags": [
+        "EPI",
+        "ficha de entrega",
+        "biometria facial",
+        "estoque"
+      ],
+      "palavraChave": "ficha de entrega de EPI",
+      "autor": "james-kamradt-jr",
+      "publicado": "2025-01-24",
+      "atualizado": "2026-08-18",
+      "tempoLeitura": 5,
+      "capa": "assets/capa.svg",
+      "capaAlt": "Ilustração do controle de estoque e ficha de entrega de EPI",
+      "destaque": false,
+      "rascunho": false,
+      "origem": "https://blog.bevart.com.br/como-gerenciar-o-estoque-e-emitir-ficha-de-entrega-de-epi-no-bevart/",
+      "sidebar": "Ficha de EPI assinada com foto e estoque atualizado na mesma ação.",
+      "cta": {
+        "titulo": "Entrega de EPI que se comprova",
+        "texto": "Estoque, ficha assinada por biometria e relatório por funcionário, prontos para auditoria. Teste 5 dias, sem cartão."
+      }
+    },
+    {
+      "slug": "gerando-documentos-sst-no-bevart-ltcat",
+      "titulo": "Do cadastro ao LTCAT: como gerar o laudo a partir do inventário",
+      "tituloSeo": "Como gerar o LTCAT a partir do inventário de riscos",
+      "breadcrumb": "Gerar o LTCAT",
+      "dek": "Setor, empresa, unidade, ambiente e inventário de riscos são cadastros que você faz uma vez. Depois disso, o LTCAT deixa de ser redação e vira geração.",
+      "descricao": "Configuração inicial, cadastro de ambiente (GHE), inventário de riscos e geração do PDF do LTCAT com assinatura dentro do próprio sistema.",
+      "categoria": "pgr-e-riscos",
+      "tags": [
+        "LTCAT",
+        "GHE",
+        "inventário de riscos",
+        "documentos de SST"
+      ],
+      "palavraChave": "gerar LTCAT",
+      "autor": "james-kamradt-jr",
+      "publicado": "2025-01-23",
+      "atualizado": "2026-08-18",
+      "tempoLeitura": 4,
+      "capa": "assets/capa.svg",
+      "capaAlt": "Ilustração da geração do LTCAT a partir do inventário de riscos",
+      "destaque": false,
+      "rascunho": false,
+      "origem": "https://blog.bevart.com.br/gerando-documentos-sst-no-bevart-ltcat/",
+      "sidebar": "Ambiente e inventário cadastrados uma vez alimentam LTCAT, PGR e eSocial.",
+      "cta": {
+        "titulo": "O laudo nasce do cadastro, não do Word",
+        "texto": "Ambiente, inventário de riscos e geração de LTCAT em PDF assinado, no mesmo lugar. Teste 5 dias, sem cartão."
+      }
+    },
+    {
+      "slug": "como-funciona-o-ppp-eletronico",
+      "titulo": "Como funciona o PPP eletrônico",
+      "tituloSeo": "Como funciona o PPP eletrônico no eSocial",
+      "breadcrumb": "PPP eletrônico",
+      "dek": "O perfil profissiográfico deixou de ser um documento montado na demissão. Hoje ele é construído em tempo real pelos eventos que a empresa envia — e é aí que mora o risco.",
+      "descricao": "O que é o PPP, como o eSocial passou a formá-lo a partir dos eventos S-2220 e S-2240 e o que fazer para o histórico do trabalhador não ficar furado.",
+      "categoria": "esocial",
+      "tags": [
+        "PPP",
+        "eSocial",
+        "S-2240",
+        "S-2220",
+        "aposentadoria especial"
+      ],
+      "palavraChave": "PPP eletrônico",
+      "autor": "james-kamradt-jr",
+      "publicado": "2025-01-22",
+      "atualizado": "2026-08-18",
+      "tempoLeitura": 4,
+      "capa": "assets/capa.svg",
+      "capaAlt": "Ilustração do PPP eletrônico formado pelos eventos do eSocial",
+      "destaque": false,
+      "rascunho": false,
+      "origem": "https://blog.bevart.com.br/como-funciona-o-ppp-eletronico/",
+      "sidebar": "Mudou o ambiente? O sistema lista quem precisa de novo S-2240.",
+      "cta": {
+        "titulo": "O histórico do trabalhador se constrói agora",
+        "texto": "Painel de eventos, alerta de mudança de ambiente e envio ao eSocial com log de retorno. Teste 5 dias, sem cartão."
+      }
+    },
+    {
+      "slug": "como-cadastrar-procuracao-digital-sst",
+      "titulo": "Como cadastrar a procuração digital para o eSocial SST",
+      "tituloSeo": "Como cadastrar procuração digital para o eSocial SST",
+      "breadcrumb": "Procuração digital",
+      "dek": "Sem a procuração eletrônica no e-CAC, a consultoria não transmite evento nenhum em nome do cliente. São sete telas — e uma escolha que costuma ser feita errada.",
+      "descricao": "Passo a passo no e-CAC para cadastrar a procuração eletrônica do eSocial – Grupo SST e liberar a transmissão dos eventos pela consultoria.",
+      "categoria": "esocial",
+      "tags": [
+        "procuração eletrônica",
+        "e-CAC",
+        "certificado digital",
+        "eSocial"
+      ],
+      "palavraChave": "procuração digital eSocial SST",
+      "autor": "james-kamradt-jr",
+      "publicado": "2025-01-22",
+      "atualizado": "2026-08-18",
+      "tempoLeitura": 4,
+      "capa": "assets/capa.svg",
+      "capaAlt": "Ilustração do cadastro de procuração digital no e-CAC",
+      "destaque": false,
+      "rascunho": false,
+      "origem": "https://blog.bevart.com.br/como-cadastrar-procuracao-digital-sst/",
+      "sidebar": "Certificado cadastrado como transmissor e eventos saindo pelo mesmo painel.",
+      "cta": {
+        "titulo": "Procuração pronta, eventos no ar",
+        "texto": "Cadastre o certificado como transmissor e envie os eventos de SST de toda a carteira com log de retorno. Teste 5 dias, sem cartão."
+      }
+    },
+    {
+      "slug": "acessando-modulo-gov-web-sst-esocial",
+      "titulo": "Como consultar os eventos de SST no módulo web do eSocial",
+      "tituloSeo": "Consultar eventos de SST no módulo web do eSocial",
+      "breadcrumb": "Módulo web de SST",
+      "dek": "Enviou o evento e quer ver o que o governo registrou? O módulo web do eSocial mostra as movimentações de SST por trabalhador — o retrato oficial, não o do seu sistema.",
+      "descricao": "Como acessar o módulo web de SST do eSocial com certificado digital, trocar de perfil, localizar o trabalhador pelo CPF e ver todos os eventos enviados.",
+      "categoria": "esocial",
+      "tags": [
+        "eSocial",
+        "módulo web",
+        "certificado digital",
+        "eventos de SST"
+      ],
+      "palavraChave": "módulo web SST eSocial",
+      "autor": "james-kamradt-jr",
+      "publicado": "2025-01-22",
+      "atualizado": "2026-08-18",
+      "tempoLeitura": 4,
+      "capa": "assets/capa.svg",
+      "capaAlt": "Ilustração da consulta de eventos de SST no módulo web do eSocial",
+      "destaque": false,
+      "rascunho": false,
+      "origem": "https://blog.bevart.com.br/acessando-modulo-gov-web-sst-esocial/",
+      "sidebar": "Painel de envio e log de retorno para você não depender da conferência manual.",
+      "cta": {
+        "titulo": "Menos conferência, mais controle",
+        "texto": "Painel de eventos por empresa, log de retorno e alerta quando o ambiente muda. Teste 5 dias, sem cartão."
+      }
+    },
+    {
+      "slug": "checklist-para-inspecao-seguranca-do-trabalho",
+      "titulo": "Checklist de inspeção de segurança do trabalho: como montar e aplicar",
+      "tituloSeo": "Checklist de inspeção de segurança do trabalho",
+      "breadcrumb": "Checklist de inspeção",
+      "dek": "Checklist bom não é o que tem mais itens: é o que gera apontamento com responsável. Veja como organizar por norma, vincular ao GHE e transformar a inspeção em ação.",
+      "descricao": "Como criar checklists por norma, montar inspeções por empresa com periodicidade e GHE, e transformar o que foi encontrado em apontamento com responsável.",
+      "categoria": "pgr-e-riscos",
+      "tags": [
+        "checklist",
+        "inspeção de segurança",
+        "GHE",
+        "plano de ação"
+      ],
+      "palavraChave": "checklist inspeção segurança do trabalho",
+      "autor": "james-kamradt-jr",
+      "publicado": "2025-01-22",
+      "atualizado": "2026-08-18",
+      "tempoLeitura": 5,
+      "capa": "assets/capa.svg",
+      "capaAlt": "Ilustração de checklist de inspeção de segurança do trabalho",
+      "destaque": false,
+      "rascunho": false,
+      "origem": "https://blog.bevart.com.br/checklist-para-inspecao-seguranca-do-trabalho/",
+      "sidebar": "Inspeção ligada ao GHE, com apontamento que vira plano de ação.",
+      "cta": {
+        "titulo": "Inspeção que vira prevenção",
+        "texto": "Checklists por norma, inspeções com periodicidade e apontamentos ligados ao inventário de riscos. Teste 5 dias, sem cartão."
+      }
+    },
+    {
+      "slug": "como-consultar-as-procuracoes-liberadas-para-seu-certificado-digital",
+      "titulo": "Como consultar as procurações liberadas para o seu certificado digital",
+      "tituloSeo": "Como consultar procurações do seu certificado digital",
+      "breadcrumb": "Consultar procurações",
+      "dek": "Antes de culpar o sistema pelo evento rejeitado, confira a lista: quais clientes realmente liberaram procuração para o seu certificado e quais já venceram.",
+      "descricao": "Como consultar no e-CAC todas as procurações liberadas para o seu certificado digital, conferir situação e vigência e destravar o envio ao eSocial.",
+      "categoria": "esocial",
+      "tags": [
+        "procuração eletrônica",
+        "e-CAC",
+        "certificado digital",
+        "consultoria de SST"
+      ],
+      "palavraChave": "consultar procurações certificado digital",
+      "autor": "james-kamradt-jr",
+      "publicado": "2025-01-22",
+      "atualizado": "2026-08-18",
+      "tempoLeitura": 4,
+      "capa": "assets/capa.svg",
+      "capaAlt": "Ilustração da consulta de procurações no e-CAC",
+      "destaque": false,
+      "rascunho": false,
+      "origem": "https://blog.bevart.com.br/como-consultar-as-procuracoes-liberadas-para-seu-certificado-digital/",
+      "sidebar": "Toda a carteira transmitindo pelo mesmo certificado, com histórico por empresa.",
+      "cta": {
+        "titulo": "Carteira inteira no mesmo painel",
+        "texto": "Um certificado transmissor, todos os clientes, log de retorno por empresa. Teste 5 dias, sem cartão."
+      }
+    },
+    {
+      "slug": "como-emitir-cat-esocial-no-sistema-bevart",
+      "titulo": "Como emitir a CAT no eSocial (evento S-2210) pelo Bevart",
+      "tituloSeo": "Como emitir a CAT no eSocial (evento S-2210)",
+      "breadcrumb": "Emitir CAT",
+      "dek": "O prazo é curto e o formulário é longo. Veja o que precisa estar pronto antes, como preencher cada bloco e como acompanhar o recibo que comprova a comunicação.",
+      "descricao": "Passo a passo da CAT no eSocial: pré-requisitos, preenchimento bloco a bloco do S-2210, envio, status até o recibo e geração do relatório.",
+      "categoria": "esocial",
+      "tags": [
+        "CAT",
+        "S-2210",
+        "eSocial",
+        "acidente de trabalho"
+      ],
+      "palavraChave": "emitir CAT eSocial",
+      "autor": "james-kamradt-jr",
+      "publicado": "2025-01-22",
+      "atualizado": "2026-08-18",
+      "tempoLeitura": 6,
+      "capa": "assets/capa.svg",
+      "capaAlt": "Ilustração da emissão da CAT pelo evento S-2210 do eSocial",
+      "destaque": false,
+      "rascunho": false,
+      "origem": "https://blog.bevart.com.br/como-emitir-cat-esocial-no-sistema-bevart/",
+      "sidebar": "CAT com dados do cadastro, status do envio e recibo no mesmo painel.",
+      "cta": {
+        "titulo": "Prazo de CAT não espera",
+        "texto": "Formulário com os dados do cadastro, envio direto, status até o recibo e relatório pronto para arquivar. Teste 5 dias, sem cartão."
+      }
+    },
+    {
+      "slug": "como-elaborar-monitorar-e-gerar-o-pgr",
+      "titulo": "Como elaborar, monitorar e gerar o PGR no sistema",
+      "tituloSeo": "Como elaborar, monitorar e gerar o PGR",
+      "breadcrumb": "Elaborar e gerar o PGR",
+      "dek": "Três etapas e nenhuma delas é \"escrever o documento\": cadastrar os GHEs, montar o inventário com planos de ação e acompanhar. O PDF é a última coisa que acontece.",
+      "descricao": "Do cadastro do GHE ao PDF: como montar o inventário de riscos, criar planos de ação ligados a cada risco e gerar o PGR com poucos cliques.",
+      "categoria": "pgr-e-riscos",
+      "tags": [
+        "PGR",
+        "GHE",
+        "inventário de riscos",
+        "plano de ação"
+      ],
+      "palavraChave": "gerar PGR sistema",
+      "autor": "james-kamradt-jr",
+      "publicado": "2025-01-22",
+      "atualizado": "2026-08-18",
+      "tempoLeitura": 5,
+      "capa": "assets/capa.svg",
+      "capaAlt": "Ilustração da elaboração e geração do PGR",
+      "destaque": false,
+      "rascunho": false,
+      "origem": "https://blog.bevart.com.br/como-elaborar-monitorar-e-gerar-o-pgr/",
+      "sidebar": "GHE, inventário e plano de ação alimentando o PGR sem redigitação.",
+      "cta": {
+        "titulo": "PGR gerado, não digitado",
+        "texto": "Cadastre o GHE, monte o inventário, ligue os planos de ação e gere o documento quando precisar. Teste 5 dias, sem cartão."
+      }
+    },
+    {
+      "slug": "como-assinar-documento-tst-pdf-e-validar-conformidade",
+      "titulo": "Como assinar o PDF de SST e validar a conformidade da assinatura",
+      "tituloSeo": "Como assinar o PDF de SST e validar a assinatura",
+      "breadcrumb": "Assinar e validar documento",
+      "dek": "Certificado A1 no perfil do profissional, documento gerado e assinado no sistema, guarda automática no GED — e a conferência final no verificador oficial do governo.",
+      "descricao": "Como cadastrar o certificado A1, assinar PGR, LTCAT e PCMSO dentro do sistema, guardar no GED e validar a assinatura no verificador do ITI.",
+      "categoria": "gestao-de-sst",
+      "tags": [
+        "assinatura digital",
+        "certificado A1",
+        "GED",
+        "ITI",
+        "documentos de SST"
+      ],
+      "palavraChave": "assinar documento SST PDF",
+      "autor": "james-kamradt-jr",
+      "publicado": "2025-01-22",
+      "atualizado": "2026-08-18",
+      "tempoLeitura": 4,
+      "capa": "assets/capa.svg",
+      "capaAlt": "Ilustração da assinatura digital de documentos de SST e validação",
+      "destaque": false,
+      "rascunho": false,
+      "origem": "https://blog.bevart.com.br/como-assinar-documento-tst-pdf-e-validar-conformidade/",
+      "sidebar": "Documento gerado, assinado com A1 e arquivado por empresa no GED.",
+      "cta": {
+        "titulo": "Documento assinado e guardado no lugar certo",
+        "texto": "PGR, LTCAT e PCMSO gerados do cadastro, assinados com certificado A1 e arquivados por empresa. Teste 5 dias, sem cartão."
+      }
     }
   ]
 }

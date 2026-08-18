@@ -513,12 +513,271 @@ ${rodape(prefixo)}
   }
 }
 
+/* ============================ blocos do post ============================ */
+/* Tudo que é igual em todo post mora aqui, não no arquivo do post. O texto
+ * do artigo continua escrito à mão; cabeça, assinatura, compartilhamento,
+ * caixa do autor, aside e CTA final são gerados a partir do posts.json. */
+
+const ENTIDADES = { '&amp;': '&', '&lt;': '<', '&gt;': '>', '&quot;': '"', '&#39;': "'", '&nbsp;': ' ' };
+
+/** HTML -> texto puro, para reaproveitar o conteúdo visível no JSON-LD. */
+function texto(html) {
+  return html
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&[a-z#0-9]+;/gi, (e) => ENTIDADES[e] || e)
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+/** Lê o FAQ que está visível na página para montar o FAQPage.
+ *  Assim é impossível o dado estruturado prometer pergunta que não existe. */
+function faqDaPagina(html) {
+  const secao = html.match(/<section class="bv-faq">([\s\S]*?)<\/section>/);
+  if (!secao) return [];
+
+  const perguntas = [];
+
+  for (const m of secao[1].matchAll(/<details>([\s\S]*?)<\/details>/g)) {
+    const pergunta = m[1].match(/<summary>([\s\S]*?)<\/summary>/);
+    const resposta = m[1].match(/<div>([\s\S]*?)<\/div>/);
+    if (!pergunta || !resposta) continue;
+    perguntas.push({
+      '@type': 'Question',
+      name: texto(pergunta[1]),
+      acceptedAnswer: { '@type': 'Answer', text: texto(resposta[1]) }
+    });
+  }
+
+  return perguntas;
+}
+
+/** Conta só o texto do artigo.
+ *  O corte no marcador build:share é essencial: sem ele, a contagem
+ *  cresce a cada build, porque rodapé e relacionados entram na conta. */
+function contarPalavras(html) {
+  const depoisDoProse = html.split('<div class="bv-prose">')[1] || '';
+  const corpo = depoisDoProse.split('<!-- build:share')[0];
+  return texto(corpo).split(' ').filter(Boolean).length;
+}
+
+function autorDoPost(p) {
+  const autor = autores[p.autor] || autores['equipe-bevart'];
+  const id = `${BASE}/#${p.autor}`;
+  const pessoa = Array.isArray(autor.perfis) && autor.perfis.length;
+
+  return { autor, id: pessoa ? id : `${BASE}/#organization`, pessoa };
+}
+
+/** Todo o <head> do post, inclusive o JSON-LD. */
+function cabecaPost(p, html) {
+  const cat = mapaCategorias.get(p.categoria);
+  const { autor, id, pessoa } = autorDoPost(p);
+  const url = urlPost(p);
+  const capa = urlCapa(p);
+  const titulo = p.tituloSeo || p.titulo;
+  const faq = faqDaPagina(html);
+
+  const grafo = [
+    {
+      '@type': 'Organization',
+      '@id': `${BASE}/#organization`,
+      name: 'Bevart',
+      url: `${BASE}/`,
+      logo: `${BASE}/assets/img/logo%20bevart.svg`
+    }
+  ];
+
+  if (pessoa) {
+    grafo.push({
+      '@type': 'Person',
+      '@id': id,
+      name: autor.nome,
+      jobTitle: autor.cargo,
+      worksFor: { '@id': `${BASE}/#organization` },
+      sameAs: autor.perfis
+    });
+  }
+
+  grafo.push({
+    '@type': 'BlogPosting',
+    '@id': `${url}#post`,
+    headline: p.titulo,
+    description: p.descricao,
+    image: [capa],
+    datePublished: dataIso(p.publicado),
+    dateModified: dataIso(p.atualizado || p.publicado),
+    inLanguage: blog.idioma,
+    articleSection: cat.nome,
+    keywords: (p.tags || []).join(', '),
+    wordCount: contarPalavras(html),
+    author: { '@id': id },
+    publisher: { '@id': `${BASE}/#organization` },
+    isPartOf: { '@id': `${URL_BLOG}/#blog` },
+    mainEntityOfPage: url
+  });
+
+  grafo.push({
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Bevart', item: `${BASE}/` },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: `${URL_BLOG}/` },
+      { '@type': 'ListItem', position: 3, name: cat.nome, item: urlCategoria(cat) },
+      { '@type': 'ListItem', position: 4, name: p.breadcrumb || p.titulo, item: url }
+    ]
+  });
+
+  if (faq.length) grafo.push({ '@type': 'FAQPage', mainEntity: faq });
+
+  const jsonld = JSON.stringify({ '@context': 'https://schema.org', '@graph': grafo }, null, 2)
+    .split('\n').map((l) => '  ' + l).join('\n');
+
+  return `  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${esc(titulo)} | Blog Bevart</title>
+  <meta name="description" content="${escAttr(p.descricao)}">
+  <link rel="canonical" href="${url}">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="theme-color" content="#2563eb">
+  <meta name="author" content="${escAttr(autor.nome)}">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Blog Bevart">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="${url}">
+  <meta property="og:title" content="${escAttr(p.titulo)}">
+  <meta property="og:description" content="${escAttr(p.dek)}">
+  <meta property="og:image" content="${capa}">
+  <meta property="article:published_time" content="${dataIso(p.publicado)}">
+  <meta property="article:modified_time" content="${dataIso(p.atualizado || p.publicado)}">
+  <meta property="article:section" content="${escAttr(cat.nome)}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="${escAttr(p.titulo)}">
+  <meta name="twitter:description" content="${escAttr(p.dek)}">
+  <meta name="twitter:image" content="${capa}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../../assets/img/favicon.png">
+  <link rel="stylesheet" href="../assets/css/blog.css">
+  <link rel="alternate" type="application/rss+xml" title="Blog Bevart" href="../feed.xml">
+
+  <script defer src="../assets/js/analytics.js"></script>
+  <script defer src="../assets/js/blog.js"></script>
+
+  <script type="application/ld+json">
+${jsonld}
+  </script>`;
+}
+
+function bylinePost(p) {
+  const { autor } = autorDoPost(p);
+  const atualizado = p.atualizado && p.atualizado !== p.publicado
+    ? `\n            <span class="bv-meta__sep">atualizado em ${dataLegivel(p.atualizado)}</span>`
+    : '';
+
+  return `        <div class="bv-byline">
+          <span class="bv-avatar" aria-hidden="true">${esc(autor.iniciais)}</span>
+          <span class="bv-byline__who">
+            <strong>${esc(autor.nome)}</strong>
+            <span>${esc(autor.cargo)}</span>
+          </span>
+          <span class="bv-meta" style="margin-left:auto">
+            <time datetime="${p.publicado}">${dataLegivel(p.publicado)}</time>
+            <span class="bv-meta__sep">${p.tempoLeitura} min de leitura</span>${atualizado}
+          </span>
+        </div>`;
+}
+
+const BLOCO_SHARE = `          <div class="bv-share" data-share>
+            <span class="bv-share__label">Compartilhar</span>
+            <a data-rede="linkedin" href="#" aria-label="Compartilhar no LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.6c0-1.34-.03-3.07-1.9-3.07-1.9 0-2.2 1.46-2.2 2.97V21H9z" />
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+            <a data-rede="whatsapp" href="#" aria-label="Compartilhar no WhatsApp">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2a10 10 0 0 0-8.6 15.06L2 22l5.07-1.33A10 10 0 1 0 12 2zm5.5 14.2c-.24.67-1.4 1.28-1.93 1.32-.5.05-.97.23-3.27-.68-2.75-1.08-4.5-3.9-4.63-4.08-.14-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.25-.27.55-.34.73-.34h.52c.17 0 .4-.06.62.48.24.57.8 1.97.87 2.11.07.14.11.3.02.48-.09.18-.14.3-.27.46l-.4.47c-.14.14-.28.29-.12.57.16.27.71 1.17 1.53 1.9 1.05.93 1.94 1.22 2.22 1.36.27.14.43.12.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.6-.14.25.09 1.57.74 1.84.88.27.14.45.2.51.32.07.11.07.66-.17 1.32z" />
+              </svg>
+              <span>WhatsApp</span>
+            </a>
+            <a data-rede="x" href="#" aria-label="Compartilhar no X">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M18.9 2H22l-7.1 8.1L23.2 22h-6.5l-5.1-6.6L5.8 22H2.7l7.6-8.7L1.2 2h6.6l4.6 6.1zM17.8 20.2h1.7L7.3 3.7H5.5z" />
+              </svg>
+              <span>X</span>
+            </a>
+            <button type="button" data-rede="copiar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.5 1.5" />
+                <path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.5-1.5" />
+              </svg>
+              <span>Copiar link</span>
+            </button>
+          </div>`;
+
+function caixaAutor(p) {
+  const { autor } = autorDoPost(p);
+
+  return `          <aside class="bv-author">
+            <span class="bv-avatar" aria-hidden="true">${esc(autor.iniciais)}</span>
+            <div>
+              <h2>${esc(autor.nome)}</h2>
+              <p>${esc(autor.bio)}</p>
+            </div>
+          </aside>`;
+}
+
+function asidePost(p) {
+  const chamada = p.sidebar || 'O Bevart conecta riscos, documentos, exames, EPI e eSocial em um fluxo só.';
+
+  return `        <aside class="bv-toc">
+          <nav id="sumario" aria-label="Sumário do artigo" hidden>
+            <p class="bv-toc__title">Neste artigo</p>
+          </nav>
+          <div class="bv-toc__aside">
+            <p>${esc(chamada)}</p>
+            <a class="bv-btn bv-btn--primary" href="https://profissionais.bevart.com.br/app/src/login/views/login"
+              data-cta="blog-post-sidebar">Testar 5 dias grátis</a>
+          </div>
+        </aside>`;
+}
+
+function ctaFinal(p) {
+  const cta = p.cta || {};
+  const titulo = cta.titulo || 'Do risco mapeado ao eSocial entregue';
+  const texto_ = cta.texto || 'O Bevart liga o inventário de riscos aos documentos, exames, treinamentos, EPI e eventos do eSocial. Teste 5 dias, sem cartão.';
+
+  return `    <section class="bv-section">
+      <div class="bv-wrap">
+        <div class="bv-band">
+          <div>
+            <h2>${esc(titulo)}</h2>
+            <p>${esc(texto_)}</p>
+          </div>
+          <div class="bv-band__actions">
+            <a class="bv-btn bv-btn--light bv-btn--lg"
+              href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="blog-post-fim">Criar conta
+              grátis</a>
+            <a class="bv-btn bv-btn--outline-light bv-btn--lg" href="../../index.html#pricing">Ver planos</a>
+          </div>
+        </div>
+      </div>
+    </section>`;
+}
+
 /* ============================ posts ============================ */
 
 function montarPosts() {
   posts.forEach((p, i) => {
     const arquivo = join(DIR_BLOG, p.slug, 'index.html');
     let html = readFileSync(arquivo, 'utf8');
+    const palavras = contarPalavras(html);
 
     const anterior = posts[i + 1];
     const proximo = posts[i - 1];
@@ -547,10 +806,16 @@ ${proximo ? `        <a class="is-next" href="../${proximo.slug}/index.html"><sp
       : '';
 
     const trocas = {
+      head: cabecaPost(p, html),
       header: cabecalho('../'),
-      footer: rodape('../'),
+      byline: bylinePost(p),
+      share: BLOCO_SHARE,
+      autor: caixaAutor(p),
+      sidebar: asidePost(p),
+      prevnext: blocoPrevNext,
       relacionados: blocoRelacionados,
-      prevnext: blocoPrevNext
+      ctafinal: ctaFinal(p),
+      footer: rodape('../')
     };
 
     for (const [nome, conteudo] of Object.entries(trocas)) {
@@ -561,7 +826,9 @@ ${proximo ? `        <a class="is-next" href="../${proximo.slug}/index.html"><sp
 
     writeFileSync(arquivo, html);
     feitos.push(`blog/${p.slug}/index.html`);
-    conferirPost(p, html);
+    // as palavras são contadas ANTES dos blocos gerados entrarem, senão
+    // rodapé e relacionados inflam a contagem e escondem post curto demais
+    conferirPost(p, html, palavras);
   });
 }
 
@@ -585,7 +852,7 @@ function escolherRelacionados(post, limite = 3) {
 }
 
 /** Conferências de SEO que valem um aviso, não um erro. */
-function conferirPost(p, html) {
+function conferirPost(p, html, palavrasDoTexto) {
   const onde = `blog/${p.slug}`;
   if (p.descricao.length > 165) avisos.push(`${onde}: meta description com ${p.descricao.length} caracteres (ideal até 160)`);
   if (p.titulo.length > 70) avisos.push(`${onde}: título com ${p.titulo.length} caracteres (ideal até 60-70)`);
@@ -595,12 +862,15 @@ function conferirPost(p, html) {
   if ((html.match(/<h1[\s>]/g) || []).length !== 1) avisos.push(`${onde}: a página precisa ter exatamente um H1`);
   if (!existsSync(join(DIR_BLOG, p.slug, p.capa))) avisos.push(`${onde}: capa não encontrada (${p.capa})`);
 
-  const texto = (html.split('<div class="bv-prose"')[1] || '').replace(/<[^>]+>/g, ' ');
-  const palavras = texto.split(/\s+/).filter(Boolean).length;
-  if (palavras && palavras < 600) avisos.push(`${onde}: só ${palavras} palavras no corpo (posts curtos rankeiam mal)`);
+  // 450 é o piso de um tutorial com prints; guia abaixo disso rankeia mal
+  const palavras = palavrasDoTexto;
+  if (palavras && palavras < 450) avisos.push(`${onde}: só ${palavras} palavras no corpo (curto até para tutorial)`);
 
-  const minutos = Math.max(1, Math.round(palavras / 200));
-  if (palavras && Math.abs(minutos - p.tempoLeitura) > 3) {
+  // 200 palavras por minuto, mais 15 segundos por print — tutorial com
+  // muita imagem leva mais tempo do que a contagem de palavras sugere
+  const figuras = ((html.split('<div class="bv-prose">')[1] || '').split('<!-- build:share')[0].match(/<figure>/g) || []).length;
+  const minutos = Math.max(2, Math.round(palavras / 200 + figuras * 0.25));
+  if (palavras && Math.abs(minutos - p.tempoLeitura) > 2) {
     avisos.push(`${onde}: tempoLeitura ${p.tempoLeitura} min, texto sugere ${minutos} min`);
   }
 }

@@ -32,6 +32,18 @@
     <priority>0.60</priority>
   </url>
   <url>
+    <loc>https://bevart.com.br/blog/categoria/treinamentos-e-epi/</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://bevart.com.br/blog/categoria/gestao-de-sst/</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
     <loc>https://bevart.com.br/blog/como-montar-o-pgr-inventario-de-riscos-e-plano-de-acao/</loc>
     <lastmod>2026-08-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -69,6 +81,136 @@
     <image:image>
       <image:loc>https://bevart.com.br/blog/como-evitar-multas-psicossociais-com-o-sistema-bevart-a-nova-nr-1-ja-esta-em-vigor/assets/capa.svg</image:loc>
       <image:title>Como evitar multas psicossociais com o sistema Bevart</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://bevart.com.br/blog/envio-do-evento-toxicologico-s-2221-no-esocial-de-forma-simples-com-o-bevart/</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://bevart.com.br/blog/envio-do-evento-toxicologico-s-2221-no-esocial-de-forma-simples-com-o-bevart/assets/capa.svg</image:loc>
+      <image:title>Envio do evento toxicológico S-2221 no eSocial com o Bevart</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://bevart.com.br/blog/do-pcmso-ao-aso-audiometria-e-esocial-com-o-bevart/</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://bevart.com.br/blog/do-pcmso-ao-aso-audiometria-e-esocial-com-o-bevart/assets/capa.svg</image:loc>
+      <image:title>Do PCMSO ao ASO, audiometria e eSocial: o caminho completo no Bevart</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://bevart.com.br/blog/descubra-a-area-do-cliente-do-bevart-um-diferencial-exclusivo-para-a-gestao-de-sst/</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://bevart.com.br/blog/descubra-a-area-do-cliente-do-bevart-um-diferencial-exclusivo-para-a-gestao-de-sst/assets/capa.svg</image:loc>
+      <image:title>Área do cliente: o portal que a sua consultoria entrega</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://bevart.com.br/blog/como-gerenciar-o-estoque-e-emitir-ficha-de-entrega-de-epi-no-bevart/</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://bevart.com.br/blog/como-gerenciar-o-estoque-e-emitir-ficha-de-entrega-de-epi-no-bevart/assets/capa.svg</image:loc>
+      <image:title>Estoque de EPI e ficha de entrega com biometria facial</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://bevart.com.br/blog/gerando-documentos-sst-no-bevart-ltcat/</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://bevart.com.br/blog/gerando-documentos-sst-no-bevart-ltcat/assets/capa.svg</image:loc>
+      <image:title>Do cadastro ao LTCAT: como gerar o laudo a partir do inventário</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://bevart.com.br/blog/como-funciona-o-ppp-eletronico/</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://bevart.com.br/blog/como-funciona-o-ppp-eletronico/assets/capa.svg</image:loc>
+      <image:title>Como funciona o PPP eletrônico</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://bevart.com.br/blog/como-cadastrar-procuracao-digital-sst/</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://bevart.com.br/blog/como-cadastrar-procuracao-digital-sst/assets/capa.svg</image:loc>
+      <image:title>Como cadastrar a procuração digital para o eSocial SST</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://bevart.com.br/blog/acessando-modulo-gov-web-sst-esocial/</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://bevart.com.br/blog/acessando-modulo-gov-web-sst-esocial/assets/capa.svg</image:loc>
+      <image:title>Como consultar os eventos de SST no módulo web do eSocial</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://bevart.com.br/blog/checklist-para-inspecao-seguranca-do-trabalho/</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://bevart.com.br/blog/checklist-para-inspecao-seguranca-do-trabalho/assets/capa.svg</image:loc>
+      <image:title>Checklist de inspeção de segurança do trabalho: como montar e aplicar</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://bevart.com.br/blog/como-consultar-as-procuracoes-liberadas-para-seu-certificado-digital/</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://bevart.com.br/blog/como-consultar-as-procuracoes-liberadas-para-seu-certificado-digital/assets/capa.svg</image:loc>
+      <image:title>Como consultar as procurações liberadas para o seu certificado digital</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://bevart.com.br/blog/como-emitir-cat-esocial-no-sistema-bevart/</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://bevart.com.br/blog/como-emitir-cat-esocial-no-sistema-bevart/assets/capa.svg</image:loc>
+      <image:title>Como emitir a CAT no eSocial (evento S-2210) pelo Bevart</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://bevart.com.br/blog/como-elaborar-monitorar-e-gerar-o-pgr/</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://bevart.com.br/blog/como-elaborar-monitorar-e-gerar-o-pgr/assets/capa.svg</image:loc>
+      <image:title>Como elaborar, monitorar e gerar o PGR no sistema</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://bevart.com.br/blog/como-assinar-documento-tst-pdf-e-validar-conformidade/</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://bevart.com.br/blog/como-assinar-documento-tst-pdf-e-validar-conformidade/assets/capa.svg</image:loc>
+      <image:title>Como assinar o PDF de SST e validar a conformidade da assinatura</image:title>
     </image:image>
   </url>
 </urlset>
