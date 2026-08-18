@@ -68,6 +68,13 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+/* O filtro do hub esconde card com o atributo hidden. Sem o !important, um
+   display: flex/grid no componente vence a regra [hidden] do navegador e o
+   card continua na tela — foi o que quebrou a busca e o filtro por categoria. */
+[hidden] {
+  display: none !important;
+}
+
 img {
   max-width: 100%;
   height: auto;

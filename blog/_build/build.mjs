@@ -295,7 +295,9 @@ function montarHub() {
     destaque: destaque ? cardDestaque(destaque, '') : '',
     filtros: [
       '        <button type="button" class="bv-filter is-active" data-filtro="todas" aria-pressed="true">Todas</button>',
-      ...categorias.map((c) => `        <button type="button" class="bv-filter" data-filtro="${c.slug}" aria-pressed="false">${esc(c.nome)}</button>`)
+      // categoria sem post vira botão que só mostra 'nenhum resultado'
+      ...categorias.filter((c) => posts.some((p) => p.categoria === c.slug))
+        .map((c) => `        <button type="button" class="bv-filter" data-filtro="${c.slug}" aria-pressed="false">${esc(c.nome)}</button>`)
     ].join('\n'),
     cards: demais.map((p) => cardPost(p, '')).join('\n'),
     categorias: categorias.map((c) => {
