@@ -60,6 +60,15 @@ blog/
   _build/                       build, gerador de capa e verificador
 ```
 
+## Links
+
+Toda navegação termina em `index.html` (`../categoria/esocial/index.html`). Link para
+pasta só funciona quando existe um servidor resolvendo o DirectoryIndex, e o blog
+precisa abrir também direto do disco.
+
+As URLs canônicas, o sitemap e o feed seguem na forma limpa `/blog/slug/`, que é a
+versão indexada pelo Google — o canonical junta as duas pontas.
+
 ## Regra única que não pode ser quebrada
 
 Tudo entre `<!-- build:algo -->` e `<!-- /build:algo -->` pertence ao build.

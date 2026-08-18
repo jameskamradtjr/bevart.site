@@ -61,7 +61,8 @@ for (const arquivo of arquivos) {
   }
 
   // canonical presente, absoluto e com barra final
-  const canonical = html.match(/<link rel="canonical" href="([^"]+)"/);
+  // \s+ porque a tag quebra em duas linhas quando a URL é longa
+  const canonical = html.match(/<link\s+rel="canonical"\s+href="([^"]+)"/);
   if (!canonical) erros.push(`${nome}: sem canonical`);
   else if (!canonical[1].startsWith('https://bevart.com.br/')) erros.push(`${nome}: canonical não absoluto`);
   else if (!canonical[1].endsWith('/')) erros.push(`${nome}: canonical sem barra final`);
@@ -75,6 +76,11 @@ for (const arquivo of arquivos) {
 
     const semQuery = alvo.split('?')[0];
     if (!semQuery) continue;
+
+    // link para pasta só abre com servidor: a navegação do blog aponta para o arquivo
+    if (semQuery.endsWith('/') || semQuery === './') {
+      erros.push(`${nome}: link para pasta -> ${alvo} (use ${semQuery}index.html)`);
+    }
 
     let caminho = resolve(base, decodeURIComponent(semQuery));
     if (semQuery.endsWith('/')) caminho = join(caminho, 'index.html');

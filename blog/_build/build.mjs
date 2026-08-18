@@ -69,6 +69,22 @@ function substituirBloco(html, nome, conteudo) {
   return { html: html.replace(re, `$1\n${conteudo}\n$2`), trocou: true };
 }
 
+/**
+ * Link de navegação: sempre apontando para o arquivo, nunca para a pasta.
+ *
+ * `/blog/slug/` só resolve para o index.html quando existe um servidor no meio.
+ * Abrindo o site direto do disco, ou em qualquer host sem DirectoryIndex, a
+ * pasta não abre. Terminar em index.html funciona nos dois casos.
+ *
+ * Isso vale só para a NAVEGAÇÃO. Canonical, sitemap, feed, OG e JSON-LD
+ * continuam usando a URL limpa (`https://bevart.com.br/blog/slug/`), que é a
+ * versão que deve ser indexada — o canonical junta as duas para o Google.
+ */
+function pagina(caminho) {
+  if (!caminho || caminho === './') return 'index.html';
+  return caminho.endsWith('/') ? caminho + 'index.html' : caminho;
+}
+
 /** Prefixo relativo (../../) da página até a raiz do blog. */
 function prefixoBlog(arquivo) {
   const rel = relative(DIR_BLOG, dirname(arquivo));
@@ -124,16 +140,17 @@ function urlCapa(p) {
 
 function cardPost(p, prefixo) {
   const cat = mapaCategorias.get(p.categoria);
-  const href = `${prefixo}${p.slug}/`;
+  const pasta = `${prefixo}${p.slug}/`;
+  const href = pagina(pasta);
   const busca = semAcento([p.titulo, p.dek, cat.nome, (p.tags || []).join(' ')].join(' '));
 
   return `        <article class="bv-post-card" data-post data-categoria="${escAttr(p.categoria)}"
           data-busca="${escAttr(busca)}">
           <a class="bv-post-card__media" href="${escAttr(href)}" tabindex="-1" aria-hidden="true">
-            <img src="${escAttr(href + p.capa)}" alt="" width="640" height="360" loading="lazy" decoding="async">
+            <img src="${escAttr(pasta + p.capa)}" alt="" width="640" height="360" loading="lazy" decoding="async">
           </a>
           <div class="bv-post-card__body">
-            <a class="bv-chip" href="${escAttr(prefixo + 'categoria/' + cat.slug + '/')}">${esc(cat.nome)}</a>
+            <a class="bv-chip" href="${escAttr(pagina(prefixo + 'categoria/' + cat.slug + '/'))}">${esc(cat.nome)}</a>
             <h3 class="bv-post-card__title"><a href="${escAttr(href)}">${esc(p.titulo)}</a></h3>
             <p class="bv-post-card__dek">${esc(p.dek)}</p>
             <p class="bv-meta">
@@ -146,14 +163,15 @@ function cardPost(p, prefixo) {
 
 function cardDestaque(p, prefixo) {
   const cat = mapaCategorias.get(p.categoria);
-  const href = `${prefixo}${p.slug}/`;
+  const pasta = `${prefixo}${p.slug}/`;
+  const href = pagina(pasta);
 
   return `      <article class="bv-featured">
         <a class="bv-featured__media" href="${escAttr(href)}" tabindex="-1" aria-hidden="true">
-          <img src="${escAttr(href + p.capa)}" alt="" width="800" height="500" fetchpriority="high" decoding="async">
+          <img src="${escAttr(pasta + p.capa)}" alt="" width="800" height="500" fetchpriority="high" decoding="async">
         </a>
         <div class="bv-featured__body">
-          <a class="bv-chip" href="${escAttr(prefixo + 'categoria/' + cat.slug + '/')}">${esc(cat.nome)}</a>
+          <a class="bv-chip" href="${escAttr(pagina(prefixo + 'categoria/' + cat.slug + '/'))}">${esc(cat.nome)}</a>
           <h3><a href="${escAttr(href)}">${esc(p.titulo)}</a></h3>
           <p>${esc(p.dek)}</p>
           <p class="bv-meta">
@@ -171,13 +189,13 @@ function cabecalho(prefixo, { paginaAtual = '' } = {}) {
 
   return `  <div class="bv-header">
     <div class="bv-wrap bv-header__inner">
-      <a class="bv-header__brand" href="${raiz}" aria-label="Blog do Bevart">
+      <a class="bv-header__brand" href="${raiz}index.html" aria-label="Blog do Bevart">
         <img src="${site}assets/img/logo bevart.svg" alt="Bevart" width="140" height="40">
         <span class="bv-header__tag">Blog</span>
       </a>
       <nav class="bv-nav" aria-label="Navegação do blog">
-        <a href="${raiz}"${marcaBlog}>Todos os artigos</a>
-${categorias.slice(0, 4).map((c) => `        <a href="${prefixo}categoria/${c.slug}/"${paginaAtual === c.slug ? ' aria-current="page"' : ''}>${esc(c.nome)}</a>`).join('\n')}
+        <a href="${raiz}index.html"${marcaBlog}>Todos os artigos</a>
+${categorias.slice(0, 4).map((c) => `        <a href="${prefixo}categoria/${c.slug}/index.html"${paginaAtual === c.slug ? ' aria-current="page"' : ''}>${esc(c.nome)}</a>`).join('\n')}
         <a href="${site}index.html">Plataforma</a>
       </nav>
       <div class="bv-header__actions">
@@ -194,8 +212,8 @@ ${categorias.slice(0, 4).map((c) => `        <a href="${prefixo}categoria/${c.sl
     </div>
     <div class="bv-wrap">
       <div class="bv-mobile" id="menu-mobile">
-        <a href="${raiz}">Todos os artigos</a>
-${categorias.map((c) => `        <a href="${prefixo}categoria/${c.slug}/">${esc(c.nome)}</a>`).join('\n')}
+        <a href="${raiz}index.html">Todos os artigos</a>
+${categorias.map((c) => `        <a href="${prefixo}categoria/${c.slug}/index.html">${esc(c.nome)}</a>`).join('\n')}
         <a href="${site}index.html">Plataforma Bevart</a>
         <a class="bv-btn bv-btn--primary"
           href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="blog-menu-mobile">Criar conta grátis</a>
@@ -220,8 +238,8 @@ function rodape(prefixo) {
         <div>
           <h3>Blog</h3>
           <ul>
-            <li><a href="${raiz}">Todos os artigos</a></li>
-${categorias.map((c) => `            <li><a href="${prefixo}categoria/${c.slug}/">${esc(c.nome)}</a></li>`).join('\n')}
+            <li><a href="${raiz}index.html">Todos os artigos</a></li>
+${categorias.map((c) => `            <li><a href="${prefixo}categoria/${c.slug}/index.html">${esc(c.nome)}</a></li>`).join('\n')}
             <li><a href="${raiz}feed.xml">Feed RSS</a></li>
           </ul>
         </div>
@@ -282,7 +300,7 @@ function montarHub() {
     cards: demais.map((p) => cardPost(p, '')).join('\n'),
     categorias: categorias.map((c) => {
       const total = posts.filter((p) => p.categoria === c.slug).length;
-      return `        <a class="bv-cat" href="categoria/${c.slug}/">
+      return `        <a class="bv-cat" href="categoria/${c.slug}/index.html">
           <strong>${esc(c.nome)}</strong>
           <span>${esc(c.descricao)}</span>
           <p class="bv-meta" style="margin-top:10px">${total === 1 ? '1 artigo' : total + ' artigos'}</p>
@@ -419,7 +437,7 @@ ${cabecalho(prefixo, { paginaAtual: cat.slug })}
     <nav class="bv-breadcrumb bv-wrap" aria-label="Você está em">
       <ol>
         <li><a href="${prefixo}../index.html">Bevart</a></li>
-        <li><a href="${prefixo}">Blog</a></li>
+        <li><a href="${prefixo}index.html">Blog</a></li>
         <li aria-current="page">${esc(cat.nome)}</li>
       </ol>
     </nav>
@@ -451,7 +469,7 @@ ${doCat.map((p) => cardPost(p, prefixo)).join('\n') || '        <p class="bv-met
         </div>
         <div class="bv-empty" id="sem-resultados">
           <p>Nenhum artigo encontrado para essa busca.</p>
-          <p><a href="${prefixo}">Ver todos os artigos do blog</a></p>
+          <p><a href="${prefixo}index.html">Ver todos os artigos do blog</a></p>
         </div>
       </div>
     </section>
@@ -512,7 +530,7 @@ function montarPosts() {
       <div class="bv-wrap">
         <div class="bv-section__head">
           <h2>Continue lendo</h2>
-          <a class="bv-link" href="../">Ver todos os artigos</a>
+          <a class="bv-link" href="../index.html">Ver todos os artigos</a>
         </div>
         <div class="bv-grid">
 ${relacionados.map((r) => cardPost(r, '../')).join('\n')}
@@ -523,8 +541,8 @@ ${relacionados.map((r) => cardPost(r, '../')).join('\n')}
 
     const blocoPrevNext = (anterior || proximo)
       ? `      <nav class="bv-prevnext" aria-label="Outros artigos">
-${anterior ? `        <a href="../${anterior.slug}/"><span>Artigo anterior</span><strong>${esc(anterior.titulo)}</strong></a>` : '        <span></span>'}
-${proximo ? `        <a class="is-next" href="../${proximo.slug}/"><span>Próximo artigo</span><strong>${esc(proximo.titulo)}</strong></a>` : '        <span></span>'}
+${anterior ? `        <a href="../${anterior.slug}/index.html"><span>Artigo anterior</span><strong>${esc(anterior.titulo)}</strong></a>` : '        <span></span>'}
+${proximo ? `        <a class="is-next" href="../${proximo.slug}/index.html"><span>Próximo artigo</span><strong>${esc(proximo.titulo)}</strong></a>` : '        <span></span>'}
       </nav>`
       : '';
 
@@ -571,7 +589,9 @@ function conferirPost(p, html) {
   const onde = `blog/${p.slug}`;
   if (p.descricao.length > 165) avisos.push(`${onde}: meta description com ${p.descricao.length} caracteres (ideal até 160)`);
   if (p.titulo.length > 70) avisos.push(`${onde}: título com ${p.titulo.length} caracteres (ideal até 60-70)`);
-  if (!html.includes(`<link rel="canonical" href="${urlPost(p)}"`)) avisos.push(`${onde}: canonical diferente de ${urlPost(p)}`);
+  // o \s+ é proposital: o canonical costuma quebrar em duas linhas quando a URL é longa
+  const canonical = (html.match(/<link\s+rel="canonical"\s+href="([^"]+)"/) || [])[1];
+  if (canonical !== urlPost(p)) avisos.push(`${onde}: canonical ${canonical || 'ausente'} — esperado ${urlPost(p)}`);
   if ((html.match(/<h1[\s>]/g) || []).length !== 1) avisos.push(`${onde}: a página precisa ter exatamente um H1`);
   if (!existsSync(join(DIR_BLOG, p.slug, p.capa))) avisos.push(`${onde}: capa não encontrada (${p.capa})`);
 

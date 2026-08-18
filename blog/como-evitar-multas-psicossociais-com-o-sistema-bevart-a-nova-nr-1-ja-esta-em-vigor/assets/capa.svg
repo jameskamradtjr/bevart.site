@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img"
+  aria-label="Como evitar multas psicossociais com o sistema Bevart">
+  <defs>
+    <linearGradient id="fundo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1220" />
+      <stop offset="100%" stop-color="#16233b" />
+    </linearGradient>
+    <radialGradient id="brilhoAzul" cx="0.12" cy="0.06" r="0.7">
+      <stop offset="0%" stop-color="#2563eb" stop-opacity=".55" />
+      <stop offset="100%" stop-color="#2563eb" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="brilhoVerde" cx="0.95" cy="0.95" r="0.6">
+      <stop offset="0%" stop-color="#059669" stop-opacity=".38" />
+      <stop offset="100%" stop-color="#059669" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="malha" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0v48" fill="none" stroke="#ffffff" stroke-opacity=".05" stroke-width="1" />
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#fundo)" />
+  <rect width="1200" height="630" fill="url(#malha)" />
+  <rect width="1200" height="630" fill="url(#brilhoAzul)" />
+  <rect width="1200" height="630" fill="url(#brilhoVerde)" />
+
+  <g font-family="Inter, system-ui, -apple-system, Segoe UI, sans-serif">
+    <g transform="translate(88 78)">
+      <rect x="0" y="0" width="277.6" height="34" rx="17" fill="#2563eb" fill-opacity=".18"
+        stroke="#60a5fa" stroke-opacity=".45" />
+      <text x="14" y="23" fill="#93c5fd" font-size="16" font-weight="700" letter-spacing="1.2">
+        PSICOSSOCIAL E ERGONOMIA</text>
+    </g>
+
+    <text x="88" y="241" fill="#ffffff" font-size="62" font-weight="800" letter-spacing="-1.6">
+      <tspan x="88" dy="0">Como evitar multas</tspan>
+      <tspan x="88" dy="74">psicossociais com o</tspan>
+      <tspan x="88" dy="74">sistema Bevart</tspan>
+    </text>
+
+    <g transform="translate(88 532)">
+      <rect x="0" y="0" width="40" height="40" rx="12" fill="#2563eb" />
+      <text x="20" y="27" fill="#ffffff" font-size="18" font-weight="800" text-anchor="middle">B</text>
+      <text x="56" y="19" fill="#ffffff" font-size="19" font-weight="700">bevart</text>
+      <text x="56" y="38" fill="#94a3b8" font-size="15" font-weight="500">bevart.com.br/blog</text>
+    </g>
+
+    <text x="1112" y="560" fill="#64748b" font-size="16" font-weight="600" text-anchor="end">
+      7 min de leitura</text>
+  </g>
+
+  <rect x="0" y="626" width="1200" height="4" fill="#2563eb" />
+</svg>

@@ -23,6 +23,9 @@ se for relevante, em `llms.txt`. O build não toca nesses dois.
 - Slug em minúsculas, sem acento, separado por hifens, com a palavra-chave.
 - URL publicada **não muda**. Se for inevitável, o novo post assume e o antigo recebe
   `RewriteRule` 301 no `.htaccess`.
+- **Link interno aponta para o arquivo** (`../slug/index.html`); a URL indexada é a
+  limpa (`/blog/slug/`). O canonical junta as duas pontas, e o `verificar.mjs` recusa
+  qualquer link relativo terminado em barra.
 - Parâmetros `?q=` e `?categoria=` são bloqueados no robots.txt: filtram o hub, mas não
   geram página nova para indexar.
 

@@ -30,6 +30,13 @@ blog/
   _build/capa-png.mjs             opcional: rasteriza a capa para og:image
 ```
 
+Regra dos links: **todo link de navegação termina em `index.html`**, nunca em barra
+(`../categoria/esocial/index.html`, não `../categoria/esocial/`). Pasta só abre quando
+existe servidor no meio; terminar no arquivo funciona também abrindo do disco. O
+`verificar.mjs` recusa qualquer link relativo terminado em `/`.
+Isso vale só para a navegação: **canonical, sitemap, feed, OG e JSON-LD continuam na
+URL limpa** `https://bevart.com.br/blog/<slug>/`, que é a versão indexada.
+
 Regra de ouro: **nada entre `<!-- build:algo -->` e `<!-- /build:algo -->` é escrito
 por você.** Header, footer, relacionados, anterior/próximo, cards do hub e JSON-LD do
 hub são do build. Se precisar mudar o menu ou o rodapé, mude em `_build/build.mjs`
@@ -117,6 +124,8 @@ link para o novo — não delete página indexada.
 
 ## Referências
 
+- `references/importar-do-blog-antigo.md` — migração do blog.bevart.com.br: slug, datas,
+  imagens, autor e redirect. **Leia antes de importar qualquer post.**
 - `references/estilo-editorial.md` — voz, estrutura, títulos, CTAs e o que evitar.
 - `references/checklist-publicacao.md` — checagem final antes de entregar.
 - `references/seo-tecnico.md` — canonical, JSON-LD, imagens, links internos, IA/LLM.

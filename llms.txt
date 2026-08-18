@@ -28,12 +28,14 @@ Teste gratuito de 5 dias, sem cartão de crédito. Contato: contato@bevart.com.b
 Blog Bevart — guias práticos de SST: [https://bevart.com.br/blog/](https://bevart.com.br/blog/) · feed RSS: https://bevart.com.br/blog/feed.xml
 <!-- build:blog -->
 - [PGR e riscos](https://bevart.com.br/blog/categoria/pgr-e-riscos/): Inventário de riscos, plano de ação, GRO e tudo que sustenta o PGR no dia a dia.
+- [Psicossocial e ergonomia](https://bevart.com.br/blog/categoria/psicossocial-e-ergonomia/): Riscos psicossociais e ergonômicos no GRO: como identificar, medir e provar prevenção.
 - [eSocial](https://bevart.com.br/blog/categoria/esocial/): Eventos de SST, prazos, retificações e o que fazer quando o envio dá erro.
 - [PCMSO e exames](https://bevart.com.br/blog/categoria/pcmso-e-exames/): Programa médico, ASO, periodicidade e controle de exames ocupacionais.
 
 - [Como montar o PGR: inventário de riscos e plano de ação na prática](https://bevart.com.br/blog/como-montar-o-pgr-inventario-de-riscos-e-plano-de-acao/): Guia prático do PGR: como levantar perigos, montar o inventário de riscos, classificar por severidade e virar plano de ação com prazo e responsável.
 - [eSocial SST: o que são os eventos S-2210, S-2220 e S-2240](https://bevart.com.br/blog/esocial-sst-eventos-s-2210-s-2220-s-2240/): Entenda os eventos de SST do eSocial: S-2210 (CAT), S-2220 (monitoramento da saúde) e S-2240 (condições ambientais do trabalho), com origem dos dados e erros comuns.
 - [PCMSO e ASO: como organizar exames ocupacionais sem perder prazo](https://bevart.com.br/blog/pcmso-e-aso-como-organizar-exames-ocupacionais/): Como estruturar o PCMSO a partir dos riscos, definir exames por função, controlar periodicidade e emitir ASO sem deixar prazos vencerem.
+- [Como evitar multas psicossociais com o sistema Bevart](https://bevart.com.br/blog/como-evitar-multas-psicossociais-com-o-sistema-bevart-a-nova-nr-1-ja-esta-em-vigor/): A nova NR-1 exige riscos psicossociais no GRO. Veja como medir clima, gerar indicadores e provar prevenção com inventário e plano de ação no Bevart.
 <!-- /build:blog -->
 
 ## Institucional

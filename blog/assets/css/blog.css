@@ -1041,10 +1041,12 @@ a.bv-chip:hover {
   margin: 2em 0;
 }
 
-.bv-prose figure img {
+/* Toda imagem do corpo do post é arredondada, esteja ou não dentro de <figure>. */
+.bv-prose img {
   width: 100%;
   border-radius: var(--bv-r-lg);
   border: 1px solid var(--bv-line);
+  background: var(--bv-line-soft);
 }
 
 .bv-prose figcaption {

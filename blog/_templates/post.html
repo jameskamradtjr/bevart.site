@@ -11,6 +11,8 @@
      Regras que não podem ser quebradas:
      · um único <h1> na página, igual ao "titulo" do posts.json;
      · canonical absoluto, com barra no fim: https://bevart.com.br/blog/<slug>/;
+     · link de navegação SEMPRE terminando em index.html, nunca em barra
+       (../categoria/x/index.html) — pasta só abre quando há servidor;
      · datas em ISO (AAAA-MM-DD) iguais às do posts.json;
      · a estrutura do texto vive dentro de <div class="bv-prose">;
      · não mexa no conteúdo entre os marcadores <!-- build:... -->:
@@ -131,14 +133,14 @@
       <nav class="bv-breadcrumb bv-wrap" aria-label="Você está em">
         <ol>
           <li><a href="../../index.html">Bevart</a></li>
-          <li><a href="../">Blog</a></li>
-          <li><a href="../categoria/{{CATEGORIA_SLUG}}/">{{CATEGORIA_NOME}}</a></li>
+          <li><a href="../index.html">Blog</a></li>
+          <li><a href="../categoria/{{CATEGORIA_SLUG}}/index.html">{{CATEGORIA_NOME}}</a></li>
           <li aria-current="page">{{TITULO_CURTO_BREADCRUMB}}</li>
         </ol>
       </nav>
 
       <header class="bv-article-head bv-wrap">
-        <a class="bv-chip" href="../categoria/{{CATEGORIA_SLUG}}/">{{CATEGORIA_NOME}}</a>
+        <a class="bv-chip" href="../categoria/{{CATEGORIA_SLUG}}/index.html">{{CATEGORIA_NOME}}</a>
         <h1>{{TITULO}}</h1>
         <p class="bv-dek">{{DEK}}</p>
 

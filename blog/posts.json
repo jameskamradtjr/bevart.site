@@ -17,6 +17,19 @@
       "iniciais": "BV",
       "bio": "Time de produto e conteúdo do Bevart, plataforma que liga o inventário de riscos aos documentos, exames, treinamentos, EPI e eventos do eSocial. Escrevemos a partir do que vemos na rotina de consultorias e técnicos de segurança.",
       "url": "https://bevart.com.br/"
+    },
+    "james-kamradt-jr": {
+      "nome": "James Kamradt Jr",
+      "cargo": "Fundador do Bevart",
+      "iniciais": "JK",
+      "bio": "Fundador do Bevart e responsável pelo produto. Escreve sobre a rotina real de quem opera SST: o que a fiscalização cobra, o que trava no dia a dia e como transformar exigência de norma em processo que roda sozinho.",
+      "url": "https://bevart.com.br/",
+      "perfis": [
+        "https://www.linkedin.com/in/jameskamradtjr/",
+        "https://www.instagram.com/jameskamradtjr/",
+        "https://www.youtube.com/@JamesKamradtJr",
+        "https://x.com/jameskamradtjr"
+      ]
     }
   },
   "categorias": [
@@ -26,6 +39,13 @@
       "descricao": "Inventário de riscos, plano de ação, GRO e tudo que sustenta o PGR no dia a dia.",
       "tituloSeo": "PGR e gerenciamento de riscos ocupacionais",
       "descricaoSeo": "Artigos sobre PGR, inventário de riscos, GRO e plano de ação: como montar, revisar e manter os documentos vivos na rotina da empresa."
+    },
+    {
+      "slug": "psicossocial-e-ergonomia",
+      "nome": "Psicossocial e ergonomia",
+      "descricao": "Riscos psicossociais e ergonômicos no GRO: como identificar, medir e provar prevenção.",
+      "tituloSeo": "Riscos psicossociais e ergonômicos no trabalho",
+      "descricaoSeo": "Como identificar, avaliar e tratar riscos psicossociais e ergonômicos dentro do GRO e do PGR, com indicadores e planos de ação que a fiscalização aceita."
     },
     {
       "slug": "esocial",
@@ -65,12 +85,43 @@
   ],
   "posts": [
     {
+      "slug": "como-evitar-multas-psicossociais-com-o-sistema-bevart-a-nova-nr-1-ja-esta-em-vigor",
+      "titulo": "Como evitar multas psicossociais com o sistema Bevart",
+      "dek": "A nova NR-1 colocou riscos psicossociais e ergonômicos dentro do GRO. O fiscal não quer só documento: quer ver prevenção acontecendo — e isso precisa estar registrado.",
+      "descricao": "A nova NR-1 exige riscos psicossociais no GRO. Veja como medir clima, gerar indicadores e provar prevenção com inventário e plano de ação no Bevart.",
+      "categoria": "psicossocial-e-ergonomia",
+      "tags": [
+        "NR-1",
+        "riscos psicossociais",
+        "GRO",
+        "PGR",
+        "ergonomia",
+        "fiscalização"
+      ],
+      "palavraChave": "multas riscos psicossociais NR-1",
+      "autor": "james-kamradt-jr",
+      "publicado": "2026-05-22",
+      "atualizado": "2026-08-18",
+      "tempoLeitura": 7,
+      "capa": "assets/capa.svg",
+      "capaAlt": "Ilustração sobre riscos psicossociais no GRO e na nova NR-1",
+      "destaque": false,
+      "rascunho": false,
+      "origem": "https://blog.bevart.com.br/como-evitar-multas-psicossociais-com-o-sistema-bevart-a-nova-nr-1-ja-esta-em-vigor/"
+    },
+    {
       "slug": "como-montar-o-pgr-inventario-de-riscos-e-plano-de-acao",
       "titulo": "Como montar o PGR: inventário de riscos e plano de ação na prática",
       "dek": "O PGR trava quando o inventário vira lista solta e o plano de ação vira promessa. Este guia mostra o caminho completo, do levantamento de perigos ao acompanhamento das medidas.",
       "descricao": "Guia prático do PGR: como levantar perigos, montar o inventário de riscos, classificar por severidade e virar plano de ação com prazo e responsável.",
       "categoria": "pgr-e-riscos",
-      "tags": ["PGR", "NR-1", "inventário de riscos", "plano de ação", "GRO"],
+      "tags": [
+        "PGR",
+        "NR-1",
+        "inventário de riscos",
+        "plano de ação",
+        "GRO"
+      ],
       "palavraChave": "como montar o PGR",
       "autor": "equipe-bevart",
       "publicado": "2026-08-18",
@@ -87,7 +138,13 @@
       "dek": "Três eventos concentram quase toda a rotina de SST no eSocial. Entenda o que cada um informa, de onde vem a informação e o que costuma travar o envio.",
       "descricao": "Entenda os eventos de SST do eSocial: S-2210 (CAT), S-2220 (monitoramento da saúde) e S-2240 (condições ambientais do trabalho), com origem dos dados e erros comuns.",
       "categoria": "esocial",
-      "tags": ["eSocial", "S-2210", "S-2220", "S-2240", "CAT"],
+      "tags": [
+        "eSocial",
+        "S-2210",
+        "S-2220",
+        "S-2240",
+        "CAT"
+      ],
       "palavraChave": "eventos de SST no eSocial",
       "autor": "equipe-bevart",
       "publicado": "2026-08-18",
@@ -104,7 +161,12 @@
       "dek": "Exame vencido é o tipo de problema que só aparece na auditoria. Veja como ligar o PCMSO ao inventário de riscos e manter o calendário de exames sob controle.",
       "descricao": "Como estruturar o PCMSO a partir dos riscos, definir exames por função, controlar periodicidade e emitir ASO sem deixar prazos vencerem.",
       "categoria": "pcmso-e-exames",
-      "tags": ["PCMSO", "ASO", "NR-7", "exames ocupacionais"],
+      "tags": [
+        "PCMSO",
+        "ASO",
+        "NR-7",
+        "exames ocupacionais"
+      ],
       "palavraChave": "PCMSO e ASO",
       "autor": "equipe-bevart",
       "publicado": "2026-08-18",

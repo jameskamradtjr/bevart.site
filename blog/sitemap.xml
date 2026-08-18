@@ -14,6 +14,12 @@
     <priority>0.60</priority>
   </url>
   <url>
+    <loc>https://bevart.com.br/blog/categoria/psicossocial-e-ergonomia/</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
     <loc>https://bevart.com.br/blog/categoria/esocial/</loc>
     <lastmod>2026-08-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -53,6 +59,16 @@
     <image:image>
       <image:loc>https://bevart.com.br/blog/pcmso-e-aso-como-organizar-exames-ocupacionais/assets/capa.svg</image:loc>
       <image:title>PCMSO e ASO: como organizar exames ocupacionais sem perder prazo</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://bevart.com.br/blog/como-evitar-multas-psicossociais-com-o-sistema-bevart-a-nova-nr-1-ja-esta-em-vigor/</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://bevart.com.br/blog/como-evitar-multas-psicossociais-com-o-sistema-bevart-a-nova-nr-1-ja-esta-em-vigor/assets/capa.svg</image:loc>
+      <image:title>Como evitar multas psicossociais com o sistema Bevart</image:title>
     </image:image>
   </url>
 </urlset>
