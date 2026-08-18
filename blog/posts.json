@@ -1,0 +1,119 @@
+{
+  "$schema": "./_build/posts.schema.json",
+  "blog": {
+    "titulo": "Blog Bevart",
+    "subtitulo": "SST na prática",
+    "descricao": "Guias práticos de segurança e saúde do trabalho: PGR, PCMSO, LTCAT, eSocial, treinamentos, EPI e riscos psicossociais — escritos para quem executa.",
+    "url": "https://bevart.com.br/blog/",
+    "site": "https://bevart.com.br/",
+    "idioma": "pt-BR",
+    "ogPadrao": "https://bevart.com.br/assets/img/tela_sistema_sst_bevart.png",
+    "postsPorPagina": 12
+  },
+  "autores": {
+    "equipe-bevart": {
+      "nome": "Equipe Bevart",
+      "cargo": "Especialistas em SST e eSocial",
+      "iniciais": "BV",
+      "bio": "Time de produto e conteúdo do Bevart, plataforma que liga o inventário de riscos aos documentos, exames, treinamentos, EPI e eventos do eSocial. Escrevemos a partir do que vemos na rotina de consultorias e técnicos de segurança.",
+      "url": "https://bevart.com.br/"
+    }
+  },
+  "categorias": [
+    {
+      "slug": "pgr-e-riscos",
+      "nome": "PGR e riscos",
+      "descricao": "Inventário de riscos, plano de ação, GRO e tudo que sustenta o PGR no dia a dia.",
+      "tituloSeo": "PGR e gerenciamento de riscos ocupacionais",
+      "descricaoSeo": "Artigos sobre PGR, inventário de riscos, GRO e plano de ação: como montar, revisar e manter os documentos vivos na rotina da empresa."
+    },
+    {
+      "slug": "esocial",
+      "nome": "eSocial",
+      "descricao": "Eventos de SST, prazos, retificações e o que fazer quando o envio dá erro.",
+      "tituloSeo": "eSocial SST",
+      "descricaoSeo": "Guias sobre os eventos de SST no eSocial — S-2210, S-2220 e S-2240 —, prazos de envio, erros comuns e como evitar multas."
+    },
+    {
+      "slug": "pcmso-e-exames",
+      "nome": "PCMSO e exames",
+      "descricao": "Programa médico, ASO, periodicidade e controle de exames ocupacionais.",
+      "tituloSeo": "PCMSO, ASO e exames ocupacionais",
+      "descricaoSeo": "Conteúdos sobre PCMSO, emissão de ASO, periodicidade de exames ocupacionais e integração com o inventário de riscos."
+    },
+    {
+      "slug": "treinamentos-e-epi",
+      "nome": "Treinamentos e EPI",
+      "descricao": "Capacitações das NRs, validade, evidências e controle de entrega de EPI.",
+      "tituloSeo": "Treinamentos de NR e controle de EPI",
+      "descricaoSeo": "Como planejar treinamentos das normas regulamentadoras, controlar validade e reciclagem e manter a ficha de EPI a prova de fiscalização."
+    },
+    {
+      "slug": "legislacao-e-nrs",
+      "nome": "Legislação e NRs",
+      "descricao": "Leitura aplicada das normas regulamentadoras e das mudanças que afetam a rotina.",
+      "tituloSeo": "Normas regulamentadoras e legislação de SST",
+      "descricaoSeo": "Interpretação prática das normas regulamentadoras e da legislação de segurança e saúde do trabalho para quem precisa aplicar, não só citar."
+    },
+    {
+      "slug": "gestao-de-sst",
+      "nome": "Gestão de SST",
+      "descricao": "Produtividade, precificação e organização de consultorias e equipes de segurança.",
+      "tituloSeo": "Gestão de SST para consultorias e equipes",
+      "descricaoSeo": "Processos, indicadores e organização para consultorias de SST e equipes internas entregarem mais sem aumentar o time."
+    }
+  ],
+  "posts": [
+    {
+      "slug": "como-montar-o-pgr-inventario-de-riscos-e-plano-de-acao",
+      "titulo": "Como montar o PGR: inventário de riscos e plano de ação na prática",
+      "dek": "O PGR trava quando o inventário vira lista solta e o plano de ação vira promessa. Este guia mostra o caminho completo, do levantamento de perigos ao acompanhamento das medidas.",
+      "descricao": "Guia prático do PGR: como levantar perigos, montar o inventário de riscos, classificar por severidade e virar plano de ação com prazo e responsável.",
+      "categoria": "pgr-e-riscos",
+      "tags": ["PGR", "NR-1", "inventário de riscos", "plano de ação", "GRO"],
+      "palavraChave": "como montar o PGR",
+      "autor": "equipe-bevart",
+      "publicado": "2026-08-18",
+      "atualizado": "2026-08-18",
+      "tempoLeitura": 11,
+      "capa": "assets/capa.svg",
+      "capaAlt": "Ilustração do fluxo do PGR: perigos, inventário de riscos e plano de ação",
+      "destaque": true,
+      "rascunho": false
+    },
+    {
+      "slug": "esocial-sst-eventos-s-2210-s-2220-s-2240",
+      "titulo": "eSocial SST: o que são os eventos S-2210, S-2220 e S-2240",
+      "dek": "Três eventos concentram quase toda a rotina de SST no eSocial. Entenda o que cada um informa, de onde vem a informação e o que costuma travar o envio.",
+      "descricao": "Entenda os eventos de SST do eSocial: S-2210 (CAT), S-2220 (monitoramento da saúde) e S-2240 (condições ambientais do trabalho), com origem dos dados e erros comuns.",
+      "categoria": "esocial",
+      "tags": ["eSocial", "S-2210", "S-2220", "S-2240", "CAT"],
+      "palavraChave": "eventos de SST no eSocial",
+      "autor": "equipe-bevart",
+      "publicado": "2026-08-18",
+      "atualizado": "2026-08-18",
+      "tempoLeitura": 9,
+      "capa": "assets/capa.svg",
+      "capaAlt": "Ilustração dos três eventos de SST do eSocial",
+      "destaque": false,
+      "rascunho": false
+    },
+    {
+      "slug": "pcmso-e-aso-como-organizar-exames-ocupacionais",
+      "titulo": "PCMSO e ASO: como organizar exames ocupacionais sem perder prazo",
+      "dek": "Exame vencido é o tipo de problema que só aparece na auditoria. Veja como ligar o PCMSO ao inventário de riscos e manter o calendário de exames sob controle.",
+      "descricao": "Como estruturar o PCMSO a partir dos riscos, definir exames por função, controlar periodicidade e emitir ASO sem deixar prazos vencerem.",
+      "categoria": "pcmso-e-exames",
+      "tags": ["PCMSO", "ASO", "NR-7", "exames ocupacionais"],
+      "palavraChave": "PCMSO e ASO",
+      "autor": "equipe-bevart",
+      "publicado": "2026-08-18",
+      "atualizado": "2026-08-18",
+      "tempoLeitura": 8,
+      "capa": "assets/capa.svg",
+      "capaAlt": "Ilustração do calendário de exames ocupacionais ligado ao PCMSO",
+      "destaque": false,
+      "rascunho": false
+    }
+  ]
+}

@@ -1,4 +1,72 @@
+# robots.txt — bevart.com.br
+# Buscadores tradicionais e rastreadores de IA são bem-vindos: o conteúdo
+# do site e do blog é público e queremos aparecer nas duas frentes.
+
 User-agent: *
 Allow: /
+Disallow: /blog/_templates/
+Disallow: /blog/_build/
+Disallow: /*?q=
+Disallow: /*?categoria=
+
+# Rastreadores de IA e de busca generativa (liberados de propósito)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# Guia de conteúdo para modelos de linguagem
+# https://bevart.com.br/llms.txt
 
 Sitemap: https://bevart.com.br/sitemap.xml
+Sitemap: https://bevart.com.br/sitemap-paginas.xml
+Sitemap: https://bevart.com.br/blog/sitemap.xml

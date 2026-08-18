@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://bevart.com.br/blog/</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://bevart.com.br/blog/categoria/pgr-e-riscos/</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://bevart.com.br/blog/categoria/esocial/</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://bevart.com.br/blog/categoria/pcmso-e-exames/</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://bevart.com.br/blog/como-montar-o-pgr-inventario-de-riscos-e-plano-de-acao/</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://bevart.com.br/blog/como-montar-o-pgr-inventario-de-riscos-e-plano-de-acao/assets/capa.svg</image:loc>
+      <image:title>Como montar o PGR: inventário de riscos e plano de ação na prática</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://bevart.com.br/blog/esocial-sst-eventos-s-2210-s-2220-s-2240/</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://bevart.com.br/blog/esocial-sst-eventos-s-2210-s-2220-s-2240/assets/capa.svg</image:loc>
+      <image:title>eSocial SST: o que são os eventos S-2210, S-2220 e S-2240</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://bevart.com.br/blog/pcmso-e-aso-como-organizar-exames-ocupacionais/</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://bevart.com.br/blog/pcmso-e-aso-como-organizar-exames-ocupacionais/assets/capa.svg</image:loc>
+      <image:title>PCMSO e ASO: como organizar exames ocupacionais sem perder prazo</image:title>
+    </image:image>
+  </url>
+</urlset>

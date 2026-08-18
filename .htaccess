@@ -17,6 +17,21 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*)$ $1.html [L]
 
+# ---- Blog ----
+# Os posts moram em /blog/<slug>/index.html, então /blog/<slug> vira
+# /blog/<slug>/ pelo DirectorySlash do Apache e o index é servido sozinho.
+# Aqui só fechamos as pastas de trabalho do CMS (template e build), que
+# não devem ser servidas nem indexadas.
+RewriteRule ^blog/_(build|templates)/ - [R=404,L]
+
+# O antigo blog vivia em blog.bevart.com.br. Se um dia o subdomínio for
+# apontado para este mesmo host, descomente as duas linhas abaixo para
+# redirecionar tudo que chegar por lá para a pasta /blog (301 preserva o
+# ranking que o subdomínio já tem).
+# RewriteCond %{HTTP_HOST} ^blog[.]bevart[.]com[.]br$ [NC]
+# RewriteRule ^(.*)$ https://bevart.com.br/blog/$1 [R=301,L]
+
+
 # Cache longo para estáticos (o HTML continua sem cache agressivo)
 <IfModule mod_expires.c>
   ExpiresActive On

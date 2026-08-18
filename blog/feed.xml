@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Blog Bevart</title>
+    <link>https://bevart.com.br/blog/</link>
+    <description>Guias práticos de segurança e saúde do trabalho: PGR, PCMSO, LTCAT, eSocial, treinamentos, EPI e riscos psicossociais — escritos para quem executa.</description>
+    <language>pt-BR</language>
+    <lastBuildDate>Tue, 18 Aug 2026 12:00:00 GMT</lastBuildDate>
+    <atom:link href="https://bevart.com.br/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Como montar o PGR: inventário de riscos e plano de ação na prática</title>
+      <link>https://bevart.com.br/blog/como-montar-o-pgr-inventario-de-riscos-e-plano-de-acao/</link>
+      <guid isPermaLink="true">https://bevart.com.br/blog/como-montar-o-pgr-inventario-de-riscos-e-plano-de-acao/</guid>
+      <pubDate>Tue, 18 Aug 2026 12:00:00 GMT</pubDate>
+      <category>PGR e riscos</category>
+      <description>Guia prático do PGR: como levantar perigos, montar o inventário de riscos, classificar por severidade e virar plano de ação com prazo e responsável.</description>
+    </item>
+    <item>
+      <title>eSocial SST: o que são os eventos S-2210, S-2220 e S-2240</title>
+      <link>https://bevart.com.br/blog/esocial-sst-eventos-s-2210-s-2220-s-2240/</link>
+      <guid isPermaLink="true">https://bevart.com.br/blog/esocial-sst-eventos-s-2210-s-2220-s-2240/</guid>
+      <pubDate>Tue, 18 Aug 2026 12:00:00 GMT</pubDate>
+      <category>eSocial</category>
+      <description>Entenda os eventos de SST do eSocial: S-2210 (CAT), S-2220 (monitoramento da saúde) e S-2240 (condições ambientais do trabalho), com origem dos dados e erros comuns.</description>
+    </item>
+    <item>
+      <title>PCMSO e ASO: como organizar exames ocupacionais sem perder prazo</title>
+      <link>https://bevart.com.br/blog/pcmso-e-aso-como-organizar-exames-ocupacionais/</link>
+      <guid isPermaLink="true">https://bevart.com.br/blog/pcmso-e-aso-como-organizar-exames-ocupacionais/</guid>
+      <pubDate>Tue, 18 Aug 2026 12:00:00 GMT</pubDate>
+      <category>PCMSO e exames</category>
+      <description>Como estruturar o PCMSO a partir dos riscos, definir exames por função, controlar periodicidade e emitir ASO sem deixar prazos vencerem.</description>
+    </item>
+  </channel>
+</rss>

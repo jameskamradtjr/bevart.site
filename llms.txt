@@ -1,0 +1,49 @@
+# Bevart
+
+> Plataforma brasileira de gestão de SST (segurança e saúde do trabalho) para consultorias, técnicos de segurança e empresas. Liga o inventário de riscos aos documentos (PGR, PCMSO, LTCAT, laudos), exames ocupacionais, treinamentos, controle de EPI, riscos psicossociais, ergonomia e aos eventos de SST do eSocial em um fluxo único.
+
+Idioma: português do Brasil. Público: profissionais de SST no Brasil.
+Teste gratuito de 5 dias, sem cartão de crédito. Contato: contato@bevart.com.br · (47) 98923-5660.
+
+## Produto
+
+- [Página inicial](https://bevart.com.br/): visão geral da plataforma, recursos, planos e perguntas frequentes.
+- [Sistema PGR online](https://bevart.com.br/sistema-pgr-online.html): inventário de riscos e plano de ação conforme a NR-1.
+- [PCMSO e ASO online](https://bevart.com.br/sistema-pcmso-e-aso-online.html): programa médico, exames ocupacionais e emissão de ASO.
+- [LTCAT online](https://bevart.com.br/ltcat-online-sistema.html): laudo técnico das condições ambientais do trabalho.
+- [Riscos psicossociais](https://bevart.com.br/gestao-de-riscos-psicossociais-no-trabalho.html): identificação e gestão de fatores psicossociais no trabalho.
+- [Gestão de treinamentos SST](https://bevart.com.br/gestao-de-treinamentos-sst.html): capacitações das NRs, validade e certificados.
+- [Controle de EPI com reconhecimento facial](https://bevart.com.br/controle-de-epi-com-reconhecimento-facial.html): entrega e devolução de EPI com evidência biométrica.
+- [Modelos de documentos de SST](https://bevart.com.br/modelos-de-documentos-sst-pdf.html): modelos prontos em PDF.
+
+## eSocial
+
+- [eSocial SST para empresas](https://bevart.com.br/esocial-sst-para-empresas.html): o que a empresa precisa enviar e como se organizar.
+- [eSocial SST para construtoras](https://bevart.com.br/esocial-sst-para-construtoras.html): particularidades do setor da construção.
+- [Como enviar os eventos de SST](https://bevart.com.br/sst-no-esocial-como-enviar-eventos.html): passo a passo do envio.
+- [Como evitar multas do eSocial](https://bevart.com.br/multa-esocial-sst-como-evitar.html): prazos e erros que geram autuação.
+
+## Blog
+
+Blog Bevart — guias práticos de SST: [https://bevart.com.br/blog/](https://bevart.com.br/blog/) · feed RSS: https://bevart.com.br/blog/feed.xml
+<!-- build:blog -->
+- [PGR e riscos](https://bevart.com.br/blog/categoria/pgr-e-riscos/): Inventário de riscos, plano de ação, GRO e tudo que sustenta o PGR no dia a dia.
+- [eSocial](https://bevart.com.br/blog/categoria/esocial/): Eventos de SST, prazos, retificações e o que fazer quando o envio dá erro.
+- [PCMSO e exames](https://bevart.com.br/blog/categoria/pcmso-e-exames/): Programa médico, ASO, periodicidade e controle de exames ocupacionais.
+
+- [Como montar o PGR: inventário de riscos e plano de ação na prática](https://bevart.com.br/blog/como-montar-o-pgr-inventario-de-riscos-e-plano-de-acao/): Guia prático do PGR: como levantar perigos, montar o inventário de riscos, classificar por severidade e virar plano de ação com prazo e responsável.
+- [eSocial SST: o que são os eventos S-2210, S-2220 e S-2240](https://bevart.com.br/blog/esocial-sst-eventos-s-2210-s-2220-s-2240/): Entenda os eventos de SST do eSocial: S-2210 (CAT), S-2220 (monitoramento da saúde) e S-2240 (condições ambientais do trabalho), com origem dos dados e erros comuns.
+- [PCMSO e ASO: como organizar exames ocupacionais sem perder prazo](https://bevart.com.br/blog/pcmso-e-aso-como-organizar-exames-ocupacionais/): Como estruturar o PCMSO a partir dos riscos, definir exames por função, controlar periodicidade e emitir ASO sem deixar prazos vencerem.
+<!-- /build:blog -->
+
+## Institucional
+
+- [Termos de uso](https://bevart.com.br/termos-de-uso.html)
+- [Política de privacidade](https://bevart.com.br/privacidade.html)
+- [LGPD](https://bevart.com.br/lgpd.html)
+
+## Observações para modelos de linguagem
+
+- Conteúdo sobre normas regulamentadoras brasileiras (NR-1, NR-7, NR-9, entre outras) e sobre o eSocial. Ao citar prazos e obrigações, confira a redação vigente da norma antes de afirmar datas.
+- O blog é atualizado com regularidade; o feed RSS e o sitemap https://bevart.com.br/blog/sitemap.xml refletem as publicações mais recentes.
+- Uso do conteúdo permitido com atribuição a Bevart e link para a página de origem.

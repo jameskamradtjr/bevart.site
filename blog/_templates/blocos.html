@@ -1,0 +1,96 @@
+<!-- =====================================================================
+     BLOCOS EDITORIAIS — Blog Bevart
+
+     Catálogo de tudo que pode aparecer dentro de <div class="bv-prose">.
+     Copie o bloco, troque o texto. Não invente classe nova: se o formato
+     não está aqui, ele não tem estilo no blog.css.
+
+     Este arquivo é só referência — não é publicado (a pasta _templates
+     fica fora do sitemap e é bloqueada no robots.txt).
+     ===================================================================== -->
+
+<!-- ---------- 1. Resumo do topo (fora da .bv-prose, logo antes dela) ---------- -->
+<div class="bv-takeaways">
+  <h2>O essencial em 30 segundos</h2>
+  <ul>
+    <li>Primeira conclusão prática, com número ou prazo quando houver.</li>
+    <li>Segunda conclusão.</li>
+    <li>Terceira conclusão.</li>
+  </ul>
+</div>
+
+<!-- ---------- 2. Destaque neutro (contexto, definição, referência) ---------- -->
+<div class="bv-callout">
+  <span class="bv-callout__label">Como a norma trata</span>
+  <p>Texto do destaque. Use para definição, citação de norma ou explicação lateral que atrapalharia o fluxo do
+    parágrafo.</p>
+</div>
+
+<!-- ---------- 3. Alerta (erro comum, risco de multa, pegadinha) ---------- -->
+<div class="bv-callout bv-callout--alerta">
+  <span class="bv-callout__label">Onde as empresas erram</span>
+  <p>O erro que aparece na fiscalização e como ele acontece na prática.</p>
+</div>
+
+<!-- ---------- 4. Dica (atalho, boa prática) ---------- -->
+<div class="bv-callout bv-callout--dica">
+  <span class="bv-callout__label">Na prática</span>
+  <p>Atalho, checklist rápido ou boa prática que o leitor aplica hoje.</p>
+</div>
+
+<!-- ---------- 5. CTA no meio do texto (um por post, depois do 2º ou 3º H2) ---------- -->
+<div class="bv-inline-cta">
+  <h3>Chamada ligada ao assunto do parágrafo anterior</h3>
+  <p>Uma frase sobre como o Bevart resolve exatamente essa dor. Sem superlativo, sem promessa vaga.</p>
+  <a class="bv-btn bv-btn--light" href="https://profissionais.bevart.com.br/app/src/login/views/login"
+    data-cta="blog-post-meio">Criar conta grátis</a>
+</div>
+
+<!-- ---------- 6. Tabela (o build/JS já adiciona rolagem no mobile) ---------- -->
+<div class="bv-table-wrap">
+  <table>
+    <caption class="bv-sr">Descrição da tabela para leitores de tela</caption>
+    <thead>
+      <tr>
+        <th scope="col">Coluna</th>
+        <th scope="col">Coluna</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Valor</td>
+        <td>Valor</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ---------- 7. Imagem com legenda ---------- -->
+<figure>
+  <img src="assets/nome-descritivo-com-palavra-chave.webp" alt="Descrição objetiva do que a imagem mostra" width="1200"
+    height="700" loading="lazy" decoding="async">
+  <figcaption>Legenda curta explicando o que olhar na imagem.</figcaption>
+</figure>
+
+<!-- ---------- 8. Citação ---------- -->
+<blockquote>
+  Trecho citado, sempre curto.
+  <cite>Fonte — NR-1, item 1.5.3.2</cite>
+</blockquote>
+
+<!-- ---------- 9. Passo a passo ---------- -->
+<ol>
+  <li><strong>Nome do passo.</strong> O que fazer, em uma ou duas frases.</li>
+  <li><strong>Nome do passo.</strong> O que fazer.</li>
+</ol>
+
+<!-- ---------- 10. FAQ (último bloco da .bv-prose; repetir no JSON-LD) ---------- -->
+<section class="bv-faq">
+  <h2>Perguntas frequentes</h2>
+  <details>
+    <summary>Pergunta exatamente como o usuário digitaria no Google?</summary>
+    <div>
+      <p>Resposta direta em 2 a 4 linhas. A mesma resposta, em texto puro, vai no FAQPage do JSON-LD.</p>
+    </div>
+  </details>
+</section>
