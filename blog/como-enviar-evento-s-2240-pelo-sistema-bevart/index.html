@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <!-- build:head -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Como enviar o evento S-2240 pelo Bevart e gerar o PPP | Blog Bevart</title>
+  <meta name="description" content="Guia do S-2240 no Bevart: regras de carga inicial vs alteração de exposição, Tabela 24, procuração digital e emissão do PPP eletrônico no Meu INSS.">
+  <link rel="canonical" href="https://bevart.com.br/blog/como-enviar-evento-s-2240-pelo-sistema-bevart/">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="theme-color" content="#2563eb">
+  <meta name="author" content="James Kamradt Jr">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Blog Bevart">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://bevart.com.br/blog/como-enviar-evento-s-2240-pelo-sistema-bevart/">
+  <meta property="og:title" content="Como enviar o evento S-2240 pelo Bevart e gerar o PPP">
+  <meta property="og:description" content="Entenda a lógica das datas no S-2240, como manter o histórico do PPP eletrônico vivo sem furos e o passo a passo para enviar no Bevart com procuração digital.">
+  <meta property="og:image" content="https://bevart.com.br/assets/img/tela_sistema_sst_bevart.png">
+  <meta property="article:published_time" content="2026-08-21T09:00:00-03:00">
+  <meta property="article:modified_time" content="2026-08-21T09:00:00-03:00">
+  <meta property="article:section" content="eSocial">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Como enviar o evento S-2240 pelo Bevart e gerar o PPP">
+  <meta name="twitter:description" content="Entenda a lógica das datas no S-2240, como manter o histórico do PPP eletrônico vivo sem furos e o passo a passo para enviar no Bevart com procuração digital.">
+  <meta name="twitter:image" content="https://bevart.com.br/assets/img/tela_sistema_sst_bevart.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../../assets/img/favicon.png">
+  <link rel="stylesheet" href="../assets/css/blog.css">
+  <link rel="alternate" type="application/rss+xml" title="Blog Bevart" href="../feed.xml">
+
+  <script defer src="../assets/js/analytics.js"></script>
+  <script defer src="../assets/js/blog.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://bevart.com.br/#organization",
+        "name": "Bevart",
+        "url": "https://bevart.com.br/",
+        "logo": "https://bevart.com.br/assets/img/logo%20bevart.svg"
+      },
+      {
+        "@type": "Person",
+        "@id": "https://bevart.com.br/#james-kamradt-jr",
+        "name": "James Kamradt Jr",
+        "jobTitle": "Fundador do Bevart",
+        "worksFor": {
+          "@id": "https://bevart.com.br/#organization"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/jameskamradtjr/",
+          "https://www.instagram.com/jameskamradtjr/",
+          "https://www.youtube.com/@JamesKamradtJr",
+          "https://x.com/jameskamradtjr"
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://bevart.com.br/blog/como-enviar-evento-s-2240-pelo-sistema-bevart/#post",
+        "headline": "Como enviar o evento S-2240 pelo Bevart e gerar o PPP",
+        "description": "Guia do S-2240 no Bevart: regras de carga inicial vs alteração de exposição, Tabela 24, procuração digital e emissão do PPP eletrônico no Meu INSS.",
+        "image": [
+          "https://bevart.com.br/assets/img/tela_sistema_sst_bevart.png"
+        ],
+        "datePublished": "2026-08-21T09:00:00-03:00",
+        "dateModified": "2026-08-21T09:00:00-03:00",
+        "inLanguage": "pt-BR",
+        "articleSection": "eSocial",
+        "keywords": "S-2240, eSocial, PPP eletrônico, Bevart, carga inicial, Tabela 24",
+        "wordCount": 2203,
+        "author": {
+          "@id": "https://bevart.com.br/#james-kamradt-jr"
+        },
+        "publisher": {
+          "@id": "https://bevart.com.br/#organization"
+        },
+        "isPartOf": {
+          "@id": "https://bevart.com.br/blog/#blog"
+        },
+        "mainEntityOfPage": "https://bevart.com.br/blog/como-enviar-evento-s-2240-pelo-sistema-bevart/"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Bevart",
+            "item": "https://bevart.com.br/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://bevart.com.br/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "eSocial",
+            "item": "https://bevart.com.br/blog/categoria/esocial/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Como enviar o evento S-2240 pelo Bevart e gerar o PPP",
+            "item": "https://bevart.com.br/blog/como-enviar-evento-s-2240-pelo-sistema-bevart/"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Qual data colocar no \"Início da Última Exposição\" para funcionários antigos?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Para funcionários admitidos antes de 10/01/2022 (início dos eventos de SST no eSocial), coloque a data real de admissão no campo de admissão e preencha o campo \"Início da Última Exposição\" com 10/01/2022 . O eSocial não aceita datas de início de condição anteriores a essa."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quando o funcionário muda de função ou troca de EPI, envio um novo S-2240 ou retifico?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Você deve enviar um novo S-2240 com a data em que a nova exposição/função teve início. Isso cria um novo período no PPP eletrônico sem apagar o histórico passado. A retificação só deve ser usada para corrigir erros materiais em eventos já enviados."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como consultorias de SST enviam o S-2240 para empresas clientes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A empresa cliente outorga uma Procuração Eletrônica no e-CAC da Receita Federal para o CNPJ da consultoria com poderes para o eSocial SST. A consultoria cadastra seu próprio Certificado Digital A1 no transmissor do Bevart e transmite os eventos de todos os clientes em lote com segurança jurídica."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Funcionários em escritório sem riscos nocivos precisam de envio do S-2240?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. O S-2240 é obrigatório para todos os empregados CLT. Para aqueles sem exposição a agentes nocivos da Tabela 24, envia-se o evento informando o código 09.01.001 (Ausência de agente nocivo ou de atividades perigosas) ."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Onde o trabalhador pode consultar o PPP eletrônico gerado pelo S-2240?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "O trabalhador pode consultar e baixar o PPP eletrônico oficial em PDF diretamente no portal ou aplicativo Meu INSS (meu.inss.gov.br), fazendo login com sua conta Gov.br e buscando pelo serviço \"Perfil Profissiográfico Previdenciário\"."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+<!-- /build:head -->
+</head>
+
+<body>
+  <a href="#conteudo" class="bv-skip">Ir para o conteúdo</a>
+
+  <!-- build:header -->
+  <div class="bv-header">
+    <div class="bv-wrap bv-header__inner">
+      <a class="bv-header__brand" href="../index.html" aria-label="Blog do Bevart">
+        <img src="../../assets/img/logo bevart.svg" alt="Bevart" width="140" height="40">
+        <span class="bv-header__tag">Blog</span>
+      </a>
+      <nav class="bv-nav" aria-label="Navegação do blog">
+        <a href="../index.html">Todos os artigos</a>
+        <a href="../categoria/pgr-e-riscos/index.html">PGR e riscos</a>
+        <a href="../categoria/psicossocial-e-ergonomia/index.html">Psicossocial e ergonomia</a>
+        <a href="../categoria/esocial/index.html">eSocial</a>
+        <a href="../categoria/pcmso-e-exames/index.html">PCMSO e exames</a>
+        <a href="../../index.html">Plataforma</a>
+      </nav>
+      <div class="bv-header__actions">
+        <a class="bv-btn bv-btn--primary"
+          href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="blog-header">Criar conta grátis</a>
+        <button type="button" class="bv-burger" data-burger aria-expanded="false" aria-controls="menu-mobile"
+          aria-label="Abrir menu">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="bv-wrap">
+      <div class="bv-mobile" id="menu-mobile">
+        <a href="../index.html">Todos os artigos</a>
+        <a href="../categoria/pgr-e-riscos/index.html">PGR e riscos</a>
+        <a href="../categoria/psicossocial-e-ergonomia/index.html">Psicossocial e ergonomia</a>
+        <a href="../categoria/esocial/index.html">eSocial</a>
+        <a href="../categoria/pcmso-e-exames/index.html">PCMSO e exames</a>
+        <a href="../categoria/treinamentos-e-epi/index.html">Treinamentos e EPI</a>
+        <a href="../categoria/legislacao-e-nrs/index.html">Legislação e NRs</a>
+        <a href="../categoria/gestao-de-sst/index.html">Gestão de SST</a>
+        <a href="../../index.html">Plataforma Bevart</a>
+        <a class="bv-btn bv-btn--primary"
+          href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="blog-menu-mobile">Criar conta grátis</a>
+      </div>
+    </div>
+    <div class="bv-progress" id="progresso-leitura" aria-hidden="true"></div>
+  </div>
+<!-- /build:header -->
+
+  <main id="conteudo">
+    <article>
+
+      <nav class="bv-breadcrumb bv-wrap" aria-label="Você está em">
+        <ol>
+          <li><a href="../../index.html">Bevart</a></li>
+          <li><a href="../index.html">Blog</a></li>
+          <li><a href="../categoria/esocial/index.html">eSocial</a></li>
+          <li aria-current="page">Enviar S-2240 no Bevart</li>
+        </ol>
+      </nav>
+
+      <header class="bv-article-head bv-wrap">
+        <a class="bv-chip" href="../categoria/esocial/index.html">eSocial</a>
+        <h1>Como enviar o evento S-2240 pelo Bevart e gerar o PPP</h1>
+        <p class="bv-dek">Entenda a lógica das datas no S-2240, como manter o histórico do PPP eletrônico vivo sem furos e o passo a passo para enviar no Bevart com procuração digital.</p>
+
+        <!-- build:byline -->
+        <div class="bv-byline">
+          <span class="bv-avatar" aria-hidden="true">JK</span>
+          <span class="bv-byline__who">
+            <strong>James Kamradt Jr</strong>
+            <span>Fundador do Bevart</span>
+          </span>
+          <span class="bv-meta" style="margin-left:auto">
+            <time datetime="2026-08-21">21 ago 2026</time>
+            <span class="bv-meta__sep">11 min de leitura</span>
+          </span>
+        </div>
+<!-- /build:byline -->
+      </header>
+
+      <figure class="bv-cover bv-wrap">
+        <img src="assets/capa.svg" alt="Ilustração do envio do evento S-2240 e formação do PPP eletrônico no sistema Bevart" width="1200" height="630" fetchpriority="high">
+      </figure>
+
+      <div class="bv-wrap bv-layout">
+        <div>
+
+          <div class="bv-takeaways">
+            <h2>O essencial em 30 segundos</h2>
+            <ul>
+              <li><strong>Carga inicial vs. Alteração:</strong> Para funcionários admitidos antes da obrigatoriedade (10/01/2022), informe a data real de admissão e preencha o <em>Início da Última Exposição</em> com <strong>10/01/2022</strong>. Para admitidos posteriores, as duas datas coincidem com a admissão.</li>
+              <li><strong>Histórico vivo do PPP:</strong> Qualquer mudança (risco da Tabela 24, CA de EPI, responsável técnico ou função) exige um <strong>novo envio do S-2240</strong> com a data da mudança. O Bevart encadeia os períodos sem apagar o passado.</li>
+              <li><strong>Consultorias &amp; Procuração:</strong> A consultoria cadastra seu próprio Certificado A1 como transmissor no Bevart e, via procuração digital e-CAC dos clientes, envia eventos em massa para centenas de colaboradores em lote.</li>
+              <li><strong>Resultado no Meu INSS:</strong> O trabalhador acessa o portal ou app <code>meu.inss.gov.br</code> e baixa seu PPP eletrônico oficial em tempo real, com cada fase da sua carreira documentada.</li>
+            </ul>
+          </div>
+
+          <div class="bv-prose">
+            <p>O evento <strong>S-2240 (Condições Ambientais do Trabalho — Agentes Nocivos)</strong> é a espinha dorsal de SST no eSocial. Ele não é um documento estático preenchido apenas na demissão: é o registro contínuo que alimenta o <strong>PPP Eletrônico (Perfil Profissiográfico Previdenciário)</strong> diretamente na base de dados do INSS.</p>
+
+            <p>A maior dúvida de quem opera SST na rotina está nas datas: <em>qual data colocar para quem já estava na empresa?</em>, <em>o que fazer quando o funcionário muda de cargo ou troca de protetor auricular?</em> e <em>como automatizar esses envios em lote no Bevart sem criar buracos no histórico?</em></p>
+
+            <p>Neste guia, você vai entender a regra exata das datas exigida pelo eSocial, a lógica do encadeamento histórico do PPP e o passo a passo completo para cadastrar e transmitir o S-2240 pelo sistema Bevart.</p>
+
+            <h2>Como o S-2240 constrói o PPP eletrônico</h2>
+
+            <p>Desde janeiro de 2023, o PPP em papel foi extinto para todos os períodos trabalhados a partir dessa data. Hoje, o documento é emitido pelo próprio INSS a partir dos eventos que a empresa envia ao eSocial — principalmente o <strong>S-2240</strong> (ambiente e agentes nocivos) e o <strong>S-2220</strong> (monitoramento biológico e ASOs).</p>
+
+            <p>O governo exige 4 blocos fundamentais de informação dentro de cada S-2240:</p>
+
+            <ol>
+              <li><strong>Ambiente de trabalho:</strong> Estabelecimento, setor, descrição das atividades e posto de trabalho.</li>
+              <li><strong>Agentes nocivos (Tabela 24 do eSocial):</strong> Fatores físicos, químicos, biológicos, ergonômicos e mecânicos que ensejam aposentadoria especial ou periculosidade. Se o trabalhador não estiver exposto a nenhum agente da tabela, deve-se declarar o código <code>09.01.001 (Ausência de agente nocivo)</code>.</li>
+              <li><strong>Medidas de proteção (EPC e EPI):</strong> Equipamentos de proteção coletiva e individual, incluindo número do Certificado de Aprovação (CA), eficácia e cumprimento dos requisitos das NRs.</li>
+              <li><strong>Responsável pelos registros ambientais:</strong> Identificação do profissional legalmente habilitado (médico com CRM ou engenheiro/técnico de segurança com registro de classe) que elaborou o levantamento ambiental (LTCAT/PGR).</li>
+            </ol>
+
+            <div class="bv-callout">
+              <span class="bv-callout__label">Atenção à Tabela 24</span>
+              <p>O S-2240 cobra <strong>apenas os agentes nocivos listados na Tabela 24 do eSocial</strong> (Anexo IV do Decreto 3.048/1999 — Previdência Social). Riscos do PGR que não geram aposentadoria especial não vão no S-2240, mas se não houver nenhum agente nocivo previdenciário, o envio do código <code>09.01.001</code> é obrigatório para não deixar o funcionário sem PPP.</p>
+            </div>
+
+            <h2>A lógica das datas no Bevart: Carga Inicial vs. Alterações</h2>
+
+            <p>No Bevart, o cadastro do funcionário possui dois campos cruciais que definem exatamente como o XML do S-2240 será gerado: a <strong>Data de Admissão</strong> e o <strong>Início da Última Exposição</strong> (que gera a tag <code>&lt;dtIniCond&gt;</code> no eSocial).</p>
+
+            <p>Entender essa relação evita rejeições no eSocial e garante que o histórico previdenciário do trabalhador fique perfeito.</p>
+
+            <!-- INFOGRÁFICO 1: LÓGICA DAS DATAS E TIMELINE DO PPP -->
+            <div class="bv-callout" style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 24px; border-radius: 16px; margin: 2.2em 0;">
+              <span class="bv-callout__label" style="color: #2563eb; font-size: 13px; font-weight: 800; letter-spacing: 0.08em; display: flex; align-items: center; gap: 8px;">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                INFOGRÁFICO: A LINHA DO TEMPO DO S-2240 NO ESOCIAL
+              </span>
+              
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 18px;">
+                
+                <div style="background: #ffffff; border: 1px solid #dbeafe; border-left: 4px solid #2563eb; border-radius: 12px; padding: 16px; box-shadow: 0 2px 4px rgba(0,0,0,0.03);">
+                  <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+                    <span style="font-size: 11px; font-weight: 700; text-transform: uppercase; background: #eff6ff; color: #1d4ed8; padding: 3px 8px; border-radius: 999px;">Cenário 1</span>
+                    <strong style="font-size: 12px; color: #64748b;">1º Envio (Carga Inicial)</strong>
+                  </div>
+                  <h4 style="margin: 0 0 6px; font-size: 15px; color: #0f172a; font-weight: 700;">Admissão Antiga (&lt; 10/01/2022)</h4>
+                  <p style="font-size: 13px; color: #475569; margin: 0 0 10px; line-height: 1.5;">Ex: Admitido em <strong>15/03/2018</strong>.</p>
+                  <div style="background: #f8fafc; padding: 8px 10px; border-radius: 8px; font-size: 12px; border: 1px dashed #cbd5e1;">
+                    <div>• <strong>Data de Admissão:</strong> 15/03/2018</div>
+                    <div style="color: #2563eb; font-weight: 600; margin-top: 2px;">• <strong>Início da Exposição:</strong> 10/01/2022</div>
+                  </div>
+                  <p style="font-size: 11.5px; color: #64748b; margin: 8px 0 0;">O eSocial inicia o PPP eletrônico em 10/01/2022. O passado anterior fica no PPP papel.</p>
+                </div>
+
+                <div style="background: #ffffff; border: 1px solid #d1fae5; border-left: 4px solid #059669; border-radius: 12px; padding: 16px; box-shadow: 0 2px 4px rgba(0,0,0,0.03);">
+                  <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+                    <span style="font-size: 11px; font-weight: 700; text-transform: uppercase; background: #ecfdf5; color: #047857; padding: 3px 8px; border-radius: 999px;">Cenário 2</span>
+                    <strong style="font-size: 12px; color: #64748b;">Nova Admissão</strong>
+                  </div>
+                  <h4 style="margin: 0 0 6px; font-size: 15px; color: #0f172a; font-weight: 700;">Admissão Atual (&ge; 10/01/2022)</h4>
+                  <p style="font-size: 13px; color: #475569; margin: 0 0 10px; line-height: 1.5;">Ex: Admitido em <strong>01/06/2023</strong>.</p>
+                  <div style="background: #f8fafc; padding: 8px 10px; border-radius: 8px; font-size: 12px; border: 1px dashed #cbd5e1;">
+                    <div>• <strong>Data de Admissão:</strong> 01/06/2023</div>
+                    <div style="color: #059669; font-weight: 600; margin-top: 2px;">• <strong>Início da Exposição:</strong> 01/06/2023</div>
+                  </div>
+                  <p style="font-size: 11.5px; color: #64748b; margin: 8px 0 0;">As duas datas são idênticas. O PPP inicia exatamente no primeiro dia de trabalho.</p>
+                </div>
+
+                <div style="background: #ffffff; border: 1px solid #fef3c7; border-left: 4px solid #d97706; border-radius: 12px; padding: 16px; box-shadow: 0 2px 4px rgba(0,0,0,0.03);">
+                  <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+                    <span style="font-size: 11px; font-weight: 700; text-transform: uppercase; background: #fffbeb; color: #b45309; padding: 3px 8px; border-radius: 999px;">Cenário 3</span>
+                    <strong style="font-size: 12px; color: #64748b;">Alteração Futura</strong>
+                  </div>
+                  <h4 style="margin: 0 0 6px; font-size: 15px; color: #0f172a; font-weight: 700;">Mudança de Risco / Função</h4>
+                  <p style="font-size: 13px; color: #475569; margin: 0 0 10px; line-height: 1.5;">Ex: Promovido em <strong>15/04/2025</strong>.</p>
+                  <div style="background: #f8fafc; padding: 8px 10px; border-radius: 8px; font-size: 12px; border: 1px dashed #cbd5e1;">
+                    <div>• <strong>Data de Admissão:</strong> Original mantida</div>
+                    <div style="color: #d97706; font-weight: 600; margin-top: 2px;">• <strong>Início da Exposição:</strong> 15/04/2025</div>
+                  </div>
+                  <p style="font-size: 11.5px; color: #64748b; margin: 8px 0 0;">Envia novo S-2240. O anterior cobre até 14/04/2025 e o novo inicia em 15/04/2025.</p>
+                </div>
+
+              </div>
+
+              <div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid #e2e8f0; display: flex; align-items: center; gap: 10px;">
+                <span style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 50%; background: #2563eb; color: #fff; font-size: 12px; font-weight: bold; flex-shrink: 0;">✓</span>
+                <span style="font-size: 13.5px; color: #334155;"><strong>No Meu INSS:</strong> O trabalhador visualiza todos os blocos em sequência: Período 1 (2022-2025) + Período 2 (2025 em diante).</span>
+              </div>
+            </div>
+
+            <h3>1. Carga Inicial (Admissão anterior a 10/01/2022)</h3>
+            <p>Se o empregado foi contratado em 2015, 2018 ou 2021, o eSocial <strong>não permite</strong> enviar um S-2240 com data de início de condição anterior ao marco legal da obrigatoriedade (10/01/2022).</p>
+            <ul>
+              <li><strong>Campo "Data de Admissão":</strong> Coloque a data real da admissão no contrato de trabalho (ex.: <code>15/03/2018</code>).</li>
+              <li><strong>Campo "Início da Última Exposição":</strong> Coloque <code>10/01/2022</code>.</li>
+            </ul>
+            <p>Ao transmitir, o Bevart informa ao eSocial que o histórico eletrônico daquele trabalhador passa a ser contado a partir de 10/01/2022, mantendo o vínculo cadastral correto.</p>
+
+            <h3>2. Novas Admissões (Admissão após 10/01/2022)</h3>
+            <p>Para quem entrou na empresa após o início da obrigatoriedade, a regra é direta: tanto a <strong>Data de Admissão</strong> quanto o <strong>Início da Última Exposição</strong> serão exatamente a data em que o empregado começou a trabalhar (ex.: <code>01/06/2023</code>).</p>
+
+            <h3>3. Alterações de Exposição: O "Mapa do PPP" em Ação</h3>
+            <p>O que acontece quando o funcionário é promovido, muda de setor, tem um novo agente nocivo inserido no PGR/LTCAT, passa a usar um EPI com outro CA ou a empresa troca o Engenheiro/Médico responsável?</p>
+
+            <p><strong>Você não retifica o S-2240 anterior. Você envia um NOVO S-2240.</strong></p>
+
+            <p>No Bevart, a operação é simples:</p>
+            <ol>
+              <li>Atualize a função, o GHE, os agentes de risco, os EPIs ou o responsável técnico do funcionário;</li>
+              <li>No campo <strong>Início da Última Exposição</strong>, mude para a data em que a nova condição começou a valer (ex.: <code>15/04/2025</code>);</li>
+              <li>Transmita o evento para o eSocial.</li>
+            </ol>
+
+            <p>O eSocial recepciona o novo XML. Automaticamente, o sistema do governo encerra a condição anterior no dia anterior (<code>14/04/2025</code>) e inicia o novo registro a partir de <code>15/04/2025</code>. É esse encadeamento que monta o histórico da vida laboral do trabalhador no PPP eletrônico.</p>
+
+            <div class="bv-callout bv-callout--alerta">
+              <span class="bv-callout__label">Cuidado: Retificação vs. Novo Envio</span>
+              <p><strong>Retificação</strong> serve apenas para corrigir um erro do passado (ex.: digitou o número do CA errado no envio original). Se você retificar em vez de fazer um novo envio quando houver mudança de função, você <em>sobrescreve e apaga</em> o histórico anterior no INSS, prejudicando o trabalhador na comprovação de tempo especial.</p>
+            </div>
+
+            <h2>Consultorias de SST: Transmissão para Clientes com Procuração Digital</h2>
+
+            <p>Se você tem uma consultoria de SST, não precisa pedir o certificado digital A1 ou cartão token de cada cliente. A operação funciona por <strong>Procuração Eletrônica RFB (e-CAC)</strong>:</p>
+
+            <!-- INFOGRÁFICO 2: FLUXO DE TRANSMISSÃO POR CONSULTORIA -->
+            <div class="bv-callout" style="background: #0f172a; color: #fff; border: 1px solid #334155; padding: 24px; border-radius: 16px; margin: 2.2em 0;">
+              <span style="color: #38bdf8; font-size: 12px; font-weight: 800; letter-spacing: 0.08em; display: flex; align-items: center; gap: 8px; text-transform: uppercase;">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                FLUXO CENTRALIZADO DE ENVIO NO BEVART
+              </span>
+              
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-top: 18px;">
+                <div style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); padding: 14px; border-radius: 10px;">
+                  <div style="font-size: 11px; color: #94a3b8; font-weight: 700;">PASSO 1</div>
+                  <strong style="display: block; color: #f8fafc; font-size: 14px; margin: 4px 0 6px;">Procuração e-CAC</strong>
+                  <p style="font-size: 12px; color: #cbd5e1; margin: 0; line-height: 1.45;">O cliente outorga procuração eletrônica para o CNPJ da sua consultoria com poderes de SST.</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); padding: 14px; border-radius: 10px;">
+                  <div style="font-size: 11px; color: #94a3b8; font-weight: 700;">PASSO 2</div>
+                  <strong style="display: block; color: #f8fafc; font-size: 14px; margin: 4px 0 6px;">Certificado A1 Único</strong>
+                  <p style="font-size: 12px; color: #cbd5e1; margin: 0; line-height: 1.45;">Você cadastra apenas o Certificado Digital A1 da sua própria consultoria no Bevart.</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); padding: 14px; border-radius: 10px;">
+                  <div style="font-size: 11px; color: #94a3b8; font-weight: 700;">PASSO 3</div>
+                  <strong style="display: block; color: #f8fafc; font-size: 14px; margin: 4px 0 6px;">Transmissão em Massa</strong>
+                  <p style="font-size: 12px; color: #cbd5e1; margin: 0; line-height: 1.45;">O Bevart assina e transmite os S-2240 de todos os funcionários de todos os clientes em lote.</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); padding: 14px; border-radius: 10px;">
+                  <div style="font-size: 11px; color: #38bdf8; font-weight: 700;">RESULTADO</div>
+                  <strong style="display: block; color: #38bdf8; font-size: 14px; margin: 4px 0 6px;">PPP no Meu INSS</strong>
+                  <p style="font-size: 12px; color: #cbd5e1; margin: 0; line-height: 1.45;">O eSocial valida, devolve os recibos e o trabalhador acessa seu PPP oficial sem burocracia.</p>
+                </div>
+              </div>
+            </div>
+
+            <p>Com esse modelo, sua consultoria ganha escala: um único técnico ou operador consegue enviar a carga inicial e as alterações de centenas de empresas parceiras diretamente pelo painel do Bevart.</p>
+
+            <div class="bv-inline-cta">
+              <h3>Envie S-2240, S-2220 e S-2210 em lote para todos os seus clientes</h3>
+              <p>O Bevart conecta o inventário de riscos da Tabela 24, EPIs com CA e exames ocupacionais diretamente ao transmissor do eSocial, com assinatura em lote e controle de recibos.</p>
+              <a class="bv-btn bv-btn--light" href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="blog-post-meio">Criar conta grátis</a>
+            </div>
+
+            <h2>Passo a passo: Como cadastrar e enviar o S-2240 no Bevart</h2>
+
+            <p>Siga o roteiro prático abaixo para estruturar a empresa e realizar a transmissão do evento S-2240:</p>
+
+            <h3>Passo 1: Configurar o Transmissor eSocial</h3>
+            <p>No canto superior direito da tela inicial do Bevart, clique no menu do usuário e selecione <strong>Transmissor eSocial</strong>.</p>
+            <ul>
+              <li>Faça o upload do <strong>Certificado Digital formato A1</strong> (.pfx ou .p12) da sua empresa ou da consultoria;</li>
+              <li>Insira a senha do certificado e salve. O sistema estará habilitado para assinar e transmitir eventos de SST em ambiente de Produção.</li>
+            </ul>
+
+            <h3>Passo 2: Estruturar o Cadastro da Empresa</h3>
+            <p>No menu lateral esquerdo, construa a hierarquia da organização:</p>
+            <ol>
+              <li><strong>Grupo / Cliente:</strong> Clique em <em>Novo Grupo</em> para agrupar as empresas sob sua gestão;</li>
+              <li><strong>Empresa:</strong> Cadastre a razão social, CNPJ e CNAE da empresa contratante;</li>
+              <li><strong>Unidade / Estabelecimento:</strong> Cadastre o estabelecimento onde os colaboradores atuam (endereço e tipo de estabelecimento);</li>
+              <li><strong>Setores e Funções:</strong> Adicione os setores (ex.: Operacional, Manutenção, Administrativo) e as respectivas funções (com CBO e descrição sumária das atividades);</li>
+              <li><strong>GHE (Grupo Homogêneo de Exposição):</strong> Agrupe os trabalhadores que compartilham o mesmo perfil de riscos ambientais.</li>
+            </ol>
+
+            <h3>Passo 3: Vincular os Riscos da Tabela 24 no Inventário</h3>
+            <p>Vá em <strong>Inventário de Riscos</strong> e clique em <strong>Novo Risco/Perigo</strong>:</p>
+            <ul>
+              <li>Selecione o agente nocivo de acordo com a <strong>Tabela 24 do eSocial</strong> (ex.: <code>01.01.001 - Ruído contínuo ou intermitente</code>, agentes químicos com código CAS, calor, agentes biológicos, ou <code>09.01.001</code> quando não houver risco);</li>
+              <li>Informe a intensidade ou concentração, a unidade de medida, a técnica de medição e a periodicidade;</li>
+              <li>Vincule os <strong>EPIs</strong> necessários informando o <strong>número do Certificado de Aprovação (CA)</strong> válido, além de atestar a eficácia e o cumprimento dos requisitos normativos (higienização, periodicidade e CA válido);</li>
+              <li>Selecione o <strong>Responsável Técnico pelos Registros Ambientais</strong> cadastrado (Médico ou Engenheiro/TST com registro).</li>
+            </ul>
+
+            <h3>Passo 4: Cadastrar ou Importar os Funcionários</h3>
+            <p>Acesse o menu <strong>Funcionários</strong>. Você pode cadastrar um funcionário por vez ou utilizar a importação em lote via planilha.</p>
+            <p>No cadastro de cada colaborador, vincule-o ao Setor, Função e GHE correspondente e preencha os campos temporais com rigor:</p>
+            <ul>
+              <li><strong>Data de Admissão:</strong> Data original da contratação;</li>
+              <li><strong>Início da Última Exposição:</strong> <code>10/01/2022</code> para admitidos antes dessa data, ou a data de admissão/mudança para os demais.</li>
+            </ul>
+
+            <h3>Passo 5: Transmissão em Lote (Ações em Massa + eSocial)</h3>
+            <p>Com os funcionários e riscos configurados, vá na tela de <strong>Funcionários</strong>:</p>
+            <ol>
+              <li>Marque a caixa de seleção de todos os funcionários que deseja enviar (ou selecione colaboradores específicos);</li>
+              <li>Clique no botão <strong>Ações em Massa (+ eSocial)</strong> no topo da tabela;</li>
+              <li>Escolha <strong>Enviar eSocial</strong> para realizar a transmissão direta automática com seu certificado A1;</li>
+              <li><em>(Opcional)</em> Caso utilize um software externo ou mensageria própria de folha, você pode clicar em <strong>Apenas XML</strong> para baixar o arquivo estruturado do evento.</li>
+            </ol>
+
+            <h3>Passo 6: Acompanhamento no Painel eSocial S-2240</h3>
+            <p>Vá no menu <strong>Painel eSocial → S-2240</strong>. Aqui você acompanha a esteira de processamento de cada colaborador:</p>
+
+            <div class="bv-table-wrap">
+              <table>
+                <caption class="bv-sr">Fases de status do envio do evento S-2240</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Status no Painel</th>
+                    <th scope="col">Significado Técnico</th>
+                    <th scope="col">Ação Necessária</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Processando Envio</strong></td>
+                    <td>O Bevart gerou e assinou o XML e está enviando para o webservice do governo.</td>
+                    <td>Aguarde alguns segundos pela resposta do lote.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Enviado (com Protocolo)</strong></td>
+                    <td>O eSocial recebeu o arquivo e gerou número de protocolo para auditoria.</td>
+                    <td>O lote aguarda a consolidação final da Previdência.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Validado (com Recibo)</strong></td>
+                    <td><strong>Sucesso oficial:</strong> O eSocial validou todas as regras e emitiu o número do Recibo de Entrega.</td>
+                    <td>O PPP do trabalhador já está atualizado no INSS. Você pode baixar o XML e visualizar o recibo.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Erro / Rejeitado</strong></td>
+                    <td>O eSocial rejeitou o arquivo por inconsistência (ex.: falta de admissão S-2200, CA inválido ou CPF divergente).</td>
+                    <td>Clique no detalhe do erro, corrija o cadastro apontado no Bevart e transmita novamente.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="bv-callout bv-callout--dica">
+              <span class="bv-callout__label">Boa prática de gestão</span>
+              <p>Guarde o hábito de conferir o painel até que 100% dos envios estejam com o status <strong>Validado</strong>. Um evento com protocolo que sofreu rejeição posterior não existe perante a fiscalização do Ministério do Trabalho nem da Previdência.</p>
+            </div>
+
+            <h2>Como o Trabalhador Acessa o PPP Eletrônico no Meu INSS</h2>
+
+            <p>Uma vez validado o S-2240 no eSocial com recibo, o colaborador tem acesso imediato ao seu histórico ocupacional oficial:</p>
+
+            <ol>
+              <li>O trabalhador acessa o aplicativo ou site <strong><a href="https://meu.inss.gov.br" target="_blank" rel="noopener noreferrer">meu.inss.gov.br</a></strong> com sua conta Gov.br (nível prata ou ouro);</li>
+              <li>Digita <em>"PPP"</em> ou <em>"Perfil Profissiográfico Previdenciário"</em> na barra de busca de serviços;</li>
+              <li>Clica no vínculo empregatício desejado e solicita a visualização do <strong>PPP Eletrônico em PDF</strong>;</li>
+              <li>O documento é gerado pelo próprio INSS, contendo a discriminação detalhada de cada período de exposição, agentes nocivos, CA de EPIs e responsáveis técnicos que foram enviados pelo Bevart ao longo de todo o contrato de trabalho.</li>
+            </ol>
+
+            <figure>
+              <div style="background: linear-gradient(135deg, #1e293b, #0f172a); border: 1px solid #334155; border-radius: 16px; padding: 28px; text-align: center; color: #fff;">
+                <div style="font-size: 38px; margin-bottom: 10px;">📋 ➡️ 💻 ➡️ 🏛️</div>
+                <h3 style="color: #38bdf8; margin: 0 0 8px; font-size: 1.25rem;">Do Bevart para a Aposentadoria do Trabalhador</h3>
+                <p style="max-width: 540px; margin: 0 auto; color: #cbd5e1; font-size: 14.5px; line-height: 1.6;">
+                  Cada alteração registrada no Bevart alimenta a base do eSocial, garantindo que o colaborador tenha todos os direitos previdenciários resguardados sem precisar pedir declarações na saída da empresa.
+                </p>
+              </div>
+              <figcaption>Fluxo de dados contínuo: Gestão de SST no Bevart → Mensageria eSocial → Base Previdenciária do Meu INSS.</figcaption>
+            </figure>
+
+            <section class="bv-faq">
+              <h2>Perguntas frequentes</h2>
+              <details>
+                <summary>Qual data colocar no "Início da Última Exposição" para funcionários antigos?</summary>
+                <div>
+                  <p>Para funcionários admitidos antes de 10/01/2022 (início dos eventos de SST no eSocial), coloque a data real de admissão no campo de admissão e preencha o campo "Início da Última Exposição" com <strong>10/01/2022</strong>. O eSocial não aceita datas de início de condição anteriores a essa.</p>
+                </div>
+              </details>
+              <details>
+                <summary>Quando o funcionário muda de função ou troca de EPI, envio um novo S-2240 ou retifico?</summary>
+                <div>
+                  <p>Você deve enviar um <strong>novo S-2240</strong> com a data em que a nova exposição/função teve início. Isso cria um novo período no PPP eletrônico sem apagar o histórico passado. A retificação só deve ser usada para corrigir erros materiais em eventos já enviados.</p>
+                </div>
+              </details>
+              <details>
+                <summary>Como consultorias de SST enviam o S-2240 para empresas clientes?</summary>
+                <div>
+                  <p>A empresa cliente outorga uma Procuração Eletrônica no e-CAC da Receita Federal para o CNPJ da consultoria com poderes para o eSocial SST. A consultoria cadastra seu próprio Certificado Digital A1 no transmissor do Bevart e transmite os eventos de todos os clientes em lote com segurança jurídica.</p>
+                </div>
+              </details>
+              <details>
+                <summary>Funcionários em escritório sem riscos nocivos precisam de envio do S-2240?</summary>
+                <div>
+                  <p>Sim. O S-2240 é obrigatório para todos os empregados CLT. Para aqueles sem exposição a agentes nocivos da Tabela 24, envia-se o evento informando o código <code>09.01.001 (Ausência de agente nocivo ou de atividades perigosas)</code>.</p>
+                </div>
+              </details>
+              <details>
+                <summary>Onde o trabalhador pode consultar o PPP eletrônico gerado pelo S-2240?</summary>
+                <div>
+                  <p>O trabalhador pode consultar e baixar o PPP eletrônico oficial em PDF diretamente no portal ou aplicativo <strong>Meu INSS</strong> (meu.inss.gov.br), fazendo login com sua conta Gov.br e buscando pelo serviço "Perfil Profissiográfico Previdenciário".</p>
+                </div>
+              </details>
+            </section>
+
+          </div>
+
+          <!-- build:share -->
+          <div class="bv-share" data-share>
+            <span class="bv-share__label">Compartilhar</span>
+            <a data-rede="linkedin" href="#" aria-label="Compartilhar no LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.6c0-1.34-.03-3.07-1.9-3.07-1.9 0-2.2 1.46-2.2 2.97V21H9z" />
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+            <a data-rede="whatsapp" href="#" aria-label="Compartilhar no WhatsApp">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2a10 10 0 0 0-8.6 15.06L2 22l5.07-1.33A10 10 0 1 0 12 2zm5.5 14.2c-.24.67-1.4 1.28-1.93 1.32-.5.05-.97.23-3.27-.68-2.75-1.08-4.5-3.9-4.63-4.08-.14-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.25-.27.55-.34.73-.34h.52c.17 0 .4-.06.62.48.24.57.8 1.97.87 2.11.07.14.11.3.02.48-.09.18-.14.3-.27.46l-.4.47c-.14.14-.28.29-.12.57.16.27.71 1.17 1.53 1.9 1.05.93 1.94 1.22 2.22 1.36.27.14.43.12.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.6-.14.25.09 1.57.74 1.84.88.27.14.45.2.51.32.07.11.07.66-.17 1.32z" />
+              </svg>
+              <span>WhatsApp</span>
+            </a>
+            <a data-rede="x" href="#" aria-label="Compartilhar no X">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M18.9 2H22l-7.1 8.1L23.2 22h-6.5l-5.1-6.6L5.8 22H2.7l7.6-8.7L1.2 2h6.6l4.6 6.1zM17.8 20.2h1.7L7.3 3.7H5.5z" />
+              </svg>
+              <span>X</span>
+            </a>
+            <button type="button" data-rede="copiar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.5 1.5" />
+                <path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.5-1.5" />
+              </svg>
+              <span>Copiar link</span>
+            </button>
+          </div>
+<!-- /build:share -->
+
+          <!-- build:autor -->
+          <aside class="bv-author">
+            <span class="bv-avatar" aria-hidden="true">JK</span>
+            <div>
+              <h2>James Kamradt Jr</h2>
+              <p>Fundador do Bevart e responsável pelo produto. Escreve sobre a rotina real de quem opera SST: o que a fiscalização cobra, o que trava no dia a dia e como transformar exigência de norma em processo que roda sozinho.</p>
+            </div>
+          </aside>
+<!-- /build:autor -->
+
+          <!-- build:prevnext -->
+      <nav class="bv-prevnext" aria-label="Outros artigos">
+        <a href="../como-montar-o-pgr-inventario-de-riscos-e-plano-de-acao/index.html"><span>Artigo anterior</span><strong>Como montar o PGR: inventário de riscos e plano de ação na prática</strong></a>
+        <span></span>
+      </nav>
+<!-- /build:prevnext -->
+        </div>
+
+        <!-- build:sidebar -->
+        <aside class="bv-toc">
+          <nav id="sumario" aria-label="Sumário do artigo" hidden>
+            <p class="bv-toc__title">Neste artigo</p>
+          </nav>
+          <div class="bv-toc__aside">
+            <p>O Bevart conecta riscos, documentos, exames, EPI e eSocial em um fluxo só.</p>
+            <a class="bv-btn bv-btn--primary" href="https://profissionais.bevart.com.br/app/src/login/views/login"
+              data-cta="blog-post-sidebar">Testar 5 dias grátis</a>
+          </div>
+        </aside>
+<!-- /build:sidebar -->
+      </div>
+    </article>
+
+    <!-- build:relacionados -->
+    <section class="bv-section bv-section--soft">
+      <div class="bv-wrap">
+        <div class="bv-section__head">
+          <h2>Continue lendo</h2>
+          <a class="bv-link" href="../index.html">Ver todos os artigos</a>
+        </div>
+        <div class="bv-grid">
+        <article class="bv-post-card" data-post data-categoria="esocial"
+          data-busca="esocial sst: o que sao os eventos s-2210, s-2220 e s-2240 tres eventos concentram quase toda a rotina de sst no esocial. entenda o que cada um informa, de onde vem a informacao e o que costuma travar o envio. esocial esocial s-2210 s-2220 s-2240 cat">
+          <a class="bv-post-card__media" href="../esocial-sst-eventos-s-2210-s-2220-s-2240/index.html" tabindex="-1" aria-hidden="true">
+            <img src="../esocial-sst-eventos-s-2210-s-2220-s-2240/assets/capa.svg" alt="" width="640" height="360" loading="lazy" decoding="async">
+          </a>
+          <div class="bv-post-card__body">
+            <a class="bv-chip" href="../categoria/esocial/index.html">eSocial</a>
+            <h3 class="bv-post-card__title"><a href="../esocial-sst-eventos-s-2210-s-2220-s-2240/index.html">eSocial SST: o que são os eventos S-2210, S-2220 e S-2240</a></h3>
+            <p class="bv-post-card__dek">Três eventos concentram quase toda a rotina de SST no eSocial. Entenda o que cada um informa, de onde vem a informação e o que costuma travar o envio.</p>
+            <p class="bv-meta">
+              <time datetime="2026-08-18">18 ago 2026</time>
+              <span class="bv-meta__sep">6 min de leitura</span>
+            </p>
+          </div>
+        </article>
+        <article class="bv-post-card" data-post data-categoria="esocial"
+          data-busca="como funciona o ppp eletronico o perfil profissiografico deixou de ser um documento montado na demissao. hoje ele e construido em tempo real pelos eventos que a empresa envia — e e ai que mora o risco. esocial ppp esocial s-2240 s-2220 aposentadoria especial">
+          <a class="bv-post-card__media" href="../como-funciona-o-ppp-eletronico/index.html" tabindex="-1" aria-hidden="true">
+            <img src="../como-funciona-o-ppp-eletronico/assets/capa.svg" alt="" width="640" height="360" loading="lazy" decoding="async">
+          </a>
+          <div class="bv-post-card__body">
+            <a class="bv-chip" href="../categoria/esocial/index.html">eSocial</a>
+            <h3 class="bv-post-card__title"><a href="../como-funciona-o-ppp-eletronico/index.html">Como funciona o PPP eletrônico</a></h3>
+            <p class="bv-post-card__dek">O perfil profissiográfico deixou de ser um documento montado na demissão. Hoje ele é construído em tempo real pelos eventos que a empresa envia — e é aí que mora o risco.</p>
+            <p class="bv-meta">
+              <time datetime="2025-01-22">22 jan 2025</time>
+              <span class="bv-meta__sep">4 min de leitura</span>
+            </p>
+          </div>
+        </article>
+        <article class="bv-post-card" data-post data-categoria="esocial"
+          data-busca="envio do evento toxicologico s-2221 no esocial com o bevart o exame toxicologico do motorista profissional tem evento proprio no esocial. veja onde ele fica no sistema, quais campos o layout exige e o que fazer quando o envio volta com erro. esocial esocial s-2221 exame toxicologico motorista profissional">
+          <a class="bv-post-card__media" href="../envio-do-evento-toxicologico-s-2221-no-esocial-de-forma-simples-com-o-bevart/index.html" tabindex="-1" aria-hidden="true">
+            <img src="../envio-do-evento-toxicologico-s-2221-no-esocial-de-forma-simples-com-o-bevart/assets/capa.svg" alt="" width="640" height="360" loading="lazy" decoding="async">
+          </a>
+          <div class="bv-post-card__body">
+            <a class="bv-chip" href="../categoria/esocial/index.html">eSocial</a>
+            <h3 class="bv-post-card__title"><a href="../envio-do-evento-toxicologico-s-2221-no-esocial-de-forma-simples-com-o-bevart/index.html">Envio do evento toxicológico S-2221 no eSocial com o Bevart</a></h3>
+            <p class="bv-post-card__dek">O exame toxicológico do motorista profissional tem evento próprio no eSocial. Veja onde ele fica no sistema, quais campos o layout exige e o que fazer quando o envio volta com erro.</p>
+            <p class="bv-meta">
+              <time datetime="2025-03-13">13 mar 2025</time>
+              <span class="bv-meta__sep">4 min de leitura</span>
+            </p>
+          </div>
+        </article>
+        </div>
+      </div>
+    </section>
+<!-- /build:relacionados -->
+
+    <!-- build:ctafinal -->
+    <section class="bv-section">
+      <div class="bv-wrap">
+        <div class="bv-band">
+          <div>
+            <h2>Do risco mapeado ao eSocial entregue</h2>
+            <p>O Bevart liga o inventário de riscos aos documentos, exames, treinamentos, EPI e eventos do eSocial. Teste 5 dias, sem cartão.</p>
+          </div>
+          <div class="bv-band__actions">
+            <a class="bv-btn bv-btn--light bv-btn--lg"
+              href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="blog-post-fim">Criar conta
+              grátis</a>
+            <a class="bv-btn bv-btn--outline-light bv-btn--lg" href="../../index.html#pricing">Ver planos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- /build:ctafinal -->
+  </main>
+
+  <!-- build:footer -->
+  <footer class="bv-footer">
+    <div class="bv-wrap">
+      <div class="bv-footer__grid">
+        <div class="bv-footer__brand">
+          <img src="../../assets/img/logo bevart.svg" alt="Bevart" width="140" height="40">
+          <p>Plataforma de gestão de SST que liga o inventário de riscos aos documentos, exames, treinamentos, EPI e
+            eventos do eSocial.</p>
+        </div>
+        <div>
+          <h3>Blog</h3>
+          <ul>
+            <li><a href="../index.html">Todos os artigos</a></li>
+            <li><a href="../categoria/pgr-e-riscos/index.html">PGR e riscos</a></li>
+            <li><a href="../categoria/psicossocial-e-ergonomia/index.html">Psicossocial e ergonomia</a></li>
+            <li><a href="../categoria/esocial/index.html">eSocial</a></li>
+            <li><a href="../categoria/pcmso-e-exames/index.html">PCMSO e exames</a></li>
+            <li><a href="../categoria/treinamentos-e-epi/index.html">Treinamentos e EPI</a></li>
+            <li><a href="../categoria/legislacao-e-nrs/index.html">Legislação e NRs</a></li>
+            <li><a href="../categoria/gestao-de-sst/index.html">Gestão de SST</a></li>
+            <li><a href="../feed.xml">Feed RSS</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Plataforma</h3>
+          <ul>
+            <li><a href="../../index.html">Visão geral</a></li>
+            <li><a href="../../index.html#features">Recursos</a></li>
+            <li><a href="../../index.html#pricing">Preços</a></li>
+            <li><a href="../../index.html#faq">Perguntas frequentes</a></li>
+            <li><a href="../../modelos-de-documentos-sst-pdf.html">Modelos de documentos</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Soluções</h3>
+          <ul>
+            <li><a href="../../sistema-pgr-online.html">Sistema PGR online</a></li>
+            <li><a href="../../sistema-pcmso-e-aso-online.html">PCMSO e ASO online</a></li>
+            <li><a href="../../ltcat-online-sistema.html">Laudo LTCAT digital</a></li>
+            <li><a href="../../esocial-sst-para-empresas.html">eSocial SST para empresas</a></li>
+            <li><a href="../../gestao-de-treinamentos-sst.html">Gestão de treinamentos</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bv-footer__bar">
+        <p>&copy; <span data-ano>2026</span> Bevart. Todos os direitos reservados.</p>
+        <nav aria-label="Links legais">
+          <a href="../../termos-de-uso.html">Termos de uso</a>
+          <a href="../../privacidade.html">Privacidade</a>
+          <a href="../../lgpd.html">LGPD</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+<!-- /build:footer -->
+
+  <button type="button" class="bv-top" id="voltar-ao-topo" aria-label="Voltar ao topo">
+    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+      aria-hidden="true">
+      <path d="M12 19V5M5 12l7-7 7 7" />
+    </svg>
+  </button>
+</body>
+
+</html>

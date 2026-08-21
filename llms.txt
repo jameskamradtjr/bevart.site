@@ -34,6 +34,7 @@ Blog Bevart — guias práticos de SST: [https://bevart.com.br/blog/](https://be
 - [Treinamentos e EPI](https://bevart.com.br/blog/categoria/treinamentos-e-epi/): Capacitações das NRs, validade, evidências e controle de entrega de EPI.
 - [Gestão de SST](https://bevart.com.br/blog/categoria/gestao-de-sst/): Produtividade, precificação e organização de consultorias e equipes de segurança.
 
+- [Como enviar o evento S-2240 pelo Bevart e gerar o PPP](https://bevart.com.br/blog/como-enviar-evento-s-2240-pelo-sistema-bevart/): Guia do S-2240 no Bevart: regras de carga inicial vs alteração de exposição, Tabela 24, procuração digital e emissão do PPP eletrônico no Meu INSS.
 - [Como montar o PGR: inventário de riscos e plano de ação na prática](https://bevart.com.br/blog/como-montar-o-pgr-inventario-de-riscos-e-plano-de-acao/): Guia prático do PGR: como levantar perigos, montar o inventário de riscos, classificar por severidade e virar plano de ação com prazo e responsável.
 - [eSocial SST: o que são os eventos S-2210, S-2220 e S-2240](https://bevart.com.br/blog/esocial-sst-eventos-s-2210-s-2220-s-2240/): Entenda os eventos de SST do eSocial: S-2210 (CAT), S-2220 (monitoramento da saúde) e S-2240 (condições ambientais do trabalho), com origem dos dados e erros comuns.
 - [PCMSO e ASO: como organizar exames ocupacionais sem perder prazo](https://bevart.com.br/blog/pcmso-e-aso-como-organizar-exames-ocupacionais/): Como estruturar o PCMSO a partir dos riscos, definir exames por função, controlar periodicidade e emitir ASO sem deixar prazos vencerem.

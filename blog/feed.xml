@@ -5,8 +5,16 @@
     <link>https://bevart.com.br/blog/</link>
     <description>Guias práticos de segurança e saúde do trabalho: PGR, PCMSO, LTCAT, eSocial, treinamentos, EPI e riscos psicossociais — escritos para quem executa.</description>
     <language>pt-BR</language>
-    <lastBuildDate>Tue, 18 Aug 2026 12:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 21 Aug 2026 12:00:00 GMT</lastBuildDate>
     <atom:link href="https://bevart.com.br/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Como enviar o evento S-2240 pelo Bevart e gerar o PPP</title>
+      <link>https://bevart.com.br/blog/como-enviar-evento-s-2240-pelo-sistema-bevart/</link>
+      <guid isPermaLink="true">https://bevart.com.br/blog/como-enviar-evento-s-2240-pelo-sistema-bevart/</guid>
+      <pubDate>Fri, 21 Aug 2026 12:00:00 GMT</pubDate>
+      <category>eSocial</category>
+      <description>Guia do S-2240 no Bevart: regras de carga inicial vs alteração de exposição, Tabela 24, procuração digital e emissão do PPP eletrônico no Meu INSS.</description>
+    </item>
     <item>
       <title>Como montar o PGR: inventário de riscos e plano de ação na prática</title>
       <link>https://bevart.com.br/blog/como-montar-o-pgr-inventario-de-riscos-e-plano-de-acao/</link>

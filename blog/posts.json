@@ -85,6 +85,30 @@
   ],
   "posts": [
     {
+      "slug": "como-enviar-evento-s-2240-pelo-sistema-bevart",
+      "titulo": "Como enviar o evento S-2240 pelo Bevart e gerar o PPP",
+      "dek": "Entenda a lógica das datas no S-2240, como manter o histórico do PPP eletrônico vivo sem furos e o passo a passo para enviar no Bevart com procuração digital.",
+      "descricao": "Guia do S-2240 no Bevart: regras de carga inicial vs alteração de exposição, Tabela 24, procuração digital e emissão do PPP eletrônico no Meu INSS.",
+      "categoria": "esocial",
+      "tags": [
+        "S-2240",
+        "eSocial",
+        "PPP eletrônico",
+        "Bevart",
+        "carga inicial",
+        "Tabela 24"
+      ],
+      "palavraChave": "como enviar evento S-2240 no Bevart",
+      "autor": "james-kamradt-jr",
+      "publicado": "2026-08-21",
+      "atualizado": "2026-08-21",
+      "tempoLeitura": 11,
+      "capa": "assets/capa.svg",
+      "capaAlt": "Ilustração do envio do evento S-2240 e formação do PPP eletrônico no sistema Bevart",
+      "destaque": true,
+      "rascunho": false
+    },
+    {
       "slug": "como-montar-o-pgr-inventario-de-riscos-e-plano-de-acao",
       "titulo": "Como montar o PGR: inventário de riscos e plano de ação na prática",
       "dek": "O PGR trava quando o inventário vira lista solta e o plano de ação vira promessa. Este guia mostra o caminho completo, do levantamento de perigos ao acompanhamento das medidas.",
@@ -104,7 +128,7 @@
       "tempoLeitura": 9,
       "capa": "assets/capa.svg",
       "capaAlt": "Ilustração do fluxo do PGR: perigos, inventário de riscos e plano de ação",
-      "destaque": true,
+      "destaque": false,
       "rascunho": false
     },
     {
