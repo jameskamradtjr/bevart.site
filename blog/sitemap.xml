@@ -27,7 +27,7 @@
   </url>
   <url>
     <loc>https://bevart.com.br/blog/categoria/pcmso-e-exames/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.60</priority>
   </url>
@@ -44,10 +44,20 @@
     <priority>0.60</priority>
   </url>
   <url>
-    <loc>https://bevart.com.br/blog/como-enviar-evento-s-2240-pelo-sistema-bevart/</loc>
+    <loc>https://bevart.com.br/blog/como-transcrever-aso-fisico-para-esocial-s-2220-bevart/</loc>
     <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://bevart.com.br/blog/como-transcrever-aso-fisico-para-esocial-s-2220-bevart/assets/capa.svg</image:loc>
+      <image:title>Como transcrever ASO físico para o eSocial (S-2220) pelo Bevart</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://bevart.com.br/blog/como-enviar-evento-s-2240-pelo-sistema-bevart/</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
     <image:image>
       <image:loc>https://bevart.com.br/blog/como-enviar-evento-s-2240-pelo-sistema-bevart/assets/capa.svg</image:loc>
       <image:title>Como enviar o evento S-2240 pelo Bevart e gerar o PPP</image:title>

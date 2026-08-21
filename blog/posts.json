@@ -85,6 +85,31 @@
   ],
   "posts": [
     {
+      "slug": "como-transcrever-aso-fisico-para-esocial-s-2220-bevart",
+      "titulo": "Como transcrever ASO físico para o eSocial (S-2220) pelo Bevart",
+      "dek": "Recebeu o ASO em papel de uma clínica parceira? Veja como transcrever os exames, vincular a Tabela 27 e enviar o evento S-2220 direto ao eSocial no Bevart.",
+      "descricao": "Passo a passo para transcrever ASO em papel e transmitir o evento S-2220 ao eSocial no Bevart: formulário único, Tabela 27, dados médicos e recibo.",
+      "categoria": "pcmso-e-exames",
+      "tags": [
+        "ASO",
+        "S-2220",
+        "eSocial",
+        "PCMSO",
+        "Bevart",
+        "exames ocupacionais",
+        "Tabela 27"
+      ],
+      "palavraChave": "como transcrever ASO para eSocial Bevart",
+      "autor": "james-kamradt-jr",
+      "publicado": "2026-08-21",
+      "atualizado": "2026-08-21",
+      "tempoLeitura": 12,
+      "capa": "assets/capa.svg",
+      "capaAlt": "Ilustração da transcrição de ASO físico para envio do evento S-2220 no Bevart",
+      "destaque": true,
+      "rascunho": false
+    },
+    {
       "slug": "como-enviar-evento-s-2240-pelo-sistema-bevart",
       "titulo": "Como enviar o evento S-2240 pelo Bevart e gerar o PPP",
       "dek": "Entenda a lógica das datas no S-2240, como manter o histórico do PPP eletrônico vivo sem furos e o passo a passo para enviar no Bevart com procuração digital.",
@@ -105,7 +130,7 @@
       "tempoLeitura": 11,
       "capa": "assets/capa.svg",
       "capaAlt": "Ilustração do envio do evento S-2240 e formação do PPP eletrônico no sistema Bevart",
-      "destaque": true,
+      "destaque": false,
       "rascunho": false
     },
     {
