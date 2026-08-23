@@ -1,0 +1,245 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350" style="background:#080d1a;font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060913"/>
+      <stop offset="40%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#091830"/>
+    </linearGradient>
+    
+    <!-- Glow Gradients -->
+    <linearGradient id="blueGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#1d4ed8" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="greenGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#059669" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+
+    <linearGradient id="amberBadge" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+
+    <linearGradient id="cardDarkGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.98"/>
+    </linearGradient>
+
+    <!-- Drop Shadows -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+
+    <filter id="glowEffect" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1080" height="1350" fill="url(#bgGrad)" />
+  
+  <!-- Glowing Atmospheric Elements -->
+  <circle cx="180" cy="180" r="320" fill="url(#blueGlow)" filter="url(#glowEffect)" />
+  <circle cx="920" cy="950" r="380" fill="url(#greenGlow)" filter="url(#glowEffect)" />
+  <circle cx="950" cy="240" r="240" fill="url(#blueGlow)" filter="url(#glowEffect)" />
+
+  <!-- ==================== TOP BRANDING ==================== -->
+  <g transform="translate(70, 65)">
+    <!-- Bevart Brand Pill -->
+    <rect width="170" height="46" rx="23" fill="#1e293b" stroke="#334155" stroke-width="1.5" />
+    <circle cx="26" cy="23" r="9" fill="#2563eb" />
+    <text x="46" y="29" fill="#f8fafc" font-size="17" font-weight="900" letter-spacing="1.2">BEVART</text>
+
+    <!-- Category Pill -->
+    <rect x="190" y="0" width="240" height="46" rx="23" fill="#eff6ff" fill-opacity="0.08" stroke="#3b82f6" stroke-opacity="0.4" stroke-width="1.5" />
+    <text x="212" y="28" fill="#38bdf8" font-size="14" font-weight="700" letter-spacing="0.5">SST &amp; eSOCIAL SIMPLIFICADO</text>
+  </g>
+
+  <!-- ==================== MAIN HEADLINE ==================== -->
+  <g transform="translate(70, 160)">
+    <!-- Small Alert Tag -->
+    <rect width="320" height="36" rx="18" fill="url(#amberBadge)" />
+    <text x="18" y="23" fill="#ffffff" font-size="13.5" font-weight="900" letter-spacing="1.2">NOVA SOLUÇÃO EXCLUSIVA</text>
+    
+    <!-- Title Line 1 -->
+    <text x="0" y="96" fill="#ffffff" font-size="54" font-weight="900" letter-spacing="-1.5">
+      Recebeu ASO em Papel?
+    </text>
+
+    <!-- Title Line 2 Highlight -->
+    <text x="0" y="162" fill="url(#primaryGrad)" font-size="50" font-weight="900" letter-spacing="-1">
+      Transcreva e Envie o S-2220
+    </text>
+
+    <!-- Subtitle Description -->
+    <text x="0" y="215" fill="#94a3b8" font-size="22" font-weight="500">
+      Envie laudos físicos de clínicas parceiras ao eSocial em 2 minutos!
+    </text>
+  </g>
+
+  <!-- ==================== VISUAL MOCKUP SECTION (SIDE BY SIDE) ==================== -->
+  <g transform="translate(70, 425)">
+    
+    <!-- LEFT CARD: O ASO FÍSICO / PAPEL -->
+    <g transform="translate(0, 0)" filter="url(#shadow)">
+      <rect width="430" height="470" rx="22" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" />
+      
+      <!-- Card Header -->
+      <rect width="430" height="66" rx="22" fill="#f1f5f9" />
+      <rect y="48" width="430" height="18" fill="#f1f5f9" />
+      <circle cx="38" cy="33" r="15" fill="#fee2e2" />
+      <text x="31" y="40" fill="#ef4444" font-size="16" font-weight="bold">📄</text>
+      <text x="64" y="40" fill="#334155" font-size="16.5" font-weight="800">ASO FÍSICO (PAPEL)</text>
+      
+      <rect x="290" y="18" width="115" height="30" rx="15" fill="#fee2e2" />
+      <text x="306" y="38" fill="#dc2626" font-size="11.5" font-weight="800">CLÍNICA EXTERNA</text>
+
+      <!-- Document Mock Content -->
+      <g transform="translate(30, 95)">
+        <text x="0" y="16" fill="#64748b" font-size="12.5" font-weight="700">EMPRESA / TRABALHADOR:</text>
+        <rect y="26" width="370" height="24" rx="6" fill="#f8fafc" stroke="#e2e8f0" />
+        <text x="12" y="43" fill="#334155" font-size="12">Silva &amp; Cia Ltda • João Santos (CPF: 123.***)</text>
+        
+        <text x="0" y="82" fill="#64748b" font-size="12.5" font-weight="700">TIPO DE EXAME / PARECER:</text>
+        <rect y="92" width="175" height="34" rx="8" fill="#f1f5f9" stroke="#cbd5e1" />
+        <text x="14" y="114" fill="#334155" font-size="13.5" font-weight="bold">Exame Periódico</text>
+        
+        <rect x="195" y="92" width="175" height="34" rx="8" fill="#dcfce7" stroke="#86efac" />
+        <text x="210" y="114" fill="#15803d" font-size="13.5" font-weight="bold">✓ APTO</text>
+
+        <!-- Exam List -->
+        <text x="0" y="156" fill="#64748b" font-size="12.5" font-weight="700">PROCEDIMENTOS DIAGNÓSTICOS:</text>
+        <rect y="166" width="370" height="54" rx="8" fill="#f8fafc" stroke="#e2e8f0" />
+        <text x="12" y="188" fill="#475569" font-size="12.5">• Avaliação Clínica Geral (Anamnese)</text>
+        <text x="12" y="208" fill="#475569" font-size="12.5">• Audiometria Ocupacional Tonal</text>
+
+        <!-- Doctor Stamp Mock -->
+        <g transform="translate(195, 238)">
+          <rect width="175" height="72" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-dasharray="4,4" />
+          <text x="14" y="28" fill="#1e40af" font-size="12" font-weight="bold">Dr. Carlos Mendes</text>
+          <text x="14" y="47" fill="#3b82f6" font-size="11.5">CRM/SP 123456</text>
+          <text x="14" y="62" fill="#64748b" font-size="10">Médico Examinador</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- CENTER TRANSFORMATION ICON -->
+    <g transform="translate(445, 185)">
+      <circle cx="25" cy="35" r="32" fill="#2563eb" filter="url(#shadow)" />
+      <path d="M14 35 L36 35 M27 25 L37 35 L27 45" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+      <text x="25" y="88" text-anchor="middle" fill="#38bdf8" font-size="12.5" font-weight="900">BEVART</text>
+      <text x="25" y="104" text-anchor="middle" fill="#94a3b8" font-size="10.5" font-weight="700">MOTOR S-2220</text>
+    </g>
+
+    <!-- RIGHT CARD: ESOCIAL S-2220 VALIDADO -->
+    <g transform="translate(510, 0)" filter="url(#shadow)">
+      <rect width="430" height="470" rx="22" fill="url(#cardDarkGrad)" stroke="#334155" stroke-width="2" />
+      
+      <!-- Card Header -->
+      <rect width="430" height="66" rx="22" fill="#1e293b" />
+      <rect y="48" width="430" height="18" fill="#1e293b" />
+      <circle cx="38" cy="33" r="15" fill="#dbeafe" />
+      <text x="30" y="40" fill="#2563eb" font-size="16" font-weight="bold">⚡</text>
+      <text x="64" y="40" fill="#ffffff" font-size="16.5" font-weight="800">EVENTO S-2220 ESOCIAL</text>
+      
+      <!-- Validated Pill -->
+      <rect x="285" y="18" width="125" height="30" rx="15" fill="url(#badgeGrad)" />
+      <text x="302" y="38" fill="#ffffff" font-size="11.5" font-weight="900">✓ VALIDADO</text>
+
+      <!-- Digital System Fields Mock -->
+      <g transform="translate(30, 95)">
+        <text x="0" y="16" fill="#94a3b8" font-size="12.5" font-weight="700">MENSAGERIA GOV / ESOCIAL:</text>
+        <rect y="26" width="370" height="36" rx="8" fill="#0f172a" stroke="#334155" />
+        <text x="12" y="49" fill="#38bdf8" font-size="12.5" font-weight="bold">XML Gerado &amp; Assinado (Certificado A1)</text>
+
+        <text x="0" y="90" fill="#94a3b8" font-size="12.5" font-weight="700">TABELA 27 VINCULADA:</text>
+        <rect y="100" width="370" height="38" rx="8" fill="#0f172a" stroke="#334155" />
+        <text x="12" y="124" fill="#4ade80" font-size="12.5">Cód. 0295 — Avaliação Clínica Ocupacional</text>
+
+        <!-- Status Receipt Box -->
+        <rect y="160" width="370" height="150" rx="12" fill="#0b1b36" stroke="#1d4ed8" stroke-width="1.5" />
+        <text x="18" y="190" fill="#93c5fd" font-size="12" font-weight="800" letter-spacing="0.5">RECIBO OFICIAL DE ENTREGA:</text>
+        <text x="18" y="218" fill="#f8fafc" font-size="16" font-weight="900">1.2.202608.0000000000123456</text>
+        
+        <rect x="18" y="236" width="334" height="1" fill="#1e3a8a" />
+        
+        <text x="18" y="262" fill="#38bdf8" font-size="12.5" font-weight="600">Ambiente: Produção • Evento S-2220</text>
+        <text x="18" y="286" fill="#10b981" font-size="13" font-weight="bold">✓ Histórico de Saúde do Trabalhador 100% em Dia</text>
+      </g>
+    </g>
+
+  </g>
+
+  <!-- ==================== 4 BENEFIT BOXES (2x2 GRID) ==================== -->
+  <g transform="translate(70, 930)">
+    <!-- Box 1 -->
+    <g transform="translate(0, 0)">
+      <rect width="455" height="90" rx="16" fill="#1e293b" stroke="#334155" stroke-width="1.5" />
+      <circle cx="36" cy="45" r="18" fill="#eff6ff" />
+      <text x="28" y="52" fill="#2563eb" font-size="17" font-weight="bold">⚡</text>
+      <text x="68" y="38" fill="#ffffff" font-size="15.5" font-weight="800">Formulário Único de Transcrição</text>
+      <text x="68" y="62" fill="#94a3b8" font-size="13">Sem agendamento ou prontuário médico falso.</text>
+    </g>
+
+    <!-- Box 2 -->
+    <g transform="translate(485, 0)">
+      <rect width="455" height="90" rx="16" fill="#1e293b" stroke="#334155" stroke-width="1.5" />
+      <circle cx="36" cy="45" r="18" fill="#eff6ff" />
+      <text x="27" y="52" fill="#2563eb" font-size="17" font-weight="bold">🔍</text>
+      <text x="68" y="38" fill="#ffffff" font-size="15.5" font-weight="800">Tabela 27 Automática</text>
+      <text x="68" y="62" fill="#94a3b8" font-size="13">Digite o nome do exame e o código entra sozinho.</text>
+    </g>
+
+    <!-- Box 3 -->
+    <g transform="translate(0, 106)">
+      <rect width="455" height="90" rx="16" fill="#1e293b" stroke="#334155" stroke-width="1.5" />
+      <circle cx="36" cy="45" r="18" fill="#eff6ff" />
+      <text x="27" y="52" fill="#2563eb" font-size="17" font-weight="bold">🏢</text>
+      <text x="68" y="38" fill="#ffffff" font-size="15.5" font-weight="800">Procuração Eletrônica e-CAC</text>
+      <text x="68" y="62" fill="#94a3b8" font-size="13">Envie para todos os clientes com o A1 da consultoria.</text>
+    </g>
+
+    <!-- Box 4 -->
+    <g transform="translate(485, 106)">
+      <rect width="455" height="90" rx="16" fill="#1e293b" stroke="#334155" stroke-width="1.5" />
+      <circle cx="36" cy="45" r="18" fill="#eff6ff" />
+      <text x="27" y="52" fill="#2563eb" font-size="17" font-weight="bold">📁</text>
+      <text x="68" y="38" fill="#ffffff" font-size="15.5" font-weight="800">Painel S-2220 Integrado</text>
+      <text x="68" y="62" fill="#94a3b8" font-size="13">Acompanhe lotes, protocolos e recibos oficiais.</text>
+    </g>
+  </g>
+
+  <!-- ==================== FOOTER CTA BAR ==================== -->
+  <g transform="translate(70, 1165)">
+    <rect width="940" height="110" rx="20" fill="url(#primaryGrad)" filter="url(#shadow)" />
+    
+    <g transform="translate(40, 36)">
+      <text x="0" y="24" fill="#ffffff" font-size="23" font-weight="900">
+        Software de SST Completo para Consultorias e Empresas
+      </text>
+      <text x="0" y="52" fill="#e0f2fe" font-size="15" font-weight="500">
+        PGR • PCMSO • LTCAT • Ficha de EPI • eSocial S-2210, S-2220 e S-2240
+      </text>
+    </g>
+
+    <!-- Button -->
+    <rect x="710" y="28" width="195" height="54" rx="27" fill="#ffffff" />
+    <text x="736" y="62" fill="#1d4ed8" font-size="17" font-weight="900">bevart.com.br</text>
+  </g>
+
+</svg>
