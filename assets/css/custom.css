@@ -1324,3 +1324,367 @@ body.has-sticky-cta .bv-wa-button {
 .nav-link:hover::after {
   width: 100%;
 }
+
+/* =====================================================================
+ * 5. DOCUMENTOS, EXPLORADOR DE FUNÇÕES E PLACEHOLDERS DE PRINT
+ *    (usados na home — seções #documentos e #explorar)
+ * ===================================================================== */
+
+/* --- catálogo de documentos --- */
+.bv-doc-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #fff;
+  border: 1px solid var(--bv-line);
+  border-radius: var(--bv-r-xl);
+  padding: 1.75rem;
+  box-shadow: var(--bv-shadow-card);
+  transition: box-shadow .3s ease, border-color .3s ease, transform .3s ease;
+}
+
+.bv-doc-card:hover {
+  box-shadow: var(--bv-shadow-lift);
+  border-color: #dbe2ec;
+  transform: translateY(-2px);
+}
+
+.bv-doc-kicker {
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--bv-primary);
+}
+
+.bv-doc-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin-top: 1.25rem;
+}
+
+.bv-doc-tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: .78rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--bv-ink-700);
+  background: #f6f8fc;
+  border: 1px solid var(--bv-line);
+  border-radius: 999px;
+  padding: .38rem .72rem;
+}
+
+.bv-doc-tag--accent {
+  color: #047857;
+  background: var(--bv-accent-50);
+  border-color: #b9ecd6;
+}
+
+/* faixa de personalização / marketplace */
+.bv-doc-highlight {
+  border-radius: var(--bv-r-xl);
+  border: 1px solid var(--bv-line);
+  background: linear-gradient(180deg, #fff, #f8fafc);
+  padding: 1.75rem;
+  height: 100%;
+}
+
+.bv-doc-highlight h3 {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--bv-ink);
+  margin-top: 1rem;
+}
+
+.bv-doc-highlight p {
+  margin-top: .5rem;
+  font-size: .9375rem;
+  line-height: 1.6;
+  color: var(--bv-muted);
+}
+
+/* --- explorador de funções (abas com print) --- */
+.bv-explorer {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid var(--bv-line);
+  border-radius: var(--bv-r-xl);
+  box-shadow: var(--bv-shadow-lift);
+  overflow: hidden;
+}
+
+.bv-explorer-stage {
+  padding: 1.75rem;
+}
+
+@media (min-width: 1024px) {
+  .bv-explorer-stage {
+    padding: 3rem;
+  }
+}
+
+.bv-explorer-panel {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .bv-explorer-panel {
+    grid-template-columns: 1fr 1.25fr;
+    gap: 3.25rem;
+    /* trava a altura do maior painel: sem isso a página saltava a cada troca */
+    min-height: 36rem;
+    align-content: center;
+  }
+}
+
+.bv-explorer-steps {
+  counter-reset: bvstep;
+  display: grid;
+  gap: .85rem;
+  margin-top: 1.5rem;
+}
+
+.bv-explorer-steps li {
+  position: relative;
+  padding-left: 2.4rem;
+  color: var(--bv-muted);
+  line-height: 1.6;
+}
+
+.bv-explorer-steps li::before {
+  counter-increment: bvstep;
+  content: counter(bvstep);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.65rem;
+  height: 1.65rem;
+  border-radius: 999px;
+  background: var(--bv-primary-50);
+  color: var(--bv-primary-700);
+  font-size: .78rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* barra inferior com as abas, no estilo de um carrossel */
+.bv-explorer-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f8fafc;
+  order: -1;
+  border-bottom: 1px solid var(--bv-line);
+}
+
+@media (min-width: 1024px) {
+  .bv-explorer-bar {
+    order: 0;
+    border-bottom: 0;
+    border-top: 1px solid var(--bv-line);
+  }
+}
+
+.bv-explorer-strip {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  gap: .6rem;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  scroll-padding: 0 1rem;
+  /* a barra de rolagem some: a navegação é pelas setas, pelo arrasto e pelo teclado */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 3px 2px;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 20px, #000 calc(100% - 20px), transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, #000 20px, #000 calc(100% - 20px), transparent 100%);
+}
+
+.bv-explorer-strip::-webkit-scrollbar {
+  display: none;
+}
+
+.bv-explorer-tab {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  min-width: 12.5rem;
+  max-width: 14rem;
+  text-align: left;
+  padding: .7rem .85rem;
+  border-radius: var(--bv-r-md);
+  border: 1px solid var(--bv-line);
+  background: #fff;
+  box-shadow: var(--bv-shadow-card);
+  font-size: .8125rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--bv-ink-700);
+  cursor: pointer;
+  transition: background .25s ease, border-color .25s ease, color .25s ease, transform .25s ease;
+}
+
+.bv-explorer-tab:hover {
+  transform: translateY(-1px);
+  border-color: #cfd8e6;
+}
+
+.bv-explorer-tab-icon {
+  width: 2rem;
+  height: 2rem;
+  border-radius: .6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eef2f7;
+  color: var(--bv-ink-700);
+  flex-shrink: 0;
+  transition: background .25s ease, color .25s ease;
+}
+
+.bv-explorer-tab-icon svg {
+  width: 1.05rem;
+  height: 1.05rem;
+}
+
+/* estados ativos — cada aba tem o seu tom, como nos cards de destaque */
+.bv-explorer-tab.is-active {
+  color: var(--bv-ink);
+  border-color: currentColor;
+}
+
+.bv-explorer-tab--blue.is-active {
+  background: #e8f0ff;
+  border-color: #b9d0ff;
+}
+
+.bv-explorer-tab--blue.is-active .bv-explorer-tab-icon {
+  background: #2563eb;
+  color: #fff;
+}
+
+.bv-explorer-tab--amber.is-active {
+  background: #fff5da;
+  border-color: #f5d98d;
+}
+
+.bv-explorer-tab--amber.is-active .bv-explorer-tab-icon {
+  background: #b45309;
+  color: #fff;
+}
+
+.bv-explorer-tab--emerald.is-active {
+  background: #e3f8ee;
+  border-color: #a7e3c8;
+}
+
+.bv-explorer-tab--emerald.is-active .bv-explorer-tab-icon {
+  background: #059669;
+  color: #fff;
+}
+
+.bv-explorer-tab--rose.is-active {
+  background: #ffe9ec;
+  border-color: #f7c1ca;
+}
+
+.bv-explorer-tab--rose.is-active .bv-explorer-tab-icon {
+  background: #be123c;
+  color: #fff;
+}
+
+.bv-explorer-tab--violet.is-active {
+  background: #efe9ff;
+  border-color: #cfc0f8;
+}
+
+.bv-explorer-tab--violet.is-active .bv-explorer-tab-icon {
+  background: #6d28d9;
+  color: #fff;
+}
+
+.bv-explorer-nav {
+  display: flex;
+  gap: .5rem;
+  flex-shrink: 0;
+}
+
+.bv-explorer-arrow {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid var(--bv-line);
+  color: var(--bv-ink-700);
+  box-shadow: var(--bv-shadow-card);
+  transition: background .25s ease, color .25s ease, border-color .25s ease;
+}
+
+.bv-explorer-arrow:hover {
+  background: var(--bv-primary);
+  border-color: var(--bv-primary);
+  color: #fff;
+}
+
+@media (max-width: 640px) {
+  .bv-explorer-nav {
+    display: none;
+  }
+
+  .bv-explorer-tab {
+    min-width: 10.5rem;
+  }
+}
+
+/* --- placeholder de print (trocar pela imagem real depois) --- */
+.bv-ph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .45rem;
+  text-align: center;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  min-height: 200px;
+  padding: 1.5rem;
+  border: 2px dashed #cbd5e1;
+  border-radius: var(--bv-r-lg);
+  background:
+    repeating-linear-gradient(45deg, #f8fafc, #f8fafc 12px, #f1f5f9 12px, #f1f5f9 24px);
+  color: #64748b;
+}
+
+.bv-ph svg {
+  width: 2rem;
+  height: 2rem;
+  color: #94a3b8;
+}
+
+.bv-ph-title {
+  font-size: .9375rem;
+  font-weight: 700;
+  color: var(--bv-ink-700);
+}
+
+.bv-ph-hint {
+  font-size: .72rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: #94a3b8;
+  word-break: break-all;
+}
