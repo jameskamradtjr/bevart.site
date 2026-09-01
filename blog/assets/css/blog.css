@@ -1509,8 +1509,11 @@ a.bv-chip:hover {
     display: inline-flex;
   }
 
+  /* minmax(0, 1fr) e não 1fr: sem o mínimo zerado, um filho com largura
+     intrínseca grande (iframe de PDF, vídeo, tabela larga) estica a coluna
+     e cria rolagem horizontal na página inteira. */
   .bv-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 0;
   }
 

@@ -85,6 +85,30 @@
   ],
   "posts": [
     {
+      "slug": "modelo-de-pgr-em-pdf-premium",
+      "titulo": "Novo modelo de PGR em PDF: documento premium em 6 passos",
+      "dek": "Capa institucional, sumário executivo com indicadores, matriz de risco colorida e plano de ação com semáforo de prazos. Veja o documento por dentro e como gerar o seu.",
+      "descricao": "Conheça o novo modelo de PGR em PDF do Bevart: capa institucional, sumário executivo, cores por nível de risco e plano de ação com prazos. Veja como gerar.",
+      "categoria": "pgr-e-riscos",
+      "tags": [
+        "PGR",
+        "modelo de PGR",
+        "PDF",
+        "NR-1",
+        "inventário de riscos",
+        "plano de ação"
+      ],
+      "palavraChave": "modelo de PGR em PDF",
+      "autor": "james-kamradt-jr",
+      "publicado": "2026-09-01",
+      "atualizado": "2026-09-01",
+      "tempoLeitura": 9,
+      "capa": "assets/capa.svg",
+      "capaAlt": "Ilustração do novo modelo de PGR em PDF do Bevart, com capa institucional e indicadores de risco",
+      "destaque": true,
+      "rascunho": false
+    },
+    {
       "slug": "como-transcrever-aso-fisico-para-esocial-s-2220-bevart",
       "titulo": "Como transcrever ASO físico para o eSocial (S-2220) pelo Bevart",
       "dek": "Recebeu o ASO em papel de uma clínica parceira? Veja como transcrever os exames, vincular a Tabela 27 e enviar o evento S-2220 direto ao eSocial no Bevart.",
@@ -106,7 +130,7 @@
       "tempoLeitura": 12,
       "capa": "assets/capa.svg",
       "capaAlt": "Ilustração da transcrição de ASO físico para envio do evento S-2220 no Bevart",
-      "destaque": true,
+      "destaque": false,
       "rascunho": false
     },
     {
@@ -576,7 +600,7 @@
       "palavraChave": "gerar PGR sistema",
       "autor": "james-kamradt-jr",
       "publicado": "2025-01-22",
-      "atualizado": "2026-08-18",
+      "atualizado": "2026-09-01",
       "tempoLeitura": 5,
       "capa": "assets/capa.svg",
       "capaAlt": "Ilustração da elaboração e geração do PGR",

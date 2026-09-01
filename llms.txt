@@ -34,6 +34,7 @@ Blog Bevart — guias práticos de SST: [https://bevart.com.br/blog/](https://be
 - [Treinamentos e EPI](https://bevart.com.br/blog/categoria/treinamentos-e-epi/): Capacitações das NRs, validade, evidências e controle de entrega de EPI.
 - [Gestão de SST](https://bevart.com.br/blog/categoria/gestao-de-sst/): Produtividade, precificação e organização de consultorias e equipes de segurança.
 
+- [Novo modelo de PGR em PDF: documento premium em 6 passos](https://bevart.com.br/blog/modelo-de-pgr-em-pdf-premium/): Conheça o novo modelo de PGR em PDF do Bevart: capa institucional, sumário executivo, cores por nível de risco e plano de ação com prazos. Veja como gerar.
 - [Como transcrever ASO físico para o eSocial (S-2220) pelo Bevart](https://bevart.com.br/blog/como-transcrever-aso-fisico-para-esocial-s-2220-bevart/): Passo a passo para transcrever ASO em papel e transmitir o evento S-2220 ao eSocial no Bevart: formulário único, Tabela 27, dados médicos e recibo.
 - [Como enviar o evento S-2240 pelo Bevart e gerar o PPP](https://bevart.com.br/blog/como-enviar-evento-s-2240-pelo-sistema-bevart/): Guia do S-2240 no Bevart: regras de carga inicial vs alteração de exposição, Tabela 24, procuração digital e emissão do PPP eletrônico no Meu INSS.
 - [Como montar o PGR: inventário de riscos e plano de ação na prática](https://bevart.com.br/blog/como-montar-o-pgr-inventario-de-riscos-e-plano-de-acao/): Guia prático do PGR: como levantar perigos, montar o inventário de riscos, classificar por severidade e virar plano de ação com prazo e responsável.
