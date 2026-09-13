@@ -1,10 +1,10 @@
 /* =============================================================
- * Bevart — estilos do site
+ * Bevart: estilos do site
  *
  * 1. Base e tokens
  * 2. Design system da home (classes .bv-*)
  * 3. Componentes compartilhados (FAQ, cookies, navbar)
- * 4. Legado das páginas de solução — NÃO REMOVER
+ * 4. Legado das páginas de solução: NÃO REMOVER
  *    (hero-gradient, btn-primary-gradient, btn-outline, feature-card,
  *     gradient-text e nav-link são usados pelas 14 páginas internas)
  * ============================================================= */
@@ -762,7 +762,7 @@ html {
 }
 
 /* No mobile as colunas viram blocos, então cada valor precisa dizer a que
-   lado pertence — o cabeçalho da tabela não cabe. */
+   lado pertence: o cabeçalho da tabela não cabe. */
 @media (max-width: 767px) {
 
   .bv-compare-row {
@@ -1232,7 +1232,7 @@ body.has-sticky-cta .bv-wa-button {
   }
 }
 
-/* ============ 4. LEGADO DAS PÁGINAS DE SOLUÇÃO — NÃO REMOVER ============ */
+/* ============ 4. LEGADO DAS PÁGINAS DE SOLUÇÃO: NÃO REMOVER ============ */
 /* Usado por sistema-pgr-online.html, ltcat-online-sistema.html e demais
    páginas internas. Alterar aqui muda o visual dessas 14 páginas. */
 
@@ -1327,7 +1327,7 @@ body.has-sticky-cta .bv-wa-button {
 
 /* =====================================================================
  * 5. DOCUMENTOS, EXPLORADOR DE FUNÇÕES E PLACEHOLDERS DE PRINT
- *    (usados na home — seções #documentos e #explorar)
+ *    (usados na home: seções #documentos e #explorar)
  * ===================================================================== */
 
 /* --- catálogo de documentos --- */
@@ -1559,7 +1559,7 @@ body.has-sticky-cta .bv-wa-button {
   height: 1.05rem;
 }
 
-/* estados ativos — cada aba tem o seu tom, como nos cards de destaque */
+/* estados ativos: cada aba tem o seu tom, como nos cards de destaque */
 .bv-explorer-tab.is-active {
   color: var(--bv-ink);
   border-color: currentColor;

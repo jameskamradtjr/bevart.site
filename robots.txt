@@ -1,4 +1,4 @@
-# robots.txt — bevart.com.br
+# robots.txt, bevart.com.br
 # Buscadores tradicionais e rastreadores de IA são bem-vindos: o conteúdo
 # do site e do blog é público e queremos aparecer nas duas frentes.
 

@@ -1,5 +1,5 @@
 /* =====================================================================
- * Bevart — comportamento do site
+ * Bevart: comportamento do site
  *
  * Carregado por todas as páginas. Cada bloco verifica se o elemento
  * existe antes de agir, porque as páginas internas têm estruturas

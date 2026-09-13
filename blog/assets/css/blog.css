@@ -1,5 +1,5 @@
 /* =============================================================
- * Bevart Blog — CSS único do blog
+ * Bevart Blog: CSS único do blog
  *
  * Puro CSS (sem Tailwind) para o blog carregar rápido e o texto
  * nunca "pular" enquanto o JIT do CDN monta as classes.
@@ -70,7 +70,7 @@ body {
 
 /* O filtro do hub esconde card com o atributo hidden. Sem o !important, um
    display: flex/grid no componente vence a regra [hidden] do navegador e o
-   card continua na tela — foi o que quebrou a busca e o filtro por categoria. */
+   card continua na tela: foi o que quebrou a busca e o filtro por categoria. */
 [hidden] {
   display: none !important;
 }
@@ -94,7 +94,7 @@ a {
 
 /* Container padrão. ATENÇÃO: classe usada em conjunto (class="bv-wrap bv-algo").
    Quem for combinada com ela NUNCA pode declarar `margin:` ou `padding:` no
-   atalho — sobrescreve a centralização e o respiro lateral e joga o bloco para
+   atalho: sobrescreve a centralização e o respiro lateral e joga o bloco para
    fora do eixo da página. Use margin-block / padding-block ou repita os 20px.
    O verificar.mjs acusa se alguém esquecer disso. */
 .bv-wrap {

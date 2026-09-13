@@ -1,5 +1,5 @@
 /* =====================================================================
- * Bevart Blog — capa.svg -> capa.png (1200x630)
+ * Bevart Blog: capa.svg -> capa.png (1200x630)
  *
  *   node blog/_build/capa-png.mjs <slug>
  *   node blog/_build/capa-png.mjs --todos
@@ -34,7 +34,7 @@ let puppeteer;
 try {
   puppeteer = (await import('puppeteer')).default;
 } catch {
-  console.log('\n  puppeteer não encontrado — o PNG é opcional.');
+  console.log('\n  puppeteer não encontrado: o PNG é opcional.');
   console.log('  Para gerar: npm i -D puppeteer  (uma vez, na raiz do site)');
   console.log('  Sem PNG, o og:image cai na imagem padrão definida em posts.json.\n');
   process.exit(0);

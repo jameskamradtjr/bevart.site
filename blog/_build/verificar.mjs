@@ -1,5 +1,5 @@
 /* =====================================================================
- * Bevart Blog — verificação
+ * Bevart Blog: verificação
  *
  *   node blog/_build/verificar.mjs
  *
@@ -56,7 +56,7 @@ for (const arquivo of arquivos) {
     try {
       JSON.parse(m[1]);
     } catch (e) {
-      erros.push(`${nome}: JSON-LD inválido — ${e.message}`);
+      erros.push(`${nome}: JSON-LD inválido: ${e.message}`);
     }
   }
 
@@ -99,7 +99,7 @@ for (const arquivo of arquivos) {
 /* O .bv-wrap centraliza (margin: 0 auto) e dá o respiro lateral
  * (padding: 0 20px). Ele é usado em conjunto: class="bv-wrap bv-algo".
  * Se a classe irmã declarar margin ou padding no atalho, apaga os dois e
- * desloca o bloco inteiro para fora do eixo da página — foi o que
+ * desloca o bloco inteiro para fora do eixo da página: foi o que
  * aconteceu com a capa dos posts. Esta checagem existe para isso não
  * voltar sem ninguém perceber. */
 
@@ -167,7 +167,7 @@ function declaracao(corpo, propriedade) {
       if (horizontal(valor) === esperado[propriedade]) continue;
 
       erros.push(
-        `blog.css: .${classe} declara "${propriedade}: ${valor}" e anda junto com .bv-wrap — ` +
+        `blog.css: .${classe} declara "${propriedade}: ${valor}" e anda junto com .bv-wrap: ` +
         `isso apaga a centralização e o respiro lateral ` +
         `(use ${propriedade}-block ou mantenha ${esperado[propriedade]} na lateral)`
       );
@@ -202,14 +202,14 @@ try {
   const dados = JSON.parse(readFileSync(join(DIR_BLOG, 'posts.json'), 'utf8'));
   const slugs = dados.posts.map((p) => p.slug);
   const repetidos = slugs.filter((s, i) => slugs.indexOf(s) !== i);
-  if (repetidos.length) erros.push(`posts.json: slug repetido — ${repetidos.join(', ')}`);
+  if (repetidos.length) erros.push(`posts.json: slug repetido: ${repetidos.join(', ')}`);
 
   const destaques = dados.posts.filter((p) => p.destaque && !p.rascunho).length;
   if (destaques > 1) erros.push(`posts.json: ${destaques} posts marcados como destaque (use apenas 1)`);
 
   ok.push('blog/posts.json');
 } catch (e) {
-  erros.push(`posts.json inválido — ${e.message}`);
+  erros.push(`posts.json inválido: ${e.message}`);
 }
 
 /* ============================ llms.txt ============================ */
@@ -221,7 +221,7 @@ else ok.push('llms.txt');
 
 /* ============================ resultado ============================ */
 
-console.log(`\nBevart Blog — verificação`);
+console.log(`\nBevart Blog: verificação`);
 console.log(`  arquivos conferidos: ${ok.length}`);
 
 if (erros.length) {

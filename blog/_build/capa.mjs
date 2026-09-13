@@ -1,5 +1,5 @@
 /* =====================================================================
- * Bevart Blog — gerador de capa
+ * Bevart Blog: gerador de capa
  *
  *   node blog/_build/capa.mjs <slug>      gera a capa de um post
  *   node blog/_build/capa.mjs --todos     gera as capas que faltam
@@ -11,7 +11,7 @@
  *
  * SVG resolve a capa dentro do site. Para redes sociais (LinkedIn,
  * WhatsApp e Facebook não renderizam SVG), gere também um PNG com
- * blog/_build/capa-png.mjs — o build usa o PNG no og:image quando existe.
+ * blog/_build/capa-png.mjs: o build usa o PNG no og:image quando existe.
  * ===================================================================== */
 
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
