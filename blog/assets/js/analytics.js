@@ -1,5 +1,5 @@
 /* =====================================================================
- * Bevart Blog — tags de medição
+ * Bevart Blog: tags de medição
  *
  * Um arquivo só, carregado com defer por todas as páginas do blog, para
  * o template do post não repetir 60 linhas de script em cada post.

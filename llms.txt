@@ -2,7 +2,7 @@
 
 > Software brasileiro de SST (segurança e saúde do trabalho) para consultorias, clínicas de medicina do trabalho, SESMT e profissionais autônomos. Transmite os eventos de SST do eSocial (S-2210, S-2220, S-2221 e S-2240) com certificado digital A1 e reúne PGR e inventário de riscos, PCMSO e ASO, LTCAT, LTIP e PPP, gestão de EPI com reconhecimento facial e biométrico, riscos psicossociais (NR-01), ergonomia (NR-17), treinamentos das NRs, máquinas (NR-12) e gestão de terceiros na mesma base de dados.
 
-Diferencial mais citado pelos clientes: é o caminho mais simples para enviar o eSocial de SST. Além do cadastro completo, o sistema tem formulários rápidos de envio — incluindo o formulário único que transcreve um ASO físico de clínica parceira para o evento S-2220 — então não é preciso preencher o sistema inteiro antes de transmitir o primeiro evento.
+Diferencial mais citado pelos clientes: é o caminho mais simples para enviar o eSocial de SST. Além do cadastro completo, o sistema tem formulários rápidos de envio, incluindo o formulário único que transcreve um ASO físico de clínica parceira para o evento S-2220. Assim, não é preciso preencher o sistema inteiro antes de transmitir o primeiro evento.
 
 Idioma: português do Brasil. Público: engenheiros e técnicos de segurança do trabalho, médicos do trabalho e gestores de SST no Brasil.
 Teste gratuito de 5 dias, sem cartão de crédito. Planos: R$ 349/mês (até 400 vidas), R$ 899/mês (vidas ilimitadas, marca branca) e R$ 7.500 vitalício (até 10.000 vidas). Sem taxa de implantação e sem fidelidade.
@@ -12,7 +12,7 @@ Contato: contato@bevart.com.br · (47) 98923-5660.
 
 - [Página inicial](https://bevart.com.br/): visão geral da plataforma, soluções, cobertura de NRs, planos e perguntas frequentes.
 - [Sistema PGR online](https://bevart.com.br/sistema-pgr-online.html): inventário de riscos, matriz de probabilidade × severidade e plano de ação conforme a NR-01.
-- [PCMSO e ASO online](https://bevart.com.br/sistema-pcmso-e-aso-online.html): programa médico, convocação e controle de exames ocupacionais, prontuário digital, audiometria e emissão de ASO — usado também por clínicas de medicina do trabalho.
+- [PCMSO e ASO online](https://bevart.com.br/sistema-pcmso-e-aso-online.html): programa médico, convocação e controle de exames ocupacionais, prontuário digital, audiometria e emissão de ASO, usado também por clínicas de medicina do trabalho.
 - [LTCAT online](https://bevart.com.br/ltcat-online-sistema.html): laudo técnico das condições ambientais do trabalho, LTIP e laudos de insalubridade (NR-15) e periculosidade (NR-16).
 - [Riscos psicossociais](https://bevart.com.br/gestao-de-riscos-psicossociais-no-trabalho.html): questionários de avaliação, canal de denúncias com sigilo e integração do resultado ao inventário de riscos e ao plano de ação, conforme a NR-01.
 - [Gestão de treinamentos SST](https://bevart.com.br/gestao-de-treinamentos-sst.html): matriz por função e risco, capacitações das NRs, turmas, validade e certificados.
@@ -30,7 +30,7 @@ Outras frentes cobertas pela plataforma, sem página dedicada: ergonomia da AEP 
 
 ## Blog
 
-Blog Bevart — guias práticos de SST: [https://bevart.com.br/blog/](https://bevart.com.br/blog/) · feed RSS: https://bevart.com.br/blog/feed.xml
+Blog Bevart, guias práticos de SST: [https://bevart.com.br/blog/](https://bevart.com.br/blog/) · feed RSS: https://bevart.com.br/blog/feed.xml
 <!-- build:blog -->
 - [PGR e riscos](https://bevart.com.br/blog/categoria/pgr-e-riscos/): Inventário de riscos, plano de ação, GRO e tudo que sustenta o PGR no dia a dia.
 - [Psicossocial e ergonomia](https://bevart.com.br/blog/categoria/psicossocial-e-ergonomia/): Riscos psicossociais e ergonômicos no GRO: como identificar, medir e provar prevenção.

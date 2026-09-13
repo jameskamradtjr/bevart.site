@@ -1,5 +1,5 @@
 /* =====================================================================
- * Bevart Blog — build
+ * Bevart Blog: build
  *
  * Roda com: node blog/_build/build.mjs
  *
@@ -8,7 +8,7 @@
  * O que ele faz é manter em dia tudo que é derivado de posts.json:
  *
  *   1. cabeçalho e rodapé de todas as páginas do blog (marcadores build:header
- *      e build:footer) — assim um link novo no menu entra em todos os posts;
+ *      e build:footer): assim um link novo no menu entra em todos os posts;
  *   2. cards do hub, filtros, grade de categorias e o ItemList do JSON-LD;
  *   3. páginas de categoria (geradas inteiras, não precisa editar à mão);
  *   4. posts relacionados e navegação anterior/próximo dentro de cada post;
@@ -78,7 +78,7 @@ function substituirBloco(html, nome, conteudo) {
  *
  * Isso vale só para a NAVEGAÇÃO. Canonical, sitemap, feed, OG e JSON-LD
  * continuam usando a URL limpa (`https://bevart.com.br/blog/slug/`), que é a
- * versão que deve ser indexada — o canonical junta as duas para o Google.
+ * versão que deve ser indexada: o canonical junta as duas para o Google.
  */
 function pagina(caminho) {
   if (!caminho || caminho === './') return 'index.html';
@@ -862,7 +862,7 @@ function conferirPost(p, html, palavrasDoTexto) {
   if (p.titulo.length > 70) avisos.push(`${onde}: título com ${p.titulo.length} caracteres (ideal até 60-70)`);
   // o \s+ é proposital: o canonical costuma quebrar em duas linhas quando a URL é longa
   const canonical = (html.match(/<link\s+rel="canonical"\s+href="([^"]+)"/) || [])[1];
-  if (canonical !== urlPost(p)) avisos.push(`${onde}: canonical ${canonical || 'ausente'} — esperado ${urlPost(p)}`);
+  if (canonical !== urlPost(p)) avisos.push(`${onde}: canonical ${canonical || 'ausente'}: esperado ${urlPost(p)}`);
   if ((html.match(/<h1[\s>]/g) || []).length !== 1) avisos.push(`${onde}: a página precisa ter exatamente um H1`);
   if (!existsSync(join(DIR_BLOG, p.slug, p.capa))) avisos.push(`${onde}: capa não encontrada (${p.capa})`);
 
@@ -870,7 +870,7 @@ function conferirPost(p, html, palavrasDoTexto) {
   const palavras = palavrasDoTexto;
   if (palavras && palavras < 450) avisos.push(`${onde}: só ${palavras} palavras no corpo (curto até para tutorial)`);
 
-  // 200 palavras por minuto, mais 15 segundos por print — tutorial com
+  // 200 palavras por minuto, mais 15 segundos por print: tutorial com
   // muita imagem leva mais tempo do que a contagem de palavras sugere
   const figuras = ((html.split('<div class="bv-prose">')[1] || '').split('<!-- build:share')[0].match(/<figure>/g) || []).length;
   const minutos = Math.max(2, Math.round(palavras / 200 + figuras * 0.25));
@@ -1014,7 +1014,7 @@ montarSitemap();
 montarFeed();
 montarLlms();
 
-console.log(`\nBevart Blog — build`);
+console.log(`\nBevart Blog: build`);
 console.log(`  posts publicados : ${posts.length}`);
 console.log(`  categorias       : ${categorias.length}`);
 console.log(`  arquivos escritos: ${feitos.length}`);

@@ -1,11 +1,11 @@
 /* =============================================================
- * Bevart — CSS da home (index.html)
+ * Bevart: CSS da home (index.html)
  *
  * CSS puro, sem Tailwind: a home é a primeira página que o lead
  * abre e o CDN do Tailwind custava ~400 KB de JS bloqueante.
  * Os tokens espelham blog/assets/css/blog.css para o site inteiro
  * manter a mesma cara. As páginas internas continuam no
- * assets/css/custom.css — este arquivo é exclusivo da home.
+ * assets/css/custom.css: este arquivo é exclusivo da home.
  *
  *  1. Tokens e base
  *  2. Utilitários de layout
@@ -237,7 +237,7 @@ ol {
   pointer-events: none;
 }
 
-/* Reveal ao rolar — substitui a biblioteca AOS (economiza 2 requisições). */
+/* Reveal ao rolar: substitui a biblioteca AOS (economiza 2 requisições). */
 .bv-reveal {
   opacity: 0;
   transform: translateY(16px);

@@ -1,5 +1,5 @@
 /* =====================================================================
- * Bevart Blog — comportamento
+ * Bevart Blog: comportamento
  *
  * Vanilla JS, sem dependências. Todo bloco checa se o elemento existe,
  * porque o mesmo arquivo roda no hub, nas categorias e nos posts.

@@ -1,5 +1,5 @@
 /* =====================================================================
- * Bevart — comportamento da home (index.html)
+ * Bevart: comportamento da home (index.html)
  *
  * Substitui Alpine.js + AOS por JS nativo: a home carrega só este
  * arquivo. As páginas internas continuam usando assets/js/app.js.

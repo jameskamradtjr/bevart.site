@@ -3,7 +3,7 @@
   "blog": {
     "titulo": "Blog Bevart",
     "subtitulo": "SST na prática",
-    "descricao": "Guias práticos de segurança e saúde do trabalho: PGR, PCMSO, LTCAT, eSocial, treinamentos, EPI e riscos psicossociais — escritos para quem executa.",
+    "descricao": "Guias práticos de segurança e saúde do trabalho: PGR, PCMSO, LTCAT, eSocial, treinamentos, EPI e riscos psicossociais, escritos para quem executa.",
     "url": "https://bevart.com.br/blog/",
     "site": "https://bevart.com.br/",
     "idioma": "pt-BR",
@@ -52,7 +52,7 @@
       "nome": "eSocial",
       "descricao": "Eventos de SST, prazos, retificações e o que fazer quando o envio dá erro.",
       "tituloSeo": "eSocial SST",
-      "descricaoSeo": "Guias sobre os eventos de SST no eSocial — S-2210, S-2220 e S-2240 —, prazos de envio, erros comuns e como evitar multas."
+      "descricaoSeo": "Guias sobre os eventos de SST no eSocial (S-2210, S-2220 e S-2240), prazos de envio, erros comuns e como evitar multas."
     },
     {
       "slug": "pcmso-e-exames",
@@ -228,7 +228,7 @@
     {
       "slug": "como-evitar-multas-psicossociais-com-o-sistema-bevart-a-nova-nr-1-ja-esta-em-vigor",
       "titulo": "Como evitar multas psicossociais com o sistema Bevart",
-      "dek": "A nova NR-1 colocou riscos psicossociais e ergonômicos dentro do GRO. O fiscal não quer só documento: quer ver prevenção acontecendo — e isso precisa estar registrado.",
+      "dek": "A nova NR-1 colocou riscos psicossociais e ergonômicos dentro do GRO. O fiscal não quer só documento: quer ver prevenção acontecendo, e isso precisa estar registrado.",
       "descricao": "A nova NR-1 exige riscos psicossociais no GRO. Veja como medir clima, gerar indicadores e provar prevenção com inventário e plano de ação no Bevart.",
       "categoria": "psicossocial-e-ergonomia",
       "tags": [
@@ -309,7 +309,7 @@
       "sidebar": "Do GHE ao S-2220 sem trocar de sistema no meio do caminho.",
       "cta": {
         "titulo": "Saúde ocupacional em um fluxo só",
-        "texto": "GHE, PCMSO, atendimento, audiometria, ASO assinado e S-2220 transmitido — a mesma informação do começo ao fim. Teste 5 dias, sem cartão."
+        "texto": "GHE, PCMSO, atendimento, audiometria, ASO assinado e S-2220 transmitido, a mesma informação do começo ao fim. Teste 5 dias, sem cartão."
       }
     },
     {
@@ -347,7 +347,7 @@
       "titulo": "Estoque de EPI e ficha de entrega com biometria facial",
       "tituloSeo": "Como controlar estoque de EPI e emitir ficha de entrega",
       "breadcrumb": "Estoque e ficha de EPI",
-      "dek": "Cadastrar o EPI, dar baixa no estoque e emitir a ficha assinada — sem papel, sem planilha paralela e com a foto do recebimento anexada ao PDF.",
+      "dek": "Cadastrar o EPI, dar baixa no estoque e emitir a ficha assinada, sem papel, sem planilha paralela e com a foto do recebimento anexada ao PDF.",
       "descricao": "Como cadastrar EPI no estoque, registrar entrega e devolução com biometria facial e emitir a ficha em PDF com a foto do recebimento anexada.",
       "categoria": "treinamentos-e-epi",
       "tags": [
@@ -407,7 +407,7 @@
       "titulo": "Como funciona o PPP eletrônico",
       "tituloSeo": "Como funciona o PPP eletrônico no eSocial",
       "breadcrumb": "PPP eletrônico",
-      "dek": "O perfil profissiográfico deixou de ser um documento montado na demissão. Hoje ele é construído em tempo real pelos eventos que a empresa envia — e é aí que mora o risco.",
+      "dek": "O perfil profissiográfico deixou de ser um documento montado na demissão. Hoje ele é construído em tempo real pelos eventos que a empresa envia, e é aí que mora o risco.",
       "descricao": "O que é o PPP, como o eSocial passou a formá-lo a partir dos eventos S-2220 e S-2240 e o que fazer para o histórico do trabalhador não ficar furado.",
       "categoria": "esocial",
       "tags": [
@@ -438,7 +438,7 @@
       "titulo": "Como cadastrar a procuração digital para o eSocial SST",
       "tituloSeo": "Como cadastrar procuração digital para o eSocial SST",
       "breadcrumb": "Procuração digital",
-      "dek": "Sem a procuração eletrônica no e-CAC, a consultoria não transmite evento nenhum em nome do cliente. São sete telas — e uma escolha que costuma ser feita errada.",
+      "dek": "Sem a procuração eletrônica no e-CAC, a consultoria não transmite evento nenhum em nome do cliente. São sete telas, e uma escolha que costuma ser feita errada.",
       "descricao": "Passo a passo no e-CAC para cadastrar a procuração eletrônica do eSocial – Grupo SST e liberar a transmissão dos eventos pela consultoria.",
       "categoria": "esocial",
       "tags": [
@@ -468,7 +468,7 @@
       "titulo": "Como consultar os eventos de SST no módulo web do eSocial",
       "tituloSeo": "Consultar eventos de SST no módulo web do eSocial",
       "breadcrumb": "Módulo web de SST",
-      "dek": "Enviou o evento e quer ver o que o governo registrou? O módulo web do eSocial mostra as movimentações de SST por trabalhador — o retrato oficial, não o do seu sistema.",
+      "dek": "Enviou o evento e quer ver o que o governo registrou? O módulo web do eSocial mostra as movimentações de SST por trabalhador, o retrato oficial, não o do seu sistema.",
       "descricao": "Como acessar o módulo web de SST do eSocial com certificado digital, trocar de perfil, localizar o trabalhador pelo CPF e ver todos os eventos enviados.",
       "categoria": "esocial",
       "tags": [
@@ -618,7 +618,7 @@
       "titulo": "Como assinar o PDF de SST e validar a conformidade da assinatura",
       "tituloSeo": "Como assinar o PDF de SST e validar a assinatura",
       "breadcrumb": "Assinar e validar documento",
-      "dek": "Certificado A1 no perfil do profissional, documento gerado e assinado no sistema, guarda automática no GED — e a conferência final no verificador oficial do governo.",
+      "dek": "Certificado A1 no perfil do profissional, documento gerado e assinado no sistema, guarda automática no GED, e a conferência final no verificador oficial do governo.",
       "descricao": "Como cadastrar o certificado A1, assinar PGR, LTCAT e PCMSO dentro do sistema, guardar no GED e validar a assinatura no verificador do ITI.",
       "categoria": "gestao-de-sst",
       "tags": [
