@@ -247,6 +247,7 @@ ${categorias.map((c) => `            <li><a href="${prefixo}categoria/${c.slug}/
           <h3>Plataforma</h3>
           <ul>
             <li><a href="${site}index.html">Visão geral</a></li>
+            <li><a href="${site}index.html#esocial">eSocial SST</a></li>
             <li><a href="${site}index.html#features">Recursos</a></li>
             <li><a href="${site}index.html#pricing">Preços</a></li>
             <li><a href="${site}index.html#faq">Perguntas frequentes</a></li>
@@ -256,10 +257,11 @@ ${categorias.map((c) => `            <li><a href="${prefixo}categoria/${c.slug}/
         <div>
           <h3>Soluções</h3>
           <ul>
-            <li><a href="${site}sistema-pgr-online.html">Sistema PGR online</a></li>
+            <li><a href="${site}sistema-pgr-online.html">Sistema de PGR online</a></li>
             <li><a href="${site}sistema-pcmso-e-aso-online.html">PCMSO e ASO online</a></li>
-            <li><a href="${site}ltcat-online-sistema.html">Laudo LTCAT digital</a></li>
-            <li><a href="${site}esocial-sst-para-empresas.html">eSocial SST para empresas</a></li>
+            <li><a href="${site}ltcat-online-sistema.html">LTCAT e LTIP digital</a></li>
+            <li><a href="${site}gestao-de-riscos-psicossociais-no-trabalho.html">Riscos psicossociais</a></li>
+            <li><a href="${site}controle-de-epi-com-reconhecimento-facial.html">Gestão de EPI com facial</a></li>
             <li><a href="${site}gestao-de-treinamentos-sst.html">Gestão de treinamentos</a></li>
           </ul>
         </div>
