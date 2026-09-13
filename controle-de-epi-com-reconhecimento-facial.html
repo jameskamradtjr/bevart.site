@@ -2,43 +2,39 @@
 <html lang="pt-BR">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Controle de EPI com reconhecimento facial e ficha digital | Bevart</title>
+  <meta name="description"
+    content="Sistema de gestão e entrega de EPI: estoque, validade, entrega pelo tablet com reconhecimento facial e ficha em PDF com foto, termo e hash. Teste grátis.">
+  <link rel="canonical" href="https://bevart.com.br/controle-de-epi-com-reconhecimento-facial.html">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="theme-color" content="#2563eb">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Bevart">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://bevart.com.br/controle-de-epi-com-reconhecimento-facial.html">
+  <meta property="og:title" content="Controle de EPI com reconhecimento facial e ficha de entrega digital">
+  <meta property="og:description"
+    content="Entregas e devoluções de EPI registradas pelo rosto do colaborador, no tablet, smartphone ou computador. Ficha em PDF com foto, termo aceito, CA e hash de integridade.">
+  <meta property="og:image" content="https://bevart.com.br/assets/telas/gerar_ficha_epi_bevart.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Controle de EPI com reconhecimento facial e ficha de entrega digital">
+  <meta name="twitter:description"
+    content="Entregas e devoluções de EPI registradas pelo rosto do colaborador. Ficha em PDF com foto, termo aceito, CA e hash de integridade.">
+  <meta name="twitter:image" content="https://bevart.com.br/assets/telas/gerar_ficha_epi_bevart.webp">
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17992875515"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'AW-17992875515');
     gtag('config', 'G-Z0RJMZR8R2');
   </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Controle de EPI com Reconhecimento Facial - Ficha Digital Bevart</title>
-    <meta name="description"
-        content="Elimine as fichas de EPI em papel. Use reconhecimento facial para comprovar a entrega de equipamentos com validade jurídica total.">
-    <meta name="keywords"
-        content="ficha de entrega epi digital, controle de epi online, sistema de epi, assinatura digital epi, reconhecimento facial epi, gestão de epi sst, ficha epi com foto">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
-                    colors: {
-                        primary: { 50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe', 300: '#93c5fd', 400: '#60a5fa', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 800: '#1e40af', 900: '#1e3a8a' },
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="assets/img/favicon.png">
-    <link rel="stylesheet" href="assets/css/custom.css">
-    <!-- Google Lead Conversion Tracking -->
+  <!-- Conversões do Google Ads (mesmos rótulos da home) -->
   <script>
     function gtag_report_conversion(url) {
       if (typeof gtag !== 'function') {
@@ -46,9 +42,7 @@
         return false;
       }
       var callback = function () {
-        if (typeof (url) != 'undefined') {
-          window.location = url;
-        }
+        if (typeof url !== 'undefined') { window.location = url; }
       };
       gtag('event', 'conversion', {
         'send_to': 'AW-17992875515/YUXSCN2X8IQcEPv71YND',
@@ -57,7 +51,6 @@
       return false;
     }
 
-    // New function for WhatsApp conversion
     function gtag_report_whatsapp_conversion() {
       if (typeof gtag === 'function') {
         gtag('event', 'conversion', {
@@ -68,134 +61,926 @@
       }
     }
 
-    // Use event delegation to handle clicks
     document.addEventListener('click', function (e) {
-      // Login/Register conversion
-      const loginTarget = e.target.closest('a[href*="profissionais.bevart.com.br/app/src/login/views/login"]');
-      if (loginTarget) {
-        e.preventDefault();
-        gtag_report_conversion(loginTarget.href);
+      var cadastro = e.target.closest('a[href*="profissionais.bevart.com.br/app/src/login/views/login"]');
+      if (cadastro) {
+        if (cadastro.target === '_blank') {
+          gtag_report_conversion();
+        } else {
+          e.preventDefault();
+          gtag_report_conversion(cadastro.href);
+        }
       }
 
-      // WhatsApp conversion
-      const waTarget = e.target.closest('a[href*="wa.me"], a[href*="whatsapp.com"]');
-      if (waTarget) {
+      if (e.target.closest('a[href*="wa.me"], a[href*="whatsapp.com"]')) {
         gtag_report_whatsapp_conversion();
       }
     });
   </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          colors: {
+            primary: { 50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe', 300: '#93c5fd', 400: '#60a5fa', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 800: '#1e40af', 900: '#1e3a8a' },
+            accent: { 50: '#ecfdf5', 100: '#d1fae5', 200: '#a7f3d0', 400: '#34d399', 500: '#10b981', 600: '#059669', 700: '#047857' },
+            ink: { 700: '#334155', 800: '#1e293b', 900: '#0f172a', 950: '#080d17' },
+          },
+          boxShadow: {
+            card: '0 1px 2px 0 rgba(16,24,40,.04), 0 1px 3px 0 rgba(16,24,40,.06)',
+            lift: '0 16px 40px -16px rgba(16,24,40,.22)',
+            product: '0 48px 90px -40px rgba(15,23,42,.42), 0 0 0 1px rgba(15,23,42,.06)',
+          },
+          borderRadius: { '4xl': '1.75rem' },
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <noscript>
+    <style>
+      [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    </style>
+  </noscript>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="assets/css/custom.css">
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1004315305690659');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1004315305690659&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
   <!-- Rastreamento de origem: anúncio -> site -> cadastro -->
   <script src="assets/js/bev-tracking.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://bevart.com.br/#organization",
+        "name": "Bevart",
+        "url": "https://bevart.com.br/",
+        "logo": "https://bevart.com.br/assets/img/logo%20bevart.svg",
+        "email": "contato@bevart.com.br",
+        "telephone": "+55-47-98923-5660",
+        "areaServed": "BR"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://bevart.com.br/controle-de-epi-com-reconhecimento-facial.html#webpage",
+        "url": "https://bevart.com.br/controle-de-epi-com-reconhecimento-facial.html",
+        "name": "Controle de EPI com reconhecimento facial e ficha de entrega digital",
+        "description": "Sistema de gestão e entrega de EPI: estoque, validade, entrega pelo tablet com reconhecimento facial e ficha em PDF com foto, termo e hash.",
+        "inLanguage": "pt-BR",
+        "dateModified": "2026-09-13",
+        "publisher": { "@id": "https://bevart.com.br/#organization" },
+        "about": { "@id": "https://bevart.com.br/controle-de-epi-com-reconhecimento-facial.html#software" },
+        "primaryImageOfPage": "https://bevart.com.br/assets/telas/gerar_ficha_epi_bevart.webp"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Bevart", "item": "https://bevart.com.br/" },
+          { "@type": "ListItem", "position": 2, "name": "Controle de EPI com reconhecimento facial", "item": "https://bevart.com.br/controle-de-epi-com-reconhecimento-facial.html" }
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://bevart.com.br/controle-de-epi-com-reconhecimento-facial.html#software",
+        "name": "Bevart - Gestão e ficha de entrega de EPI com reconhecimento facial",
+        "applicationCategory": "BusinessApplication",
+        "applicationSubCategory": "Gestão de EPI e segurança do trabalho",
+        "operatingSystem": "Web (navegador em tablet, smartphone ou computador)",
+        "url": "https://bevart.com.br/controle-de-epi-com-reconhecimento-facial.html",
+        "inLanguage": "pt-BR",
+        "publisher": { "@id": "https://bevart.com.br/#organization" },
+        "description": "Módulo de EPI da plataforma Bevart: estoque por unidade com CA e validade, entrega, reposição e devolução registradas pelo reconhecimento facial do colaborador e ficha em PDF com foto, termo aceito, identificação e hash SHA-256.",
+        "featureList": [
+          "Estoque de EPI por unidade com CA, validade e quantidade disponível",
+          "Alertas de estoque baixo ou esgotado e de validade vencida ou vencendo em 30 dias",
+          "Ficha de entrega de EPI no tablet, smartphone ou computador",
+          "Identificação do colaborador por reconhecimento facial, com busca por nome ou CPF como alternativa",
+          "Entrega, reposição e devolução de EPI com termo de responsabilidade aceito pelo colaborador",
+          "PDF da ficha com foto do colaborador, similaridade do reconhecimento, data, hora, IP e responsável",
+          "Hash SHA-256 de cada ficha guardado no sistema",
+          "EPIs obrigatórios por função a partir do inventário de riscos",
+          "Histórico de entregas e devoluções por funcionário e exportação para Excel",
+          "Armazenamento privado das fichas em PDF na nuvem"
+        ],
+        "offers": [
+          { "@type": "Offer", "name": "Plano 400", "price": "349.00", "priceCurrency": "BRL" },
+          { "@type": "Offer", "name": "Plano Ilimitado", "price": "899.00", "priceCurrency": "BRL" },
+          { "@type": "Offer", "name": "Plano Vitalício", "price": "7500.00", "priceCurrency": "BRL" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Ficha de entrega de EPI digital tem validade na fiscalização?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. A NR-6 permite registrar o fornecimento de EPI em livros, fichas ou sistema eletrônico, inclusive biométrico. A ficha do Bevart identifica empregador, trabalhador, EPI com CA e validade, data e hora, o termo aceito e como o colaborador foi identificado, e guarda o hash SHA-256 do PDF para mostrar que ele não foi alterado." } },
+          { "@type": "Question", "name": "Preciso comprar leitor biométrico ou instalar aplicativo?", "acceptedAnswer": { "@type": "Answer", "text": "Não. A ficha de entrega abre no navegador e usa a câmera do tablet, do smartphone ou a webcam do computador." } },
+          { "@type": "Question", "name": "Por que reconhecimento facial e não impressão digital?", "acceptedAnswer": { "@type": "Answer", "text": "Na construção civil e em atividades com cimento, argamassa ou abrasivos, as digitais se desgastam e a mão suja, calejada ou com luva não é lida. O rosto é reconhecido sem contato, com a câmera do próprio aparelho, e a foto do momento vai para o PDF, mostrando quem estava ali." } },
+          { "@type": "Question", "name": "A foto do funcionário aparece no PDF da ficha de EPI?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. A foto capturada no reconhecimento facial, ou tirada na confirmação, vai para o PDF junto com a similaridade do reconhecimento, a data e a hora, o responsável pelo registro e o endereço IP." } },
+          { "@type": "Question", "name": "E se o colaborador não for reconhecido pela câmera?", "acceptedAnswer": { "@type": "Answer", "text": "O responsável busca o colaborador pelo nome ou CPF e registra a entrega normalmente. A ficha informa que a identificação foi manual, sem verificação biométrica, porque o documento só afirma o que de fato aconteceu." } },
+          { "@type": "Question", "name": "Onde ficam guardadas as fichas de EPI?", "acceptedAnswer": { "@type": "Answer", "text": "Em armazenamento privado na nuvem, vinculadas ao funcionário e à unidade. Os administradores filtram por período, funcionário e tipo (fornecimento, reposição ou devolução) e baixam o PDF com acesso autenticado." } },
+          { "@type": "Question", "name": "O sistema avisa sobre validade e estoque de EPI?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. O painel da unidade mostra itens com estoque baixo ou esgotado, EPIs com validade vencida ou vencendo em 30 dias, quantas unidades estão em uso e com quais colaboradores cada EPI está." } },
+          { "@type": "Question", "name": "Como fica a biometria facial em relação à LGPD?", "acceptedAnswer": { "@type": "Answer", "text": "Biometria é dado pessoal sensível na LGPD, então a empresa deve usá-la com finalidade clara e informar o trabalhador. No Bevart, a biometria de cada conta fica separada das demais e é apagada quando o funcionário é excluído." } }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 
-<body class="font-sans antialiased text-gray-800 overflow-x-hidden">
-    <nav class="fixed top-0 left-0 right-0 z-50 px-4 pt-4">
-        <div
-            class="max-w-6xl mx-auto bg-white/80 backdrop-blur-xl rounded-2xl border border-white/40 shadow-lg px-6 h-16 flex items-center justify-between">
-            <a href="index.html"><img src="assets/img/logo bevart.svg" alt="Bevart" class="h-10 w-auto"></a>
+<body class="font-sans antialiased text-ink-800 bg-white overflow-x-hidden">
+
+  <a href="#conteudo" class="bv-skip">Ir para o conteúdo</a>
+
+  <!-- ==================== HEADER ==================== -->
+  <div id="navbar-wrapper" class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 pt-4 transition-all duration-300">
+    <nav id="navbar" x-data="{ mobileOpen: false }"
+      class="floating-navbar max-w-6xl mx-auto bg-white/85 backdrop-blur-xl rounded-2xl border border-white/50 transition-all duration-300"
+      aria-label="Navegação principal">
+      <div class="px-5 sm:px-6">
+        <div class="flex items-center justify-between h-16">
+          <a href="index.html" class="flex items-center shrink-0" aria-label="Bevart, página inicial">
+            <img src="assets/img/logo bevart.svg" alt="Bevart" width="140" height="40" class="h-9 w-auto">
+          </a>
+
+          <div class="hidden lg:flex items-center gap-7">
+            <a href="#como-funciona" class="bv-navlink">Como funciona</a>
+            <a href="#ficha-pdf" class="bv-navlink">Ficha em PDF</a>
+            <a href="#gestao" class="bv-navlink">Gestão do estoque</a>
+            <a href="#faq" class="bv-navlink">Perguntas</a>
+            <a href="index.html#pricing" class="bv-navlink">Preços</a>
+          </div>
+
+          <div class="hidden lg:flex items-center gap-2">
             <a href="https://profissionais.bevart.com.br/app/src/login/views/login"
-                class="btn-primary-gradient text-white px-6 py-2 rounded-full text-sm font-bold">Experimentar Grátis</a>
+              class="px-4 py-2 text-sm font-semibold text-ink-700 hover:text-primary-700 transition">Entrar</a>
+            <a href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="epi-header"
+              class="bv-btn bv-btn-primary text-sm">Criar conta grátis</a>
+          </div>
+
+          <button type="button" @click="mobileOpen = !mobileOpen"
+            class="lg:hidden p-2 -mr-2 rounded-xl hover:bg-gray-100 transition" :aria-expanded="mobileOpen"
+            aria-controls="menu-mobile" aria-label="Abrir menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+              aria-hidden="true">
+              <path x-show="!mobileOpen" d="M4 7h16M4 12h16M4 17h16" />
+              <path x-show="mobileOpen" x-cloak d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
         </div>
+
+        <div id="menu-mobile" x-show="mobileOpen" x-cloak x-transition
+          class="lg:hidden border-t border-gray-100 py-3 space-y-1">
+          <a href="#como-funciona" @click="mobileOpen = false" class="bv-menuitem-mobile">Como funciona</a>
+          <a href="#ficha-pdf" @click="mobileOpen = false" class="bv-menuitem-mobile">Ficha em PDF</a>
+          <a href="#gestao" @click="mobileOpen = false" class="bv-menuitem-mobile">Gestão do estoque</a>
+          <a href="#faq" @click="mobileOpen = false" class="bv-menuitem-mobile">Perguntas frequentes</a>
+          <a href="index.html" class="bv-menuitem-mobile">Plataforma Bevart</a>
+          <a href="blog/index.html" class="bv-menuitem-mobile">Blog</a>
+          <div class="pt-3 mt-2 border-t border-gray-100 flex flex-col gap-2">
+            <a href="https://profissionais.bevart.com.br/app/src/login/views/login"
+              class="bv-btn bv-btn-ghost w-full justify-center">Entrar</a>
+            <a href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="epi-menu-mobile"
+              class="bv-btn bv-btn-primary w-full justify-center">Criar conta grátis</a>
+          </div>
+        </div>
+      </div>
     </nav>
+  </div>
 
-    <section class="hero-gradient pt-32 pb-20 text-center">
-        <div class="max-w-7xl mx-auto px-4 z-10">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-gray-900 mb-6"
-                data-aos="fade-up">
-                Controle de EPI com <span class="gradient-text">Reconhecimento Facial</span>
-            </h1>
-            <p class="text-lg sm:text-xl text-gray-600 mb-10 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-                Elimine o papel e as fraudes. Prove a entrega de EPI com biometria facial e assinatura digital.
-                Segurança jurídica absoluta para sua empresa.
+  <main id="conteudo" x-data="{ shot: null, alt: '' }" @keydown.escape.window="shot = null">
+
+    <!-- ==================== HERO ==================== -->
+    <section id="top" class="relative overflow-hidden pt-28 pb-16 md:pt-36 md:pb-24 bg-white">
+      <div class="bv-hero-bg" aria-hidden="true"></div>
+
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="max-w-3xl">
+          <nav aria-label="Você está em" class="text-sm text-ink-700/60" data-aos="fade-up">
+            <a href="index.html" class="hover:text-primary-600">Bevart</a>
+            <span aria-hidden="true"> / </span>
+            <span>Controle de EPI</span>
+          </nav>
+          <p class="bv-eyebrow mt-6" data-aos="fade-up">Gestão e entrega de EPI · NR-6</p>
+          <h1 class="mt-4 text-4xl sm:text-5xl font-extrabold tracking-tight text-ink-900 leading-[1.08]"
+            data-aos="fade-up">
+            Controle de EPI com <span class="text-primary-600">reconhecimento facial</span> e ficha de entrega digital
+          </h1>
+          <p class="mt-6 text-lg text-ink-700/80 leading-relaxed" data-aos="fade-up" data-aos-delay="50">
+            O colaborador olha para a câmera do tablet, confere os EPIs e aceita o termo. O Bevart registra a entrega
+            ou a devolução, atualiza o estoque e gera a ficha em PDF com a foto de quem recebeu, o CA de cada item e o
+            hash de integridade. É a prova que a fiscalização pede, pronta em segundos.
+          </p>
+
+          <div class="mt-8 flex flex-col sm:flex-row gap-3 sm:items-center" data-aos="fade-up" data-aos-delay="100">
+            <a href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="epi-hero"
+              class="bv-btn bv-btn-primary bv-btn-lg justify-center">Criar conta grátis</a>
+            <a href="#como-funciona" class="bv-btn bv-btn-ghost bv-btn-lg justify-center">Ver como funciona</a>
+          </div>
+          <p class="mt-4 text-sm text-ink-700/60" data-aos="fade-up" data-aos-delay="150">
+            Tablet, smartphone ou computador · 5 dias grátis · sem cartão de crédito
+          </p>
+        </div>
+
+        <!-- Tela real: confirmação com foto do reconhecimento facial e aceite do termo -->
+        <div class="mt-14 md:mt-16" data-aos="fade-up" data-aos-delay="200">
+          <button type="button" class="bv-shot" aria-label="Ampliar a tela de confirmação da ficha de entrega de EPI"
+            @click="shot='assets/telas/gerar_ficha_epi_bevart.webp'; alt='Confirmação da ficha de EPI com colaborador reconhecido pela face, foto capturada e aceite do termo'">
+            <img src="assets/telas/gerar_ficha_epi_bevart.webp"
+              alt="Tela de confirmação da ficha de entrega de EPI no Bevart: colaborador reconhecido pela face, EPIs com CA e quantidade, foto do colaborador capturada no reconhecimento facial, termo de responsabilidade e aceite"
+              width="1568" height="781" fetchpriority="high" decoding="async">
+            <span class="bv-shot-hint">Clique para ampliar</span>
+          </button>
+          <p class="mt-4 text-center text-sm text-ink-700/60">
+            Tela real da confirmação: o colaborador foi reconhecido pela face, a foto já está na ficha e ele aceita o
+            termo antes de gerar o PDF.
+          </p>
+        </div>
+      </div>
+      <div id="hero-fim" aria-hidden="true"></div>
+    </section>
+
+    <!-- ==================== RESUMO ==================== -->
+    <section class="py-12 border-y border-gray-100 bg-gray-50/60">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="sr-only">Resumo do controle de EPI com reconhecimento facial</h2>
+        <dl class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-sm">
+          <div data-aos="fade-up">
+            <dt class="font-semibold text-ink-900">O que é</dt>
+            <dd class="mt-1 text-ink-700/75 leading-relaxed">Módulo de gestão de EPI do Bevart: estoque, entregas,
+              reposições, devoluções e fichas assinadas em um só lugar.</dd>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="50">
+            <dt class="font-semibold text-ink-900">Onde funciona</dt>
+            <dd class="mt-1 text-ink-700/75 leading-relaxed">No navegador do tablet, do smartphone ou do computador,
+              usando a câmera do próprio aparelho.</dd>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="100">
+            <dt class="font-semibold text-ink-900">O que o PDF comprova</dt>
+            <dd class="mt-1 text-ink-700/75 leading-relaxed">Quem recebeu, quais EPIs com CA, quando, o termo aceito e a
+              foto de quem estava diante da câmera.</dd>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="150">
+            <dt class="font-semibold text-ink-900">Base legal</dt>
+            <dd class="mt-1 text-ink-700/75 leading-relaxed">CLT arts. 157, 158 e 166 e NR-6, que admite o registro do
+              fornecimento em sistema eletrônico, inclusive biométrico.</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ==================== PROBLEMA ==================== -->
+    <section class="bv-section bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mb-12" data-aos="fade-up">
+          <p class="bv-eyebrow">O problema</p>
+          <h2 class="bv-h2 mt-4">"Eu nunca recebi esse EPI." E agora, como a empresa prova?</h2>
+          <p class="mt-5 text-lg text-ink-700/75 leading-relaxed">
+            A cobrança não chega no dia da entrega. Chega no acidente, na reclamatória de insalubridade ou na visita do
+            auditor fiscal, meses depois. Nessa hora, o ônus de provar a entrega é da empresa.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-5">
+          <div class="bv-card p-7" data-aos="fade-up">
+            <h3 class="bv-h3">A ficha de papel some</h3>
+            <p class="mt-3 text-sm text-ink-700/75 leading-relaxed">Fica na caixa da obra que fechou, molha, rasga ou é
+              assinada em branco na admissão e preenchida depois.</p>
+          </div>
+          <div class="bv-card p-7" data-aos="fade-up" data-aos-delay="50">
+            <h3 class="bv-h3">A assinatura é contestada</h3>
+            <p class="mt-3 text-sm text-ink-700/75 leading-relaxed">Rabisco no papel ou na tela não mostra quem estava
+              ali. Um colega assina pelo outro e ninguém consegue provar o contrário.</p>
+          </div>
+          <div class="bv-card p-7" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="bv-h3">A planilha não sabe de nada</h3>
+            <p class="mt-3 text-sm text-ink-700/75 leading-relaxed">Não diz com quem está cada EPI, qual CA venceu nem o
+              que falta comprar. E não tem manifestação do trabalhador.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== COMO FUNCIONA ==================== -->
+    <section id="como-funciona" class="bv-section bg-gray-50/70 border-y border-gray-100">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mb-12" data-aos="fade-up">
+          <p class="bv-eyebrow">Como funciona</p>
+          <h2 class="bv-h2 mt-4">Do estoque à ficha assinada em quatro passos</h2>
+          <p class="mt-5 text-lg text-ink-700/75 leading-relaxed">
+            A ficha de entrega foi desenhada para um tablet fixo no almoxarifado ou para o celular do técnico em campo.
+            No computador, funciona igual.
+          </p>
+        </div>
+
+        <div class="bv-card p-6 sm:p-7 mb-6 flex flex-col sm:flex-row sm:items-center gap-4" data-aos="fade-up">
+          <span class="bv-num shrink-0">Antes de começar</span>
+          <p class="text-sm text-ink-700/75 leading-relaxed">Cadastre os EPIs no estoque da unidade com CA, validade,
+            quantidade e foto. Vinculado ao inventário de riscos, o EPI vira obrigatório para as funções expostas e
+            aparece destacado na ficha.</p>
+        </div>
+
+        <div class="space-y-6">
+          <div class="bv-step" data-aos="fade-up">
+            <div class="bv-step-text">
+              <span class="bv-step-num">Passo 01 · Colaborador</span>
+              <h3 class="mt-3 text-2xl font-extrabold tracking-tight text-ink-900">O colaborador olha para a câmera e é
+                identificado</h3>
+              <p class="mt-4 text-ink-700/75 leading-relaxed">Toque em Iniciar reconhecimento: o sistema compara o rosto
+                com a biometria facial do cadastro, sem contato e sem leitor biométrico.</p>
+              <ul class="bv-checks mt-5">
+                <li>Funciona na câmera do tablet, do smartphone ou do computador</li>
+                <li>Sem rosto cadastrado ou sem câmera, a busca por nome ou CPF resolve</li>
+                <li>A ficha registra se a identificação foi facial ou manual</li>
+              </ul>
+            </div>
+            <button type="button" class="bv-shot" aria-label="Ampliar a tela de reconhecimento facial da ficha de EPI"
+              @click="shot='assets/telas/reconhecimento_facial_epi_bevart.webp'; alt='Tela de identificação do colaborador por reconhecimento facial ou busca por nome e CPF'">
+              <img src="assets/telas/reconhecimento_facial_epi_bevart.webp"
+                alt="Primeira tela da ficha de entrega de EPI no Bevart: câmera para reconhecimento facial do colaborador e busca por nome ou CPF"
+                width="1568" height="781" loading="lazy" decoding="async">
+              <span class="bv-shot-hint">Clique para ampliar</span>
+            </button>
+          </div>
+
+          <div class="bv-step bv-step--reverse" data-aos="fade-up">
+            <div class="bv-step-text">
+              <span class="bv-step-num">Passo 02 · Entregar</span>
+              <h3 class="mt-3 text-2xl font-extrabold tracking-tight text-ink-900">Os EPIs obrigatórios da função já
+                aparecem marcados</h3>
+              <p class="mt-4 text-ink-700/75 leading-relaxed">O catálogo mostra os EPIs da unidade com foto, CA e
+                quantidade disponível. É só ajustar a quantidade e continuar.</p>
+              <ul class="bv-checks mt-5">
+                <li>Selo de obrigatório vindo do inventário de riscos da função</li>
+                <li>Aviso quando um EPI obrigatório está sem estoque na unidade</li>
+                <li>Busca por nome ou CA e filtro "somente obrigatórios"</li>
+              </ul>
+            </div>
+            <button type="button" class="bv-shot" aria-label="Ampliar a tela de escolha dos EPIs para entrega"
+              @click="shot='assets/telas/entrega_gerar_ficha_epi_bevart.webp'; alt='Escolha dos EPIs para entrega com obrigatórios da função e aviso de estoque'">
+              <img src="assets/telas/entrega_gerar_ficha_epi_bevart.webp"
+                alt="Tela de entrega de EPI no Bevart: colaborador reconhecido pela face, capacete e óculos marcados como obrigatórios da função, aviso de EPI obrigatório sem estoque e quantidade disponível de cada item"
+                width="1568" height="784" loading="lazy" decoding="async">
+              <span class="bv-shot-hint">Clique para ampliar</span>
+            </button>
+          </div>
+
+          <div class="bv-step" data-aos="fade-up">
+            <div class="bv-step-text">
+              <span class="bv-step-num">Passo 02 · Devolver ou repor</span>
+              <h3 class="mt-3 text-2xl font-extrabold tracking-tight text-ink-900">Tudo o que está com o colaborador, em
+                uma lista</h3>
+              <p class="mt-4 text-ink-700/75 leading-relaxed">Na devolução, aparecem os EPIs em uso com a data da retirada
+                e há quantos dias estão com ele. Toque no que voltou. Para troca por desgaste, use Repor.</p>
+              <ul class="bv-checks mt-5">
+                <li>Data de retirada e tempo de uso de cada item</li>
+                <li>Devolução no desligamento ou na troca de função sem esquecer nada</li>
+                <li>Reposição registrada como nova entrega, com a sua própria ficha</li>
+              </ul>
+            </div>
+            <button type="button" class="bv-shot" aria-label="Ampliar a tela de devolução de EPI"
+              @click="shot='assets/telas/registrar_entrega_epi_bevart.webp'; alt='Lista de EPIs em uso pelo colaborador para registrar a devolução'">
+              <img src="assets/telas/registrar_entrega_epi_bevart.webp"
+                alt="Tela de devolução de EPI no Bevart com os EPIs em uso pelo colaborador, CA, data de retirada e dias de uso de cada item"
+                width="1568" height="784" loading="lazy" decoding="async">
+              <span class="bv-shot-hint">Clique para ampliar</span>
+            </button>
+          </div>
+
+          <div class="bv-card p-6 sm:p-7 flex flex-col sm:flex-row sm:items-center gap-4" data-aos="fade-up">
+            <span class="bv-num shrink-0">Passo 03 · Confirmação</span>
+            <p class="text-sm text-ink-700/75 leading-relaxed">O colaborador revisa os itens, confere a foto e aceita o
+              termo de responsabilidade (tela no topo desta página). Ao confirmar, o PDF é gerado e guardado, e a tela
+              volta sozinha para o próximo da fila. <a href="#ficha-pdf" class="bv-link">Veja a ficha gerada</a>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== POR QUE FACIAL ==================== -->
+    <section id="por-que-facial" class="bv-section bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-start">
+          <div data-aos="fade-up">
+            <p class="bv-eyebrow">Reconhecimento facial</p>
+            <h2 class="bv-h2 mt-4">Na construção civil, o rosto funciona onde a digital falha</h2>
+            <p class="mt-5 text-lg text-ink-700/75 leading-relaxed">
+              Cimento, argamassa e abrasivos desgastam as digitais. Mão calejada, suja ou de luva não é lida, e o
+              sensor compartilhado vive sujo. O reconhecimento facial não tem nenhum desses problemas e só precisa da
+              câmera que o aparelho já tem.
             </p>
-            <div class="flex flex-wrap justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
-                <a href="https://profissionais.bevart.com.br/app/src/login/views/login"
-                    class="btn-primary-gradient text-white px-10 py-4 rounded-full text-lg font-bold">Modernizar meu
-                    Estoque</a>
+            <ul class="bv-checks mt-7">
+              <li><strong class="text-ink-900">Sem contato e sem tirar a luva:</strong> o colaborador só olha para a
+                câmera.</li>
+              <li><strong class="text-ink-900">Sem hardware extra:</strong> nada de leitor biométrico, cabo ou driver.</li>
+              <li><strong class="text-ink-900">Difícil de delegar:</strong> um colega não "assina" pelo outro.</li>
+              <li><strong class="text-ink-900">Prova visual:</strong> a foto do momento vai para o PDF e mostra que o
+                funcionário estava ali.</li>
+              <li><strong class="text-ink-900">Mais rápido na fila:</strong> a identificação é automática e a tela volta
+                sozinha para o próximo.</li>
+            </ul>
+          </div>
+
+          <div class="bv-compare" data-aos="fade-up" data-aos-delay="100">
+            <div class="bv-compare-head">
+              <span></span>
+              <span class="text-ink-700/60">Papel, planilha ou leitor de digital</span>
+              <span class="text-primary-700 font-semibold">Ficha com reconhecimento facial</span>
             </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-white">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="bg-blue-50 border border-blue-100 rounded-3xl p-8 md:p-12 text-center" data-aos="zoom-in">
-                <h2 class="text-2xl md:text-3xl font-bold text-blue-900 mb-6">"O funcionário diz que não recebeu o EPI."
-                </h2>
-                <p class="text-blue-800 text-lg mb-8">
-                    Papel perdido, assinaturas falsificadas ou auditorias que pedem comprovação imediata? O
-                    reconhecimento facial acaba com esses problemas.
-                </p>
-                <div class="grid md:grid-cols-2 gap-6 text-left">
-                    <div class="bg-white p-6 rounded-2xl shadow-sm">
-                        <h4 class="font-bold text-primary-600 mb-2">Sem Papel</h4>
-                        <p class="text-sm text-gray-600">Chega de caixas de arquivos mortos ocupando espaço.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl shadow-sm">
-                        <h4 class="font-bold text-primary-600 mb-2">Prova Incontestável</h4>
-                        <p class="text-sm text-gray-600">Foto e biometria facial são aceitos em tribunais como prova de
-                            entrega.</p>
-                    </div>
-                </div>
+            <div class="bv-compare-row">
+              <span class="bv-compare-label">Quem recebeu</span>
+              <span>Assinatura que pode ser de qualquer um</span>
+              <span class="bv-compare-good">Rosto reconhecido e foto anexada ao PDF</span>
             </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-gray-50 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div data-aos="fade-right">
-                    <h2 class="text-3xl font-extrabold text-gray-900 mb-6">Ficha de Entrega Digital (NR-06)</h2>
-                    <p class="text-gray-600 text-lg mb-6">O Bevart automatiza todo o fluxo de entrega de EPI conforme a
-                        portaria mais recente do Ministério do Trabalho.</p>
-                    <ul class="space-y-4">
-                        <li class="flex gap-3"><span
-                                class="w-6 h-6 bg-green-500 text-white rounded-full flex items-center justify-center text-xs">✓</span>
-                            <span>Validação automática do CA (Certificado de Aprovação)</span></li>
-                        <li class="flex gap-3"><span
-                                class="w-6 h-6 bg-green-500 text-white rounded-full flex items-center justify-center text-xs">✓</span>
-                            <span>Controle de validade e higienização</span></li>
-                        <li class="flex gap-3"><span
-                                class="w-6 h-6 bg-green-500 text-white rounded-full flex items-center justify-center text-xs">✓</span>
-                            <span>Entrega via App com biometria ou PIN</span></li>
-                    </ul>
-                </div>
-                <div class="relative" data-aos="fade-left">
-                    <div class="aspect-video rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-black">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/t8-l9NumdZU"
-                            title="Controle de EPI Bevart" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                </div>
+            <div class="bv-compare-row">
+              <span class="bv-compare-label">Mão suja ou com luva</span>
+              <span>Digital não lê e a entrega volta para o papel</span>
+              <span class="bv-compare-good">Não faz diferença: o sistema lê o rosto</span>
             </div>
+            <div class="bv-compare-row">
+              <span class="bv-compare-label">CA e validade</span>
+              <span>"Luva" escrita à mão, sem CA</span>
+              <span class="bv-compare-good">CA e validade saem do estoque para a ficha</span>
+            </div>
+            <div class="bv-compare-row">
+              <span class="bv-compare-label">Documento alterado</span>
+              <span>Não há como saber</span>
+              <span class="bv-compare-good">Hash SHA-256 guardado na emissão</span>
+            </div>
+            <div class="bv-compare-row">
+              <span class="bv-compare-label">Achar a ficha de 2 anos atrás</span>
+              <span>Caixa de arquivo morto</span>
+              <span class="bv-compare-good">Filtro por funcionário, período e tipo</span>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <section class="py-20 bg-primary-900 text-center">
-        <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-3xl font-extrabold text-white mb-8">Poupe tempo e evite passivos trabalhistas.</h2>
-            <a href="https://profissionais.bevart.com.br/app/src/login/views/login"
-                class="bg-white text-primary-600 px-12 py-5 rounded-full text-xl font-bold shadow-2xl hover:bg-gray-100 transition inline-block">Eliminar
-                Fichas em Papel</a>
+    <!-- ==================== FICHA EM PDF ==================== -->
+    <section id="ficha-pdf" class="bv-section bg-ink-950 relative overflow-hidden">
+      <div class="bv-grid-pattern" aria-hidden="true"></div>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div data-aos="fade-up">
+            <p class="bv-eyebrow text-primary-300">A ficha em PDF</p>
+            <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-white leading-tight">
+              Um documento feito para responder ao auditor fiscal
+            </h2>
+            <p class="mt-5 text-lg text-white/60 leading-relaxed">
+              Cada entrega, reposição ou devolução gera uma ficha que reúne, numa página, tudo o que costuma ser pedido
+              para comprovar o fornecimento de EPI.
+            </p>
+            <ul class="bv-checks bv-checks--dark mt-7">
+              <li><strong class="text-white">Empregador e colaborador:</strong> razão social, CNPJ, unidade, nome, CPF,
+                matrícula, função, setor e admissão.</li>
+              <li><strong class="text-white">EPIs com CA, validade e quantidade:</strong> na devolução, também a data da
+                entrega original e o motivo.</li>
+              <li><strong class="text-white">Termo aceito:</strong> o mesmo texto que o colaborador leu na tela, com data
+                e hora de Brasília.</li>
+              <li><strong class="text-white">Identificação:</strong> similaridade do reconhecimento facial, foto,
+                responsável pelo registro e endereço IP.</li>
+              <li><strong class="text-white">Integridade:</strong> hash SHA-256 do arquivo guardado no sistema.</li>
+              <li><strong class="text-white">Situação do colaborador:</strong> EPIs em posse e EPIs exigidos para a função,
+                com o que está pendente.</li>
+            </ul>
+            <p class="mt-7 text-sm text-white/50 leading-relaxed">
+              A ficha só afirma o que aconteceu: quando o colaborador é escolhido pela busca, o PDF diz que a
+              identificação foi manual. Um documento que não exagera é o que o auditor e o juiz levam a sério.
+            </p>
+          </div>
+
+          <!-- PDF real gerado pela ficha (CPF e IP ocultados na imagem do site) -->
+          <div data-aos="fade-up" data-aos-delay="100">
+            <button type="button" class="bv-shot bv-shot--dark" aria-label="Ampliar a ficha de EPI em PDF"
+              @click="shot='assets/telas/ficha_epi_site.webp'; alt='Ficha de devolução de EPI em PDF com foto do colaborador e identificação por reconhecimento facial'">
+              <img src="assets/telas/ficha_epi_site.webp"
+                alt="Ficha de devolução de EPI em PDF gerada pelo Bevart: empregador, colaborador, EPIs devolvidos com CA e validade, termo aceito com data e hora e bloco de identificação com similaridade do reconhecimento facial, responsável e foto do colaborador"
+                width="822" height="913" loading="lazy" decoding="async">
+              <span class="bv-shot-hint">Clique para ampliar</span>
+            </button>
+            <p class="mt-4 text-center text-sm text-white/45">PDF real gerado pelo sistema. CPF e IP foram ocultados
+              nesta imagem.</p>
+          </div>
         </div>
+      </div>
     </section>
 
-    <footer class="bg-gray-900 text-gray-400 py-12 text-center">
-        <img src="assets/img/logo bevart.svg" alt="Bevart" class="h-8 mx-auto mb-6 brightness-0 invert opacity-50">
-        <p class="text-sm">© 2026 Bevart - Ficha de EPI Digital e Biometria.</p>
-    </footer>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init({ duration: 800, once: true });</script>
+    <!-- ==================== GESTÃO ==================== -->
+    <section id="gestao" class="bv-section bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mb-12" data-aos="fade-up">
+          <p class="bv-eyebrow">Para quem administra</p>
+          <h2 class="bv-h2 mt-4">Saiba com quem está cada EPI, o que vence e o que comprar</h2>
+          <p class="mt-5 text-lg text-ink-700/75 leading-relaxed">
+            Cada entrega e devolução alimenta a gestão de EPI da unidade. Sem planilha paralela e sem contar caixa no
+            almoxarifado.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div class="bv-card p-7" data-aos="fade-up">
+            <h3 class="bv-h3">Estoque disponível de verdade</h3>
+            <p class="mt-3 text-sm text-ink-700/75 leading-relaxed">O disponível já desconta o que está em uso com os
+              colaboradores, por unidade.</p>
+          </div>
+          <div class="bv-card p-7" data-aos="fade-up" data-aos-delay="50">
+            <h3 class="bv-h3">Estoque baixo ou esgotado</h3>
+            <p class="mt-3 text-sm text-ink-700/75 leading-relaxed">Filtro direto dos itens que precisam de compra antes
+              de faltar na entrega.</p>
+          </div>
+          <div class="bv-card p-7" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="bv-h3">Validade vencida ou em 30 dias</h3>
+            <p class="mt-3 text-sm text-ink-700/75 leading-relaxed">Os EPIs com validade do CA ou do lote vencendo
+              aparecem destacados para renovar a tempo.</p>
+          </div>
+          <div class="bv-card p-7" data-aos="fade-up">
+            <h3 class="bv-h3">Com quem está cada EPI</h3>
+            <p class="mt-3 text-sm text-ink-700/75 leading-relaxed">Para cobrar a devolução no desligamento ou na troca de
+              função, e repor o que está desgastado.</p>
+          </div>
+          <div class="bv-card p-7" data-aos="fade-up" data-aos-delay="50">
+            <h3 class="bv-h3">Histórico por funcionário</h3>
+            <p class="mt-3 text-sm text-ink-700/75 leading-relaxed">Entregas e devoluções por período e por colaborador,
+              com exportação para Excel.</p>
+          </div>
+          <div class="bv-card p-7" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="bv-h3">Fichas assinadas guardadas</h3>
+            <p class="mt-3 text-sm text-ink-700/75 leading-relaxed">Fornecimento, reposição e devolução em armazenamento
+              privado na nuvem, com o hash de cada PDF.</p>
+          </div>
+        </div>
+
+        <figure class="mt-12" data-aos="fade-up">
+          <div class="bv-frame">
+            <img src="assets/telas/estoque%20epi.webp"
+              alt="Tela de gestão de EPI do Bevart com o estoque da unidade, indicadores de disponibilidade e acesso à ficha de entrega"
+              width="1804" height="778" loading="lazy" decoding="async" class="w-full h-auto block">
+          </div>
+          <figcaption class="mt-4 text-center text-sm text-ink-700/60">Gestão de EPI: estoque, entregas e devoluções e
+            fichas assinadas na mesma tela.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ==================== SEGURANÇA E LEGISLAÇÃO ==================== -->
+    <section id="seguranca" class="bv-section bg-gray-50/70 border-y border-gray-100">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12">
+        <div data-aos="fade-up">
+          <p class="bv-eyebrow">Legislação</p>
+          <h2 class="bv-h2 mt-4">O que a lei pede e como a ficha responde</h2>
+          <div class="mt-8 space-y-5">
+            <div class="bv-card p-6">
+              <h3 class="bv-h3">CLT, art. 166</h3>
+              <p class="mt-2 text-sm text-ink-700/75 leading-relaxed">A empresa fornece EPI gratuito, adequado ao risco e
+                em perfeito estado. A ficha registra o que foi entregue, com CA e validade.</p>
+            </div>
+            <div class="bv-card p-6">
+              <h3 class="bv-h3">CLT, arts. 157 e 158</h3>
+              <p class="mt-2 text-sm text-ink-700/75 leading-relaxed">A empresa instrui e o empregado deve usar o EPI; a
+                recusa injustificada é ato faltoso. O termo aceito registra essa ciência.</p>
+            </div>
+            <div class="bv-card p-6">
+              <h3 class="bv-h3">NR-6</h3>
+              <p class="mt-2 text-sm text-ink-700/75 leading-relaxed">O empregador registra o fornecimento, e a norma
+                admite livros, fichas ou sistema eletrônico, inclusive biométrico.</p>
+            </div>
+            <div class="bv-card p-6">
+              <h3 class="bv-h3">Súmula 289 do TST</h3>
+              <p class="mt-2 text-sm text-ink-700/75 leading-relaxed">Só fornecer não isenta a empresa: ela precisa agir
+                pelo uso efetivo. O histórico de entregas, reposições e devoluções mostra esse acompanhamento.</p>
+            </div>
+          </div>
+          <p class="mt-5 text-xs text-ink-700/55 leading-relaxed">Conteúdo informativo. Confira a redação vigente das
+            normas e, para dúvidas específicas, consulte a assessoria jurídica da empresa.</p>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="100">
+          <p class="bv-eyebrow">Segurança dos dados</p>
+          <h2 class="bv-h2 mt-4">Biometria protegida e fichas guardadas com segurança</h2>
+          <ul class="bv-checks mt-8">
+            <li><strong class="text-ink-900">Biometria isolada por conta:</strong> os rostos de uma empresa nunca são
+              comparados com os de outra.</li>
+            <li><strong class="text-ink-900">Apagada ao excluir:</strong> quando o funcionário é excluído, a biometria
+              facial dele também é removida.</li>
+            <li><strong class="text-ink-900">Fichas em armazenamento privado:</strong> os PDFs não ficam em link
+              público e só são baixados por usuários autenticados da conta.</li>
+            <li><strong class="text-ink-900">Integridade verificável:</strong> o hash SHA-256 de cada ficha é registrado
+              na emissão.</li>
+            <li><strong class="text-ink-900">LGPD:</strong> biometria é dado pessoal sensível. Use-a com finalidade clara
+              e informe o trabalhador. A política da plataforma está na página de <a href="lgpd.html"
+                class="bv-link">LGPD</a>.</li>
+          </ul>
+
+          <div class="bv-card p-7 mt-8">
+            <p class="bv-pill bv-pill--primary">No blog</p>
+            <ul class="mt-4 space-y-3 text-sm">
+              <li><a href="blog/como-comprovar-entrega-de-epi-com-reconhecimento-facial/index.html"
+                  class="bv-link">Como comprovar a entrega de EPI com reconhecimento facial</a></li>
+              <li><a href="blog/como-gerenciar-o-estoque-e-emitir-ficha-de-entrega-de-epi-no-bevart/index.html"
+                  class="bv-link">Estoque de EPI e ficha de entrega: passo a passo no sistema</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PARA QUEM ==================== -->
+    <section class="bv-section bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mb-12" data-aos="fade-up">
+          <p class="bv-eyebrow">Para quem é</p>
+          <h2 class="bv-h2 mt-4">Feito para quem entrega EPI todo dia</h2>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div class="bv-card p-7" data-aos="fade-up">
+            <h3 class="bv-h3">Construtoras e obras</h3>
+            <p class="mt-3 text-sm text-ink-700/75 leading-relaxed">Tablet no almoxarifado do canteiro, estoque por obra e
+              ficha que não se perde quando a obra termina.</p>
+          </div>
+          <div class="bv-card p-7" data-aos="fade-up" data-aos-delay="50">
+            <h3 class="bv-h3">Indústrias</h3>
+            <p class="mt-3 text-sm text-ink-700/75 leading-relaxed">Entregas em volume por turno, reposição por desgaste e
+              controle de validade por unidade.</p>
+          </div>
+          <div class="bv-card p-7" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="bv-h3">Consultorias de SST</h3>
+            <p class="mt-3 text-sm text-ink-700/75 leading-relaxed">Cada cliente com seu estoque e suas fichas, ligados ao
+              PGR que a consultoria já mantém no Bevart.</p>
+          </div>
+          <div class="bv-card p-7" data-aos="fade-up" data-aos-delay="150">
+            <h3 class="bv-h3">Empresas com várias unidades</h3>
+            <p class="mt-3 text-sm text-ink-700/75 leading-relaxed">Estoque e indicadores separados por unidade, com as
+              fichas centralizadas para a auditoria.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FAQ ==================== -->
+    <section id="faq" class="bv-section bg-gray-50/70 border-y border-gray-100">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-10" data-aos="fade-up">
+          <p class="bv-eyebrow">Perguntas frequentes</p>
+          <h2 class="bv-h2 mt-4">Dúvidas sobre controle e ficha de entrega de EPI</h2>
+        </div>
+
+        <div x-data="{ active: null }" class="bg-white rounded-3xl border border-gray-100 px-6 sm:px-8 shadow-card">
+          <div class="faq-item">
+            <button type="button" class="faq-button" @click="active = active === 1 ? null : 1"
+              :aria-expanded="active === 1">
+              <span>Ficha de entrega de EPI digital tem validade na fiscalização?</span>
+              <svg class="w-5 h-5 shrink-0 transition-transform" :class="active === 1 && 'rotate-180'" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-content" :style="active === 1 ? 'max-height: 600px' : 'max-height: 0'">
+              <p>Sim. A NR-6 permite registrar o fornecimento de EPI em livros, fichas ou sistema eletrônico, inclusive biométrico. A ficha do Bevart identifica empregador, trabalhador, EPI com CA e validade, data e hora, o termo aceito e como o colaborador foi identificado, e guarda o hash SHA-256 do PDF para mostrar que ele não foi alterado.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-button" @click="active = active === 2 ? null : 2"
+              :aria-expanded="active === 2">
+              <span>Preciso comprar leitor biométrico ou instalar aplicativo?</span>
+              <svg class="w-5 h-5 shrink-0 transition-transform" :class="active === 2 && 'rotate-180'" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-content" :style="active === 2 ? 'max-height: 600px' : 'max-height: 0'">
+              <p>Não. A ficha de entrega abre no navegador e usa a câmera do tablet, do smartphone ou a webcam do computador.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-button" @click="active = active === 3 ? null : 3"
+              :aria-expanded="active === 3">
+              <span>Por que reconhecimento facial e não impressão digital?</span>
+              <svg class="w-5 h-5 shrink-0 transition-transform" :class="active === 3 && 'rotate-180'" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-content" :style="active === 3 ? 'max-height: 600px' : 'max-height: 0'">
+              <p>Na construção civil e em atividades com cimento, argamassa ou abrasivos, as digitais se desgastam e a mão suja, calejada ou com luva não é lida. O rosto é reconhecido sem contato, com a câmera do próprio aparelho, e a foto do momento vai para o PDF, mostrando quem estava ali.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-button" @click="active = active === 4 ? null : 4"
+              :aria-expanded="active === 4">
+              <span>A foto do funcionário aparece no PDF da ficha de EPI?</span>
+              <svg class="w-5 h-5 shrink-0 transition-transform" :class="active === 4 && 'rotate-180'" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-content" :style="active === 4 ? 'max-height: 600px' : 'max-height: 0'">
+              <p>Sim. A foto capturada no reconhecimento facial, ou tirada na confirmação, vai para o PDF junto com a similaridade do reconhecimento, a data e a hora, o responsável pelo registro e o endereço IP.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-button" @click="active = active === 5 ? null : 5"
+              :aria-expanded="active === 5">
+              <span>E se o colaborador não for reconhecido pela câmera?</span>
+              <svg class="w-5 h-5 shrink-0 transition-transform" :class="active === 5 && 'rotate-180'" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-content" :style="active === 5 ? 'max-height: 600px' : 'max-height: 0'">
+              <p>O responsável busca o colaborador pelo nome ou CPF e registra a entrega normalmente. A ficha informa que a identificação foi manual, sem verificação biométrica, porque o documento só afirma o que de fato aconteceu.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-button" @click="active = active === 6 ? null : 6"
+              :aria-expanded="active === 6">
+              <span>Onde ficam guardadas as fichas de EPI?</span>
+              <svg class="w-5 h-5 shrink-0 transition-transform" :class="active === 6 && 'rotate-180'" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-content" :style="active === 6 ? 'max-height: 600px' : 'max-height: 0'">
+              <p>Em armazenamento privado na nuvem, vinculadas ao funcionário e à unidade. Os administradores filtram por período, funcionário e tipo (fornecimento, reposição ou devolução) e baixam o PDF com acesso autenticado.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-button" @click="active = active === 7 ? null : 7"
+              :aria-expanded="active === 7">
+              <span>O sistema avisa sobre validade e estoque de EPI?</span>
+              <svg class="w-5 h-5 shrink-0 transition-transform" :class="active === 7 && 'rotate-180'" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-content" :style="active === 7 ? 'max-height: 600px' : 'max-height: 0'">
+              <p>Sim. O painel da unidade mostra itens com estoque baixo ou esgotado, EPIs com validade vencida ou vencendo em 30 dias, quantas unidades estão em uso e com quais colaboradores cada EPI está.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-button" @click="active = active === 8 ? null : 8"
+              :aria-expanded="active === 8">
+              <span>Como fica a biometria facial em relação à LGPD?</span>
+              <svg class="w-5 h-5 shrink-0 transition-transform" :class="active === 8 && 'rotate-180'" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-content" :style="active === 8 ? 'max-height: 600px' : 'max-height: 0'">
+              <p>Biometria é dado pessoal sensível na LGPD, então a empresa deve usá-la com finalidade clara e informar o trabalhador. No Bevart, a biometria de cada conta fica separada das demais e é apagada quando o funcionário é excluído.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CTA FINAL ==================== -->
+    <section id="contato" class="bv-section bg-ink-950 relative overflow-hidden">
+      <div class="bv-grid-pattern" aria-hidden="true"></div>
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative" data-aos="fade-up">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white leading-tight">
+          A próxima entrega de EPI já pode sair com foto, termo e ficha guardada.
+        </h2>
+        <p class="mt-5 text-lg text-white/60 leading-relaxed">
+          Crie a conta, cadastre os EPIs de uma unidade e faça a primeira entrega pelo tablet ou pelo celular.
+        </p>
+        <div class="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
+          <a href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="epi-final"
+            class="bv-btn bv-btn-primary bv-btn-lg justify-center">Criar conta grátis</a>
+          <a href="index.html#pricing" class="bv-btn bv-btn-onDark bv-btn-lg justify-center">Ver os planos</a>
+        </div>
+        <p class="mt-4 text-sm text-white/45">5 dias com acesso completo · sem cartão de crédito</p>
+      </div>
+    </section>
+
+    <!-- Lightbox (mesmo padrão da home) -->
+    <div x-show="shot" x-cloak x-transition.opacity role="dialog" aria-modal="true" aria-label="Tela ampliada"
+      class="fixed inset-0 z-[100] bg-ink-950/90 backdrop-blur-sm flex items-center justify-center p-4 sm:p-10 cursor-zoom-out"
+      @click="shot = null">
+      <button type="button" @click.stop="shot = null" aria-label="Fechar"
+        class="absolute top-5 right-5 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"
+          aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <template x-if="shot">
+        <img :src="shot" :alt="alt" class="max-w-full max-h-[86vh] object-contain rounded-xl shadow-2xl" @click.stop>
+      </template>
+    </div>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-ink-950 text-white/55 pt-16 pb-10 border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div class="lg:col-span-2">
+          <img src="assets/img/logo bevart.svg" alt="Bevart" width="140" height="40"
+            class="h-8 w-auto brightness-0 invert">
+          <p class="mt-4 text-sm leading-relaxed max-w-xs">
+            Plataforma de gestão de SST que liga o inventário de riscos aos documentos, exames, treinamentos, EPI e
+            eventos do eSocial.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold text-sm mb-4">Soluções</h3>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="index.html" class="bv-footer-link">Plataforma Bevart</a></li>
+            <li><a href="sistema-pgr-online.html" class="bv-footer-link">Sistema PGR online</a></li>
+            <li><a href="sistema-pcmso-e-aso-online.html" class="bv-footer-link">PCMSO e ASO online</a></li>
+            <li><a href="gestao-de-treinamentos-sst.html" class="bv-footer-link">Gestão de treinamentos</a></li>
+            <li><a href="esocial-sst-para-construtoras.html" class="bv-footer-link">SST para construtoras</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold text-sm mb-4">Conteúdo</h3>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="blog/index.html" class="bv-footer-link">Blog</a></li>
+            <li><a href="blog/categoria/treinamentos-e-epi/index.html" class="bv-footer-link">Treinamentos e EPI</a></li>
+            <li><a href="index.html#faq" class="bv-footer-link">Perguntas frequentes</a></li>
+            <li><a href="https://www.youtube.com/@bevartsst6772" target="_blank" rel="noopener"
+                class="bv-footer-link">Canal no YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex flex-col md:flex-row items-center gap-2 md:gap-6 text-sm">
+          <p>&copy; 2026 Bevart. Todos os direitos reservados.</p>
+          <p class="text-white/40">
+            <a href="mailto:contato@bevart.com.br" class="bv-footer-link">contato@bevart.com.br</a>
+            · (47) 98923-5660
+          </p>
+        </div>
+        <div class="flex items-center gap-5 text-sm">
+          <a href="termos-de-uso.html" class="bv-footer-link">Termos de uso</a>
+          <a href="privacidade.html" class="bv-footer-link">Privacidade</a>
+          <a href="lgpd.html" class="bv-footer-link">LGPD</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== CTA FIXO (MOBILE) ==================== -->
+  <div id="sticky-cta" class="bv-sticky-cta" aria-hidden="true">
+    <div>
+      <p class="text-xs text-ink-700/60">5 dias grátis · sem cartão</p>
+      <p class="text-sm font-semibold text-ink-900">Ficha de EPI com foto</p>
+    </div>
+    <a href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="epi-sticky-mobile"
+      class="bv-btn bv-btn-primary text-sm">Criar conta</a>
+  </div>
+
+  <a href="https://wa.me/5547988805218?text=vim%20pelo%20site%20do%20bevart%20(controle%20de%20EPI)" target="_blank"
+    rel="noopener" class="bv-wa-button" aria-label="Falar com o Bevart no WhatsApp">
+    <img src="assets/img/whatsapp.png" alt="" width="32" height="32" class="w-7 h-7 object-contain">
+  </a>
 
   <!-- Cookie Consent -->
   <div id="cookie-consent" class="cookie-consent">
-    <h4>🍪 Cookies & Privacidade</h4>
-    <p>Utilizamos cookies para melhorar sua experiência em nosso site e analisar nosso tráfego. Ao clicar em "Aceitar", você concorda com o uso de cookies.</p>
+    <h4>Cookies e privacidade</h4>
+    <p>Usamos cookies para entender como o site é usado e melhorar sua experiência. Ao clicar em "Aceitar", você
+      concorda com o uso de cookies.</p>
     <div class="flex justify-start">
       <button id="accept-cookies" class="btn-accept">Aceitar</button>
     </div>
   </div>
+  <div id="cookie-settings-trigger" class="cookie-settings-trigger hidden" role="button" tabindex="0"
+    aria-label="Configurações de cookies">🍪</div>
 
-<script defer src="assets/js/app.js"></script>
-  <div id="cookie-settings-trigger" class="cookie-settings-trigger hidden">🍪</div>
+  <!-- Scripts -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script defer src="assets/js/app.js"></script>
 </body>
 
 </html>

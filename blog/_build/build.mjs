@@ -259,6 +259,7 @@ ${categorias.map((c) => `            <li><a href="${prefixo}categoria/${c.slug}/
             <li><a href="${site}sistema-pgr-online.html">Sistema PGR online</a></li>
             <li><a href="${site}sistema-pcmso-e-aso-online.html">PCMSO e ASO online</a></li>
             <li><a href="${site}ltcat-online-sistema.html">Laudo LTCAT digital</a></li>
+            <li><a href="${site}controle-de-epi-com-reconhecimento-facial.html">EPI com reconhecimento facial</a></li>
             <li><a href="${site}esocial-sst-para-empresas.html">eSocial SST para empresas</a></li>
             <li><a href="${site}gestao-de-treinamentos-sst.html">Gestão de treinamentos</a></li>
           </ul>

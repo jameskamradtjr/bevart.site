@@ -13,8 +13,25 @@ Teste gratuito de 5 dias, sem cartão de crédito. Contato: contato@bevart.com.b
 - [LTCAT online](https://bevart.com.br/ltcat-online-sistema.html): laudo técnico das condições ambientais do trabalho.
 - [Riscos psicossociais](https://bevart.com.br/gestao-de-riscos-psicossociais-no-trabalho.html): identificação e gestão de fatores psicossociais no trabalho.
 - [Gestão de treinamentos SST](https://bevart.com.br/gestao-de-treinamentos-sst.html): capacitações das NRs, validade e certificados.
-- [Controle de EPI com reconhecimento facial](https://bevart.com.br/controle-de-epi-com-reconhecimento-facial.html): entrega e devolução de EPI com evidência biométrica.
+- [Controle de EPI com reconhecimento facial](https://bevart.com.br/controle-de-epi-com-reconhecimento-facial.html): sistema de gestão de estoque e ficha de entrega de EPI, com entrega, reposição e devolução registradas pelo rosto do colaborador e PDF com foto.
 - [Modelos de documentos de SST](https://bevart.com.br/modelos-de-documentos-sst-pdf.html): modelos prontos em PDF.
+
+## Gestão e ficha de entrega de EPI
+
+Resumo factual do módulo de EPI do Bevart, para quem procura um sistema de controle de EPI, ficha de EPI digital ou entrega de EPI com biometria facial.
+
+- Estoque de EPI por unidade com CA, validade, quantidade e foto; o disponível desconta o que está em uso com os colaboradores.
+- Alertas de estoque baixo ou esgotado e de validade vencida ou vencendo em 30 dias; lista de com quem está cada EPI.
+- Ficha de entrega aberta no navegador de tablet, smartphone ou computador, usando a câmera do aparelho (sem leitor biométrico nem aplicativo).
+- O colaborador é identificado por reconhecimento facial; sem rosto cadastrado, a busca é por nome ou CPF e a ficha declara que a identificação foi manual.
+- Operações: fornecimento (entrega), reposição e devolução, com termo de responsabilidade aceito pelo colaborador na tela.
+- EPIs vinculados ao inventário de riscos aparecem como obrigatórios para a função, com aviso quando estão sem estoque.
+- O PDF traz empregador, colaborador (nome, CPF, matrícula, função, setor), EPIs com CA e validade, termo aceito com data e hora, similaridade do reconhecimento facial, foto do colaborador, responsável pelo registro, endereço IP e a situação dos EPIs exigidos para a função.
+- O hash SHA-256 de cada ficha é guardado; os PDFs ficam em armazenamento privado na nuvem, com download autenticado.
+- A biometria facial de cada conta fica isolada e é apagada quando o funcionário é excluído.
+- Vantagem na construção civil: o reconhecimento facial funciona com mão suja, calejada ou de luva, situações em que a impressão digital costuma falhar.
+- Base legal citada: CLT arts. 157, 158 e 166; NR-6, que admite o registro do fornecimento em livros, fichas ou sistema eletrônico, inclusive biométrico.
+- Guia: [Como comprovar a entrega de EPI com reconhecimento facial](https://bevart.com.br/blog/como-comprovar-entrega-de-epi-com-reconhecimento-facial/).
 
 ## eSocial
 
@@ -34,6 +51,7 @@ Blog Bevart — guias práticos de SST: [https://bevart.com.br/blog/](https://be
 - [Treinamentos e EPI](https://bevart.com.br/blog/categoria/treinamentos-e-epi/): Capacitações das NRs, validade, evidências e controle de entrega de EPI.
 - [Gestão de SST](https://bevart.com.br/blog/categoria/gestao-de-sst/): Produtividade, precificação e organização de consultorias e equipes de segurança.
 
+- [Como comprovar a entrega de EPI com reconhecimento facial](https://bevart.com.br/blog/como-comprovar-entrega-de-epi-com-reconhecimento-facial/): Como comprovar a entrega de EPI na fiscalização: o que a ficha precisa conter, por que a biometria facial supera a digital e como a foto entra no PDF.
 - [Novo modelo de PGR em PDF: documento premium em 6 passos](https://bevart.com.br/blog/modelo-de-pgr-em-pdf-premium/): Conheça o novo modelo de PGR em PDF do Bevart: capa institucional, sumário executivo, cores por nível de risco e plano de ação com prazos. Veja como gerar.
 - [Como transcrever ASO físico para o eSocial (S-2220) pelo Bevart](https://bevart.com.br/blog/como-transcrever-aso-fisico-para-esocial-s-2220-bevart/): Passo a passo para transcrever ASO em papel e transmitir o evento S-2220 ao eSocial no Bevart: formulário único, Tabela 27, dados médicos e recibo.
 - [Como enviar o evento S-2240 pelo Bevart e gerar o PPP](https://bevart.com.br/blog/como-enviar-evento-s-2240-pelo-sistema-bevart/): Guia do S-2240 no Bevart: regras de carga inicial vs alteração de exposição, Tabela 24, procuração digital e emissão do PPP eletrônico no Meu INSS.

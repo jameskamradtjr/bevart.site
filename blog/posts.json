@@ -85,6 +85,37 @@
   ],
   "posts": [
     {
+      "slug": "como-comprovar-entrega-de-epi-com-reconhecimento-facial",
+      "titulo": "Como comprovar a entrega de EPI com reconhecimento facial",
+      "tituloSeo": "Como comprovar entrega de EPI com ficha e biometria facial",
+      "breadcrumb": "Comprovar entrega de EPI",
+      "dek": "Papel some, assinatura é contestada e planilha não prova nada. Veja o que a ficha de EPI precisa ter para sustentar a entrega na fiscalização e como a foto do reconhecimento facial vai para dentro do PDF.",
+      "descricao": "Como comprovar a entrega de EPI na fiscalização: o que a ficha precisa conter, por que a biometria facial supera a digital e como a foto entra no PDF.",
+      "categoria": "treinamentos-e-epi",
+      "tags": [
+        "EPI",
+        "ficha de entrega de EPI",
+        "reconhecimento facial",
+        "NR-6",
+        "gestão de EPI",
+        "construção civil"
+      ],
+      "palavraChave": "comprovar entrega de EPI",
+      "autor": "james-kamradt-jr",
+      "publicado": "2026-09-13",
+      "atualizado": "2026-09-13",
+      "tempoLeitura": 9,
+      "capa": "assets/capa.svg",
+      "capaAlt": "Capa do artigo sobre como comprovar a entrega de EPI com ficha digital e reconhecimento facial",
+      "destaque": true,
+      "rascunho": false,
+      "sidebar": "Ficha de EPI com a foto do reconhecimento facial, termo aceito e hash de integridade.",
+      "cta": {
+        "titulo": "Ficha de EPI que se sustenta na fiscalização",
+        "texto": "Estoque, entrega pelo tablet com reconhecimento facial e PDF com foto, termo aceito e hash guardado. Teste 5 dias, sem cartão."
+      }
+    },
+    {
       "slug": "modelo-de-pgr-em-pdf-premium",
       "titulo": "Novo modelo de PGR em PDF: documento premium em 6 passos",
       "dek": "Capa institucional, sumário executivo com indicadores, matriz de risco colorida e plano de ação com semáforo de prazos. Veja o documento por dentro e como gerar o seu.",
@@ -105,7 +136,7 @@
       "tempoLeitura": 9,
       "capa": "assets/capa.svg",
       "capaAlt": "Ilustração do novo modelo de PGR em PDF do Bevart, com capa institucional e indicadores de risco",
-      "destaque": true,
+      "destaque": false,
       "rascunho": false
     },
     {
@@ -359,7 +390,7 @@
       "palavraChave": "ficha de entrega de EPI",
       "autor": "james-kamradt-jr",
       "publicado": "2025-01-24",
-      "atualizado": "2026-08-18",
+      "atualizado": "2026-09-13",
       "tempoLeitura": 5,
       "capa": "assets/capa.svg",
       "capaAlt": "Ilustração do controle de estoque e ficha de entrega de EPI",
