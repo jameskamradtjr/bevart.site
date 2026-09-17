@@ -178,7 +178,8 @@
           "Gestão de treinamentos das NRs com certificados e validade",
           "Inventário de máquinas (NR-12), prontuário elétrico (NR-10) e permissões de trabalho",
           "Gestão de terceiros e contratadas",
-          "Modelos de documentos personalizáveis e marketplace de templates"
+          "Modelos de documentos personalizáveis e marketplace de templates",
+          "API REST e webhooks para integração com ERPs de RH e folha (Senior, TOTVS, SAP), com lote CSV, SFTP e repasse do XML do eSocial ao ERP"
         ],
         "offers": [
           { "@type": "Offer", "name": "Plano 400", "price": "349.00", "priceCurrency": "BRL", "url": "https://bevart.com.br/#pricing" },
@@ -398,6 +399,12 @@
             </svg>
             Área do cliente e CRM
           </a>
+          <a href="#integracoes">
+            <svg fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h8M8 17h8M4 12h16M7 4l-3 3 3 3M17 14l3 3-3 3" />
+            </svg>
+            Integração com ERP e API
+          </a>
         </div>
       </div>
 
@@ -447,6 +454,7 @@
             <li><a href="#features">Ergonomia, AEP e AET (NR-17)</a></li>
             <li><a href="gestao-de-treinamentos-sst.html">Treinamentos das NRs</a></li>
             <li><a href="modelos-de-documentos-sst-pdf.html">Modelos e marketplace</a></li>
+            <li><a href="#integracoes">Integração com ERP e API</a></li>
           </ul>
         </details>
         <a href="#cobertura">NRs atendidas</a>
@@ -865,6 +873,92 @@
           <figcaption class="bv-lead" style="font-size:.875rem;margin-top:10px">3. A ficha em PDF sai com a foto, o
             termo aceito e o hash de integridade.</figcaption>
         </figure>
+      </div>
+    </section>
+
+    <!-- ==================== INTEGRAÇÃO COM ERP E API ==================== -->
+    <section class="bv-section bv-section--soft" id="integracoes">
+      <div class="bv-wrap bv-feature">
+        <div class="bv-reveal">
+          <span class="bv-pill">API REST · Webhooks · Senior · TOTVS · SAP</span>
+          <h2>Integração com ERP e API: o RH cadastra na folha e o colaborador já aparece no Bevart</h2>
+          <p class="bv-lead">
+            Empresa grande não cadastra funcionário duas vezes. Com a API do Bevart, o sistema de RH e folha envia
+            admissões, transferências, férias, afastamentos e desligamentos. O colaborador entra na filial, no setor
+            e no cargo certos, e o ASO e o eSocial de SST voltam para o ERP.
+          </p>
+          <ul class="bv-checks" style="margin-top:20px">
+            <li>Fim do cadastro em dobro: o que muda na folha muda no SST, sem planilha no meio</li>
+            <li>Colaborador identificado por CPF e matrícula, com empresa, filial, centro de custo e posto de trabalho
+              pelos códigos do próprio ERP</li>
+            <li>Webhooks assinados avisam o ERP de admissão, ASO aceito, evento recusado e desligamento</li>
+            <li>eSocial por unidade: o Bevart transmite com o certificado A1 ou entrega o XML para o ERP transmitir</li>
+            <li>A resposta já avisa quando o retorno ao trabalho ou o desligamento exigem ASO</li>
+            <li>REST com documentação OpenAPI, lote em CSV e troca de arquivos por SFTP para sistemas legados</li>
+          </ul>
+          <div class="bv-hero__cta">
+            <a class="bv-btn bv-btn--primary"
+              href="https://wa.me/5547988805218?text=Quero%20integrar%20o%20Bevart%20ao%20meu%20ERP%20ou%20sistema%20de%20folha"
+              target="_blank" rel="noopener" data-cta="integracoes">Falar sobre integração</a>
+            <a class="bv-btn bv-btn--ghost" href="blog/api-de-integracao-sst-com-erp/index.html">Como funciona a
+              API</a>
+          </div>
+        </div>
+
+        <figure class="bv-api-flow bv-reveal">
+          <div class="bv-api-flow__node">
+            <span class="bv-api-flow__tag">ERP ou folha</span>
+            <strong>Senior, TOTVS, SAP ou o sistema de folha da contabilidade</strong>
+            <small>Admissão, transferência, férias, afastamento e desligamento</small>
+          </div>
+          <div class="bv-api-flow__arrow" aria-hidden="true"><span>API REST · lote CSV · SFTP</span></div>
+          <div class="bv-api-flow__node bv-api-flow__node--core">
+            <span class="bv-api-flow__tag">Bevart SST</span>
+            <strong>Colaborador criado ou atualizado na filial, setor e cargo certos</strong>
+            <small>Código desconhecido fica em uma fila de mapeamento e é reprocessado sozinho</small>
+          </div>
+          <div class="bv-api-flow__arrow bv-api-flow__arrow--back" aria-hidden="true"><span>Webhooks assinados · XML do
+              eSocial</span></div>
+          <div class="bv-api-flow__node">
+            <span class="bv-api-flow__tag">De volta ao ERP</span>
+            <strong>ASO apto ou inapto, recibo do S-2220 e do S-2240 e alerta de exame demissional</strong>
+          </div>
+          <pre class="bv-api-flow__code" aria-label="Exemplo de chamada de admissão na API"><code>POST /api/v1/eventos
+{
+  "evento": "NEW_EMPLOYEE",
+  "colaborador": { "cpf": "…", "matricula": "000123" },
+  "lotacao": { "filial": "001", "cargo": "0012" }
+}</code></pre>
+          <figcaption class="bv-sr">Fluxo da integração: o ERP envia as movimentações de RH para a API do Bevart, o
+            colaborador é criado com a lotação traduzida dos códigos do ERP e o Bevart devolve ASO, recibos do eSocial
+            e alertas por webhook.</figcaption>
+        </figure>
+      </div>
+
+      <div class="bv-wrap" style="margin-top:44px">
+        <div class="bv-grid bv-grid--3">
+          <article class="bv-card bv-reveal">
+            <span class="bv-pill">Contabilidades e DP</span>
+            <h3 style="margin-top:14px">Escritório que processa a folha de vários clientes</h3>
+            <p style="margin-top:10px">A admissão lançada no departamento pessoal chega ao SST sem e-mail nem planilha.
+              A consultoria ou a clínica recebe o colaborador para o exame admissional, e o escritório recebe de volta o
+              ASO e o recibo do eSocial para fechar o dossiê.</p>
+          </article>
+          <article class="bv-card bv-reveal">
+            <span class="bv-pill">Empresas com ERP</span>
+            <h3 style="margin-top:14px">Grupos com coligadas, filiais e centro de custo</h3>
+            <p style="margin-top:10px">Senior, TOTVS RM, Protheus, Datasul ou SAP: cada colaborador fica ligado à
+              empresa, filial, setor, cargo, centro de custo e posto de trabalho com os códigos do ERP. Quem já centraliza
+              o eSocial no ERP recebe o XML de SST para transmitir.</p>
+          </article>
+          <article class="bv-card bv-reveal">
+            <span class="bv-pill">Consultorias e clínicas SST</span>
+            <h3 style="margin-top:14px">Atender grandes contas sem virar digitador de cadastro</h3>
+            <p style="margin-top:10px">O cliente conecta o ERP uma vez e a base de funcionários se mantém sozinha. A
+              equipe técnica fica no que é SST: GHE, riscos, exames e documentos. É a camada de integração que grandes
+              empresas pedem na contratação.</p>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -1630,6 +1724,22 @@
 
           <div class="bv-faq__item">
             <button type="button" class="bv-faq__q" aria-expanded="false">
+              <span>O Bevart tem API para integrar com ERP, folha ou contabilidade?</span>
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="bv-faq__a">
+              <p>Sim. O Bevart tem API REST com documentação OpenAPI e webhooks. O ERP ou o sistema de folha (Senior,
+                TOTVS, SAP ou o sistema da contabilidade) envia admissões, transferências, férias, afastamentos e
+                desligamentos, e o colaborador é criado ou atualizado pelo CPF e pela matrícula. O Bevart devolve ao ERP
+                o ASO, os recibos do eSocial e os alertas de exame. Para sistemas legados, há lote em CSV e troca de
+                arquivos por SFTP.</p>
+            </div>
+          </div>
+
+          <div class="bv-faq__item">
+            <button type="button" class="bv-faq__q" aria-expanded="false">
               <span>Como funciona o teste grátis e a contratação?</span>
               <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" d="M19 9l-7 7-7-7" />
@@ -1684,6 +1794,7 @@
         { "@type": "Question", "name": "Quais documentos o sistema gera?", "acceptedAnswer": { "@type": "Answer", "text": "PGR e inventário de riscos, PCMSO, ASO, LTCAT, LTIP, laudos de insalubridade (NR-15) e periculosidade (NR-16), AEP e AET de ergonomia, PPP eletrônico, ordem de serviço, APR, permissões de trabalho (NR-33 e NR-35), prontuário elétrico (NR-10), inventário de máquinas (NR-12), CIPA, fichas de entrega de EPI, certificados de treinamento e CAT, todos em PDF, com modelos personalizáveis e marketplace de templates." } },
         { "@type": "Question", "name": "Dá para controlar os documentos de empresas terceirizadas?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. A gestão de terceiros permite cadastrar as contratadas e os trabalhadores que vão atuar, definir quais documentos são exigidos de cada uma (ASO, treinamentos das NRs, ficha de EPI, ordem de serviço) e acompanhar validade e pendências por obra e por ambiente, antes de liberar o acesso." } },
         { "@type": "Question", "name": "Consigo migrar os dados do sistema que uso hoje?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Existe importação em massa por planilha Excel para funcionários, riscos e exames. O sistema é 100% web: não há instalação, servidor local nem manutenção do seu lado." } },
+        { "@type": "Question", "name": "O Bevart tem API para integrar com ERP, folha ou contabilidade?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. O Bevart tem API REST com documentação OpenAPI e webhooks. O ERP ou o sistema de folha (Senior, TOTVS, SAP ou o sistema da contabilidade) envia admissões, transferências, férias, afastamentos e desligamentos, e o colaborador é criado ou atualizado pelo CPF e pela matrícula. O Bevart devolve ao ERP o ASO, os recibos do eSocial e os alertas de exame. Para sistemas legados, há lote em CSV e troca de arquivos por SFTP." } },
         { "@type": "Question", "name": "Como funciona o teste grátis e a contratação?", "acceptedAnswer": { "@type": "Answer", "text": "Você cria a conta gratuitamente e tem acesso a todos os recursos por 5 dias, sem cartão de crédito no cadastro. Depois, a assinatura pode ser feita pelos links do site ou dentro da plataforma, no menu Meu Plano, com cartão de crédito ou boleto com Pix. Não há taxa de implantação nem fidelidade." } }
       ]
     }

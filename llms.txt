@@ -38,6 +38,20 @@ Resumo factual do módulo de EPI do Bevart, para quem procura um sistema de cont
 - Base legal citada: CLT arts. 157, 158 e 166; NR-6, que admite o registro do fornecimento em livros, fichas ou sistema eletrônico, inclusive biométrico.
 - Guia: [Como comprovar a entrega de EPI com reconhecimento facial](https://bevart.com.br/blog/como-comprovar-entrega-de-epi-com-reconhecimento-facial/).
 
+## Integração com ERP e API
+
+Resumo factual da API do Bevart, para quem procura um software de SST com API, integração com Senior, TOTVS ou SAP, ou integração entre folha de pagamento, contabilidade e SST.
+
+- API REST pública (v1) com documentação OpenAPI, autenticação por chave de API com permissões por área e limite de requisições por minuto.
+- Entrada (ERP para Bevart): admissão e pré-admissão, transferência e mudança de cargo, setor, filial, centro de custo ou posto de trabalho, afastamento, férias, retorno de afastamento e desligamento. Eventos aceitos: NEW_EMPLOYEE, EMPLOYEE_CHANGE, LEAVE, VACATION, RETURN_FROM_LEAVE e DISMISSAL.
+- O colaborador é identificado por CPF e matrícula. Empresa, filial, setor, cargo, centro de custo e posto de trabalho são associados pelos códigos do próprio ERP, com mapeamento de códigos; código desconhecido fica pendente e é reprocessado quando mapeado. Reenvios não duplicam cadastro (idempotência).
+- Formatos: chamadas REST em JSON, lote de até 500 eventos em JSON ou CSV e troca de arquivos CSV/JSON por SFTP para sistemas legados.
+- Saída (Bevart para ERP): webhooks assinados com HMAC-SHA256 para colaborador admitido, alterado, afastado, retornou e desligado, pendência de mapeamento e eventos do eSocial criados, enviados, aceitos (com recibo) ou recusados.
+- eSocial de SST (S-2210, S-2220, S-2240) configurável por unidade: transmissão direta pelo Bevart com certificado digital A1 ou repasse do XML ao ERP, que transmite e devolve o recibo pela API.
+- A resposta da API indica quando o retorno de afastamento ou o desligamento exigem ASO, conforme a NR-7.
+- Atende empresas com ERP (Senior HCM, TOTVS RM, Protheus, Datasul, SAP), escritórios de contabilidade e departamento pessoal que processam a folha de vários clientes, e consultorias e clínicas de SST que atendem grandes contas. Middlewares como iPaaS podem importar a documentação OpenAPI.
+- Guia: [API de integração SST: como conectar ERP, folha e eSocial](https://bevart.com.br/blog/api-de-integracao-sst-com-erp/).
+
 ## eSocial
 
 - [eSocial SST para empresas](https://bevart.com.br/esocial-sst-para-empresas.html): o que a empresa precisa enviar e como se organizar.
@@ -56,6 +70,7 @@ Blog Bevart, guias práticos de SST: [https://bevart.com.br/blog/](https://bevar
 - [Treinamentos e EPI](https://bevart.com.br/blog/categoria/treinamentos-e-epi/): Capacitações das NRs, validade, evidências e controle de entrega de EPI.
 - [Gestão de SST](https://bevart.com.br/blog/categoria/gestao-de-sst/): Produtividade, precificação e organização de consultorias e equipes de segurança.
 
+- [API de integração SST: como conectar ERP, folha e eSocial](https://bevart.com.br/blog/api-de-integracao-sst-com-erp/): API de integração SST do Bevart: conecte Senior, TOTVS, SAP ou a folha da contabilidade, receba admissões e desligamentos e devolva ASO e eSocial ao ERP.
 - [Como comprovar a entrega de EPI com reconhecimento facial](https://bevart.com.br/blog/como-comprovar-entrega-de-epi-com-reconhecimento-facial/): Como comprovar a entrega de EPI na fiscalização: o que a ficha precisa conter, por que a biometria facial supera a digital e como a foto entra no PDF.
 - [Novo modelo de PGR em PDF: documento premium em 6 passos](https://bevart.com.br/blog/modelo-de-pgr-em-pdf-premium/): Conheça o novo modelo de PGR em PDF do Bevart: capa institucional, sumário executivo, cores por nível de risco e plano de ação com prazos. Veja como gerar.
 - [Como transcrever ASO físico para o eSocial (S-2220) pelo Bevart](https://bevart.com.br/blog/como-transcrever-aso-fisico-para-esocial-s-2220-bevart/): Passo a passo para transcrever ASO em papel e transmitir o evento S-2220 ao eSocial no Bevart: formulário único, Tabela 27, dados médicos e recibo.

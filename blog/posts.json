@@ -85,6 +85,29 @@
   ],
   "posts": [
     {
+      "slug": "api-de-integracao-sst-com-erp",
+      "titulo": "API de integração SST: como conectar ERP, folha e eSocial",
+      "breadcrumb": "API de integração SST",
+      "dek": "O RH admite no ERP e alguém redigita no sistema de SST. Veja como a API do Bevart recebe admissões, transferências, afastamentos e desligamentos da folha e devolve ASO e eSocial ao ERP, para empresas, contabilidades e consultorias.",
+      "descricao": "API de integração SST do Bevart: conecte Senior, TOTVS, SAP ou a folha da contabilidade, receba admissões e desligamentos e devolva ASO e eSocial ao ERP.",
+      "categoria": "gestao-de-sst",
+      "tags": ["API", "integração com ERP", "eSocial", "folha de pagamento", "contabilidade", "webhooks"],
+      "palavraChave": "API de integração SST",
+      "autor": "james-kamradt-jr",
+      "publicado": "2026-09-17",
+      "atualizado": "2026-09-17",
+      "tempoLeitura": 10,
+      "capa": "assets/capa.svg",
+      "capaAlt": "Capa do artigo sobre a API de integração SST do Bevart com ERPs de RH, folha de pagamento e eSocial",
+      "destaque": false,
+      "rascunho": false,
+      "sidebar": "Admissão, transferência, afastamento e desligamento chegando do ERP; ASO e eSocial voltando por webhook.",
+      "cta": {
+        "titulo": "Integre a folha ao SST sem redigitar cadastro",
+        "texto": "API REST, webhooks, lote CSV e SFTP. O colaborador do ERP entra com filial, setor e cargo, e o eSocial de SST volta para o ERP. Teste 5 dias, sem cartão."
+      }
+    },
+    {
       "slug": "como-comprovar-entrega-de-epi-com-reconhecimento-facial",
       "titulo": "Como comprovar a entrega de EPI com reconhecimento facial",
       "tituloSeo": "Como comprovar entrega de EPI com ficha e biometria facial",

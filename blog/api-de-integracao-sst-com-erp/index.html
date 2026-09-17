@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <!-- build:head -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API de integração SST: como conectar ERP, folha e eSocial | Blog Bevart</title>
+  <meta name="description" content="API de integração SST do Bevart: conecte Senior, TOTVS, SAP ou a folha da contabilidade, receba admissões e desligamentos e devolva ASO e eSocial ao ERP.">
+  <link rel="canonical" href="https://bevart.com.br/blog/api-de-integracao-sst-com-erp/">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="theme-color" content="#2563eb">
+  <meta name="author" content="James Kamradt Jr">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Blog Bevart">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://bevart.com.br/blog/api-de-integracao-sst-com-erp/">
+  <meta property="og:title" content="API de integração SST: como conectar ERP, folha e eSocial">
+  <meta property="og:description" content="O RH admite no ERP e alguém redigita no sistema de SST. Veja como a API do Bevart recebe admissões, transferências, afastamentos e desligamentos da folha e devolve ASO e eSocial ao ERP, para empresas, contabilidades e consultorias.">
+  <meta property="og:image" content="https://bevart.com.br/assets/img/tela_sistema_sst_bevart.png">
+  <meta property="article:published_time" content="2026-09-17T09:00:00-03:00">
+  <meta property="article:modified_time" content="2026-09-17T09:00:00-03:00">
+  <meta property="article:section" content="Gestão de SST">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="API de integração SST: como conectar ERP, folha e eSocial">
+  <meta name="twitter:description" content="O RH admite no ERP e alguém redigita no sistema de SST. Veja como a API do Bevart recebe admissões, transferências, afastamentos e desligamentos da folha e devolve ASO e eSocial ao ERP, para empresas, contabilidades e consultorias.">
+  <meta name="twitter:image" content="https://bevart.com.br/assets/img/tela_sistema_sst_bevart.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../../assets/img/favicon.png">
+  <link rel="stylesheet" href="../assets/css/blog.css">
+  <link rel="alternate" type="application/rss+xml" title="Blog Bevart" href="../feed.xml">
+
+  <script defer src="../assets/js/analytics.js"></script>
+  <script defer src="../assets/js/blog.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://bevart.com.br/#organization",
+        "name": "Bevart",
+        "url": "https://bevart.com.br/",
+        "logo": "https://bevart.com.br/assets/img/logo%20bevart.svg"
+      },
+      {
+        "@type": "Person",
+        "@id": "https://bevart.com.br/#james-kamradt-jr",
+        "name": "James Kamradt Jr",
+        "jobTitle": "Fundador do Bevart",
+        "worksFor": {
+          "@id": "https://bevart.com.br/#organization"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/jameskamradtjr/",
+          "https://www.instagram.com/jameskamradtjr/",
+          "https://www.youtube.com/@JamesKamradtJr",
+          "https://x.com/jameskamradtjr"
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://bevart.com.br/blog/api-de-integracao-sst-com-erp/#post",
+        "headline": "API de integração SST: como conectar ERP, folha e eSocial",
+        "description": "API de integração SST do Bevart: conecte Senior, TOTVS, SAP ou a folha da contabilidade, receba admissões e desligamentos e devolva ASO e eSocial ao ERP.",
+        "image": [
+          "https://bevart.com.br/assets/img/tela_sistema_sst_bevart.png"
+        ],
+        "datePublished": "2026-09-17T09:00:00-03:00",
+        "dateModified": "2026-09-17T09:00:00-03:00",
+        "inLanguage": "pt-BR",
+        "articleSection": "Gestão de SST",
+        "keywords": "API, integração com ERP, eSocial, folha de pagamento, contabilidade, webhooks",
+        "wordCount": 1838,
+        "author": {
+          "@id": "https://bevart.com.br/#james-kamradt-jr"
+        },
+        "publisher": {
+          "@id": "https://bevart.com.br/#organization"
+        },
+        "isPartOf": {
+          "@id": "https://bevart.com.br/blog/#blog"
+        },
+        "mainEntityOfPage": "https://bevart.com.br/blog/api-de-integracao-sst-com-erp/"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Bevart",
+            "item": "https://bevart.com.br/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://bevart.com.br/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Gestão de SST",
+            "item": "https://bevart.com.br/blog/categoria/gestao-de-sst/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "API de integração SST",
+            "item": "https://bevart.com.br/blog/api-de-integracao-sst-com-erp/"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "O Bevart tem API para integrar com ERP?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. O Bevart tem uma API REST com documentação OpenAPI e webhooks. O ERP envia admissões, transferências, férias, afastamentos e desligamentos, e o Bevart devolve ASO, recibos e recusas do eSocial. Para sistemas legados, há envio em lote por CSV e troca de arquivos por SFTP."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "A integração funciona com Senior, TOTVS e SAP?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. A API é genérica e funciona com qualquer ERP ou middleware que consiga chamar uma API REST ou gerar arquivo CSV, incluindo Senior HCM, TOTVS RM, Protheus, Datasul e SAP. Os códigos de coligada, filial, seção, cargo e centro de custo do ERP são mapeados para os cadastros do Bevart."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Contabilidade consegue integrar o sistema de folha com o SST?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. O sistema de folha do escritório envia as movimentações dos clientes para a API ou para a pasta SFTP, e recebe de volta o ASO e o recibo do eSocial. Não é necessário um conector pronto: basta o sistema chamar a API REST ou exportar CSV."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quem transmite o eSocial quando o ERP está integrado?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Você escolhe por unidade. Na transmissão direta, o Bevart assina com o certificado A1 e transmite. No repasse de XML, o ERP baixa o XML pela API, transmite e devolve o recibo. Os dois nunca devem transmitir o mesmo empregador."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Preciso cadastrar os funcionários de novo no Bevart?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Não. A carga inicial é feita em lote a partir do ERP e, depois, as movimentações chegam automaticamente. Colaboradores já cadastrados com o mesmo CPF e matrícula são atualizados, sem duplicar."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+<!-- /build:head -->
+</head>
+
+<body>
+  <a href="#conteudo" class="bv-skip">Ir para o conteúdo</a>
+
+  <!-- build:header -->
+  <div class="bv-header">
+    <div class="bv-wrap bv-header__inner">
+      <a class="bv-header__brand" href="../index.html" aria-label="Blog do Bevart">
+        <img src="../../assets/img/logo bevart.svg" alt="Bevart" width="140" height="40">
+        <span class="bv-header__tag">Blog</span>
+      </a>
+      <nav class="bv-nav" aria-label="Navegação do blog">
+        <a href="../index.html">Todos os artigos</a>
+        <a href="../categoria/pgr-e-riscos/index.html">PGR e riscos</a>
+        <a href="../categoria/psicossocial-e-ergonomia/index.html">Psicossocial e ergonomia</a>
+        <a href="../categoria/esocial/index.html">eSocial</a>
+        <a href="../categoria/pcmso-e-exames/index.html">PCMSO e exames</a>
+        <a href="../../index.html">Plataforma</a>
+      </nav>
+      <div class="bv-header__actions">
+        <a class="bv-btn bv-btn--primary"
+          href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="blog-header">Criar conta grátis</a>
+        <button type="button" class="bv-burger" data-burger aria-expanded="false" aria-controls="menu-mobile"
+          aria-label="Abrir menu">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="bv-wrap">
+      <div class="bv-mobile" id="menu-mobile">
+        <a href="../index.html">Todos os artigos</a>
+        <a href="../categoria/pgr-e-riscos/index.html">PGR e riscos</a>
+        <a href="../categoria/psicossocial-e-ergonomia/index.html">Psicossocial e ergonomia</a>
+        <a href="../categoria/esocial/index.html">eSocial</a>
+        <a href="../categoria/pcmso-e-exames/index.html">PCMSO e exames</a>
+        <a href="../categoria/treinamentos-e-epi/index.html">Treinamentos e EPI</a>
+        <a href="../categoria/legislacao-e-nrs/index.html">Legislação e NRs</a>
+        <a href="../categoria/gestao-de-sst/index.html">Gestão de SST</a>
+        <a href="../../index.html">Plataforma Bevart</a>
+        <a class="bv-btn bv-btn--primary"
+          href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="blog-menu-mobile">Criar conta grátis</a>
+      </div>
+    </div>
+    <div class="bv-progress" id="progresso-leitura" aria-hidden="true"></div>
+  </div>
+<!-- /build:header -->
+
+  <main id="conteudo">
+    <article>
+
+      <nav class="bv-breadcrumb bv-wrap" aria-label="Você está em">
+        <ol>
+          <li><a href="../../index.html">Bevart</a></li>
+          <li><a href="../index.html">Blog</a></li>
+          <li><a href="../categoria/gestao-de-sst/index.html">Gestão de SST</a></li>
+          <li aria-current="page">API de integração SST</li>
+        </ol>
+      </nav>
+
+      <header class="bv-article-head bv-wrap">
+        <a class="bv-chip" href="../categoria/gestao-de-sst/index.html">Gestão de SST</a>
+        <h1>API de integração SST: como conectar ERP, folha e eSocial</h1>
+        <p class="bv-dek">O RH admite no ERP e alguém redigita no sistema de SST. Veja como a API do Bevart recebe
+          admissões, transferências, afastamentos e desligamentos da folha e devolve ASO e eSocial ao ERP, para
+          empresas, contabilidades e consultorias.</p>
+
+        <!-- build:byline -->
+        <div class="bv-byline">
+          <span class="bv-avatar" aria-hidden="true">JK</span>
+          <span class="bv-byline__who">
+            <strong>James Kamradt Jr</strong>
+            <span>Fundador do Bevart</span>
+          </span>
+          <span class="bv-meta" style="margin-left:auto">
+            <time datetime="2026-09-17">17 set 2026</time>
+            <span class="bv-meta__sep">10 min de leitura</span>
+          </span>
+        </div>
+<!-- /build:byline -->
+      </header>
+
+      <figure class="bv-cover bv-wrap">
+        <img src="assets/capa.svg"
+          alt="Capa do artigo sobre a API de integração SST do Bevart com ERPs de RH, folha de pagamento e eSocial"
+          width="1200" height="630" fetchpriority="high">
+      </figure>
+
+      <div class="bv-wrap bv-layout">
+        <div>
+
+          <div class="bv-takeaways">
+            <h2>O essencial em 30 segundos</h2>
+            <ul>
+              <li>Cadastro em dobro entre folha e SST gera exame admissional atrasado, S-2240 esquecido e colaborador
+                desligado ainda sendo convocado. A integração elimina a redigitação na origem.</li>
+              <li>Pela API, o ERP envia cada movimentação de RH e o colaborador entra no Bevart pelo CPF e pela
+                matrícula, na filial, no setor e no cargo correspondentes aos códigos do próprio ERP.</li>
+              <li>O caminho de volta também existe: webhooks avisam o ERP de ASO, recibo e recusa do eSocial, e o
+                eSocial de SST pode ser transmitido pelo Bevart ou pelo ERP, por unidade.</li>
+            </ul>
+          </div>
+
+          <div class="bv-prose">
+            <p>Uma API de integração SST é a ponte que faz o sistema de RH e folha e o sistema de segurança e saúde do
+              trabalho conversarem sozinhos. O RH admite, transfere, afasta ou desliga no ERP; a mesma informação chega
+              ao sistema de SST em segundos, sem planilha, sem e-mail e sem alguém redigitando CPF.</p>
+
+            <p>Em empresa pequena, o técnico de segurança dá conta de manter o cadastro na mão. Em grupo com três
+              coligadas, vinte filiais e rotatividade alta, não dá. É por isso que grandes contas perguntam, na primeira
+              reunião, se o software de SST integra com Senior, TOTVS ou SAP. Quem responde "exportamos planilha" perde
+              a conta para quem responde "temos API".</p>
+
+            <p>Este artigo explica o que a API do Bevart recebe, o que ela devolve, para quem ela faz diferença e como
+              conectar o seu ERP na prática.</p>
+
+            <h2>Por que o cadastro em dobro entre folha e SST sai caro</h2>
+
+            <p>O problema da redigitação não é só o tempo gasto. É o atraso entre o fato e o registro no SST, e o que
+              deixa de acontecer nesse intervalo. A tabela resume onde a falta de integração costuma aparecer.</p>
+
+            <div class="bv-table-wrap">
+              <table>
+                <caption class="bv-sr">Consequências do cadastro manual comparadas à integração por API</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Movimentação no RH</th>
+                    <th scope="col">Sem integração</th>
+                    <th scope="col">Com a API</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Admissão</td>
+                    <td>Colaborador chega ao SST dias depois; o admissional corre atrás da data de início</td>
+                    <td>Entra no Bevart no momento da admissão ou da pré-admissão</td>
+                  </tr>
+                  <tr>
+                    <td>Mudança de cargo ou setor</td>
+                    <td>O GHE e os riscos continuam os da função antiga</td>
+                    <td>Histórico de funções gravado e S-2240 sinalizado para revisão</td>
+                  </tr>
+                  <tr>
+                    <td>Afastamento longo</td>
+                    <td>Ninguém lembra do exame de retorno</td>
+                    <td>A resposta indica quando o retorno exige exame</td>
+                  </tr>
+                  <tr>
+                    <td>Desligamento</td>
+                    <td>Colaborador segue ativo e recebendo convocação</td>
+                    <td>Inativado na data informada, com o aviso sobre o exame demissional</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>Some a isso o custo invisível: o técnico que deveria estar no campo gasta horas conferindo lista de ativos
+              com o RH. Em consultoria, esse retrabalho se multiplica pelo número de clientes.</p>
+
+            <h2>O que a API do Bevart recebe do ERP</h2>
+
+            <p>O ERP, ou o middleware que conversa com ele, envia cada movimentação para um endpoint da API. O tipo de
+              movimentação vai no campo <code>evento</code>, com os mesmos nomes usados em fluxos de integração de SST
+              de mercado.</p>
+
+            <div class="bv-table-wrap">
+              <table>
+                <caption class="bv-sr">Movimentações aceitas pela API e o que cada uma faz no Bevart</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Evento enviado</th>
+                    <th scope="col">O que acontece no Bevart</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>NEW_EMPLOYEE</code></td>
+                    <td>Cria o colaborador (inclusive pré-admissão); se estava desligado, readmite</td>
+                  </tr>
+                  <tr>
+                    <td><code>EMPLOYEE_CHANGE</code></td>
+                    <td>Atualiza cargo, setor, filial, centro de custo, posto de trabalho ou dados cadastrais</td>
+                  </tr>
+                  <tr>
+                    <td><code>LEAVE</code> e <code>VACATION</code></td>
+                    <td>Registra afastamento ou férias no histórico do colaborador</td>
+                  </tr>
+                  <tr>
+                    <td><code>RETURN_FROM_LEAVE</code></td>
+                    <td>Encerra o afastamento e indica se há exame de retorno</td>
+                  </tr>
+                  <tr>
+                    <td><code>DISMISSAL</code></td>
+                    <td>Inativa o colaborador e indica se o exame demissional é necessário</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>CPF, matrícula e os códigos do próprio ERP</h3>
+
+            <p>O colaborador é identificado por <strong>CPF e matrícula</strong>, a mesma chave do eSocial. A lotação
+              chega com os códigos que o ERP já usa: coligada, filial, seção, cargo, centro de custo e posto de
+              trabalho. O Bevart traduz esses códigos para os cadastros dele pelo CNPJ da filial, pelo código interno
+              ou pelo nome, e guarda a correspondência.</p>
+
+            <p>Quando um código não bate com nada, o envio não se perde. Ele fica em uma fila de mapeamento; alguém
+              aponta o cadastro correspondente e o Bevart reprocessa sozinho tudo que estava travado. O ERP não precisa
+              reenviar.</p>
+
+            <div class="bv-callout bv-callout--dica">
+              <span class="bv-callout__label">Na prática</span>
+              <p>Preencher o código interno das unidades, setores e funções do Bevart com os mesmos códigos do ERP, e o
+                CNPJ correto de cada unidade, faz a primeira carga casar quase tudo sem mapeamento manual.</p>
+            </div>
+
+            <h3>Alertas de exame que já saem na resposta</h3>
+
+            <p>A NR-7 exige o exame de retorno ao trabalho antes que o empregado reassuma as funções, quando a ausência
+              for de 30 dias ou mais por doença ou acidente, de natureza ocupacional ou não (item 7.5.9). O exame
+              demissional deve ser feito em até 10 dias do término do contrato e pode ser dispensado se o último exame
+              ocupacional tiver menos de 135 dias, nos graus de risco 1 e 2, ou menos de 90 dias, nos graus 3 e 4 (item
+              7.5.11).</p>
+
+            <p>Como o Bevart conhece o motivo do afastamento, o grau de risco da unidade e a data do último ASO, a
+              resposta ao retorno e ao desligamento já informa se o exame é necessário. O RH descobre isso no momento da
+              movimentação, e não na fiscalização.</p>
+
+            <div class="bv-inline-cta">
+              <h3>Quer ligar o seu ERP ao SST sem redigitar cadastro?</h3>
+              <p>No Bevart, a chave de API e o mapeamento de códigos são configurados na tela de Integrações, e o
+                colaborador enviado pelo ERP já entra com filial, setor e cargo.</p>
+              <a class="bv-btn bv-btn--light" href="https://profissionais.bevart.com.br/app/src/login/views/login"
+                data-cta="blog-post-meio">Criar conta grátis</a>
+            </div>
+
+            <h2>Para quem a integração faz diferença</h2>
+
+            <h3>Contabilidades e escritórios de departamento pessoal</h3>
+
+            <p>O escritório processa a folha de dezenas de empresas e costuma ser a origem da informação de admissão e
+              desligamento. Sem integração, essa informação vai por e-mail para a consultoria ou a clínica de SST, que
+              redigita. Com a API, o sistema de folha envia a movimentação e o escritório recebe de volta o ASO e o
+              recibo do eSocial para fechar o dossiê do colaborador.</p>
+
+            <p>Não é preciso que o sistema de folha tenha um conector pronto com o Bevart. Qualquer sistema que consiga
+              chamar uma API REST ou exportar um arquivo CSV consegue integrar.</p>
+
+            <h3>Empresas com ERP e estrutura de grupo</h3>
+
+            <p>Grupos que usam Senior HCM, TOTVS RM, Protheus, Datasul ou SAP trabalham com coligadas, filiais e centros
+              de custo. A API mantém essa estrutura: cada colaborador fica ligado à empresa, filial, setor, cargo,
+              centro de custo e posto de trabalho com os códigos do ERP. Se o mesmo CPF e a mesma matrícula existirem
+              em duas coligadas, o CNPJ da filial desempata.</p>
+
+            <h3>Consultorias e clínicas de SST que atendem grandes contas</h3>
+
+            <p>Para quem presta serviço de SST, a integração deixa de ser detalhe técnico e vira critério de
+              contratação. O cliente conecta o ERP uma vez, a base de funcionários se mantém sozinha e a equipe técnica
+              fica no que é SST: GHE, inventário de riscos, exames e documentos. Veja também como o controle de
+              <a href="../pcmso-e-aso-como-organizar-exames-ocupacionais/index.html">PCMSO e exames ocupacionais</a>
+              depende de uma base de colaboradores atualizada.</p>
+
+            <h2>eSocial de SST: o Bevart transmite ou o ERP transmite</h2>
+
+            <p>Algumas empresas querem que a consultoria cuide do eSocial de SST. Outras já centralizam todo o eSocial
+              no ERP e não abrem mão disso. Por isso o modo de envio dos eventos
+              <a href="../esocial-sst-eventos-s-2210-s-2220-s-2240/index.html">S-2210, S-2220 e S-2240</a> é escolhido
+              por unidade.</p>
+
+            <ul>
+              <li><strong>Transmissão direta.</strong> O Bevart assina com o certificado digital A1 da empresa e
+                transmite. O ERP acompanha pelos webhooks de evento aceito, com recibo, ou recusado, com a mensagem.</li>
+              <li><strong>Repasse de XML.</strong> O Bevart gera o XML no leiaute do eSocial e não transmite. O ERP,
+                como o TOTVS eDocs ou o módulo de eSocial da Senior, baixa o XML pela API, assina, transmite e devolve o
+                recibo.</li>
+            </ul>
+
+            <div class="bv-callout bv-callout--alerta">
+              <span class="bv-callout__label">Onde as empresas erram</span>
+              <p>Deixar o sistema de SST e o ERP transmitindo o mesmo empregador. O eSocial recusa o evento duplicado e
+                a correção vira retificação. No modo repasse, o Bevart deixa de colocar os eventos daquela unidade na
+                fila de propósito.</p>
+            </div>
+
+            <p>Nos dois modos, os dados de SST continuam nascendo no mesmo lugar: o ASO do S-2220 e os agentes nocivos
+              do S-2240 saem do inventário de riscos e dos exames cadastrados. Se o envio pelo Bevart é novidade para a
+              sua equipe, o <a href="../como-enviar-evento-s-2240-pelo-sistema-bevart/index.html">guia do S-2240 no
+                Bevart</a> mostra o fluxo completo.</p>
+
+            <h2>Como conectar o seu ERP ao Bevart na prática</h2>
+
+            <ol>
+              <li><strong>Crie uma chave de API por sistema e ambiente.</strong> Na tela de Integrações, gere uma chave
+                para homologação e outra para produção, com só as permissões necessárias. A chave aparece uma única
+                vez.</li>
+              <li><strong>Faça a carga inicial.</strong> Envie os colaboradores ativos em lote, em JSON ou CSV, com até
+                500 movimentações por chamada. Sistemas legados podem deixar o arquivo em uma pasta SFTP.</li>
+              <li><strong>Resolva os mapeamentos.</strong> Os códigos que não casaram aparecem em uma lista; aponte o
+                cadastro correspondente e o reprocessamento é automático.</li>
+              <li><strong>Ligue as movimentações do dia a dia.</strong> O ERP ou o middleware passa a chamar a API a cada
+                admissão, transferência, afastamento e desligamento.</li>
+              <li><strong>Cadastre os webhooks.</strong> Informe a URL do ERP que recebe os avisos e teste a entrega
+                pela própria tela.</li>
+              <li><strong>Escolha o modo do eSocial por unidade</strong> e valide um evento de ponta a ponta antes de
+                virar a chave para produção.</li>
+            </ol>
+
+            <p>O time de TI trabalha a partir da documentação OpenAPI, que pode ser importada em ferramentas como Postman
+              e em plataformas de integração do tipo iPaaS. Reenvios não duplicam cadastro: cada movimentação carrega um
+              identificador do ERP, e o Bevart devolve a mesma resposta quando recebe algo que já processou.</p>
+
+            <h2>Segurança e LGPD na integração</h2>
+
+            <p>Integração com folha trafega CPF, data de nascimento e afastamento por doença. Por isso a camada foi
+              desenhada com controles que a área de segurança da informação do cliente costuma pedir:</p>
+
+            <ul>
+              <li>chave de API guardada só como hash, com permissões por área, restrição de IP e revogação imediata;</li>
+              <li>cada chave acessa apenas os dados da própria conta;</li>
+              <li>webhooks assinados com HMAC-SHA256, para o ERP confirmar que o aviso veio do Bevart;</li>
+              <li>limite de requisições por minuto por chave;</li>
+              <li>conteúdo das movimentações processadas apagado após 180 dias, mantendo apenas o registro de quem
+                enviou o quê e quando.</li>
+            </ul>
+
+            <p>Se a sua operação ainda está organizando o básico do eSocial antes de pensar em integração, comece pelo
+              <a href="../../esocial-sst-para-empresas.html">eSocial SST para empresas</a> e volte a este guia quando a
+              base estiver de pé.</p>
+
+            <section class="bv-faq">
+              <h2>Perguntas frequentes</h2>
+              <details>
+                <summary>O Bevart tem API para integrar com ERP?</summary>
+                <div>
+                  <p>Sim. O Bevart tem uma API REST com documentação OpenAPI e webhooks. O ERP envia admissões,
+                    transferências, férias, afastamentos e desligamentos, e o Bevart devolve ASO, recibos e recusas do
+                    eSocial. Para sistemas legados, há envio em lote por CSV e troca de arquivos por SFTP.</p>
+                </div>
+              </details>
+              <details>
+                <summary>A integração funciona com Senior, TOTVS e SAP?</summary>
+                <div>
+                  <p>Sim. A API é genérica e funciona com qualquer ERP ou middleware que consiga chamar uma API REST ou
+                    gerar arquivo CSV, incluindo Senior HCM, TOTVS RM, Protheus, Datasul e SAP. Os códigos de coligada,
+                    filial, seção, cargo e centro de custo do ERP são mapeados para os cadastros do Bevart.</p>
+                </div>
+              </details>
+              <details>
+                <summary>Contabilidade consegue integrar o sistema de folha com o SST?</summary>
+                <div>
+                  <p>Sim. O sistema de folha do escritório envia as movimentações dos clientes para a API ou para a
+                    pasta SFTP, e recebe de volta o ASO e o recibo do eSocial. Não é necessário um conector pronto: basta
+                    o sistema chamar a API REST ou exportar CSV.</p>
+                </div>
+              </details>
+              <details>
+                <summary>Quem transmite o eSocial quando o ERP está integrado?</summary>
+                <div>
+                  <p>Você escolhe por unidade. Na transmissão direta, o Bevart assina com o certificado A1 e transmite.
+                    No repasse de XML, o ERP baixa o XML pela API, transmite e devolve o recibo. Os dois nunca devem
+                    transmitir o mesmo empregador.</p>
+                </div>
+              </details>
+              <details>
+                <summary>Preciso cadastrar os funcionários de novo no Bevart?</summary>
+                <div>
+                  <p>Não. A carga inicial é feita em lote a partir do ERP e, depois, as movimentações chegam
+                    automaticamente. Colaboradores já cadastrados com o mesmo CPF e matrícula são atualizados, sem
+                    duplicar.</p>
+                </div>
+              </details>
+            </section>
+          </div>
+
+          <!-- build:share -->
+          <div class="bv-share" data-share>
+            <span class="bv-share__label">Compartilhar</span>
+            <a data-rede="linkedin" href="#" aria-label="Compartilhar no LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.6c0-1.34-.03-3.07-1.9-3.07-1.9 0-2.2 1.46-2.2 2.97V21H9z" />
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+            <a data-rede="whatsapp" href="#" aria-label="Compartilhar no WhatsApp">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2a10 10 0 0 0-8.6 15.06L2 22l5.07-1.33A10 10 0 1 0 12 2zm5.5 14.2c-.24.67-1.4 1.28-1.93 1.32-.5.05-.97.23-3.27-.68-2.75-1.08-4.5-3.9-4.63-4.08-.14-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.25-.27.55-.34.73-.34h.52c.17 0 .4-.06.62.48.24.57.8 1.97.87 2.11.07.14.11.3.02.48-.09.18-.14.3-.27.46l-.4.47c-.14.14-.28.29-.12.57.16.27.71 1.17 1.53 1.9 1.05.93 1.94 1.22 2.22 1.36.27.14.43.12.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.6-.14.25.09 1.57.74 1.84.88.27.14.45.2.51.32.07.11.07.66-.17 1.32z" />
+              </svg>
+              <span>WhatsApp</span>
+            </a>
+            <a data-rede="x" href="#" aria-label="Compartilhar no X">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M18.9 2H22l-7.1 8.1L23.2 22h-6.5l-5.1-6.6L5.8 22H2.7l7.6-8.7L1.2 2h6.6l4.6 6.1zM17.8 20.2h1.7L7.3 3.7H5.5z" />
+              </svg>
+              <span>X</span>
+            </a>
+            <button type="button" data-rede="copiar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.5 1.5" />
+                <path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.5-1.5" />
+              </svg>
+              <span>Copiar link</span>
+            </button>
+          </div>
+<!-- /build:share -->
+
+          <!-- build:autor -->
+          <aside class="bv-author">
+            <span class="bv-avatar" aria-hidden="true">JK</span>
+            <div>
+              <h2>James Kamradt Jr</h2>
+              <p>Fundador do Bevart e responsável pelo produto. Escreve sobre a rotina real de quem opera SST: o que a fiscalização cobra, o que trava no dia a dia e como transformar exigência de norma em processo que roda sozinho.</p>
+            </div>
+          </aside>
+<!-- /build:autor -->
+
+          <!-- build:prevnext -->
+      <nav class="bv-prevnext" aria-label="Outros artigos">
+        <a href="../como-comprovar-entrega-de-epi-com-reconhecimento-facial/index.html"><span>Artigo anterior</span><strong>Como comprovar a entrega de EPI com reconhecimento facial</strong></a>
+        <span></span>
+      </nav>
+<!-- /build:prevnext -->
+        </div>
+
+        <!-- build:sidebar -->
+        <aside class="bv-toc">
+          <nav id="sumario" aria-label="Sumário do artigo" hidden>
+            <p class="bv-toc__title">Neste artigo</p>
+          </nav>
+          <div class="bv-toc__aside">
+            <p>Admissão, transferência, afastamento e desligamento chegando do ERP; ASO e eSocial voltando por webhook.</p>
+            <a class="bv-btn bv-btn--primary" href="https://profissionais.bevart.com.br/app/src/login/views/login"
+              data-cta="blog-post-sidebar">Testar 5 dias grátis</a>
+          </div>
+        </aside>
+<!-- /build:sidebar -->
+      </div>
+    </article>
+
+    <!-- build:relacionados -->
+    <section class="bv-section bv-section--soft">
+      <div class="bv-wrap">
+        <div class="bv-section__head">
+          <h2>Continue lendo</h2>
+          <a class="bv-link" href="../index.html">Ver todos os artigos</a>
+        </div>
+        <div class="bv-grid">
+        <article class="bv-post-card" data-post data-categoria="gestao-de-sst"
+          data-busca="area do cliente: o portal que a sua consultoria entrega em vez de mandar pdf por whatsapp e responder &quot;cade o aso?&quot; toda semana, cada cliente entra com o proprio login e encontra documento assinado, exame a vencer e plano de acao. gestao de sst area do cliente consultoria de sst documentos planos de acao">
+          <a class="bv-post-card__media" href="../descubra-a-area-do-cliente-do-bevart-um-diferencial-exclusivo-para-a-gestao-de-sst/index.html" tabindex="-1" aria-hidden="true">
+            <img src="../descubra-a-area-do-cliente-do-bevart-um-diferencial-exclusivo-para-a-gestao-de-sst/assets/capa.svg" alt="" width="640" height="360" loading="lazy" decoding="async">
+          </a>
+          <div class="bv-post-card__body">
+            <a class="bv-chip" href="../categoria/gestao-de-sst/index.html">Gestão de SST</a>
+            <h3 class="bv-post-card__title"><a href="../descubra-a-area-do-cliente-do-bevart-um-diferencial-exclusivo-para-a-gestao-de-sst/index.html">Área do cliente: o portal que a sua consultoria entrega</a></h3>
+            <p class="bv-post-card__dek">Em vez de mandar PDF por WhatsApp e responder &quot;cadê o ASO?&quot; toda semana, cada cliente entra com o próprio login e encontra documento assinado, exame a vencer e plano de ação.</p>
+            <p class="bv-meta">
+              <time datetime="2025-02-28">28 fev 2025</time>
+              <span class="bv-meta__sep">4 min de leitura</span>
+            </p>
+          </div>
+        </article>
+        <article class="bv-post-card" data-post data-categoria="gestao-de-sst"
+          data-busca="como assinar o pdf de sst e validar a conformidade da assinatura certificado a1 no perfil do profissional, documento gerado e assinado no sistema, guarda automatica no ged, e a conferencia final no verificador oficial do governo. gestao de sst assinatura digital certificado a1 ged iti documentos de sst">
+          <a class="bv-post-card__media" href="../como-assinar-documento-tst-pdf-e-validar-conformidade/index.html" tabindex="-1" aria-hidden="true">
+            <img src="../como-assinar-documento-tst-pdf-e-validar-conformidade/assets/capa.svg" alt="" width="640" height="360" loading="lazy" decoding="async">
+          </a>
+          <div class="bv-post-card__body">
+            <a class="bv-chip" href="../categoria/gestao-de-sst/index.html">Gestão de SST</a>
+            <h3 class="bv-post-card__title"><a href="../como-assinar-documento-tst-pdf-e-validar-conformidade/index.html">Como assinar o PDF de SST e validar a conformidade da assinatura</a></h3>
+            <p class="bv-post-card__dek">Certificado A1 no perfil do profissional, documento gerado e assinado no sistema, guarda automática no GED, e a conferência final no verificador oficial do governo.</p>
+            <p class="bv-meta">
+              <time datetime="2025-01-22">22 jan 2025</time>
+              <span class="bv-meta__sep">4 min de leitura</span>
+            </p>
+          </div>
+        </article>
+        <article class="bv-post-card" data-post data-categoria="esocial"
+          data-busca="como enviar o evento s-2240 pelo bevart e gerar o ppp entenda a logica das datas no s-2240, como manter o historico do ppp eletronico vivo sem furos e o passo a passo para enviar no bevart com procuracao digital. esocial s-2240 esocial ppp eletronico bevart carga inicial tabela 24">
+          <a class="bv-post-card__media" href="../como-enviar-evento-s-2240-pelo-sistema-bevart/index.html" tabindex="-1" aria-hidden="true">
+            <img src="../como-enviar-evento-s-2240-pelo-sistema-bevart/assets/capa.svg" alt="" width="640" height="360" loading="lazy" decoding="async">
+          </a>
+          <div class="bv-post-card__body">
+            <a class="bv-chip" href="../categoria/esocial/index.html">eSocial</a>
+            <h3 class="bv-post-card__title"><a href="../como-enviar-evento-s-2240-pelo-sistema-bevart/index.html">Como enviar o evento S-2240 pelo Bevart e gerar o PPP</a></h3>
+            <p class="bv-post-card__dek">Entenda a lógica das datas no S-2240, como manter o histórico do PPP eletrônico vivo sem furos e o passo a passo para enviar no Bevart com procuração digital.</p>
+            <p class="bv-meta">
+              <time datetime="2026-08-21">21 ago 2026</time>
+              <span class="bv-meta__sep">11 min de leitura</span>
+            </p>
+          </div>
+        </article>
+        </div>
+      </div>
+    </section>
+<!-- /build:relacionados -->
+
+    <!-- build:ctafinal -->
+    <section class="bv-section">
+      <div class="bv-wrap">
+        <div class="bv-band">
+          <div>
+            <h2>Integre a folha ao SST sem redigitar cadastro</h2>
+            <p>API REST, webhooks, lote CSV e SFTP. O colaborador do ERP entra com filial, setor e cargo, e o eSocial de SST volta para o ERP. Teste 5 dias, sem cartão.</p>
+          </div>
+          <div class="bv-band__actions">
+            <a class="bv-btn bv-btn--light bv-btn--lg"
+              href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="blog-post-fim">Criar conta
+              grátis</a>
+            <a class="bv-btn bv-btn--outline-light bv-btn--lg" href="../../index.html#pricing">Ver planos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- /build:ctafinal -->
+  </main>
+
+  <!-- build:footer -->
+  <footer class="bv-footer">
+    <div class="bv-wrap">
+      <div class="bv-footer__grid">
+        <div class="bv-footer__brand">
+          <img src="../../assets/img/logo bevart.svg" alt="Bevart" width="140" height="40">
+          <p>Plataforma de gestão de SST que liga o inventário de riscos aos documentos, exames, treinamentos, EPI e
+            eventos do eSocial.</p>
+        </div>
+        <div>
+          <h3>Blog</h3>
+          <ul>
+            <li><a href="../index.html">Todos os artigos</a></li>
+            <li><a href="../categoria/pgr-e-riscos/index.html">PGR e riscos</a></li>
+            <li><a href="../categoria/psicossocial-e-ergonomia/index.html">Psicossocial e ergonomia</a></li>
+            <li><a href="../categoria/esocial/index.html">eSocial</a></li>
+            <li><a href="../categoria/pcmso-e-exames/index.html">PCMSO e exames</a></li>
+            <li><a href="../categoria/treinamentos-e-epi/index.html">Treinamentos e EPI</a></li>
+            <li><a href="../categoria/legislacao-e-nrs/index.html">Legislação e NRs</a></li>
+            <li><a href="../categoria/gestao-de-sst/index.html">Gestão de SST</a></li>
+            <li><a href="../feed.xml">Feed RSS</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Plataforma</h3>
+          <ul>
+            <li><a href="../../index.html">Visão geral</a></li>
+            <li><a href="../../index.html#esocial">eSocial SST</a></li>
+            <li><a href="../../index.html#features">Recursos</a></li>
+            <li><a href="../../index.html#pricing">Preços</a></li>
+            <li><a href="../../index.html#faq">Perguntas frequentes</a></li>
+            <li><a href="../../modelos-de-documentos-sst-pdf.html">Modelos de documentos</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Soluções</h3>
+          <ul>
+            <li><a href="../../sistema-pgr-online.html">Sistema de PGR online</a></li>
+            <li><a href="../../sistema-pcmso-e-aso-online.html">PCMSO e ASO online</a></li>
+            <li><a href="../../ltcat-online-sistema.html">LTCAT e LTIP digital</a></li>
+            <li><a href="../../gestao-de-riscos-psicossociais-no-trabalho.html">Riscos psicossociais</a></li>
+            <li><a href="../../controle-de-epi-com-reconhecimento-facial.html">Gestão de EPI com facial</a></li>
+            <li><a href="../../gestao-de-treinamentos-sst.html">Gestão de treinamentos</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bv-footer__bar">
+        <p>&copy; <span data-ano>2026</span> Bevart. Todos os direitos reservados.</p>
+        <nav aria-label="Links legais">
+          <a href="../../termos-de-uso.html">Termos de uso</a>
+          <a href="../../privacidade.html">Privacidade</a>
+          <a href="../../lgpd.html">LGPD</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+<!-- /build:footer -->
+
+  <button type="button" class="bv-top" id="voltar-ao-topo" aria-label="Voltar ao topo">
+    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+      aria-hidden="true">
+      <path d="M12 19V5M5 12l7-7 7 7" />
+    </svg>
+  </button>
+</body>
+
+</html>

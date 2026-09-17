@@ -5,8 +5,16 @@
     <link>https://bevart.com.br/blog/</link>
     <description>Guias práticos de segurança e saúde do trabalho: PGR, PCMSO, LTCAT, eSocial, treinamentos, EPI e riscos psicossociais, escritos para quem executa.</description>
     <language>pt-BR</language>
-    <lastBuildDate>Sun, 13 Sep 2026 12:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2026 12:00:00 GMT</lastBuildDate>
     <atom:link href="https://bevart.com.br/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>API de integração SST: como conectar ERP, folha e eSocial</title>
+      <link>https://bevart.com.br/blog/api-de-integracao-sst-com-erp/</link>
+      <guid isPermaLink="true">https://bevart.com.br/blog/api-de-integracao-sst-com-erp/</guid>
+      <pubDate>Thu, 17 Sep 2026 12:00:00 GMT</pubDate>
+      <category>Gestão de SST</category>
+      <description>API de integração SST do Bevart: conecte Senior, TOTVS, SAP ou a folha da contabilidade, receba admissões e desligamentos e devolva ASO e eSocial ao ERP.</description>
+    </item>
     <item>
       <title>Como comprovar a entrega de EPI com reconhecimento facial</title>
       <link>https://bevart.com.br/blog/como-comprovar-entrega-de-epi-com-reconhecimento-facial/</link>
