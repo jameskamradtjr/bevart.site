@@ -85,13 +85,50 @@
   ],
   "posts": [
     {
+      "slug": "importar-modelo-de-documento-sst-com-ia",
+      "titulo": "Modelo de documento SST com IA: importe o PDF que você já emite",
+      "breadcrumb": "Importar modelo com IA",
+      "dek": "Trocar de sistema não precisa mudar o seu documento. No Estúdio de Documentos do Bevart, a IA lê o PGR, LTCAT ou PCMSO que o seu escritório já usa e monta o modelo dentro do sistema, ligado aos dados de cada unidade.",
+      "descricao": "Importe o PDF ou Word do seu PGR, LTCAT ou PCMSO e a IA do Bevart monta o modelo de documento SST com a sua redação e os dados reais de cada unidade.",
+      "categoria": "gestao-de-sst",
+      "tags": [
+        "modelo de documento SST",
+        "PGR",
+        "LTCAT",
+        "PCMSO",
+        "inteligência artificial",
+        "Estúdio de Documentos"
+      ],
+      "palavraChave": "modelo de documento SST com IA",
+      "autor": "james-kamradt-jr",
+      "publicado": "2026-09-18",
+      "atualizado": "2026-09-18",
+      "tempoLeitura": 6,
+      "capa": "assets/capa.svg",
+      "capaAlt": "Capa do artigo sobre importar o modelo de PGR, LTCAT e PCMSO em PDF ou Word com IA no Estúdio de Documentos do Bevart",
+      "destaque": false,
+      "rascunho": false,
+      "sidebar": "Seu PDF ou Word vira modelo no sistema: mesma redação, dados de cada unidade.",
+      "cta": {
+        "titulo": "Seus modelos, os dados do sistema",
+        "texto": "Importe o documento que o escritório já emite e gere PGR, LTCAT e PCMSO com a sua identidade para toda a carteira. Teste 5 dias, sem cartão."
+      }
+    },
+    {
       "slug": "api-de-integracao-sst-com-erp",
       "titulo": "API de integração SST: como conectar ERP, folha e eSocial",
       "breadcrumb": "API de integração SST",
       "dek": "O RH admite no ERP e alguém redigita no sistema de SST. Veja como a API do Bevart recebe admissões, transferências, afastamentos e desligamentos da folha e devolve ASO e eSocial ao ERP, para empresas, contabilidades e consultorias.",
       "descricao": "API de integração SST do Bevart: conecte Senior, TOTVS, SAP ou a folha da contabilidade, receba admissões e desligamentos e devolva ASO e eSocial ao ERP.",
       "categoria": "gestao-de-sst",
-      "tags": ["API", "integração com ERP", "eSocial", "folha de pagamento", "contabilidade", "webhooks"],
+      "tags": [
+        "API",
+        "integração com ERP",
+        "eSocial",
+        "folha de pagamento",
+        "contabilidade",
+        "webhooks"
+      ],
       "palavraChave": "API de integração SST",
       "autor": "james-kamradt-jr",
       "publicado": "2026-09-17",

@@ -5,8 +5,16 @@
     <link>https://bevart.com.br/blog/</link>
     <description>Guias práticos de segurança e saúde do trabalho: PGR, PCMSO, LTCAT, eSocial, treinamentos, EPI e riscos psicossociais, escritos para quem executa.</description>
     <language>pt-BR</language>
-    <lastBuildDate>Thu, 17 Sep 2026 12:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2026 12:00:00 GMT</lastBuildDate>
     <atom:link href="https://bevart.com.br/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Modelo de documento SST com IA: importe o PDF que você já emite</title>
+      <link>https://bevart.com.br/blog/importar-modelo-de-documento-sst-com-ia/</link>
+      <guid isPermaLink="true">https://bevart.com.br/blog/importar-modelo-de-documento-sst-com-ia/</guid>
+      <pubDate>Fri, 18 Sep 2026 12:00:00 GMT</pubDate>
+      <category>Gestão de SST</category>
+      <description>Importe o PDF ou Word do seu PGR, LTCAT ou PCMSO e a IA do Bevart monta o modelo de documento SST com a sua redação e os dados reais de cada unidade.</description>
+    </item>
     <item>
       <title>API de integração SST: como conectar ERP, folha e eSocial</title>
       <link>https://bevart.com.br/blog/api-de-integracao-sst-com-erp/</link>

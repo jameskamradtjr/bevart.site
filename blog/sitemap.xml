@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://bevart.com.br/blog/</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-09-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
@@ -39,9 +39,19 @@
   </url>
   <url>
     <loc>https://bevart.com.br/blog/categoria/gestao-de-sst/</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-09-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://bevart.com.br/blog/importar-modelo-de-documento-sst-com-ia/</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://bevart.com.br/blog/importar-modelo-de-documento-sst-com-ia/assets/capa.svg</image:loc>
+      <image:title>Modelo de documento SST com IA: importe o PDF que você já emite</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://bevart.com.br/blog/api-de-integracao-sst-com-erp/</loc>

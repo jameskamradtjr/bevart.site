@@ -70,6 +70,7 @@ Blog Bevart, guias práticos de SST: [https://bevart.com.br/blog/](https://bevar
 - [Treinamentos e EPI](https://bevart.com.br/blog/categoria/treinamentos-e-epi/): Capacitações das NRs, validade, evidências e controle de entrega de EPI.
 - [Gestão de SST](https://bevart.com.br/blog/categoria/gestao-de-sst/): Produtividade, precificação e organização de consultorias e equipes de segurança.
 
+- [Modelo de documento SST com IA: importe o PDF que você já emite](https://bevart.com.br/blog/importar-modelo-de-documento-sst-com-ia/): Importe o PDF ou Word do seu PGR, LTCAT ou PCMSO e a IA do Bevart monta o modelo de documento SST com a sua redação e os dados reais de cada unidade.
 - [API de integração SST: como conectar ERP, folha e eSocial](https://bevart.com.br/blog/api-de-integracao-sst-com-erp/): API de integração SST do Bevart: conecte Senior, TOTVS, SAP ou a folha da contabilidade, receba admissões e desligamentos e devolva ASO e eSocial ao ERP.
 - [Como comprovar a entrega de EPI com reconhecimento facial](https://bevart.com.br/blog/como-comprovar-entrega-de-epi-com-reconhecimento-facial/): Como comprovar a entrega de EPI na fiscalização: o que a ficha precisa conter, por que a biometria facial supera a digital e como a foto entra no PDF.
 - [Novo modelo de PGR em PDF: documento premium em 6 passos](https://bevart.com.br/blog/modelo-de-pgr-em-pdf-premium/): Conheça o novo modelo de PGR em PDF do Bevart: capa institucional, sumário executivo, cores por nível de risco e plano de ação com prazos. Veja como gerar.
