@@ -11,10 +11,10 @@
   'use strict';
 
   var GA = 'G-Z0RJMZR8R2';
-  var ADS = 'AW-17992875515';
+  var ADS = 'AW-18382911934';
   var PIXEL = '1004315305690659';
-  var CONVERSAO_CADASTRO = ADS + '/YUXSCN2X8IQcEPv71YND';
-  var CONVERSAO_WHATSAPP = ADS + '/nPR2CPXJyoUcEPv71YND';
+  var CONVERSAO_CADASTRO = ADS + '/DuxlCOjriPgcEL7z071E';
+  var CONVERSAO_WHATSAPP = ADS + '/DuxlCOjriPgcEL7z071E';
 
   /* ---------- Google (Analytics + Ads) ---------- */
   window.dataLayer = window.dataLayer || [];
