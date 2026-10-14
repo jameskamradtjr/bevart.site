@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://bevart.com.br/blog/</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
@@ -33,7 +33,7 @@
   </url>
   <url>
     <loc>https://bevart.com.br/blog/categoria/treinamentos-e-epi/</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.60</priority>
   </url>
@@ -42,6 +42,16 @@
     <lastmod>2026-09-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://bevart.com.br/blog/treinamento-em-seguranca-do-trabalho-como-organizar/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://bevart.com.br/blog/treinamento-em-seguranca-do-trabalho-como-organizar/assets/capa.jpg</image:loc>
+      <image:title>Treinamento em segurança do trabalho: como organizar e comprovar</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://bevart.com.br/blog/importar-modelo-de-documento-sst-com-ia/</loc>

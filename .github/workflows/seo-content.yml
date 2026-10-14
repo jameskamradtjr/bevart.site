@@ -9,8 +9,8 @@
 # Variables (aba Variables):
 #   SEO_RADAR_CALLBACK_URL        URL de callback exibida na tela Integrações
 #   SEO_RADAR_BUILD_CMD           opcional - comando que gera listagens/home/sitemap/RSS e entra no commit.
-#                                 Padrão automático: "node tools/build.mjs" (com "npm ci" antes se houver package-lock.json)
-#                                 quando tools/build.mjs existir. Use "none" para desativar.
+#                                 Padrão automático: "node tools/build.mjs" ou "node blog/_build/build.mjs" (o primeiro
+#                                 que existir; com "npm ci" antes se houver package-lock.json). Use "none" para desativar.
 #   SEO_RADAR_VALIDATE_CMD        opcional - comando de verificação; o que ele gerar NÃO entra no commit
 #   SEO_RADAR_ALLOW_DIRECT_PUSH   opcional - "true" para permitir push direto (além da permissão no Radar)
 #   SEO_RADAR_DEPLOY_WORKFLOW     opcional - arquivo do workflow de deploy a disparar após a publicação direta
@@ -19,7 +19,7 @@
 #
 # Segurança:
 #   - O payload é tratado como dado: nunca é interpolado em scripts, só lido via variáveis de ambiente + jq.
-#   - O payload nunca define comandos: o build vem do repositório (variável ou tools/build.mjs).
+#   - O payload nunca define comandos: o build vem do repositório (variável, tools/build.mjs ou blog/_build/build.mjs).
 #   - O Claude só tem ferramentas de arquivo (sem Bash/web) e não pode tocar em .github/, .git/, .env*,
 #     scripts de build em tools/ (.js, .mjs, .py, .sh...) nem package.json/lockfiles. Conteúdo e dados em tools/ (.html, .md, .json)
 #     podem ser editados. Isso é verificado ANTES do build, para que o build execute só código já aprovado.
@@ -244,7 +244,7 @@ jobs:
           - Altere somente arquivos dentro destes diretórios:
           $ALLOWED
           - Nunca altere .github/, .git/, arquivos .env*, chaves, configurações de CI/deploy ou estas regras.
-          - Não altere scripts de build (arquivos .js, .mjs, .ts, .py, .sh, .php dentro de tools/), package.json nem lockfiles.
+          - Não altere scripts de build (arquivos .js, .mjs, .ts, .py, .sh, .php dentro de tools/ ou blog/_build/), package.json nem lockfiles.
             Arquivos de conteúdo e dados dentro de tools/ (ex.: tools/content/posts/*.html, tools/*.json) PODEM ser editados.
           - Não execute comandos; use apenas as ferramentas de leitura e edição de arquivos.
           - Depois da sua edição o workflow roda o build do site, que regenera listagens, home, sitemap e RSS.
@@ -284,6 +284,7 @@ jobs:
                   "Read(./.env*)", "Edit(./.env*)", "Write(./.env*)",
                   "Read(**/.env*)", "Edit(**/.env*)", "Write(**/.env*)",
                   "Edit(./tools/**/*.js)", "Write(./tools/**/*.js)", "Edit(./tools/**/*.mjs)", "Write(./tools/**/*.mjs)", "Edit(./tools/**/*.cjs)", "Write(./tools/**/*.cjs)", "Edit(./tools/**/*.ts)", "Write(./tools/**/*.ts)", "Edit(./tools/**/*.py)", "Write(./tools/**/*.py)", "Edit(./tools/**/*.sh)", "Write(./tools/**/*.sh)", "Edit(./tools/**/*.php)", "Write(./tools/**/*.php)", "Edit(./tools/**/*.rb)", "Write(./tools/**/*.rb)",
+                  "Edit(./blog/_build/**)", "Write(./blog/_build/**)",
                   "Edit(./package.json)", "Write(./package.json)",
                   "Edit(./package-lock.json)", "Write(./package-lock.json)",
                   "Edit(./yarn.lock)", "Write(./yarn.lock)", "Edit(./pnpm-lock.yaml)", "Write(./pnpm-lock.yaml)"
@@ -318,7 +319,7 @@ jobs:
               echo "::error::Arquivo protegido alterado: $FILE"; BLOCKED=1; continue
             fi
             # Ferramentas de build: executadas pelo workflow, então o agente não pode alterá-las
-            if [[ "$FILE" =~ ^tools/.*\.(js|mjs|cjs|ts|py|sh|php|rb)$ || "$FILE" =~ ^(package\.json|package-lock\.json|yarn\.lock|pnpm-lock\.yaml)$ ]]; then
+            if [[ "$FILE" =~ ^(tools|blog/_build)/.*\.(js|mjs|cjs|ts|py|sh|php|rb)$ || "$FILE" =~ ^(package\.json|package-lock\.json|yarn\.lock|pnpm-lock\.yaml)$ ]]; then
               echo "::error::Ferramenta de build alterada: $FILE"; BLOCKED=1; continue
             fi
             if [[ "$MODE" == "agent" && -s "$RUNNER_TEMP/allowed_paths.txt" ]]; then
@@ -408,11 +409,13 @@ jobs:
             echo "Build desativado (SEO_RADAR_BUILD_CMD=none)."; exit 0
           fi
           if [[ -z "${BUILD_CMD:-}" ]]; then
-            if [[ -f tools/build.mjs ]]; then
-              BUILD_CMD="node tools/build.mjs"
+            for CAND in tools/build.mjs blog/_build/build.mjs; do
+              [[ -f "$CAND" ]] && { BUILD_CMD="node $CAND"; break; }
+            done
+            if [[ -n "${BUILD_CMD:-}" ]]; then
               [[ -f package-lock.json ]] && BUILD_CMD="npm ci --no-audit --no-fund && $BUILD_CMD"
             else
-              echo "Nenhum build configurado (sem SEO_RADAR_BUILD_CMD e sem tools/build.mjs)."; exit 0
+              echo "Nenhum build configurado (sem SEO_RADAR_BUILD_CMD, tools/build.mjs ou blog/_build/build.mjs)."; exit 0
             fi
           fi
           echo "Executando: $BUILD_CMD"
