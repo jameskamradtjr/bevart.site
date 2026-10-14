@@ -85,6 +85,35 @@
   ],
   "posts": [
     {
+      "slug": "treinamento-em-seguranca-do-trabalho-como-organizar",
+      "titulo": "Treinamento em segurança do trabalho: como organizar e comprovar",
+      "breadcrumb": "Treinamento em segurança do trabalho",
+      "dek": "Matriz por cargo, controle de validade, certificado com evidência e reciclagem no prazo. Veja como estruturar os treinamentos de SST para que a empresa consiga provar cada capacitação na fiscalização.",
+      "descricao": "Treinamento em segurança do trabalho: monte a matriz por cargo, controle a reciclagem e guarde as evidências para comprovar cada capacitação na fiscalização.",
+      "categoria": "treinamentos-e-epi",
+      "tags": [
+        "treinamento em segurança do trabalho",
+        "matriz de treinamentos",
+        "reciclagem",
+        "NR-1",
+        "certificado"
+      ],
+      "palavraChave": "treinamento em segurança do trabalho",
+      "autor": "equipe-bevart",
+      "publicado": "2026-10-14",
+      "atualizado": "2026-10-14",
+      "tempoLeitura": 5,
+      "capa": "assets/capa.jpg",
+      "capaAlt": "Equipe de trabalhadores de capacete em treinamento de segurança do trabalho, com instrutor apresentando uma norma regulamentadora",
+      "destaque": false,
+      "rascunho": false,
+      "sidebar": "Matriz por cargo, alertas de vencimento e certificados digitais num só lugar.",
+      "cta": {
+        "titulo": "Treinamento vencido não pega você de surpresa",
+        "texto": "Associe treinamentos a cargos, receba alertas de reciclagem e guarde os certificados no sistema. Teste 5 dias, sem cartão."
+      }
+    },
+    {
       "slug": "importar-modelo-de-documento-sst-com-ia",
       "titulo": "Modelo de documento SST com IA: importe o PDF que você já emite",
       "breadcrumb": "Importar modelo com IA",
