@@ -85,6 +85,35 @@
   ],
   "posts": [
     {
+      "slug": "inteligencia-artificial-na-gestao-de-sst-e-nr-1",
+      "titulo": "Inteligência artificial na gestão de SST e na NR-1: como usar sem errar",
+      "breadcrumb": "IA na gestão de SST e na NR-1",
+      "dek": "Empresas de tecnologia já anunciam IA para adequar clientes à NR-1. Veja onde a inteligência artificial ajuda de fato o profissional de SST, onde ela não pode decidir e como avaliar uma ferramenta antes de contratar.",
+      "descricao": "Como usar inteligência artificial na gestão de SST e na adequação à NR-1: onde a IA ajuda, o que não pode decidir e critérios para avaliar ferramentas.",
+      "categoria": "gestao-de-sst",
+      "tags": [
+        "inteligência artificial",
+        "NR-1",
+        "gestão de SST",
+        "PGR",
+        "IA em SST"
+      ],
+      "palavraChave": "como usar inteligência artificial na gestão de SST e na adequação à NR-1",
+      "autor": "equipe-bevart",
+      "publicado": "2026-10-16",
+      "atualizado": "2026-10-16",
+      "tempoLeitura": 5,
+      "capa": "assets/capa.jpg",
+      "capaAlt": "Profissional de segurança do trabalho analisando painel de riscos em um notebook, com apoio de inteligência artificial",
+      "destaque": false,
+      "rascunho": false,
+      "sidebar": "IA integrada ao Bevart para apoiar o SST, com revisão e decisão sempre suas.",
+      "cta": {
+        "titulo": "IA a favor do profissional de SST",
+        "texto": "O Bevart tem IA integrada para ajudar na rotina de SST e na adequação à NR-1, com você revisando e decidindo. Teste 5 dias, sem cartão."
+      }
+    },
+    {
       "slug": "treinamento-em-seguranca-do-trabalho-como-organizar",
       "titulo": "Treinamento em segurança do trabalho: como organizar e comprovar",
       "breadcrumb": "Treinamento em segurança do trabalho",
