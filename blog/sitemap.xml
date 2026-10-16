@@ -15,7 +15,7 @@
   </url>
   <url>
     <loc>https://bevart.com.br/blog/categoria/psicossocial-e-ergonomia/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.60</priority>
   </url>
@@ -42,6 +42,16 @@
     <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://bevart.com.br/blog/metas-excessivas-risco-psicossocial-nr-1/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://bevart.com.br/blog/metas-excessivas-risco-psicossocial-nr-1/assets/capa.jpg</image:loc>
+      <image:title>Metas excessivas como risco psicossocial na NR-1: como avaliar e registrar</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://bevart.com.br/blog/inteligencia-artificial-na-gestao-de-sst-e-nr-1/</loc>

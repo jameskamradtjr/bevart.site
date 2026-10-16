@@ -85,6 +85,35 @@
   ],
   "posts": [
     {
+      "slug": "metas-excessivas-risco-psicossocial-nr-1",
+      "titulo": "Metas excessivas como risco psicossocial na NR-1: como avaliar e registrar",
+      "breadcrumb": "Metas excessivas e a NR-1",
+      "dek": "A imprensa passou a destacar que metas excessivas também são risco. Veja como consultorias e equipes de SST podem avaliar cobranças no trabalho, registrar evidências e levar a análise para o PGR, separando o que a NR-1 exige do que é boa prática.",
+      "descricao": "Metas excessivas como risco psicossocial na NR-1: como avaliar cobranças, registrar evidências e integrar ao PGR, sem confundir orientação com exigência legal.",
+      "categoria": "psicossocial-e-ergonomia",
+      "tags": [
+        "riscos psicossociais",
+        "NR-1",
+        "metas excessivas",
+        "PGR",
+        "GRO"
+      ],
+      "palavraChave": "metas excessivas como risco psicossocial na NR-1",
+      "autor": "equipe-bevart",
+      "publicado": "2026-10-16",
+      "atualizado": "2026-10-16",
+      "tempoLeitura": 6,
+      "capa": "assets/capa.jpg",
+      "capaAlt": "Profissional de escritório diante de um painel de metas e indicadores, com sinais de pressão e sobrecarga no trabalho",
+      "destaque": false,
+      "rascunho": false,
+      "sidebar": "Registre avaliações de riscos psicossociais e leve ao PGR no Bevart.",
+      "cta": {
+        "titulo": "Teste a gestão de riscos psicossociais do Bevart",
+        "texto": "Avalie, registre evidências e acompanhe o plano de ação dos riscos psicossociais no mesmo sistema do PGR. Teste 5 dias, sem cartão."
+      }
+    },
+    {
       "slug": "inteligencia-artificial-na-gestao-de-sst-e-nr-1",
       "titulo": "Inteligência artificial na gestão de SST e na NR-1: como usar sem errar",
       "breadcrumb": "IA na gestão de SST e na NR-1",
