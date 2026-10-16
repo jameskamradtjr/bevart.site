@@ -85,6 +85,35 @@
   ],
   "posts": [
     {
+      "slug": "pausa-de-60-dias-acoes-nr-1-suspende-obrigacoes",
+      "titulo": "Pausa de 60 dias nas ações sobre a NR-1 suspende as obrigações das empresas?",
+      "breadcrumb": "Pausa de 60 dias e a NR-1",
+      "dek": "Um ministro do STF determinou pausa de 60 dias em ações sobre a NR-1. Entenda por que isso não equivale, por si só, a suspender a norma, o que confirmar em fontes oficiais e como manter PGR e registros em dia.",
+      "descricao": "Pausa de 60 dias nas ações sobre a NR-1 suspende as obrigações das empresas? Veja o que confirmar em fontes oficiais e como manter o PGR e os registros em dia.",
+      "categoria": "legislacao-e-nrs",
+      "tags": [
+        "NR-1",
+        "STF",
+        "PGR",
+        "GRO",
+        "legislação de SST"
+      ],
+      "palavraChave": "pausa de 60 dias nas ações sobre a NR-1 suspende as obrigações das empresas",
+      "autor": "equipe-bevart",
+      "publicado": "2026-10-16",
+      "atualizado": "2026-10-16",
+      "tempoLeitura": 5,
+      "capa": "assets/capa.jpg",
+      "capaAlt": "Balança da justiça ao lado de pastas de documentos de segurança do trabalho sobre uma mesa",
+      "destaque": false,
+      "rascunho": false,
+      "sidebar": "Mantenha inventário, plano de ação e evidências em dia no Bevart, em qualquer cenário.",
+      "cta": {
+        "titulo": "PGR em dia, qualquer que seja o cenário",
+        "texto": "Inventário de riscos, plano de ação e evidências no mesmo sistema. Teste 5 dias, sem cartão."
+      }
+    },
+    {
       "slug": "metas-excessivas-risco-psicossocial-nr-1",
       "titulo": "Metas excessivas como risco psicossocial na NR-1: como avaliar e registrar",
       "breadcrumb": "Metas excessivas e a NR-1",
