@@ -85,6 +85,35 @@
   ],
   "posts": [
     {
+      "slug": "gestao-de-sst-o-que-e-e-como-implantar",
+      "titulo": "Gestão de SST: o que é e como implantar em 7 passos",
+      "breadcrumb": "Gestão de SST: o que é",
+      "dek": "Gestão de SST é transformar a prevenção de acidentes e doenças em um ciclo que roda todo mês, com responsáveis, metas e evidências. Veja o passo a passo para colocar de pé na sua empresa ou na sua carteira de clientes.",
+      "descricao": "Gestão de SST: entenda o que é, por que importa e como implantar em 7 passos, do diagnóstico ao monitoramento, com metas, responsáveis e evidências.",
+      "categoria": "gestao-de-sst",
+      "tags": [
+        "gestão de SST",
+        "PGR",
+        "GRO",
+        "indicadores de SST",
+        "plano de ação"
+      ],
+      "palavraChave": "gestão sst",
+      "autor": "equipe-bevart",
+      "publicado": "2026-10-20",
+      "atualizado": "2026-10-20",
+      "tempoLeitura": 6,
+      "capa": "assets/capa.jpg",
+      "capaAlt": "Equipe de segurança do trabalho reunida em torno de um quadro de planejamento com etapas de um ciclo de gestão",
+      "destaque": false,
+      "rascunho": false,
+      "sidebar": "Centralize inventário, plano de ação, exames, treinamentos e EPI no Bevart.",
+      "cta": {
+        "titulo": "Gestão de SST que roda sozinha todo mês",
+        "texto": "Inventário, plano de ação, vencimentos e eSocial no mesmo sistema. Teste 5 dias, sem cartão."
+      }
+    },
+    {
       "slug": "pausa-de-60-dias-acoes-nr-1-suspende-obrigacoes",
       "titulo": "Pausa de 60 dias nas ações sobre a NR-1 suspende as obrigações das empresas?",
       "breadcrumb": "Pausa de 60 dias e a NR-1",
