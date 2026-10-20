@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://bevart.com.br/blog/</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
@@ -15,7 +15,7 @@
   </url>
   <url>
     <loc>https://bevart.com.br/blog/categoria/psicossocial-e-ergonomia/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.60</priority>
   </url>
@@ -38,10 +38,46 @@
     <priority>0.60</priority>
   </url>
   <url>
-    <loc>https://bevart.com.br/blog/categoria/gestao-de-sst/</loc>
-    <lastmod>2026-09-18</lastmod>
+    <loc>https://bevart.com.br/blog/categoria/legislacao-e-nrs/</loc>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://bevart.com.br/blog/categoria/gestao-de-sst/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://bevart.com.br/blog/pausa-de-60-dias-acoes-nr-1-suspende-obrigacoes/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://bevart.com.br/blog/pausa-de-60-dias-acoes-nr-1-suspende-obrigacoes/assets/capa.jpg</image:loc>
+      <image:title>Pausa de 60 dias nas ações sobre a NR-1 suspende as obrigações das empresas?</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://bevart.com.br/blog/metas-excessivas-risco-psicossocial-nr-1/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://bevart.com.br/blog/metas-excessivas-risco-psicossocial-nr-1/assets/capa.jpg</image:loc>
+      <image:title>Metas excessivas como risco psicossocial na NR-1: como avaliar e registrar</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://bevart.com.br/blog/inteligencia-artificial-na-gestao-de-sst-e-nr-1/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://bevart.com.br/blog/inteligencia-artificial-na-gestao-de-sst-e-nr-1/assets/capa.jpg</image:loc>
+      <image:title>Inteligência artificial na gestão de SST e na NR-1: como usar sem errar</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://bevart.com.br/blog/treinamento-em-seguranca-do-trabalho-como-organizar/</loc>

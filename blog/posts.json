@@ -85,6 +85,93 @@
   ],
   "posts": [
     {
+      "slug": "pausa-de-60-dias-acoes-nr-1-suspende-obrigacoes",
+      "titulo": "Pausa de 60 dias nas ações sobre a NR-1 suspende as obrigações das empresas?",
+      "breadcrumb": "Pausa de 60 dias e a NR-1",
+      "dek": "Um ministro do STF determinou pausa de 60 dias em ações sobre a NR-1. Entenda por que isso não equivale, por si só, a suspender a norma, o que confirmar em fontes oficiais e como manter PGR e registros em dia.",
+      "descricao": "Pausa de 60 dias nas ações sobre a NR-1 suspende as obrigações das empresas? Veja o que confirmar em fontes oficiais e como manter o PGR e os registros em dia.",
+      "categoria": "legislacao-e-nrs",
+      "tags": [
+        "NR-1",
+        "STF",
+        "PGR",
+        "GRO",
+        "legislação de SST"
+      ],
+      "palavraChave": "pausa de 60 dias nas ações sobre a NR-1 suspende as obrigações das empresas",
+      "autor": "equipe-bevart",
+      "publicado": "2026-10-16",
+      "atualizado": "2026-10-16",
+      "tempoLeitura": 5,
+      "capa": "assets/capa.jpg",
+      "capaAlt": "Balança da justiça ao lado de pastas de documentos de segurança do trabalho sobre uma mesa",
+      "destaque": false,
+      "rascunho": false,
+      "sidebar": "Mantenha inventário, plano de ação e evidências em dia no Bevart, em qualquer cenário.",
+      "cta": {
+        "titulo": "PGR em dia, qualquer que seja o cenário",
+        "texto": "Inventário de riscos, plano de ação e evidências no mesmo sistema. Teste 5 dias, sem cartão."
+      }
+    },
+    {
+      "slug": "metas-excessivas-risco-psicossocial-nr-1",
+      "titulo": "Metas excessivas como risco psicossocial na NR-1: como avaliar e registrar",
+      "breadcrumb": "Metas excessivas e a NR-1",
+      "dek": "A imprensa passou a destacar que metas excessivas também são risco. Veja como consultorias e equipes de SST podem avaliar cobranças no trabalho, registrar evidências e levar a análise para o PGR, separando o que a NR-1 exige do que é boa prática.",
+      "descricao": "Metas excessivas como risco psicossocial na NR-1: como avaliar cobranças, registrar evidências e integrar ao PGR, sem confundir orientação com exigência legal.",
+      "categoria": "psicossocial-e-ergonomia",
+      "tags": [
+        "riscos psicossociais",
+        "NR-1",
+        "metas excessivas",
+        "PGR",
+        "GRO"
+      ],
+      "palavraChave": "metas excessivas como risco psicossocial na NR-1",
+      "autor": "equipe-bevart",
+      "publicado": "2026-10-16",
+      "atualizado": "2026-10-16",
+      "tempoLeitura": 6,
+      "capa": "assets/capa.jpg",
+      "capaAlt": "Profissional de escritório diante de um painel de metas e indicadores, com sinais de pressão e sobrecarga no trabalho",
+      "destaque": false,
+      "rascunho": false,
+      "sidebar": "Registre avaliações de riscos psicossociais e leve ao PGR no Bevart.",
+      "cta": {
+        "titulo": "Teste a gestão de riscos psicossociais do Bevart",
+        "texto": "Avalie, registre evidências e acompanhe o plano de ação dos riscos psicossociais no mesmo sistema do PGR. Teste 5 dias, sem cartão."
+      }
+    },
+    {
+      "slug": "inteligencia-artificial-na-gestao-de-sst-e-nr-1",
+      "titulo": "Inteligência artificial na gestão de SST e na NR-1: como usar sem errar",
+      "breadcrumb": "IA na gestão de SST e na NR-1",
+      "dek": "Empresas de tecnologia já anunciam IA para adequar clientes à NR-1. Veja onde a inteligência artificial ajuda de fato o profissional de SST, onde ela não pode decidir e como avaliar uma ferramenta antes de contratar.",
+      "descricao": "Como usar inteligência artificial na gestão de SST e na adequação à NR-1: onde a IA ajuda, o que não pode decidir e critérios para avaliar ferramentas.",
+      "categoria": "gestao-de-sst",
+      "tags": [
+        "inteligência artificial",
+        "NR-1",
+        "gestão de SST",
+        "PGR",
+        "IA em SST"
+      ],
+      "palavraChave": "como usar inteligência artificial na gestão de SST e na adequação à NR-1",
+      "autor": "equipe-bevart",
+      "publicado": "2026-10-16",
+      "atualizado": "2026-10-16",
+      "tempoLeitura": 5,
+      "capa": "assets/capa.jpg",
+      "capaAlt": "Profissional de segurança do trabalho analisando painel de riscos em um notebook, com apoio de inteligência artificial",
+      "destaque": false,
+      "rascunho": false,
+      "sidebar": "IA integrada ao Bevart para apoiar o SST, com revisão e decisão sempre suas.",
+      "cta": {
+        "titulo": "IA a favor do profissional de SST",
+        "texto": "O Bevart tem IA integrada para ajudar na rotina de SST e na adequação à NR-1, com você revisando e decidindo. Teste 5 dias, sem cartão."
+      }
+    },
+    {
       "slug": "treinamento-em-seguranca-do-trabalho-como-organizar",
       "titulo": "Treinamento em segurança do trabalho: como organizar e comprovar",
       "breadcrumb": "Treinamento em segurança do trabalho",
