@@ -480,6 +480,11 @@
       <div class="bv-hero__bg" aria-hidden="true"></div>
       <div class="bv-wrap">
         <div class="bv-hero__inner">
+          <a class="bv-bf-faixa" id="bv-bf-faixa" href="#black-friday" hidden>
+            <span class="bv-bf-faixa__tag">Black Friday</span>
+            <span>Plano vitalício com <b data-bf="desconto">60%</b> de desconto no lote <span data-bf="lote">1</span> · termina em <span class="bv-bf-faixa__relogio" data-bf="relogio">--</span></span>
+            <span class="bv-bf-faixa__ir">Ver oferta &rarr;</span>
+          </a>
           <p class="bv-badge"><b>Novo</b> Riscos psicossociais da NR-01 já inclusos</p>
           <h1>Software de SST completo.<br><em>eSocial sem complicação.</em></h1>
           <p class="bv-hero__sub">
@@ -1460,6 +1465,43 @@
       </div>
     </section>
 
+    <!-- ==================== BLACK FRIDAY ==================== -->
+    <!-- Preenchida por assets/js/blackfriday.js com o lote vigente, lido de
+         profissionais.bevart.com.br/blackfriday.php?formato=json. Fica
+         escondida fora da campanha ou se a leitura falhar. -->
+    <section class="bv-section bv-section--soft bv-bf" id="black-friday" hidden>
+      <div class="bv-wrap">
+        <div class="bv-bf__grade">
+          <div>
+            <p class="bv-eyebrow">Black Friday 2026 · Lote <span data-bf="lote">1</span> de <span data-bf="total">7</span></p>
+            <h2 class="bv-h2">Plano vitalício com <em data-bf="desconto">60%</em> de desconto</h2>
+            <p class="bv-bf__preco"><s data-bf="cheio">R$ 7.500</s> <strong data-bf="preco">R$ 3.000</strong></p>
+            <p class="bv-bf__texto">Pagamento único, sem mensalidade, até <span data-bf="vidas">10.000</span> vidas inclusas e todas as atualizações de NRs.</p>
+            <p class="bv-bf__prazo" data-bf="prazo">O desconto diminui a cada lote.</p>
+            <a class="bv-btn bv-btn--primary bv-btn--lg" data-bf="link" href="https://profissionais.bevart.com.br/blackfriday.php" data-cta="bf-secao">
+              Ver a oferta do vitalício
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6l6 6-6 6" />
+              </svg>
+            </a>
+          </div>
+          <div class="bv-bf__cartao">
+            <p class="bv-bf__rot">Este preço acaba em</p>
+            <div class="bv-bf__relogio" data-bf="contador">
+              <div><b data-c="d">--</b><small>dias</small></div>
+              <div><b data-c="h">--</b><small>horas</small></div>
+              <div><b data-c="m">--</b><small>min</small></div>
+              <div><b data-c="s">--</b><small>seg</small></div>
+            </div>
+            <table class="bv-bf__tabela">
+              <thead><tr><th>Lote</th><th>Período</th><th>Desconto</th><th>Preço</th></tr></thead>
+              <tbody data-bf="tabela"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ==================== PREÇOS ==================== -->
     <section class="bv-section" id="pricing">
       <div class="bv-wrap">
@@ -1507,10 +1549,10 @@
           </div>
 
           <div class="bv-price bv-price--dark bv-reveal">
-            <span class="bv-price__badge bv-price__badge--amber">Por tempo limitado</span>
+            <span class="bv-price__badge bv-price__badge--amber" id="bv-vit-badge">Por tempo limitado</span>
             <h3>Plano Vitalício</h3>
-            <p class="bv-price__desc">Pagamento único, sem mensalidade</p>
-            <p class="bv-price__price"><span class="bv-price__value">R$ 7.500</span><span
+            <p class="bv-price__desc" id="bv-vit-desc">Pagamento único, sem mensalidade</p>
+            <p class="bv-price__price" id="bv-vit-preco"><span class="bv-price__value">R$ 7.500</span><span
                 class="bv-price__period">/único</span></p>
             <ul class="bv-checks bv-checks--dark">
               <li>Até 10.000 vidas inclusas</li>
@@ -1520,7 +1562,7 @@
               <li>Sem taxa de implantação</li>
             </ul>
             <a class="bv-btn bv-btn--onDark bv-btn--block" href="https://pay.kiwify.com.br/UJrDg4p"
-              data-cta="plano-vitalicio">Quero o acesso vitalício</a>
+              data-cta="plano-vitalicio" id="bv-vit-botao">Quero o acesso vitalício</a>
           </div>
         </div>
 
@@ -1973,6 +2015,7 @@
 
   <!-- Scripts -->
   <script defer src="assets/js/home.js"></script>
+  <script defer src="assets/js/blackfriday.js"></script>
   <script>(function (d, s, id) { var js = d.createElement(s); js.src = "https://analytics.yggra.com.br/tracker.js?v=" + Date.now(); js.async = true; js.setAttribute('data-id', id); d.head.appendChild(js); })(document, 'script', 'SB-3C21C2');</script>
 </body>
 

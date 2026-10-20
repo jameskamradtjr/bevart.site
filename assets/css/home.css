@@ -2121,3 +2121,82 @@ ol {
     padding: 24px;
   }
 }
+
+/* ==================== 12. BLACK FRIDAY (vitalício) ====================
+ * Tudo nasce com [hidden]; assets/js/blackfriday.js mostra só com lote
+ * aberto. Âmbar só no prazo, como sinal de advertência; o resto segue os
+ * tokens da home.
+ */
+.bv-bf-faixa {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 0 0 22px;
+  padding: 10px 14px;
+  border: 1px solid var(--bv-primary-100);
+  border-left: 4px solid #e8901a;
+  border-radius: var(--bv-r-sm);
+  background: #fff;
+  color: var(--bv-ink-800);
+  font-size: 14.5px;
+  line-height: 1.45;
+  text-decoration: none;
+  box-shadow: var(--bv-shadow-card);
+}
+
+.bv-bf-faixa:hover { border-color: var(--bv-primary); border-left-color: #e8901a; }
+.bv-bf-faixa b { color: var(--bv-primary); }
+.bv-bf-faixa__tag {
+  flex: none;
+  padding: 3px 9px;
+  border-radius: 6px;
+  background: var(--bv-ink);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.bv-bf-faixa__relogio { font-weight: 700; color: var(--bv-ink); font-variant-numeric: tabular-nums; }
+.bv-bf-faixa__ir { margin-left: auto; font-weight: 700; color: var(--bv-primary); white-space: nowrap; }
+
+.bv-bf__grade { display: grid; grid-template-columns: 1.05fr 1fr; gap: 44px; align-items: center; }
+.bv-bf .bv-h2 em { font-style: normal; color: var(--bv-primary); }
+.bv-bf__preco { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; margin: 18px 0 6px; }
+.bv-bf__preco s { color: var(--bv-muted-soft); font-size: 18px; }
+.bv-bf__preco strong { font-size: clamp(40px, 5vw, 52px); font-weight: 800; letter-spacing: -.02em; line-height: 1; color: var(--bv-ink); }
+.bv-bf__texto { color: var(--bv-muted); margin: 0 0 14px; max-width: 34em; }
+.bv-bf__prazo {
+  margin: 0 0 22px;
+  padding: 10px 14px;
+  border-left: 4px solid #e8901a;
+  border-radius: 0 var(--bv-r-sm) var(--bv-r-sm) 0;
+  background: var(--bv-amber-50);
+  color: var(--bv-ink-800);
+  font-size: 15px;
+}
+.bv-bf__prazo b { color: var(--bv-ink); }
+.bv-bf__cartao { background: #fff; border: 1px solid var(--bv-line); border-radius: var(--bv-r-lg); padding: 22px; box-shadow: var(--bv-shadow-lift); }
+.bv-bf__rot { margin: 0 0 10px; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--bv-muted); }
+.bv-bf__relogio { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 18px; }
+.bv-bf__relogio div { padding: 8px 4px; border: 1px solid var(--bv-line); border-radius: var(--bv-r-sm); background: var(--bv-bg-soft); text-align: center; }
+.bv-bf__relogio b { display: block; font-size: 24px; font-weight: 800; color: var(--bv-ink); line-height: 1.1; font-variant-numeric: tabular-nums; }
+.bv-bf__relogio small { font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--bv-muted-soft); }
+.bv-bf__tabela { width: 100%; border-collapse: collapse; font-size: 14px; }
+.bv-bf__tabela th { padding: 8px 10px; border-bottom: 1px solid var(--bv-line); text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--bv-muted); }
+.bv-bf__tabela td { padding: 8px 10px; border-bottom: 1px solid var(--bv-line-soft); color: var(--bv-ink-800); }
+.bv-bf__tabela tr:last-child td { border-bottom: 0; }
+.bv-bf__tabela tr.encerrado td { color: var(--bv-muted-soft); text-decoration: line-through; }
+.bv-bf__tabela tr.atual td { background: var(--bv-primary-50); font-weight: 700; color: var(--bv-ink); }
+.bv-bf__tabela tr.atual td:first-child { box-shadow: inset 3px 0 0 var(--bv-primary); }
+.bv-bf-de { display: block; font-size: 15px; color: rgba(255, 255, 255, .5); }
+
+@media (max-width: 900px) {
+  .bv-bf__grade { grid-template-columns: 1fr; gap: 28px; }
+  .bv-bf-faixa__ir { margin-left: 0; }
+}
+
+@media (max-width: 480px) {
+  .bv-bf__tabela th:nth-child(2), .bv-bf__tabela td:nth-child(2) { display: none; }
+}
