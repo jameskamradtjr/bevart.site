@@ -85,6 +85,35 @@
   ],
   "posts": [
     {
+      "slug": "dados-da-empresa-identificar-riscos-psicossociais-nr-1",
+      "titulo": "Como identificar riscos psicossociais no trabalho com dados da empresa",
+      "breadcrumb": "Dados para identificar riscos psicossociais",
+      "dek": "Com a NR-1 em vigor, indicadores que a empresa já tem podem mostrar onde investigar fatores psicossociais. Veja como usar esses dados como ponto de partida, sem tratá-los como diagnóstico.",
+      "descricao": "Como identificar riscos psicossociais no trabalho com dados da empresa: use absenteísmo e rotatividade como sinal e cruze com escuta e análise do trabalho.",
+      "categoria": "psicossocial-e-ergonomia",
+      "tags": [
+        "riscos psicossociais",
+        "NR-1",
+        "indicadores de SST",
+        "PGR",
+        "GRO"
+      ],
+      "palavraChave": "como identificar riscos psicossociais no trabalho com dados da empresa",
+      "autor": "equipe-bevart",
+      "publicado": "2026-10-20",
+      "atualizado": "2026-10-20",
+      "tempoLeitura": 5,
+      "capa": "assets/capa.jpg",
+      "capaAlt": "Profissional de SST analisando painéis de indicadores de absenteísmo e rotatividade ao lado de anotações de escuta dos trabalhadores",
+      "destaque": false,
+      "rascunho": false,
+      "sidebar": "Registre a avaliação psicossocial e leve ao PGR no Bevart.",
+      "cta": {
+        "titulo": "Do indicador ao plano de ação do PGR",
+        "texto": "Avalie, registre evidências e acompanhe riscos psicossociais no mesmo sistema do PGR. Teste 5 dias, sem cartão."
+      }
+    },
+    {
       "slug": "gestao-de-sst-o-que-e-e-como-implantar",
       "titulo": "Gestão de SST: o que é e como implantar em 7 passos",
       "breadcrumb": "Gestão de SST: o que é",
