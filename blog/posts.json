@@ -85,6 +85,35 @@
   ],
   "posts": [
     {
+      "slug": "beneficios-de-saude-nao-substituem-obrigacoes-nr-1",
+      "titulo": "Benefícios de saúde não substituem as obrigações da NR-1",
+      "breadcrumb": "Benefícios de saúde e NR-1",
+      "dek": "Plano de saúde e apoio psicológico são ótimos, mas não comprovam o cumprimento da NR-1. Veja como checar a lacuna entre benefícios e PGR e organizar ações preventivas com evidências.",
+      "descricao": "Benefícios de saúde não substituem as obrigações da NR-1: entenda a diferença para o PGR e como consultorias e RH podem checar lacunas e registrar evidências.",
+      "categoria": "legislacao-e-nrs",
+      "tags": [
+        "NR-1",
+        "benefícios de saúde",
+        "PGR",
+        "GRO",
+        "riscos ocupacionais"
+      ],
+      "palavraChave": "benefícios de saúde substituem obrigações da NR-1",
+      "autor": "equipe-bevart",
+      "publicado": "2026-10-23",
+      "atualizado": "2026-10-23",
+      "tempoLeitura": 5,
+      "capa": "assets/capa.jpg",
+      "capaAlt": "Mesa de trabalho com cartão de plano de saúde de um lado e pasta de PGR com inventário de riscos do outro, lado a lado",
+      "destaque": false,
+      "rascunho": false,
+      "sidebar": "Ligue o inventário de riscos ao plano de ação e guarde as evidências no Bevart.",
+      "cta": {
+        "titulo": "Do benefício à prevenção documentada",
+        "texto": "Registre riscos, ações e evidências no mesmo sistema do PGR. Teste 5 dias, sem cartão."
+      }
+    },
+    {
       "slug": "dados-da-empresa-identificar-riscos-psicossociais-nr-1",
       "titulo": "Como identificar riscos psicossociais no trabalho com dados da empresa",
       "breadcrumb": "Dados para identificar riscos psicossociais",
