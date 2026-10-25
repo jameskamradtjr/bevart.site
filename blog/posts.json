@@ -81,9 +81,64 @@
       "descricao": "Produtividade, precificação e organização de consultorias e equipes de segurança.",
       "tituloSeo": "Gestão de SST para consultorias e equipes",
       "descricaoSeo": "Processos, indicadores e organização para consultorias de SST e equipes internas entregarem mais sem aumentar o time."
+    },
+    {
+      "slug": "tutoriais",
+      "nome": "Tutoriais",
+      "descricao": "Passo a passo do Bevart com telas reais, do cadastro ao resultado.",
+      "tituloSeo": "Tutoriais do Bevart com telas reais",
+      "descricaoSeo": "Tutoriais passo a passo do sistema Bevart com prints reais: eSocial SST, inventário de riscos, treinamentos, EPI e documentos de SST."
     }
   ],
   "posts": [
+    {
+      "slug": "tutorial-gestao-de-treinamentos-bevart",
+      "titulo": "Gestão de treinamentos no Bevart: tutorial do catálogo ao certificado",
+      "dek": "Cadastre o que a empresa exige, veja quem está pendente, agende a turma, colete assinaturas, conclua e emita certificado e lista de presença. Com telas reais.",
+      "descricao": "Tutorial de gestão de treinamentos no Bevart com telas reais: catálogo por NR, quem precisa, turma, assinatura, certificado e reciclagem.",
+      "categoria": "tutoriais",
+      "tags": [
+        "treinamentos",
+        "NR-12",
+        "certificado de treinamento",
+        "lista de presença",
+        "reciclagem",
+        "Bevart"
+      ],
+      "palavraChave": "gestão de treinamentos",
+      "autor": "james-kamradt-jr",
+      "publicado": "2026-10-25",
+      "atualizado": "2026-10-25",
+      "capa": "assets/capa.webp",
+      "capaAlt": "Capa do tutorial de gestão de treinamentos do Bevart com a ficha do funcionário e a turma concluída",
+      "destaque": false,
+      "rascunho": false,
+      "tempoLeitura": 13
+    },
+    {
+      "slug": "tutorial-enviar-esocial-sst-passo-a-passo",
+      "titulo": "Tutorial: como enviar o eSocial SST no Bevart, do cadastro ao S-2240",
+      "dek": "O caminho completo com telas reais: cadastrar a empresa, configurar o transmissor, montar o inventário de riscos e gerar o S-2240 pela lista de funcionários.",
+      "descricao": "Passo a passo com telas reais para enviar o eSocial SST no Bevart: empresa, transmissor, setor, função, inventário de riscos e S-2240.",
+      "categoria": "tutoriais",
+      "tags": [
+        "eSocial",
+        "S-2240",
+        "inventário de riscos",
+        "transmissor eSocial",
+        "PPP eletrônico",
+        "Bevart"
+      ],
+      "palavraChave": "como enviar eSocial SST",
+      "autor": "james-kamradt-jr",
+      "publicado": "2026-10-25",
+      "atualizado": "2026-10-25",
+      "capa": "assets/capa.webp",
+      "capaAlt": "Capa do tutorial de envio do eSocial SST no Bevart com a conferência do S-2240 e a lista de funcionários",
+      "destaque": false,
+      "rascunho": false,
+      "tempoLeitura": 14
+    },
     {
       "slug": "dados-da-empresa-identificar-riscos-psicossociais-nr-1",
       "titulo": "Como identificar riscos psicossociais no trabalho com dados da empresa",

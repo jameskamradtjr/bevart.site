@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://bevart.com.br/blog/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
@@ -48,6 +48,32 @@
     <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://bevart.com.br/blog/categoria/tutoriais/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://bevart.com.br/blog/tutorial-gestao-de-treinamentos-bevart/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://bevart.com.br/blog/tutorial-gestao-de-treinamentos-bevart/assets/capa.webp</image:loc>
+      <image:title>Gestão de treinamentos no Bevart: tutorial do catálogo ao certificado</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://bevart.com.br/blog/tutorial-enviar-esocial-sst-passo-a-passo/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://bevart.com.br/blog/tutorial-enviar-esocial-sst-passo-a-passo/assets/capa.webp</image:loc>
+      <image:title>Tutorial: como enviar o eSocial SST no Bevart, do cadastro ao S-2240</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://bevart.com.br/blog/dados-da-empresa-identificar-riscos-psicossociais-nr-1/</loc>

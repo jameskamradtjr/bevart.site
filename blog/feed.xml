@@ -5,8 +5,24 @@
     <link>https://bevart.com.br/blog/</link>
     <description>Guias práticos de segurança e saúde do trabalho: PGR, PCMSO, LTCAT, eSocial, treinamentos, EPI e riscos psicossociais, escritos para quem executa.</description>
     <language>pt-BR</language>
-    <lastBuildDate>Tue, 20 Oct 2026 12:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 25 Oct 2026 12:00:00 GMT</lastBuildDate>
     <atom:link href="https://bevart.com.br/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gestão de treinamentos no Bevart: tutorial do catálogo ao certificado</title>
+      <link>https://bevart.com.br/blog/tutorial-gestao-de-treinamentos-bevart/</link>
+      <guid isPermaLink="true">https://bevart.com.br/blog/tutorial-gestao-de-treinamentos-bevart/</guid>
+      <pubDate>Sun, 25 Oct 2026 12:00:00 GMT</pubDate>
+      <category>Tutoriais</category>
+      <description>Tutorial de gestão de treinamentos no Bevart com telas reais: catálogo por NR, quem precisa, turma, assinatura, certificado e reciclagem.</description>
+    </item>
+    <item>
+      <title>Tutorial: como enviar o eSocial SST no Bevart, do cadastro ao S-2240</title>
+      <link>https://bevart.com.br/blog/tutorial-enviar-esocial-sst-passo-a-passo/</link>
+      <guid isPermaLink="true">https://bevart.com.br/blog/tutorial-enviar-esocial-sst-passo-a-passo/</guid>
+      <pubDate>Sun, 25 Oct 2026 12:00:00 GMT</pubDate>
+      <category>Tutoriais</category>
+      <description>Passo a passo com telas reais para enviar o eSocial SST no Bevart: empresa, transmissor, setor, função, inventário de riscos e S-2240.</description>
+    </item>
     <item>
       <title>Como identificar riscos psicossociais no trabalho com dados da empresa</title>
       <link>https://bevart.com.br/blog/dados-da-empresa-identificar-riscos-psicossociais-nr-1/</link>
