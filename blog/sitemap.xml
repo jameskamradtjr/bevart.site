@@ -39,7 +39,7 @@
   </url>
   <url>
     <loc>https://bevart.com.br/blog/categoria/legislacao-e-nrs/</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.60</priority>
   </url>
@@ -73,6 +73,16 @@
     <image:image>
       <image:loc>https://bevart.com.br/blog/tutorial-enviar-esocial-sst-passo-a-passo/assets/capa.webp</image:loc>
       <image:title>Tutorial: como enviar o eSocial SST no Bevart, do cadastro ao S-2240</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://bevart.com.br/blog/beneficios-de-saude-nao-substituem-obrigacoes-nr-1/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://bevart.com.br/blog/beneficios-de-saude-nao-substituem-obrigacoes-nr-1/assets/capa.jpg</image:loc>
+      <image:title>Benefícios de saúde não substituem as obrigações da NR-1</image:title>
     </image:image>
   </url>
   <url>
