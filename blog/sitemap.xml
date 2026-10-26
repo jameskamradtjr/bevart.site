@@ -56,6 +56,16 @@
     <priority>0.60</priority>
   </url>
   <url>
+    <loc>https://bevart.com.br/blog/tutorial-avaliacao-riscos-psicossociais-bevart/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://bevart.com.br/blog/tutorial-avaliacao-riscos-psicossociais-bevart/assets/capa.webp</image:loc>
+      <image:title>Tutorial: avaliação de riscos psicossociais no Bevart, do link ao PGR</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://bevart.com.br/blog/tutorial-gestao-de-treinamentos-bevart/</loc>
     <lastmod>2026-10-25</lastmod>
     <changefreq>monthly</changefreq>

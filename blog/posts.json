@@ -92,6 +92,30 @@
   ],
   "posts": [
     {
+      "slug": "tutorial-avaliacao-riscos-psicossociais-bevart",
+      "titulo": "Tutorial: avaliação de riscos psicossociais no Bevart, do link ao PGR",
+      "dek": "Abra uma avaliação anônima, envie o link, veja a exposição por fator e por ambiente e leve o risco ao inventário com plano de ação. Com telas reais.",
+      "descricao": "Tutorial com telas reais da avaliação de riscos psicossociais no Bevart: questionário anônimo, resultado por ambiente e risco no inventário e no PGR.",
+      "categoria": "tutoriais",
+      "tags": [
+        "riscos psicossociais",
+        "NR-1",
+        "questionário anônimo",
+        "inventário de riscos",
+        "PGR",
+        "Bevart"
+      ],
+      "palavraChave": "avaliação de riscos psicossociais",
+      "autor": "james-kamradt-jr",
+      "publicado": "2026-10-25",
+      "atualizado": "2026-10-25",
+      "tempoLeitura": 12,
+      "capa": "assets/capa.webp",
+      "capaAlt": "Capa do tutorial de avaliação de riscos psicossociais do Bevart com o resultado por fator e o questionário no celular",
+      "destaque": false,
+      "rascunho": false
+    },
+    {
       "slug": "tutorial-gestao-de-treinamentos-bevart",
       "titulo": "Gestão de treinamentos no Bevart: tutorial do catálogo ao certificado",
       "dek": "Cadastre o que a empresa exige, veja quem está pendente, agende a turma, colete assinaturas, conclua e emita certificado e lista de presença. Com telas reais.",
