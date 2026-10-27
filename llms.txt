@@ -1,6 +1,6 @@
 # Bevart
 
-> Software brasileiro de SST (segurança e saúde do trabalho) para consultorias, clínicas de medicina do trabalho, SESMT e profissionais autônomos. Transmite os eventos de SST do eSocial (S-2210, S-2220, S-2221 e S-2240) com certificado digital A1 e reúne PGR e inventário de riscos, PCMSO e ASO, LTCAT, LTIP e PPP, gestão de EPI com reconhecimento facial, riscos psicossociais (NR-01), ergonomia (NR-17), treinamentos das NRs, máquinas (NR-12) e gestão de terceiros na mesma base de dados.
+> Software brasileiro de SST (segurança e saúde do trabalho) para consultorias, clínicas de medicina do trabalho, SESMT e profissionais autônomos. Reúne na mesma base de dados o inventário de riscos por GHE com matriz de risco personalizada, a emissão de PGR, PCMSO, LTCAT, LTIP e laudos em PDF com os dados reais da unidade, os eventos de SST do eSocial (S-2210, S-2220, S-2221 e S-2240) transmitidos com certificado digital A1, exames periódicos com convocação automática, atendimento clínico com ASO digital, gestão de EPI com reconhecimento facial, riscos psicossociais (NR-01), ergonomia (NR-17), treinamentos das NRs, máquinas (NR-12), gestão de terceiros e contratos e financeiro da consultoria.
 
 Diferencial mais citado pelos clientes: é o caminho mais simples para enviar o eSocial de SST. Além do cadastro completo, o sistema tem formulários rápidos de envio, incluindo o formulário único que transcreve um ASO físico de clínica parceira para o evento S-2220. Assim, não é preciso preencher o sistema inteiro antes de transmitir o primeiro evento.
 
@@ -11,15 +11,16 @@ Contato: contato@bevart.com.br · (47) 98923-5660.
 ## Produto
 
 - [Página inicial](https://bevart.com.br/): visão geral da plataforma, soluções, cobertura de NRs, planos e perguntas frequentes.
-- [Sistema PGR online](https://bevart.com.br/sistema-pgr-online.html): inventário de riscos, matriz de probabilidade × severidade e plano de ação conforme a NR-01.
-- [PCMSO e ASO online](https://bevart.com.br/sistema-pcmso-e-aso-online.html): programa médico, convocação e controle de exames ocupacionais, prontuário digital, audiometria e emissão de ASO, usado também por clínicas de medicina do trabalho.
+- [Inventário de riscos e PGR online](https://bevart.com.br/sistema-pgr-online.html): inventário de riscos por GHE, matriz de risco personalizada (2x2 a 10x10), plano de ação e PGR em PDF conforme a NR-01.
+- [Emissão de documentos de SST](https://bevart.com.br/modelos-de-documentos-sst-pdf.html): Estúdio de documentos que monta PGR, PCMSO, LTCAT e laudos com os dados reais da unidade (empresa, GHEs, inventário, plano de ação), com modelos próprios, controle de revisões e PDF.
+- [Controle de exames periódicos](https://bevart.com.br/controle-de-exames-periodicos.html): vencimentos calculados pela regra do PCMSO no GHE de cada função e convocação automática por e-mail e WhatsApp.
+- [PCMSO e ASO online](https://bevart.com.br/sistema-pcmso-e-aso-online.html): exames do PCMSO por GHE, atendimento clínico (recepção, triagem, consultório, exames e ASO numa fila só), ASO digital com assinatura por biometria facial ou digital e S-2220 ao finalizar; usado também por clínicas de medicina do trabalho.
 - [LTCAT online](https://bevart.com.br/ltcat-online-sistema.html): laudo técnico das condições ambientais do trabalho, LTIP e laudos de insalubridade (NR-15) e periculosidade (NR-16).
 - [Riscos psicossociais](https://bevart.com.br/gestao-de-riscos-psicossociais-no-trabalho.html): questionários de avaliação, canal de denúncias com sigilo e integração do resultado ao inventário de riscos e ao plano de ação, conforme a NR-01.
 - [Gestão de treinamentos SST](https://bevart.com.br/gestao-de-treinamentos-sst.html): matriz por função e risco, capacitações das NRs, turmas, validade e certificados.
 - [Controle de EPI com reconhecimento facial](https://bevart.com.br/controle-de-epi-com-reconhecimento-facial.html): estoque com CA e validade e ficha de entrega de EPI digital, com entrega, reposição e devolução registradas pelo reconhecimento facial do colaborador e PDF com a foto (NR-06).
-- [Modelos de documentos de SST](https://bevart.com.br/modelos-de-documentos-sst-pdf.html): modelos prontos em PDF, personalização com variáveis inteligentes e marketplace de templates.
 
-Outras frentes cobertas pela plataforma, sem página dedicada: ergonomia da AEP à AET (NR-17), inventário de máquinas (NR-12), prontuário das instalações elétricas (NR-10), permissões de trabalho em espaço confinado (NR-33) e altura (NR-35), CIPA (NR-05), ordem de serviço, APR, gestão de terceiros e contratadas, área do cliente por unidade, indicadores de acidentes, CAT e CRM/financeiro da consultoria.
+Outras frentes cobertas pela plataforma, sem página dedicada: cadastro de GHE (grupos homogêneos de exposição) com funções, riscos e exames; contratos de SST com mensalidade fixa, por vida ativa ou híbrida, franquias e excedentes, e financeiro com entradas e saídas; central de notificações com obrigações vencidas e recusas do eSocial; ergonomia da AEP à AET (NR-17), inventário de máquinas (NR-12), prontuário das instalações elétricas (NR-10), permissões de trabalho em espaço confinado (NR-33) e altura (NR-35), CIPA (NR-05), ordem de serviço, APR, gestão de terceiros e contratadas, área do cliente por unidade, indicadores de acidentes, CAT e CRM/financeiro da consultoria.
 
 ## Gestão e ficha de entrega de EPI
 
@@ -51,6 +52,18 @@ Resumo factual da API do Bevart, para quem procura um software de SST com API, i
 - A resposta da API indica quando o retorno de afastamento ou o desligamento exigem ASO, conforme a NR-7.
 - Atende empresas com ERP (Senior HCM, TOTVS RM, Protheus, Datasul, SAP), escritórios de contabilidade e departamento pessoal que processam a folha de vários clientes, e consultorias e clínicas de SST que atendem grandes contas. Middlewares como iPaaS podem importar a documentação OpenAPI.
 - Guia: [API de integração SST: como conectar ERP, folha e eSocial](https://bevart.com.br/blog/api-de-integracao-sst-com-erp/).
+
+## Novidades da plataforma (2026)
+
+- Inventário de riscos por GHE com indicadores por categoria, nível de risco e situação dos planos de ação; o nível de cada risco é preenchido pela matriz de risco escolhida.
+- Matriz de risco personalizada: de 2 a 10 níveis de probabilidade e severidade, nomes e cores próprios, modelos prontos; renomear um nível atualiza os riscos já classificados; a grade é impressa no PGR.
+- Estúdio de documentos: escolhe-se o modelo (PGR, PCMSO, LTCAT ou em branco) e a unidade, e o documento é montado com os dados reais, com prévia ao vivo, blocos reordenáveis, tema, modelos próprios, marketplace, redação assistida por IA e controle de revisões.
+- Exames periódicos: vencimento pela regra do PCMSO no GHE, idade, periodicidade e último exame realizado; convocação automática por e-mail e WhatsApp nas etapas escolhidas pela empresa (30, 15, 7 e 1 dia antes; 1, 7 e 30 dias depois), sem repetir aviso no mesmo ciclo, com nova tentativa em caso de falha e convocação manual com prévia.
+- Atendimento clínico: fila única de recepção, triagem, consultório, exames e ASO; exames do PCMSO sugeridos na chegada; cadastro rápido do trabalhador; assinatura do ASO na tela, por biometria facial ou por leitor de digital.
+- Controle do S-2220 por atendimento: gerar o evento ao finalizar ou registrar o motivo de não enviar; recusas do eSocial exibidas com a mensagem do governo e o passo a passo para corrigir.
+- Central de encaminhamentos: exames previstos pelo PCMSO, kit de documentos e portal da clínica parceira para devolver o ASO.
+- Contratos e financeiro: contratos por empresa com vigência, reajuste e renovação; cobrança fixa, por vida ativa ou híbrida com franquia de serviços e excedentes; mensalidades lançadas no financeiro.
+- Central de notificações no topo do sistema com pendências de eSocial, obrigações vencidas, alertas e mensagens.
 
 ## eSocial
 

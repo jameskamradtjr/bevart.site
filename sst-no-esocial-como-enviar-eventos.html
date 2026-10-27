@@ -1,39 +1,36 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SST no eSocial: Como Enviar S-2210, S-2220, S-2221 e S-2240 | Bevart</title>
+  <meta name="description" content="Guia prático para enviar os eventos de SST no eSocial: prazos do S-2210, S-2220, S-2221 e S-2240, certificado A1, procuração, erros mais comuns e como o Bevart transmite e acompanha cada evento.">
+  <link rel="canonical" href="https://bevart.com.br/sst-no-esocial-como-enviar-eventos.html">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="theme-color" content="#3448e0">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Bevart">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://bevart.com.br/sst-no-esocial-como-enviar-eventos.html">
+  <meta property="og:title" content="SST no eSocial: Como Enviar S-2210, S-2220, S-2221 e S-2240 | Bevart">
+  <meta property="og:description" content="Guia prático para enviar os eventos de SST no eSocial: prazos do S-2210, S-2220, S-2221 e S-2240, certificado A1, procuração, erros mais comuns e como o Bevart transmite e acompanha cada evento.">
+  <meta property="og:image" content="https://bevart.com.br/assets/img/og-bevart-sst.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SST no eSocial: Como Enviar S-2210, S-2220, S-2221 e S-2240 | Bevart">
+  <meta name="twitter:description" content="Guia prático para enviar os eventos de SST no eSocial: prazos do S-2210, S-2220, S-2221 e S-2240, certificado A1, procuração, erros mais comuns e como o Bevart transmite e acompanha cada evento.">
+  <meta name="twitter:image" content="https://bevart.com.br/assets/img/og-bevart-sst.png">
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18382911934"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'AW-18382911934');
     gtag('config', 'G-Z0RJMZR8R2');
   </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SST no eSocial: Como enviar eventos sem erros - Bevart</title>
-    <meta name="description"
-        content="Aprenda como enviar os eventos de SST (S-2210, S-2220 e S-2240) ao eSocial de forma rápida e segura com o software Bevart.">
-    <meta name="keywords" content="como enviar sst no esocial, s-2240 esocial, erro esocial sst, manual eSocial SST">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
-                    colors: {
-                        primary: { 50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe', 300: '#93c5fd', 400: '#60a5fa', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 800: '#1e40af', 900: '#1e3a8a' },
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="icon" type="image/png" href="assets/img/favicon.png">
-    <link rel="stylesheet" href="assets/css/custom.css">
-    <!-- Google Lead Conversion Tracking -->
+  <!-- Conversões do Google Ads (mesmos rótulos das páginas internas) -->
   <script>
     function gtag_report_conversion(url) {
       if (typeof gtag !== 'function') {
@@ -41,9 +38,7 @@
         return false;
       }
       var callback = function () {
-        if (typeof (url) != 'undefined') {
-          window.location = url;
-        }
+        if (typeof url !== 'undefined') { window.location = url; }
       };
       gtag('event', 'conversion', {
         'send_to': 'AW-18382911934/DuxlCOjriPgcEL7z071E',
@@ -52,7 +47,6 @@
       return false;
     }
 
-    // New function for WhatsApp conversion
     function gtag_report_whatsapp_conversion() {
       if (typeof gtag === 'function') {
         gtag('event', 'conversion', {
@@ -63,120 +57,471 @@
       }
     }
 
-    // Use event delegation to handle clicks
     document.addEventListener('click', function (e) {
-      // Login/Register conversion
-      const loginTarget = e.target.closest('a[href*="profissionais.bevart.com.br/app/src/login/views/login"]');
-      if (loginTarget) {
-        e.preventDefault();
-        gtag_report_conversion(loginTarget.href);
+      var cadastro = e.target.closest('a[href*="profissionais.bevart.com.br/app/src/login/views/login"]');
+      if (cadastro) {
+        // Links que abrem em nova aba seguem sozinhos: só registramos a conversão.
+        if (cadastro.target === '_blank') {
+          gtag_report_conversion();
+        } else {
+          e.preventDefault();
+          gtag_report_conversion(cadastro.href);
+        }
       }
 
-      // WhatsApp conversion
-      const waTarget = e.target.closest('a[href*="wa.me"], a[href*="whatsapp.com"]');
-      if (waTarget) {
+      if (e.target.closest('a[href*="wa.me"], a[href*="whatsapp.com"]')) {
         gtag_report_whatsapp_conversion();
       }
     });
   </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="assets/css/home.css?v=20261027">
+  <!-- Sem JS, a animação de entrada deixaria os blocos invisíveis. -->
+  <noscript>
+    <style>
+      .bv-revela {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    </style>
+  </noscript>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1004315305690659');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1004315305690659&amp;ev=PageView&amp;noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
   <!-- Rastreamento de origem: anúncio -> site -> cadastro -->
   <script src="assets/js/bev-tracking.js"></script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://bevart.com.br/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Como enviar os eventos de SST",
+          "item": "https://bevart.com.br/sst-no-esocial-como-enviar-eventos.html"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://bevart.com.br/sst-no-esocial-como-enviar-eventos.html#webpage",
+      "url": "https://bevart.com.br/sst-no-esocial-como-enviar-eventos.html",
+      "name": "SST no eSocial: Como Enviar S-2210, S-2220, S-2221 e S-2240 | Bevart",
+      "description": "Guia prático para enviar os eventos de SST no eSocial: prazos do S-2210, S-2220, S-2221 e S-2240, certificado A1, procuração, erros mais comuns e como o Bevart transmite e acompanha cada evento.",
+      "isPartOf": {
+        "@id": "https://bevart.com.br/#website"
+      },
+      "about": {
+        "@id": "https://bevart.com.br/#software"
+      },
+      "inLanguage": "pt-BR",
+      "dateModified": "2026-10-27"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Preciso de certificado digital para enviar os eventos de SST?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. A transmissão por webservice exige certificado digital, e o Bevart trabalha com o certificado A1. Consultorias podem transmitir pelos clientes com procuração eletrônica."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Todo ASO precisa ir para o eSocial?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Os exames do PCMSO de trabalhadores com vínculo informado no eSocial vão pelo S-2220. No Bevart você registra quando um atendimento não deve ser enviado, com o motivo, e a central de notificações lembra o que ficou sem decisão."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que fazer quando o eSocial recusa um evento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ler a mensagem de erro, corrigir o dado apontado (cadastro do trabalhador, médico, exame ou ASO) e retransmitir. O Bevart mostra a mensagem e o passo a passo no próprio atendimento."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O PPP eletrônico depende do S-2240?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. O PPP eletrônico é formado a partir das informações enviadas ao eSocial, principalmente o S-2240, por isso o inventário de riscos precisa estar correto e atualizado."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
 </head>
 
-<body class="font-sans antialiased text-gray-800 overflow-x-hidden">
-    <nav class="fixed top-0 left-0 right-0 z-50 px-4 pt-4">
-        <div
-            class="max-w-6xl mx-auto bg-white/80 backdrop-blur-xl rounded-2xl border border-white/40 shadow-lg px-6 h-16 flex items-center justify-between">
-            <a href="index.html"><img src="assets/img/logo bevart.svg" alt="Bevart" class="h-10 w-auto"></a>
-            <a href="https://profissionais.bevart.com.br/app/src/login/views/login"
-                class="btn-primary-gradient text-white px-6 py-2 rounded-full text-sm font-bold">Enviar Meus Eventos</a>
+<body>
+
+  <a href="#conteudo" class="bv-skip">Ir para o conteúdo</a>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="bv-header" id="header">
+    <div class="bv-wrap bv-header__in">
+      <a class="bv-marca" href="/" aria-label="Bevart: página inicial">
+        <img src="assets/img/logo bevart.svg" alt="Bevart" width="128" height="30">
+      </a>
+      <nav class="bv-nav" aria-label="Navegação principal">
+        <button type="button" class="bv-nav__btn" id="mega-gatilho" aria-expanded="false" aria-controls="mega-solucoes">
+          Soluções
+          <svg fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+        </button>
+        <a href="/#plataforma">Plataforma</a>
+        <a href="/#para-quem">Para quem</a>
+        <a href="/#planos">Preços</a>
+        <a href="blog/">Blog</a>
+        <a href="/#faq">Dúvidas</a>
+      </nav>
+      <div class="bv-header__acoes">
+        <a class="bv-entrar" href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="header-entrar">Entrar</a>
+        <a class="bv-btn bv-btn--pri" href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="header">Teste grátis</a>
+        <button type="button" class="bv-burger" id="burger" aria-expanded="false" aria-controls="gaveta" aria-label="Abrir menu">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16" /></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="bv-mega" id="mega-solucoes" role="region" aria-label="Soluções do Bevart">
+      <div class="bv-wrap bv-mega__grade">
+        <div>
+          <h3>eSocial SST</h3>
+          <a href="sst-no-esocial-como-enviar-eventos.html"><b>Envio de eventos de SST</b><span>S-2210, S-2220, S-2221 e S-2240 com certificado A1</span></a>
+          <a href="esocial-sst-para-empresas.html"><b>eSocial SST para empresas</b><span>Do cadastro ao recibo, com retificação</span></a>
+          <a href="esocial-sst-para-construtoras.html"><b>eSocial para construtoras</b><span>Obras, CNO e trabalhadores em campo</span></a>
+          <a href="multa-esocial-sst-como-evitar.html"><b>Como evitar multas</b><span>Prazos e penalidades dos eventos de SST</span></a>
         </div>
-    </nav>
-
-    <section class="hero-gradient pt-32 pb-20 text-center">
-        <div class="max-w-7xl mx-auto px-4 z-10">
-            <h1 class="text-4xl sm:text-5xl lg:text-5xl font-extrabold leading-tight text-gray-900 mb-6"
-                data-aos="fade-up">
-                Como enviar <span class="gradient-text">Eventos SST no eSocial</span> sem Erros
-            </h1>
-            <p class="text-lg sm:text-xl text-gray-600 mb-10 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-                Um guia prático para dominar a transmissão dos eventos de Saúde e Segurança do Trabalho. Use a
-                ferramenta certa e ganhe tempo.
-            </p>
+        <div>
+          <h3>Saúde ocupacional</h3>
+          <a href="controle-de-exames-periodicos.html"><b>Exames periódicos</b><span>Vencimentos pelo PCMSO e convocação automática</span></a>
+          <a href="sistema-pcmso-e-aso-online.html"><b>PCMSO e ASO online</b><span>Atendimento clínico, prontuário e ASO digital</span></a>
+          <a href="gestao-de-riscos-psicossociais-no-trabalho.html"><b>Riscos psicossociais</b><span>Questionários e canal de denúncias (NR-01)</span></a>
         </div>
-    </section>
-
-    <section class="py-20 bg-white">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="prose prose-blue max-w-none">
-                <h2 class="text-3xl font-bold mb-6">Guia Rápido de Transmissão</h2>
-                <p class="text-lg text-gray-600 mb-8">O envio para o governo pode ser complexo, mas com o Bevart, o
-                    processo é resumido em 3 passos:</p>
-                <div class="space-y-8">
-                    <div class="flex gap-6">
-                        <div
-                            class="w-12 h-12 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center shrink-0 font-bold text-xl">
-                            1</div>
-                        <div>
-                            <h4 class="font-bold text-xl mb-2">Configure o Certificado A1</h4>
-                            <p class="text-gray-600 text-sm">Faça o upload do certificado digital uma única vez para
-                                transmissões automáticas e seguras.</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-6">
-                        <div
-                            class="w-12 h-12 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center shrink-0 font-bold text-xl">
-                            2</div>
-                        <div>
-                            <h4 class="font-bold text-xl mb-2">Importe ou Crie os Dados</h4>
-                            <p class="text-gray-600 text-sm">Puxe dados do PGR ou PCMSO. O sistema preenche os campos do
-                                eSocial automaticamente.</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-6">
-                        <div
-                            class="w-12 h-12 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center shrink-0 font-bold text-xl">
-                            3</div>
-                        <div>
-                            <h4 class="font-bold text-xl mb-2">Clique em Transmitir</h4>
-                            <p class="text-gray-600 text-sm">O sistema valida o XML e envia direto ao governo. Receba o
-                                número do recibo na hora.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div>
+          <h3>Segurança do trabalho</h3>
+          <a href="sistema-pgr-online.html"><b>Inventário de riscos e PGR</b><span>Riscos por GHE, matriz própria e plano de ação</span></a>
+          <a href="/#ghe"><b>GHE</b><span>Grupos homogêneos com funções, riscos e exames</span></a>
+          <a href="ltcat-online-sistema.html"><b>LTCAT, LTIP e PPP</b><span>Laudos e PPP eletrônico pelo S-2240</span></a>
+          <a href="controle-de-epi-com-reconhecimento-facial.html"><b>Gestão de EPI</b><span>Ficha de entrega com reconhecimento facial</span></a>
+          <a href="gestao-de-treinamentos-sst.html"><b>Treinamentos das NRs</b><span>Turmas, certificados e validade</span></a>
         </div>
-    </section>
-
-    <section class="py-20 bg-gray-50 text-center">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="aspect-video rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-black mb-12">
-                <iframe class="w-full h-full" src="https://www.youtube.com/embed/t8-l9NumdZU"
-                    title="Manual eSocial Bevart" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <h2 class="text-3xl font-extrabold text-gray-900 mb-8">Não sofra mais com Erros de Envio.</h2>
-            <a href="https://profissionais.bevart.com.br/app/src/login/views/login"
-                class="btn-primary-gradient text-white px-12 py-5 rounded-full text-xl font-bold">Enviar Eventos
-                Agora</a>
+        <div>
+          <h3>Documentos e gestão</h3>
+          <a href="modelos-de-documentos-sst-pdf.html"><b>Emissão de documentos</b><span>PGR, PCMSO, LTCAT, OS e APR em PDF</span></a>
+          <a href="/#financeiro"><b>Contratos e financeiro</b><span>Mensalidade fixa, por vida e excedentes</span></a>
+          <a href="blog/api-de-integracao-sst-com-erp/index.html"><b>API e integrações</b><span>REST, webhooks, CSV e SFTP para seu ERP</span></a>
         </div>
-    </section>
+      </div>
+    </div>
+  </header>
 
-    <footer class="bg-gray-900 text-gray-400 py-12 text-center">
-        <img src="assets/img/logo bevart.svg" alt="Bevart" class="h-8 mx-auto mb-6 brightness-0 invert opacity-50">
-        <p class="text-sm">© 2026 Bevart - Especialistas em eSocial SST.</p>
-    </footer>
-
-  <!-- Cookie Consent -->
-  <div id="cookie-consent" class="cookie-consent">
-    <h4>🍪 Cookies & Privacidade</h4>
-    <p>Utilizamos cookies para melhorar sua experiência em nosso site e analisar nosso tráfego. Ao clicar em "Aceitar", você concorda com o uso de cookies.</p>
-    <div class="flex justify-start">
-      <button id="accept-cookies" class="btn-accept">Aceitar</button>
+  <!-- gaveta mobile -->
+  <div class="bv-gaveta" id="gaveta" aria-hidden="true">
+    <div class="bv-gaveta__fundo" data-fechar></div>
+    <div class="bv-gaveta__painel" role="dialog" aria-modal="true" aria-label="Menu">
+      <div class="bv-gaveta__topo">
+        <img src="assets/img/logo bevart.svg" alt="Bevart" width="108" height="26">
+        <button type="button" class="bv-burger" style="display:inline-flex" data-fechar aria-label="Fechar menu">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18" /></svg>
+        </button>
+      </div>
+      <nav class="bv-gaveta__corpo" aria-label="Menu do celular">
+        <a href="/#plataforma">Plataforma</a>
+        <a href="/#para-quem">Para quem</a>
+        <a href="/#planos">Preços</a>
+        <a href="/#faq">Dúvidas</a>
+        <a href="blog/">Blog</a>
+        <h3>Soluções</h3>
+        <a href="sst-no-esocial-como-enviar-eventos.html">eSocial SST</a>
+        <a href="controle-de-exames-periodicos.html">Exames periódicos</a>
+        <a href="sistema-pcmso-e-aso-online.html">PCMSO e ASO</a>
+        <a href="sistema-pgr-online.html">Inventário de riscos e PGR</a>
+        <a href="/#ghe">GHE</a>
+        <a href="modelos-de-documentos-sst-pdf.html">Emissão de documentos</a>
+        <a href="/#financeiro">Contratos e financeiro</a>
+        <a href="controle-de-epi-com-reconhecimento-facial.html">Gestão de EPI</a>
+        <a href="gestao-de-riscos-psicossociais-no-trabalho.html">Riscos psicossociais</a>
+        <a href="gestao-de-treinamentos-sst.html">Treinamentos</a>
+        <a href="ltcat-online-sistema.html">LTCAT, LTIP e PPP</a>
+      </nav>
+      <div class="bv-gaveta__pe">
+        <a class="bv-btn bv-btn--pri bv-btn--bloco" href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="gaveta">Começar teste grátis</a>
+        <a class="bv-btn bv-btn--sec bv-btn--bloco" href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="gaveta-entrar">Entrar</a>
+      </div>
     </div>
   </div>
 
-<script defer src="assets/js/app.js"></script>
-  <div id="cookie-settings-trigger" class="cookie-settings-trigger hidden">🍪</div>
+  <main id="conteudo">
+    <section class="bv-hero bv-hero--sem-palco" id="top">
+      <div class="bv-wrap bv-hero__texto">
+        <nav class="bv-migalha" aria-label="Você está em"><a href="/">Início</a> › Como enviar os eventos de SST</nav>
+        <h1 class="bv-h1-int">SST no eSocial: <em>como enviar os eventos sem erro</em></h1>
+        <p class="bv-hero__sub">Quais eventos de SST existem, qual o prazo de cada um e o caminho mais curto para transmitir com o certificado A1, acompanhar o retorno e corrigir recusas.</p>
+        <div class="bv-hero__ctas">
+          <a class="bv-btn bv-btn--pri bv-btn--g" href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="sst-no-esocial-como-enviar-eventos-hero">Testar grátis por 5 dias</a>
+          <a class="bv-btn bv-btn--sec bv-btn--g" href="https://wa.me/5547988805218?text=Quero%20enviar%20os%20eventos%20de%20SST%20pelo%20Bevart" data-cta="sst-no-esocial-como-enviar-eventos-demo">Ver uma demonstração</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bv-sec" id="contexto">
+      <div class="bv-wrap">
+        <div class="bv-cab bv-revela">
+          <span class="bv-sobre">Os eventos</span>
+          <h2 class="bv-h2">Quatro eventos de SST e seus prazos.</h2>
+          <p class="bv-lead">Os prazos abaixo são os do leiaute do eSocial para os eventos de Segurança e Saúde no Trabalho.</p>
+        </div>
+        <div class="bv-grade bv-grade--4 bv-passos">
+          <div class="bv-passo bv-revela">
+            <h3>S-2210 · CAT</h3>
+            <p>Comunicação de acidente de trabalho: até o primeiro dia útil seguinte ao acidente; em caso de óbito, imediatamente.</p>
+          </div>
+          <div class="bv-passo bv-revela">
+            <h3>S-2220 · Monitoramento da saúde</h3>
+            <p>ASO e exames do PCMSO: até o dia 15 do mês seguinte ao da realização do exame.</p>
+          </div>
+          <div class="bv-passo bv-revela">
+            <h3>S-2221 · Exame toxicológico</h3>
+            <p>Motoristas profissionais: até o dia 15 do mês seguinte ao da realização do exame.</p>
+          </div>
+          <div class="bv-passo bv-revela">
+            <h3>S-2240 · Condições ambientais</h3>
+            <p>Agentes nocivos e EPIs: até o dia 15 do mês seguinte à admissão, ao início da obrigação ou à alteração das condições.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bv-sec bv-sec--suave" id="como-funciona">
+      <div class="bv-wrap">
+        <div class="bv-cab bv-revela">
+          <span class="bv-sobre">No Bevart</span>
+          <h2 class="bv-h2">Como o Bevart transmite e acompanha</h2>
+        </div>
+        <article class="bv-recurso bv-revela">
+          <div class="bv-recurso__texto">
+            <span class="bv-sobre">Passo 1</span>
+            <h3>Certificado A1 e procuração</h3>
+            <p>Cadastre o certificado digital A1 da empresa ou da consultoria com procuração eletrônica. A transmissão é feita por webservice, direto para o eSocial.</p>
+            <ul class="bv-checks">
+              <li>Transmissão direta pelo Bevart ou repasse do XML ao ERP, por unidade</li>
+              <li>Consulta das procurações liberadas para o seu certificado</li>
+            </ul>
+          </div>
+          <div class="bv-tela">
+            <div class="bv-janela"><img src="assets/telas/web/enviar-s2240-esocial.webp" width="1600" height="1067" loading="lazy" alt="Tela de envio do evento S-2240 ao eSocial"></div>
+          </div>
+        </article>
+        <article class="bv-recurso bv-recurso--inv bv-revela">
+          <div class="bv-recurso__texto">
+            <span class="bv-sobre">Passo 2</span>
+            <h3>Gere o evento a partir do cadastro, ou pelo formulário rápido</h3>
+            <p>O S-2240 sai do inventário de riscos e o S-2220 do atendimento clínico. Para o que precisa sair hoje, os formulários rápidos dispensam o cadastro completo, inclusive a transcrição de ASO físico.</p>
+          </div>
+          <div class="bv-tela">
+            <div class="bv-janela"><img src="assets/telas/web/aso-fisico-para-digital-esocial.webp" width="1600" height="1067" loading="lazy" alt="Formulário de transcrição de ASO físico para o S-2220"></div>
+          </div>
+        </article>
+        <article class="bv-recurso bv-revela">
+          <div class="bv-recurso__texto">
+            <span class="bv-sobre">Passo 3</span>
+            <h3>Acompanhe o retorno e corrija recusas</h3>
+            <p>Recibo guardado em cada envio. Se o eSocial recusar, a mensagem do governo aparece no próprio atendimento com o passo a passo para corrigir e retransmitir.</p>
+          </div>
+          <div class="bv-tela">
+            <div class="bv-janela"><img src="assets/telas/v2/esocial-s2220-erro-correcao.webp" width="1200" height="451" loading="lazy" alt="Evento S-2220 recusado pelo eSocial com a mensagem do governo e como corrigir"></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="bv-sec" id="video">
+      <div class="bv-wrap">
+        <div class="bv-cab bv-revela">
+          <span class="bv-sobre">Vídeo</span>
+          <h2 class="bv-h2">Veja o Bevart funcionando</h2>
+        </div>
+        <div class="bv-video bv-revela">
+          <iframe src="https://www.youtube-nocookie.com/embed/t8-l9NumdZU" title="Veja o Bevart funcionando" loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="bv-sec" id="faq">
+      <div class="bv-wrap">
+        <div class="bv-cab bv-revela">
+          <span class="bv-sobre">Perguntas frequentes</span>
+          <h2 class="bv-h2">Envio dos eventos de SST</h2>
+        </div>
+        <div class="bv-faq">
+          <details>
+            <summary>Preciso de certificado digital para enviar os eventos de SST?</summary>
+            <p>Sim. A transmissão por webservice exige certificado digital, e o Bevart trabalha com o certificado A1. Consultorias podem transmitir pelos clientes com procuração eletrônica.</p>
+          </details>
+          <details>
+            <summary>Todo ASO precisa ir para o eSocial?</summary>
+            <p>Os exames do PCMSO de trabalhadores com vínculo informado no eSocial vão pelo S-2220. No Bevart você registra quando um atendimento não deve ser enviado, com o motivo, e a central de notificações lembra o que ficou sem decisão.</p>
+          </details>
+          <details>
+            <summary>O que fazer quando o eSocial recusa um evento?</summary>
+            <p>Ler a mensagem de erro, corrigir o dado apontado (cadastro do trabalhador, médico, exame ou ASO) e retransmitir. O Bevart mostra a mensagem e o passo a passo no próprio atendimento.</p>
+          </details>
+          <details>
+            <summary>O PPP eletrônico depende do S-2240?</summary>
+            <p>Sim. O PPP eletrônico é formado a partir das informações enviadas ao eSocial, principalmente o S-2240, por isso o inventário de riscos precisa estar correto e atualizado.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="bv-sec" id="relacionados">
+      <div class="bv-wrap">
+        <div class="bv-cab bv-cab--esq bv-revela">
+          <span class="bv-sobre">Continue lendo</span>
+          <h2 class="bv-h2" style="font-size:clamp(24px,3vw,32px)">Conteúdos relacionados</h2>
+        </div>
+        <div class="bv-grade bv-grade--3">
+          <a class="bv-mod bv-revela" href="multa-esocial-sst-como-evitar.html"><h3>Multas do eSocial SST</h3><p>Prazos dos eventos e como não perder nenhum.</p></a>
+          <a class="bv-mod bv-revela" href="blog/tutorial-enviar-esocial-sst-passo-a-passo/"><h3>Tutorial com telas reais</h3><p>Do cadastro ao S-2240 no Bevart.</p></a>
+          <a class="bv-mod bv-revela" href="blog/como-transcrever-aso-fisico-para-esocial-s-2220-bevart/"><h3>ASO físico para o S-2220</h3><p>Formulário único de transcrição.</p></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bv-sec" style="padding-top:0" id="contato">
+      <div class="bv-wrap">
+        <div class="bv-final bv-revela">
+          <h2>Envie o primeiro evento de SST hoje.</h2>
+          <p>Cadastre o certificado A1 e transmita pelo formulário rápido, sem cadastrar a empresa inteira.</p>
+          <div class="bv-hero__ctas">
+            <a class="bv-btn bv-btn--clara bv-btn--g" href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="sst-no-esocial-como-enviar-eventos-final">Criar conta grátis</a>
+            <a class="bv-btn bv-btn--contorno-claro bv-btn--g" href="/#planos">Ver planos</a>
+          </div>
+          <small>5 dias com acesso completo · sem cartão de crédito</small>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== RODAPÉ ==================== -->
+  <footer class="bv-rodape">
+    <div class="bv-wrap">
+      <div class="bv-rodape__grade">
+        <div class="bv-rodape__marca">
+          <img src="assets/img/logo bevart.svg" alt="Bevart" width="120" height="28" loading="lazy">
+          <p>Sistema de gestão de SST para consultorias, clínicas, SESMT e profissionais de segurança e saúde do trabalho. Do
+            inventário de riscos ao evento entregue no eSocial.</p>
+          <div class="bv-redes">
+            <a href="https://www.instagram.com/bevartsst/" aria-label="Instagram do Bevart" rel="noopener" target="_blank"><svg fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" fill="currentColor" /></svg></a>
+            <a href="https://www.youtube.com/@bevartsst6772" aria-label="Canal do Bevart no YouTube" rel="noopener" target="_blank"><svg fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="4" /><path d="M10 9.5v5l4.5-2.5z" fill="currentColor" /></svg></a>
+            <a href="https://wa.me/5547988805218?text=vim%20pelo%20site%20do%20bevart" aria-label="WhatsApp do Bevart" rel="noopener" target="_blank"><svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2 5.2 5.2 0 001.1 2.7 11.8 11.8 0 004.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 001.8-1.2 2.2 2.2 0 00.1-1.2c0-.1-.2-.2-.5-.3z" /></svg></a>
+          </div>
+        </div>
+        <div>
+          <h3>eSocial SST</h3>
+          <ul>
+            <li><a href="sst-no-esocial-como-enviar-eventos.html">Como enviar os eventos</a></li>
+            <li><a href="esocial-sst-para-empresas.html">eSocial SST para empresas</a></li>
+            <li><a href="esocial-sst-para-construtoras.html">eSocial para construtoras</a></li>
+            <li><a href="multa-esocial-sst-como-evitar.html">Como evitar multas</a></li>
+            <li><a href="blog/como-enviar-evento-s-2240-pelo-sistema-bevart/">S-2240 e PPP eletrônico</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Saúde e segurança</h3>
+          <ul>
+            <li><a href="controle-de-exames-periodicos.html">Exames periódicos</a></li>
+            <li><a href="sistema-pcmso-e-aso-online.html">PCMSO e ASO online</a></li>
+            <li><a href="sistema-pgr-online.html">Inventário de riscos e PGR</a></li>
+            <li><a href="modelos-de-documentos-sst-pdf.html">Emissão de documentos</a></li>
+            <li><a href="ltcat-online-sistema.html">LTCAT e LTIP</a></li>
+            <li><a href="controle-de-epi-com-reconhecimento-facial.html">Gestão de EPI</a></li>
+            <li><a href="gestao-de-riscos-psicossociais-no-trabalho.html">Riscos psicossociais</a></li>
+            <li><a href="gestao-de-treinamentos-sst.html">Treinamentos</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Bevart</h3>
+          <ul>
+            <li><a href="/#planos">Preços e planos</a></li>
+            <li><a href="/#faq">Perguntas frequentes</a></li>
+            <li><a href="blog/">Blog de SST</a></li>
+            <li><a href="modelos-de-documentos-sst-pdf.html">Modelos de documentos</a></li>
+            <li><a href="https://profissionais.bevart.com.br/app/marketplace/documentos/views/marketplace">Marketplace de documentos</a></li>
+            <li><a href="https://sstninjas.bevart.com.br/profissionais">SST Ninjas</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contato</h3>
+          <ul>
+            <li><a href="mailto:contato@bevart.com.br">contato@bevart.com.br</a></li>
+            <li><a href="https://wa.me/5547988805218?text=vim%20pelo%20site%20do%20bevart">(47) 98923-5660</a></li>
+            <li><a href="https://profissionais.bevart.com.br/app/src/login/views/login">Entrar no sistema</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bv-rodape__base">
+        <span>© <span data-ano>2026</span> Bevart. Todos os direitos reservados.</span>
+        <span><a href="termos-de-uso.html">Termos de uso</a> · <a href="privacidade.html">Privacidade</a> · <a href="lgpd.html">LGPD</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <a class="bv-zap" href="https://wa.me/5547988805218?text=vim%20pelo%20site%20do%20bevart" aria-label="Falar no WhatsApp" rel="noopener" target="_blank" data-cta="flutuante-whatsapp">
+    <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2 5.2 5.2 0 001.1 2.7 11.8 11.8 0 004.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 001.8-1.2 2.2 2.2 0 00.1-1.2c0-.1-.2-.2-.5-.3z" /></svg>
+  </a>
+
+  <div class="bv-barra-mob">
+    <a class="bv-btn bv-btn--sec" href="https://wa.me/5547988805218?text=vim%20pelo%20site%20do%20bevart" data-cta="barra-whatsapp">WhatsApp</a>
+    <a class="bv-btn bv-btn--pri" href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="barra-cadastro">Teste grátis</a>
+  </div>
+
+  <div class="bv-cookies" id="cookies" role="region" aria-label="Aviso de cookies" hidden>
+    <span>Usamos cookies para entender como o site é usado e melhorar sua experiência. <a href="privacidade.html">Saiba mais</a>.</span>
+    <button type="button" class="bv-btn bv-btn--pri" data-aceitar>Aceitar</button>
+  </div>
+
+  <script defer src="assets/js/home.js?v=20261027"></script>
+  <script>(function (d, s, id) { var js = d.createElement(s); js.src = "https://analytics.yggra.com.br/tracker.js?v=" + Date.now(); js.async = true; js.setAttribute('data-id', id); d.head.appendChild(js); })(document, 'script', 'SB-3C21C2');</script>
 </body>
 
 </html>

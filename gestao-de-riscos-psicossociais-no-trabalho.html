@@ -1,392 +1,511 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18382911934"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestão de Riscos Psicossociais na NR-01 e no PGR | Software Bevart</title>
+  <meta name="description" content="Avalie os riscos psicossociais exigidos pela NR-01 com questionário anônimo, canal de denúncias e resultado por ambiente, e leve cada risco ao inventário, ao plano de ação e ao PGR. Baixe o manual do GRO.">
+  <link rel="canonical" href="https://bevart.com.br/gestao-de-riscos-psicossociais-no-trabalho.html">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="theme-color" content="#3448e0">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Bevart">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://bevart.com.br/gestao-de-riscos-psicossociais-no-trabalho.html">
+  <meta property="og:title" content="Gestão de Riscos Psicossociais na NR-01 e no PGR | Software Bevart">
+  <meta property="og:description" content="Avalie os riscos psicossociais exigidos pela NR-01 com questionário anônimo, canal de denúncias e resultado por ambiente, e leve cada risco ao inventário, ao plano de ação e ao PGR. Baixe o manual do GRO.">
+  <meta property="og:image" content="https://bevart.com.br/assets/img/og-bevart-sst.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Gestão de Riscos Psicossociais na NR-01 e no PGR | Software Bevart">
+  <meta name="twitter:description" content="Avalie os riscos psicossociais exigidos pela NR-01 com questionário anônimo, canal de denúncias e resultado por ambiente, e leve cada risco ao inventário, ao plano de ação e ao PGR. Baixe o manual do GRO.">
+  <meta name="twitter:image" content="https://bevart.com.br/assets/img/og-bevart-sst.png">
 
-        gtag('config', 'AW-18382911934');
-        gtag('config', 'G-Z0RJMZR8R2');
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestão de Riscos Psicossociais na NR 01 e PGR - Software Bevart</title>
-    <meta name="description"
-        content="Identifique e gerencie riscos psicossociais no trabalho em conformidade com a NR 01. Use formulários recomendados pela ANVISA e Ministério da Saúde integrados ao PGR.">
-    <meta name="keywords"
-        content="riscos psicossociais, risco psicossocial nr 01, risco psicossocial no pgr, gestão de riscos psicossociais, saúde mental no trabalho, burnout, estresse ocupacional, CID F">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
-                    colors: {
-                        primary: { 50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe', 300: '#93c5fd', 400: '#60a5fa', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 800: '#1e40af', 900: '#1e3a8a' },
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="assets/img/favicon.png">
-    <link rel="stylesheet" href="assets/css/custom.css">
-    <!-- Google Lead Conversion Tracking -->
-    <script>
-        function gtag_report_conversion(url) {
-            if (typeof gtag !== 'function') {
-                if (typeof url !== 'undefined') { window.location = url; }
-                return false;
-            }
-            var callback = function () {
-                if (typeof (url) != 'undefined') {
-                    window.location = url;
-                }
-            };
-            gtag('event', 'conversion', {
-                'send_to': 'AW-18382911934/DuxlCOjriPgcEL7z071E',
-                'event_callback': callback
-            });
-            return false;
-        }
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18382911934"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'AW-18382911934');
+    gtag('config', 'G-Z0RJMZR8R2');
+  </script>
+  <!-- Conversões do Google Ads (mesmos rótulos das páginas internas) -->
+  <script>
+    function gtag_report_conversion(url) {
+      if (typeof gtag !== 'function') {
+        if (typeof url !== 'undefined') { window.location = url; }
+        return false;
+      }
+      var callback = function () {
+        if (typeof url !== 'undefined') { window.location = url; }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-18382911934/DuxlCOjriPgcEL7z071E',
+        'event_callback': callback
+      });
+      return false;
+    }
 
-        // New function for WhatsApp conversion
-        function gtag_report_whatsapp_conversion() {
-            if (typeof gtag === 'function') {
-                gtag('event', 'conversion', {
-                    'send_to': 'AW-18382911934/DuxlCOjriPgcEL7z071E',
-                    'value': 1.0,
-                    'currency': 'BRL'
-                });
-            }
-        }
-
-        // Use event delegation to handle clicks
-        document.addEventListener('click', function (e) {
-            // Login/Register conversion
-            const loginTarget = e.target.closest('a[href*="profissionais.bevart.com.br/app/src/login/views/login"]');
-            if (loginTarget) {
-                e.preventDefault();
-                gtag_report_conversion(loginTarget.href);
-            }
-
-            // WhatsApp conversion
-            const waTarget = e.target.closest('a[href*="wa.me"], a[href*="whatsapp.com"]');
-            if (waTarget) {
-                gtag_report_whatsapp_conversion();
-            }
+    function gtag_report_whatsapp_conversion() {
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18382911934/DuxlCOjriPgcEL7z071E',
+          'value': 1.0,
+          'currency': 'BRL'
         });
-    </script>
+      }
+    }
+
+    document.addEventListener('click', function (e) {
+      var cadastro = e.target.closest('a[href*="profissionais.bevart.com.br/app/src/login/views/login"]');
+      if (cadastro) {
+        // Links que abrem em nova aba seguem sozinhos: só registramos a conversão.
+        if (cadastro.target === '_blank') {
+          gtag_report_conversion();
+        } else {
+          e.preventDefault();
+          gtag_report_conversion(cadastro.href);
+        }
+      }
+
+      if (e.target.closest('a[href*="wa.me"], a[href*="whatsapp.com"]')) {
+        gtag_report_whatsapp_conversion();
+      }
+    });
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="assets/css/home.css?v=20261027">
+  <!-- Sem JS, a animação de entrada deixaria os blocos invisíveis. -->
+  <noscript>
+    <style>
+      .bv-revela {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    </style>
+  </noscript>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1004315305690659');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1004315305690659&amp;ev=PageView&amp;noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
   <!-- Rastreamento de origem: anúncio -> site -> cadastro -->
   <script src="assets/js/bev-tracking.js"></script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://bevart.com.br/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Riscos psicossociais",
+          "item": "https://bevart.com.br/gestao-de-riscos-psicossociais-no-trabalho.html"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://bevart.com.br/gestao-de-riscos-psicossociais-no-trabalho.html#webpage",
+      "url": "https://bevart.com.br/gestao-de-riscos-psicossociais-no-trabalho.html",
+      "name": "Gestão de Riscos Psicossociais na NR-01 e no PGR | Software Bevart",
+      "description": "Avalie os riscos psicossociais exigidos pela NR-01 com questionário anônimo, canal de denúncias e resultado por ambiente, e leve cada risco ao inventário, ao plano de ação e ao PGR. Baixe o manual do GRO.",
+      "isPartOf": {
+        "@id": "https://bevart.com.br/#website"
+      },
+      "about": {
+        "@id": "https://bevart.com.br/#software"
+      },
+      "inLanguage": "pt-BR",
+      "dateModified": "2026-10-27"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "A avaliação psicossocial é obrigatória?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A NR-01 inclui os fatores de risco psicossociais relacionados ao trabalho no gerenciamento de riscos ocupacionais. Eles precisam ser identificados, avaliados e controlados no PGR."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O questionário é anônimo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. As respostas não são associadas à identidade do trabalhador, e o resultado é apresentado por ambiente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O canal de denúncias faz parte?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. A empresa tem um canal de denúncias próprio, com sigilo e histórico de tratamento."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
 </head>
 
-<body class="font-sans antialiased text-gray-800 overflow-x-hidden">
+<body>
 
-    <!-- ========== NAVBAR ========== -->
-    <nav class="fixed top-0 left-0 right-0 z-50 px-4 pt-4">
-        <div
-            class="max-w-6xl mx-auto bg-white/80 backdrop-blur-xl rounded-2xl border border-white/40 shadow-lg px-6 h-16 flex items-center justify-between">
-            <a href="index.html">
-                <img src="assets/img/logo bevart.svg" alt="Bevart" class="h-10 w-auto">
-            </a>
-            <a href="https://profissionais.bevart.com.br/app/src/login/views/login"
-                class="btn-primary-gradient text-white px-6 py-2 rounded-full text-sm font-bold">Experimentar Agora</a>
-        </div>
-    </nav>
+  <a href="#conteudo" class="bv-skip">Ir para o conteúdo</a>
 
-    <!-- ========== HERO SECTION ========== -->
-    <section class="hero-gradient pt-32 pb-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-gray-900 mb-6"
-                data-aos="fade-up">
-                Gestão de <span class="gradient-text">Riscos Psicossociais</span> na NR 01
-            </h1>
-            <p class="text-lg sm:text-xl text-gray-600 mb-10 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-                Saúde mental é prioridade. Identifique preventivamente fatores que causam estresse, burnout e depressão
-                com ferramentas integradas ao PGR.
-            </p>
-            <div class="flex flex-wrap justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
-                <a href="https://profissionais.bevart.com.br/app/src/login/views/login"
-                    class="btn-primary-gradient text-white px-10 py-4 rounded-full text-lg font-bold">Avaliar Riscos
-                    Agora</a>
-                <a href="#solucao" class="btn-outline px-10 py-4 rounded-full text-lg font-semibold">Conhecer
-                    Formulários</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== CONTEXT SECTION ========== -->
-    <section class="py-20 bg-white">
-        <div class="max-w-5xl mx-auto px-4">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div data-aos="fade-right">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-6">O que são Riscos Psicossociais?</h2>
-                    <p class="text-gray-600 text-lg mb-4">
-                        São as condições de trabalho relacionadas à organização, gestão e relações sociais que podem
-                        causar danos físicos, mentais e sociais aos trabalhadores.
-                    </p>
-                    <div class="space-y-4">
-                        <div class="flex items-start gap-3">
-                            <span
-                                class="w-6 h-6 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center shrink-0 font-bold text-xs">!</span>
-                            <p class="text-gray-700 font-medium">A identificação é <strong>obrigatória no PGR (NR
-                                    01)</strong>.</p>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <span
-                                class="w-6 h-6 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center shrink-0 font-bold text-xs">!</span>
-                            <p class="text-gray-700 font-medium">Impactam diretamente no absenteísmo e rotatividade
-                                (turnover).</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-gray-50 p-8 rounded-3xl border border-gray-100 shadow-sm" data-aos="fade-left">
-                    <h3 class="text-xl font-bold mb-4">Principais Fatores de Risco:</h3>
-                    <ul class="space-y-3">
-                        <li class="flex items-center gap-2"><span class="w-2 h-2 bg-primary-500 rounded-full"></span>
-                            <strong>Carga de Trabalho:</strong> Volume excessivo e prazos irreais.
-                        </li>
-                        <li class="flex items-center gap-2"><span class="w-2 h-2 bg-primary-500 rounded-full"></span>
-                            <strong>Gestão:</strong> Falta de autonomia e comunicação falha.
-                        </li>
-                        <li class="flex items-center gap-2"><span class="w-2 h-2 bg-primary-500 rounded-full"></span>
-                            <strong>Relacionamentos:</strong> Assédio moral, sexual e conflitos.
-                        </li>
-                        <li class="flex items-center gap-2"><span class="w-2 h-2 bg-primary-500 rounded-full"></span>
-                            <strong>Contexto:</strong> Insegurança laboral e desequilíbrio vida/trabalho.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== PAIN SECTION ========== -->
-    <section class="py-20 bg-rose-50 border-y border-rose-100">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-2xl md:text-3xl font-bold text-rose-900 mb-6">As consequências para a empresa e o
-                trabalhador</h2>
-            <p class="text-rose-800 text-lg mb-10">
-                O não gerenciamento desses riscos leva ao aumento expressivo de <strong>atestados médicos (CID
-                    F)</strong> e ao presenteísmo (colaborador presente, mas improdutivo).
-            </p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded-2xl shadow-sm">
-                    <p class="text-3xl font-black text-rose-600 mb-2">Burnout</p>
-                    <p class="text-sm text-gray-600">Esgotamento profissional severo.</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-sm">
-                    <p class="text-3xl font-black text-rose-600 mb-2">Ansiedade</p>
-                    <p class="text-sm text-gray-600">Transtornos crescentes no ambiente laboral.</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-sm">
-                    <p class="text-3xl font-black text-rose-600 mb-2">Depressão</p>
-                    <p class="text-sm text-gray-600">Causa principal de invalidez moderna.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== DOWNLOAD/SEO SECTION ========== -->
-    <section class="py-20 bg-gray-50 border-y border-gray-100">
-        <div class="max-w-5xl mx-auto px-4">
-            <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100 relative overflow-hidden">
-                <div
-                    class="absolute top-0 right-0 -mt-4 -mr-4 w-32 h-32 bg-primary-100 rounded-full opacity-50 blur-2xl">
-                </div>
-                <div class="absolute bottom-0 left-0 -mb-4 -ml-4 w-24 h-24 bg-blue-100 rounded-full opacity-50 blur-xl">
-                </div>
-
-                <div class="relative z-10 grid md:grid-cols-2 gap-10 items-center">
-                    <div data-aos="fade-right">
-                        <span
-                            class="inline-block py-1 px-3 rounded-full bg-primary-50 text-primary-600 text-sm font-bold mb-4">Material
-                            Gratuito</span>
-                        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                            Procurando o <span class="text-primary-600">Manual de interpretação e aplicação do capítulo
-                                1.5 da NR-1</span>?
-                        </h2>
-                        <p class="text-gray-600 mb-6 font-medium">
-                            Para ajudar na compreensão das exigências legais, disponibilizamos o download gratuito do
-                            manual oficial focado no Gerenciamento de Riscos Ocupacionais (GRO) e PGR.
-                        </p>
-                        <a href="assets/downloads/Manual_GRO_PGR_da_NR_1.pdf" download="Manual_GRO_PGR_da_NR_1.pdf"
-                            target="_blank"
-                            class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-bold text-primary-600 border-2 border-primary-600 hover:bg-primary-50 transition w-full md:w-auto">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
-                            </svg>
-                            Baixar Manual em PDF
-                        </a>
-                    </div>
-                    <div class="bg-white/80 backdrop-blur-sm shadow-sm rounded-2xl p-8 border border-gray-100 relative"
-                        data-aos="fade-left">
-                        <div class="absolute -top-3 -right-3">
-                            <span class="relative flex h-6 w-6">
-                                <span
-                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
-                                <span
-                                    class="relative inline-flex rounded-full h-6 w-6 bg-primary-500 text-white items-center justify-center text-xs font-bold">!</span>
-                            </span>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Não quer se preocupar com manuais complexos?
-                        </h3>
-                        <p class="text-gray-600 mb-6 text-sm">
-                            A aplicação prática da NR-1 para riscos psicossociais não precisa ser uma dor de cabeça. O
-                            sistema <strong>Bevart</strong> já está totalmente preparado e parametrizado para atender a
-                            todas as exigências normativas de forma automatizada e segura.
-                        </p>
-                        <a href="https://profissionais.bevart.com.br/app/src/login/views/login"
-                            class="btn-primary-gradient text-white px-6 py-3 rounded-full text-center font-bold block w-full shadow-md">
-                            Conhecer o Sistema Bevart
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== SOLUTION / BEVART DIFFERENTIATION ========== -->
-    <section id="solucao" class="py-20 bg-white overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="relative" data-aos="fade-right">
-                    <div class="aspect-video rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-black">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/QxYRR7-71mk"
-                            title="Risco Psicossocial Bevart" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <!-- Badge decoration -->
-                    <div
-                        class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl border border-gray-100 hidden md:block">
-                        <p class="text-xs font-bold text-primary-600 uppercase mb-1">Diferencial Exclusivo</p>
-                        <p class="text-sm font-bold">Formulários Oficiais Integrados</p>
-                    </div>
-                </div>
-                <div data-aos="fade-left">
-                    <h2 class="text-3xl font-extrabold text-gray-900 mb-6">O Diferencial do <span
-                            class="gradient-text">Bevart</span></h2>
-                    <p class="text-gray-600 text-lg mb-8">
-                        Nossa plataforma já conta com um workflow automatizado para identificação e avaliação de riscos
-                        psicossociais, garantindo que você cumpra a norma de forma técnica e segura.
-                    </p>
-                    <div class="space-y-6">
-                        <div class="flex gap-4">
-                            <div
-                                class="w-12 h-12 bg-blue-50 text-primary-600 rounded-xl flex items-center justify-center shrink-0">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-lg">Formulários ANVISA / MS</h4>
-                                <p class="text-sm text-gray-600 font-medium">Questionários baseados nas diretrizes da
-                                    ANVISA e do Ministério da Saúde do Brasil.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-4">
-                            <div
-                                class="w-12 h-12 bg-green-50 text-green-600 rounded-xl flex items-center justify-center shrink-0">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15">
-                                    </path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-lg">Integração Nativa com PGR</h4>
-                                <p class="text-sm text-gray-600 font-medium">Os dados coletados alimentam
-                                    automaticamente o inventário de riscos do seu PGR.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-4">
-                            <div
-                                class="w-12 h-12 bg-purple-50 text-purple-600 rounded-xl flex items-center justify-center shrink-0">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-lg">Gráficos de Pesquisa de Clima</h4>
-                                <p class="text-sm text-gray-600 font-medium">Transforme respostas em Dashboards para
-                                    tomada de decisão estratégica.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-4">
-                            <div
-                                class="w-12 h-12 bg-red-50 text-red-600 rounded-xl flex items-center justify-center shrink-0">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-lg">Canal de Denúncias</h4>
-                                <p class="text-sm text-gray-600 font-medium">Plataforma anônima e segura para recebimento de relatos, integrada aos programas de compliance e SST.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-10">
-                        <a href="https://profissionais.bevart.com.br/app/src/login/views/login"
-                            class="btn-primary-gradient text-white px-8 py-3 rounded-full font-bold inline-block">Começar
-                            Agora</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== CTA FINAL ========== -->
-    <section class="py-20 bg-gray-900 overflow-hidden relative">
-        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
-            <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-8">Proteja seus colaboradores e sua empresa.
-            </h2>
-            <p class="text-gray-400 text-xl mb-10">Implemente a gestão de riscos psicossociais hoje mesmo com a
-                tecnologia do Bevart.</p>
-            <a href="https://profissionais.bevart.com.br/app/src/login/views/login"
-                class="bg-white text-primary-600 px-12 py-5 rounded-full text-xl font-bold shadow-2xl hover:bg-gray-100 transition inline-block">Teste
-                Grátis por 5 dias</a>
-        </div>
-    </section>
-
-    <!-- ========== FOOTER ========== -->
-    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800 text-center">
-        <div class="max-w-7xl mx-auto px-4">
-            <img src="assets/img/logo bevart.svg" alt="Bevart" class="h-8 mx-auto mb-6 brightness-0 invert opacity-50">
-            <p class="text-sm">© 2026 Bevart - Soluções em Saúde Mental e Psicossocial no Trabalho.</p>
-        </div>
-    </footer>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ duration: 800, once: true });
-    </script>
-
-    <!-- Cookie Consent -->
-    <div id="cookie-consent" class="cookie-consent">
-        <h4>🍪 Cookies & Privacidade</h4>
-        <p>Utilizamos cookies para melhorar sua experiência em nosso site e analisar nosso tráfego. Ao clicar em
-            "Aceitar", você concorda com o uso de cookies.</p>
-        <div class="flex justify-start">
-            <button id="accept-cookies" class="btn-accept">Aceitar</button>
-        </div>
+  <!-- ==================== HEADER ==================== -->
+  <header class="bv-header" id="header">
+    <div class="bv-wrap bv-header__in">
+      <a class="bv-marca" href="/" aria-label="Bevart: página inicial">
+        <img src="assets/img/logo bevart.svg" alt="Bevart" width="128" height="30">
+      </a>
+      <nav class="bv-nav" aria-label="Navegação principal">
+        <button type="button" class="bv-nav__btn" id="mega-gatilho" aria-expanded="false" aria-controls="mega-solucoes">
+          Soluções
+          <svg fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+        </button>
+        <a href="/#plataforma">Plataforma</a>
+        <a href="/#para-quem">Para quem</a>
+        <a href="/#planos">Preços</a>
+        <a href="blog/">Blog</a>
+        <a href="/#faq">Dúvidas</a>
+      </nav>
+      <div class="bv-header__acoes">
+        <a class="bv-entrar" href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="header-entrar">Entrar</a>
+        <a class="bv-btn bv-btn--pri" href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="header">Teste grátis</a>
+        <button type="button" class="bv-burger" id="burger" aria-expanded="false" aria-controls="gaveta" aria-label="Abrir menu">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16" /></svg>
+        </button>
+      </div>
     </div>
 
-    <script defer src="assets/js/app.js"></script>
-    <div id="cookie-settings-trigger" class="cookie-settings-trigger hidden">🍪</div>
+    <div class="bv-mega" id="mega-solucoes" role="region" aria-label="Soluções do Bevart">
+      <div class="bv-wrap bv-mega__grade">
+        <div>
+          <h3>eSocial SST</h3>
+          <a href="sst-no-esocial-como-enviar-eventos.html"><b>Envio de eventos de SST</b><span>S-2210, S-2220, S-2221 e S-2240 com certificado A1</span></a>
+          <a href="esocial-sst-para-empresas.html"><b>eSocial SST para empresas</b><span>Do cadastro ao recibo, com retificação</span></a>
+          <a href="esocial-sst-para-construtoras.html"><b>eSocial para construtoras</b><span>Obras, CNO e trabalhadores em campo</span></a>
+          <a href="multa-esocial-sst-como-evitar.html"><b>Como evitar multas</b><span>Prazos e penalidades dos eventos de SST</span></a>
+        </div>
+        <div>
+          <h3>Saúde ocupacional</h3>
+          <a href="controle-de-exames-periodicos.html"><b>Exames periódicos</b><span>Vencimentos pelo PCMSO e convocação automática</span></a>
+          <a href="sistema-pcmso-e-aso-online.html"><b>PCMSO e ASO online</b><span>Atendimento clínico, prontuário e ASO digital</span></a>
+          <a href="gestao-de-riscos-psicossociais-no-trabalho.html"><b>Riscos psicossociais</b><span>Questionários e canal de denúncias (NR-01)</span></a>
+        </div>
+        <div>
+          <h3>Segurança do trabalho</h3>
+          <a href="sistema-pgr-online.html"><b>Inventário de riscos e PGR</b><span>Riscos por GHE, matriz própria e plano de ação</span></a>
+          <a href="/#ghe"><b>GHE</b><span>Grupos homogêneos com funções, riscos e exames</span></a>
+          <a href="ltcat-online-sistema.html"><b>LTCAT, LTIP e PPP</b><span>Laudos e PPP eletrônico pelo S-2240</span></a>
+          <a href="controle-de-epi-com-reconhecimento-facial.html"><b>Gestão de EPI</b><span>Ficha de entrega com reconhecimento facial</span></a>
+          <a href="gestao-de-treinamentos-sst.html"><b>Treinamentos das NRs</b><span>Turmas, certificados e validade</span></a>
+        </div>
+        <div>
+          <h3>Documentos e gestão</h3>
+          <a href="modelos-de-documentos-sst-pdf.html"><b>Emissão de documentos</b><span>PGR, PCMSO, LTCAT, OS e APR em PDF</span></a>
+          <a href="/#financeiro"><b>Contratos e financeiro</b><span>Mensalidade fixa, por vida e excedentes</span></a>
+          <a href="blog/api-de-integracao-sst-com-erp/index.html"><b>API e integrações</b><span>REST, webhooks, CSV e SFTP para seu ERP</span></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- gaveta mobile -->
+  <div class="bv-gaveta" id="gaveta" aria-hidden="true">
+    <div class="bv-gaveta__fundo" data-fechar></div>
+    <div class="bv-gaveta__painel" role="dialog" aria-modal="true" aria-label="Menu">
+      <div class="bv-gaveta__topo">
+        <img src="assets/img/logo bevart.svg" alt="Bevart" width="108" height="26">
+        <button type="button" class="bv-burger" style="display:inline-flex" data-fechar aria-label="Fechar menu">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18" /></svg>
+        </button>
+      </div>
+      <nav class="bv-gaveta__corpo" aria-label="Menu do celular">
+        <a href="/#plataforma">Plataforma</a>
+        <a href="/#para-quem">Para quem</a>
+        <a href="/#planos">Preços</a>
+        <a href="/#faq">Dúvidas</a>
+        <a href="blog/">Blog</a>
+        <h3>Soluções</h3>
+        <a href="sst-no-esocial-como-enviar-eventos.html">eSocial SST</a>
+        <a href="controle-de-exames-periodicos.html">Exames periódicos</a>
+        <a href="sistema-pcmso-e-aso-online.html">PCMSO e ASO</a>
+        <a href="sistema-pgr-online.html">Inventário de riscos e PGR</a>
+        <a href="/#ghe">GHE</a>
+        <a href="modelos-de-documentos-sst-pdf.html">Emissão de documentos</a>
+        <a href="/#financeiro">Contratos e financeiro</a>
+        <a href="controle-de-epi-com-reconhecimento-facial.html">Gestão de EPI</a>
+        <a href="gestao-de-riscos-psicossociais-no-trabalho.html">Riscos psicossociais</a>
+        <a href="gestao-de-treinamentos-sst.html">Treinamentos</a>
+        <a href="ltcat-online-sistema.html">LTCAT, LTIP e PPP</a>
+      </nav>
+      <div class="bv-gaveta__pe">
+        <a class="bv-btn bv-btn--pri bv-btn--bloco" href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="gaveta">Começar teste grátis</a>
+        <a class="bv-btn bv-btn--sec bv-btn--bloco" href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="gaveta-entrar">Entrar</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="conteudo">
+    <section class="bv-hero bv-hero--sem-palco" id="top">
+      <div class="bv-wrap bv-hero__texto">
+        <nav class="bv-migalha" aria-label="Você está em"><a href="/">Início</a> › Riscos psicossociais</nav>
+        <h1 class="bv-h1-int">Riscos psicossociais na NR-01, <em>do questionário ao PGR</em></h1>
+        <p class="bv-hero__sub">Questionário anônimo por setor e função, canal de denúncias com sigilo e o resultado transformado em risco do inventário, com medida de controle, responsável e prazo.</p>
+        <div class="bv-hero__ctas">
+          <a class="bv-btn bv-btn--pri bv-btn--g" href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="gestao-de-riscos-psicossociais-no-trabalho-hero">Testar grátis por 5 dias</a>
+          <a class="bv-btn bv-btn--sec bv-btn--g" href="https://wa.me/5547988805218?text=Quero%20ver%20a%20gest%C3%A3o%20de%20riscos%20psicossociais%20do%20Bevart" data-cta="gestao-de-riscos-psicossociais-no-trabalho-demo">Ver uma demonstração</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bv-sec" id="contexto">
+      <div class="bv-wrap">
+        <div class="bv-cab bv-revela">
+          <span class="bv-sobre">O que são</span>
+          <h2 class="bv-h2">Fatores da organização do trabalho que adoecem.</h2>
+          <p class="bv-lead">A NR-01 exige que os fatores de risco psicossociais façam parte do gerenciamento de riscos ocupacionais, como qualquer outro agente.</p>
+        </div>
+        <div class="bv-grade bv-grade--3 bv-passos">
+          <div class="bv-passo bv-revela">
+            <h3>Carga e ritmo</h3>
+            <p>Metas excessivas, prazos irreais e jornada sem pausa.</p>
+          </div>
+          <div class="bv-passo bv-revela">
+            <h3>Gestão e relações</h3>
+            <p>Falta de autonomia, comunicação falha, assédio e conflitos.</p>
+          </div>
+          <div class="bv-passo bv-revela">
+            <h3>Consequências</h3>
+            <p>Burnout, ansiedade, depressão, afastamentos e rotatividade.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bv-sec bv-sec--suave" id="como-funciona">
+      <div class="bv-wrap">
+        <div class="bv-cab bv-revela">
+          <span class="bv-sobre">No Bevart</span>
+          <h2 class="bv-h2">O ciclo completo no Bevart</h2>
+        </div>
+        <article class="bv-recurso bv-revela">
+          <div class="bv-recurso__texto">
+            <span class="bv-sobre">Avaliação</span>
+            <h3>Questionário anônimo por link</h3>
+            <p>O trabalhador responde pelo celular, sem identificação, e o resultado sai por ambiente.</p>
+            <a class="bv-link" href="blog/tutorial-avaliacao-riscos-psicossociais-bevart/">Veja o tutorial com telas reais <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6l6 6-6 6" /></svg></a>
+          </div>
+          <div class="bv-tela">
+            <div class="bv-janela"><img src="assets/telas/web/questionario-psicossocial-nr1-sst.webp" width="1600" height="1067" loading="lazy" alt="Questionário anônimo de avaliação de riscos psicossociais"></div>
+          </div>
+        </article>
+        <article class="bv-recurso bv-recurso--inv bv-revela">
+          <div class="bv-recurso__texto">
+            <span class="bv-sobre">Inventário</span>
+            <h3>Risco psicossocial no inventário e no PGR</h3>
+            <p>O que for risco entra no inventário com probabilidade, severidade, nível pela matriz e plano de ação, e aparece no PGR.</p>
+          </div>
+          <div class="bv-tela">
+            <div class="bv-janela"><img src="assets/telas/v2/inventario-de-riscos-ghe-pgr.webp" width="1600" height="776" loading="lazy" alt="Inventário de riscos com tipo de risco, aplicações legais, nível pela matriz, GHE e plano de ação"></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="bv-sec" id="manual">
+      <div class="bv-wrap">
+        <div class="bv-final bv-revela" style="text-align:left">
+          <span class="bv-sobre" style="color:#a5b0ff">Material gratuito</span>
+          <h2>Manual de interpretação do GRO e do PGR da NR-01</h2>
+          <p style="margin-left:0">Baixe o manual oficial com a aplicação do capítulo 1.5 da NR-01, incluindo os fatores de risco psicossociais.</p>
+          <div class="bv-hero__ctas" style="justify-content:flex-start">
+            <a class="bv-btn bv-btn--clara bv-btn--g" href="assets/downloads/Manual_GRO_PGR_da_NR_1.pdf" download data-cta="psicossocial-manual">Baixar o manual em PDF</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bv-sec" id="video">
+      <div class="bv-wrap">
+        <div class="bv-cab bv-revela">
+          <span class="bv-sobre">Vídeo</span>
+          <h2 class="bv-h2">Riscos psicossociais no Bevart</h2>
+        </div>
+        <div class="bv-video bv-revela">
+          <iframe src="https://www.youtube-nocookie.com/embed/QxYRR7-71mk" title="Riscos psicossociais no Bevart" loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="bv-sec" id="faq">
+      <div class="bv-wrap">
+        <div class="bv-cab bv-revela">
+          <span class="bv-sobre">Perguntas frequentes</span>
+          <h2 class="bv-h2">Riscos psicossociais</h2>
+        </div>
+        <div class="bv-faq">
+          <details>
+            <summary>A avaliação psicossocial é obrigatória?</summary>
+            <p>A NR-01 inclui os fatores de risco psicossociais relacionados ao trabalho no gerenciamento de riscos ocupacionais. Eles precisam ser identificados, avaliados e controlados no PGR.</p>
+          </details>
+          <details>
+            <summary>O questionário é anônimo?</summary>
+            <p>Sim. As respostas não são associadas à identidade do trabalhador, e o resultado é apresentado por ambiente.</p>
+          </details>
+          <details>
+            <summary>O canal de denúncias faz parte?</summary>
+            <p>Sim. A empresa tem um canal de denúncias próprio, com sigilo e histórico de tratamento.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="bv-sec" id="relacionados">
+      <div class="bv-wrap">
+        <div class="bv-cab bv-cab--esq bv-revela">
+          <span class="bv-sobre">Continue lendo</span>
+          <h2 class="bv-h2" style="font-size:clamp(24px,3vw,32px)">Conteúdos relacionados</h2>
+        </div>
+        <div class="bv-grade bv-grade--3">
+          <a class="bv-mod bv-revela" href="sistema-pgr-online.html"><h3>Inventário de riscos e PGR</h3><p>Riscos por GHE, matriz própria e plano de ação conforme a NR-01.</p></a>
+          <a class="bv-mod bv-revela" href="blog/metas-excessivas-risco-psicossocial-nr-1/"><h3>Metas excessivas</h3><p>Quando a meta vira risco psicossocial.</p></a>
+          <a class="bv-mod bv-revela" href="blog/dados-da-empresa-identificar-riscos-psicossociais-nr-1/"><h3>Dados da empresa</h3><p>Absenteísmo e rotatividade como sinal.</p></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bv-sec" style="padding-top:0" id="contato">
+      <div class="bv-wrap">
+        <div class="bv-final bv-revela">
+          <h2>Comece a avaliação psicossocial esta semana.</h2>
+          <p>Envie o questionário, veja o resultado por ambiente e leve os riscos ao PGR.</p>
+          <div class="bv-hero__ctas">
+            <a class="bv-btn bv-btn--clara bv-btn--g" href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="gestao-de-riscos-psicossociais-no-trabalho-final">Criar conta grátis</a>
+            <a class="bv-btn bv-btn--contorno-claro bv-btn--g" href="/#planos">Ver planos</a>
+          </div>
+          <small>5 dias com acesso completo · sem cartão de crédito</small>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== RODAPÉ ==================== -->
+  <footer class="bv-rodape">
+    <div class="bv-wrap">
+      <div class="bv-rodape__grade">
+        <div class="bv-rodape__marca">
+          <img src="assets/img/logo bevart.svg" alt="Bevart" width="120" height="28" loading="lazy">
+          <p>Sistema de gestão de SST para consultorias, clínicas, SESMT e profissionais de segurança e saúde do trabalho. Do
+            inventário de riscos ao evento entregue no eSocial.</p>
+          <div class="bv-redes">
+            <a href="https://www.instagram.com/bevartsst/" aria-label="Instagram do Bevart" rel="noopener" target="_blank"><svg fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" fill="currentColor" /></svg></a>
+            <a href="https://www.youtube.com/@bevartsst6772" aria-label="Canal do Bevart no YouTube" rel="noopener" target="_blank"><svg fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="4" /><path d="M10 9.5v5l4.5-2.5z" fill="currentColor" /></svg></a>
+            <a href="https://wa.me/5547988805218?text=vim%20pelo%20site%20do%20bevart" aria-label="WhatsApp do Bevart" rel="noopener" target="_blank"><svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2 5.2 5.2 0 001.1 2.7 11.8 11.8 0 004.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 001.8-1.2 2.2 2.2 0 00.1-1.2c0-.1-.2-.2-.5-.3z" /></svg></a>
+          </div>
+        </div>
+        <div>
+          <h3>eSocial SST</h3>
+          <ul>
+            <li><a href="sst-no-esocial-como-enviar-eventos.html">Como enviar os eventos</a></li>
+            <li><a href="esocial-sst-para-empresas.html">eSocial SST para empresas</a></li>
+            <li><a href="esocial-sst-para-construtoras.html">eSocial para construtoras</a></li>
+            <li><a href="multa-esocial-sst-como-evitar.html">Como evitar multas</a></li>
+            <li><a href="blog/como-enviar-evento-s-2240-pelo-sistema-bevart/">S-2240 e PPP eletrônico</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Saúde e segurança</h3>
+          <ul>
+            <li><a href="controle-de-exames-periodicos.html">Exames periódicos</a></li>
+            <li><a href="sistema-pcmso-e-aso-online.html">PCMSO e ASO online</a></li>
+            <li><a href="sistema-pgr-online.html">Inventário de riscos e PGR</a></li>
+            <li><a href="modelos-de-documentos-sst-pdf.html">Emissão de documentos</a></li>
+            <li><a href="ltcat-online-sistema.html">LTCAT e LTIP</a></li>
+            <li><a href="controle-de-epi-com-reconhecimento-facial.html">Gestão de EPI</a></li>
+            <li><a href="gestao-de-riscos-psicossociais-no-trabalho.html">Riscos psicossociais</a></li>
+            <li><a href="gestao-de-treinamentos-sst.html">Treinamentos</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Bevart</h3>
+          <ul>
+            <li><a href="/#planos">Preços e planos</a></li>
+            <li><a href="/#faq">Perguntas frequentes</a></li>
+            <li><a href="blog/">Blog de SST</a></li>
+            <li><a href="modelos-de-documentos-sst-pdf.html">Modelos de documentos</a></li>
+            <li><a href="https://profissionais.bevart.com.br/app/marketplace/documentos/views/marketplace">Marketplace de documentos</a></li>
+            <li><a href="https://sstninjas.bevart.com.br/profissionais">SST Ninjas</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contato</h3>
+          <ul>
+            <li><a href="mailto:contato@bevart.com.br">contato@bevart.com.br</a></li>
+            <li><a href="https://wa.me/5547988805218?text=vim%20pelo%20site%20do%20bevart">(47) 98923-5660</a></li>
+            <li><a href="https://profissionais.bevart.com.br/app/src/login/views/login">Entrar no sistema</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bv-rodape__base">
+        <span>© <span data-ano>2026</span> Bevart. Todos os direitos reservados.</span>
+        <span><a href="termos-de-uso.html">Termos de uso</a> · <a href="privacidade.html">Privacidade</a> · <a href="lgpd.html">LGPD</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <a class="bv-zap" href="https://wa.me/5547988805218?text=vim%20pelo%20site%20do%20bevart" aria-label="Falar no WhatsApp" rel="noopener" target="_blank" data-cta="flutuante-whatsapp">
+    <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2 5.2 5.2 0 001.1 2.7 11.8 11.8 0 004.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 001.8-1.2 2.2 2.2 0 00.1-1.2c0-.1-.2-.2-.5-.3z" /></svg>
+  </a>
+
+  <div class="bv-barra-mob">
+    <a class="bv-btn bv-btn--sec" href="https://wa.me/5547988805218?text=vim%20pelo%20site%20do%20bevart" data-cta="barra-whatsapp">WhatsApp</a>
+    <a class="bv-btn bv-btn--pri" href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="barra-cadastro">Teste grátis</a>
+  </div>
+
+  <div class="bv-cookies" id="cookies" role="region" aria-label="Aviso de cookies" hidden>
+    <span>Usamos cookies para entender como o site é usado e melhorar sua experiência. <a href="privacidade.html">Saiba mais</a>.</span>
+    <button type="button" class="bv-btn bv-btn--pri" data-aceitar>Aceitar</button>
+  </div>
+
+  <script defer src="assets/js/home.js?v=20261027"></script>
+  <script>(function (d, s, id) { var js = d.createElement(s); js.src = "https://analytics.yggra.com.br/tracker.js?v=" + Date.now(); js.async = true; js.setAttribute('data-id', id); d.head.appendChild(js); })(document, 'script', 'SB-3C21C2');</script>
 </body>
 
 </html>

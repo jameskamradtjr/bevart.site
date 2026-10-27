@@ -1,40 +1,36 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LTCAT Online, LTIP e PPP Eletrônico | Software Bevart</title>
+  <meta name="description" content="Emita LTCAT, LTIP e laudos de insalubridade (NR-15) e periculosidade (NR-16) com os agentes do inventário de riscos e as medições, e mantenha o PPP eletrônico alimentado pelo S-2240.">
+  <link rel="canonical" href="https://bevart.com.br/ltcat-online-sistema.html">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="theme-color" content="#3448e0">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Bevart">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://bevart.com.br/ltcat-online-sistema.html">
+  <meta property="og:title" content="LTCAT Online, LTIP e PPP Eletrônico | Software Bevart">
+  <meta property="og:description" content="Emita LTCAT, LTIP e laudos de insalubridade (NR-15) e periculosidade (NR-16) com os agentes do inventário de riscos e as medições, e mantenha o PPP eletrônico alimentado pelo S-2240.">
+  <meta property="og:image" content="https://bevart.com.br/assets/img/og-bevart-sst.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LTCAT Online, LTIP e PPP Eletrônico | Software Bevart">
+  <meta name="twitter:description" content="Emita LTCAT, LTIP e laudos de insalubridade (NR-15) e periculosidade (NR-16) com os agentes do inventário de riscos e as medições, e mantenha o PPP eletrônico alimentado pelo S-2240.">
+  <meta name="twitter:image" content="https://bevart.com.br/assets/img/og-bevart-sst.png">
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18382911934"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'AW-18382911934');
     gtag('config', 'G-Z0RJMZR8R2');
   </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LTCAT Online e Gestão de Laudos - Bevart</title>
-    <meta name="description"
-        content="Gere LTCAT digital com validade para o INSS e eSocial. Ferramenta completa para laudos de periculosidade e insalubridade.">
-    <meta name="keywords"
-        content="ltcat, laudo tecnico condicoes ambientais, ltcat para inss, sistema ltcat, risco químico aposentadoria especial, ltcat pedreiro trf4">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
-                    colors: {
-                        primary: { 50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe', 300: '#93c5fd', 400: '#60a5fa', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 800: '#1e40af', 900: '#1e3a8a' },
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="icon" type="image/png" href="assets/img/favicon.png">
-    <link rel="stylesheet" href="assets/css/custom.css">
-    <!-- Google Lead Conversion Tracking -->
+  <!-- Conversões do Google Ads (mesmos rótulos das páginas internas) -->
   <script>
     function gtag_report_conversion(url) {
       if (typeof gtag !== 'function') {
@@ -42,9 +38,7 @@
         return false;
       }
       var callback = function () {
-        if (typeof (url) != 'undefined') {
-          window.location = url;
-        }
+        if (typeof url !== 'undefined') { window.location = url; }
       };
       gtag('event', 'conversion', {
         'send_to': 'AW-18382911934/DuxlCOjriPgcEL7z071E',
@@ -53,7 +47,6 @@
       return false;
     }
 
-    // New function for WhatsApp conversion
     function gtag_report_whatsapp_conversion() {
       if (typeof gtag === 'function') {
         gtag('event', 'conversion', {
@@ -64,115 +57,449 @@
       }
     }
 
-    // Use event delegation to handle clicks
     document.addEventListener('click', function (e) {
-      // Login/Register conversion
-      const loginTarget = e.target.closest('a[href*="profissionais.bevart.com.br/app/src/login/views/login"]');
-      if (loginTarget) {
-        e.preventDefault();
-        gtag_report_conversion(loginTarget.href);
+      var cadastro = e.target.closest('a[href*="profissionais.bevart.com.br/app/src/login/views/login"]');
+      if (cadastro) {
+        // Links que abrem em nova aba seguem sozinhos: só registramos a conversão.
+        if (cadastro.target === '_blank') {
+          gtag_report_conversion();
+        } else {
+          e.preventDefault();
+          gtag_report_conversion(cadastro.href);
+        }
       }
 
-      // WhatsApp conversion
-      const waTarget = e.target.closest('a[href*="wa.me"], a[href*="whatsapp.com"]');
-      if (waTarget) {
+      if (e.target.closest('a[href*="wa.me"], a[href*="whatsapp.com"]')) {
         gtag_report_whatsapp_conversion();
       }
     });
   </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="assets/css/home.css?v=20261027">
+  <!-- Sem JS, a animação de entrada deixaria os blocos invisíveis. -->
+  <noscript>
+    <style>
+      .bv-revela {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    </style>
+  </noscript>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1004315305690659');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1004315305690659&amp;ev=PageView&amp;noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
   <!-- Rastreamento de origem: anúncio -> site -> cadastro -->
   <script src="assets/js/bev-tracking.js"></script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://bevart.com.br/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "LTCAT, LTIP e PPP",
+          "item": "https://bevart.com.br/ltcat-online-sistema.html"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://bevart.com.br/ltcat-online-sistema.html#webpage",
+      "url": "https://bevart.com.br/ltcat-online-sistema.html",
+      "name": "LTCAT Online, LTIP e PPP Eletrônico | Software Bevart",
+      "description": "Emita LTCAT, LTIP e laudos de insalubridade (NR-15) e periculosidade (NR-16) com os agentes do inventário de riscos e as medições, e mantenha o PPP eletrônico alimentado pelo S-2240.",
+      "isPartOf": {
+        "@id": "https://bevart.com.br/#website"
+      },
+      "about": {
+        "@id": "https://bevart.com.br/#software"
+      },
+      "inLanguage": "pt-BR",
+      "dateModified": "2026-10-27",
+      "primaryImageOfPage": "https://bevart.com.br/assets/telas/v2/emissao-pgr-inventario-de-riscos.webp"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Qual a diferença entre LTCAT e PGR?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O PGR gerencia todos os riscos ocupacionais com plano de ação (NR-01). O LTCAT é o laudo previdenciário sobre exposição a agentes nocivos, usado para a aposentadoria especial e o PPP."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O PPP é gerado pelo sistema?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O PPP eletrônico é formado pelo eSocial a partir dos eventos enviados, principalmente o S-2240. O Bevart mantém o S-2240 alinhado com o inventário de riscos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Dá para emitir laudo de insalubridade e periculosidade?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Os riscos indicam insalubridade (NR-15) e periculosidade (NR-16), e os laudos são emitidos em PDF."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
 </head>
 
-<body class="font-sans antialiased text-gray-800 overflow-x-hidden">
-    <nav class="fixed top-0 left-0 right-0 z-50 px-4 pt-4">
-        <div
-            class="max-w-6xl mx-auto bg-white/80 backdrop-blur-xl rounded-2xl border border-white/40 shadow-lg px-6 h-16 flex items-center justify-between">
-            <a href="index.html"><img src="assets/img/logo bevart.svg" alt="Bevart" class="h-10 w-auto"></a>
-            <a href="https://profissionais.bevart.com.br/app/src/login/views/login"
-                class="btn-primary-gradient text-white px-6 py-2 rounded-full text-sm font-bold">Experimentar Grátis</a>
+<body>
+
+  <a href="#conteudo" class="bv-skip">Ir para o conteúdo</a>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="bv-header" id="header">
+    <div class="bv-wrap bv-header__in">
+      <a class="bv-marca" href="/" aria-label="Bevart: página inicial">
+        <img src="assets/img/logo bevart.svg" alt="Bevart" width="128" height="30">
+      </a>
+      <nav class="bv-nav" aria-label="Navegação principal">
+        <button type="button" class="bv-nav__btn" id="mega-gatilho" aria-expanded="false" aria-controls="mega-solucoes">
+          Soluções
+          <svg fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+        </button>
+        <a href="/#plataforma">Plataforma</a>
+        <a href="/#para-quem">Para quem</a>
+        <a href="/#planos">Preços</a>
+        <a href="blog/">Blog</a>
+        <a href="/#faq">Dúvidas</a>
+      </nav>
+      <div class="bv-header__acoes">
+        <a class="bv-entrar" href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="header-entrar">Entrar</a>
+        <a class="bv-btn bv-btn--pri" href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="header">Teste grátis</a>
+        <button type="button" class="bv-burger" id="burger" aria-expanded="false" aria-controls="gaveta" aria-label="Abrir menu">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16" /></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="bv-mega" id="mega-solucoes" role="region" aria-label="Soluções do Bevart">
+      <div class="bv-wrap bv-mega__grade">
+        <div>
+          <h3>eSocial SST</h3>
+          <a href="sst-no-esocial-como-enviar-eventos.html"><b>Envio de eventos de SST</b><span>S-2210, S-2220, S-2221 e S-2240 com certificado A1</span></a>
+          <a href="esocial-sst-para-empresas.html"><b>eSocial SST para empresas</b><span>Do cadastro ao recibo, com retificação</span></a>
+          <a href="esocial-sst-para-construtoras.html"><b>eSocial para construtoras</b><span>Obras, CNO e trabalhadores em campo</span></a>
+          <a href="multa-esocial-sst-como-evitar.html"><b>Como evitar multas</b><span>Prazos e penalidades dos eventos de SST</span></a>
         </div>
-    </nav>
-
-    <section class="hero-gradient pt-32 pb-20 text-center">
-        <div class="max-w-7xl mx-auto px-4 z-10">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-gray-900 mb-6"
-                data-aos="fade-up">
-                Gestão de <span class="gradient-text">LTCAT Digital</span>
-            </h1>
-            <p class="text-lg sm:text-xl text-gray-600 mb-10 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-                Laudo Técnico das Condições Ambientais do Trabalho com foco em aposentadoria especial e conformidade
-                INSS.
-            </p>
-            <div class="flex flex-wrap justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
-                <a href="https://profissionais.bevart.com.br/app/src/login/views/login"
-                    class="btn-primary-gradient text-white px-10 py-4 rounded-full text-lg font-bold">Criar Laudo
-                    LTCAT</a>
-            </div>
+        <div>
+          <h3>Saúde ocupacional</h3>
+          <a href="controle-de-exames-periodicos.html"><b>Exames periódicos</b><span>Vencimentos pelo PCMSO e convocação automática</span></a>
+          <a href="sistema-pcmso-e-aso-online.html"><b>PCMSO e ASO online</b><span>Atendimento clínico, prontuário e ASO digital</span></a>
+          <a href="gestao-de-riscos-psicossociais-no-trabalho.html"><b>Riscos psicossociais</b><span>Questionários e canal de denúncias (NR-01)</span></a>
         </div>
-    </section>
-
-    <section class="py-20 bg-white">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="bg-indigo-50 border border-indigo-100 rounded-3xl p-8 md:p-12 text-center" data-aos="zoom-in">
-                <h2 class="text-2xl md:text-3xl font-bold text-indigo-900 mb-6">Confusão entre insalubridade e
-                    aposentadoria especial?</h2>
-                <p class="text-indigo-800 text-lg mb-4">
-                    O LTCAT é o documento fundamental para o preenchimento do PPP e envio do S-2240 ao eSocial. Um erro
-                    aqui pode gerar passivo previdenciário milionário.
-                </p>
-                <p class="text-indigo-700 font-semibold italic">Fiscalização e Auditorias: O Bevart protege seu laudo.
-                </p>
-            </div>
+        <div>
+          <h3>Segurança do trabalho</h3>
+          <a href="sistema-pgr-online.html"><b>Inventário de riscos e PGR</b><span>Riscos por GHE, matriz própria e plano de ação</span></a>
+          <a href="/#ghe"><b>GHE</b><span>Grupos homogêneos com funções, riscos e exames</span></a>
+          <a href="ltcat-online-sistema.html"><b>LTCAT, LTIP e PPP</b><span>Laudos e PPP eletrônico pelo S-2240</span></a>
+          <a href="controle-de-epi-com-reconhecimento-facial.html"><b>Gestão de EPI</b><span>Ficha de entrega com reconhecimento facial</span></a>
+          <a href="gestao-de-treinamentos-sst.html"><b>Treinamentos das NRs</b><span>Turmas, certificados e validade</span></a>
         </div>
-    </section>
-
-    <section class="py-20 bg-gray-50">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-8">Funcionalidades do LTCAT Bevart</h2>
-            <div class="grid md:grid-cols-2 gap-6 text-left">
-                <div class="bg-white p-6 rounded-2xl border">
-                    <h4 class="font-bold text-primary-600 mb-2">Riscos Químicos e Físicos</h4>
-                    <p class="text-sm text-gray-600">Biblioteca completa de agentes nocivos conforme o Anexo IV do
-                        Decreto 3.048/99.</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl border">
-                    <h4 class="font-bold text-primary-600 mb-2">Conclusão Técnica Automática</h4>
-                    <p class="text-sm text-gray-600">Análise de eficácia de EPI/EPC para fins de enquadramento
-                        previdenciário.</p>
-                </div>
-            </div>
+        <div>
+          <h3>Documentos e gestão</h3>
+          <a href="modelos-de-documentos-sst-pdf.html"><b>Emissão de documentos</b><span>PGR, PCMSO, LTCAT, OS e APR em PDF</span></a>
+          <a href="/#financeiro"><b>Contratos e financeiro</b><span>Mensalidade fixa, por vida e excedentes</span></a>
+          <a href="blog/api-de-integracao-sst-com-erp/index.html"><b>API e integrações</b><span>REST, webhooks, CSV e SFTP para seu ERP</span></a>
         </div>
-    </section>
+      </div>
+    </div>
+  </header>
 
-    <section class="py-20 bg-white text-center">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="aspect-video rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-black mb-12">
-                <iframe class="w-full h-full" src="https://www.youtube.com/embed/t8-l9NumdZU"
-                    title="Sistema LTCAT Bevart" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <h2 class="text-3xl font-extrabold text-gray-900 mb-8">Pronto para acelerar seus laudos?</h2>
-            <a href="https://profissionais.bevart.com.br/app/src/login/views/login"
-                class="btn-primary-gradient text-white px-12 py-5 rounded-full text-xl font-bold">Começar Grátis</a>
-        </div>
-    </section>
-
-    <footer class="bg-gray-900 text-gray-400 py-12 text-center">
-        <img src="assets/img/logo bevart.svg" alt="Bevart" class="h-8 mx-auto mb-6 brightness-0 invert opacity-50">
-        <p class="text-sm">© 2026 Bevart - Laudo Técnico LTCAT e Segurança do Trabalho.</p>
-    </footer>
-
-  <!-- Cookie Consent -->
-  <div id="cookie-consent" class="cookie-consent">
-    <h4>🍪 Cookies & Privacidade</h4>
-    <p>Utilizamos cookies para melhorar sua experiência em nosso site e analisar nosso tráfego. Ao clicar em "Aceitar", você concorda com o uso de cookies.</p>
-    <div class="flex justify-start">
-      <button id="accept-cookies" class="btn-accept">Aceitar</button>
+  <!-- gaveta mobile -->
+  <div class="bv-gaveta" id="gaveta" aria-hidden="true">
+    <div class="bv-gaveta__fundo" data-fechar></div>
+    <div class="bv-gaveta__painel" role="dialog" aria-modal="true" aria-label="Menu">
+      <div class="bv-gaveta__topo">
+        <img src="assets/img/logo bevart.svg" alt="Bevart" width="108" height="26">
+        <button type="button" class="bv-burger" style="display:inline-flex" data-fechar aria-label="Fechar menu">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18" /></svg>
+        </button>
+      </div>
+      <nav class="bv-gaveta__corpo" aria-label="Menu do celular">
+        <a href="/#plataforma">Plataforma</a>
+        <a href="/#para-quem">Para quem</a>
+        <a href="/#planos">Preços</a>
+        <a href="/#faq">Dúvidas</a>
+        <a href="blog/">Blog</a>
+        <h3>Soluções</h3>
+        <a href="sst-no-esocial-como-enviar-eventos.html">eSocial SST</a>
+        <a href="controle-de-exames-periodicos.html">Exames periódicos</a>
+        <a href="sistema-pcmso-e-aso-online.html">PCMSO e ASO</a>
+        <a href="sistema-pgr-online.html">Inventário de riscos e PGR</a>
+        <a href="/#ghe">GHE</a>
+        <a href="modelos-de-documentos-sst-pdf.html">Emissão de documentos</a>
+        <a href="/#financeiro">Contratos e financeiro</a>
+        <a href="controle-de-epi-com-reconhecimento-facial.html">Gestão de EPI</a>
+        <a href="gestao-de-riscos-psicossociais-no-trabalho.html">Riscos psicossociais</a>
+        <a href="gestao-de-treinamentos-sst.html">Treinamentos</a>
+        <a href="ltcat-online-sistema.html">LTCAT, LTIP e PPP</a>
+      </nav>
+      <div class="bv-gaveta__pe">
+        <a class="bv-btn bv-btn--pri bv-btn--bloco" href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="gaveta">Começar teste grátis</a>
+        <a class="bv-btn bv-btn--sec bv-btn--bloco" href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="gaveta-entrar">Entrar</a>
+      </div>
     </div>
   </div>
 
-<script defer src="assets/js/app.js"></script>
-  <div id="cookie-settings-trigger" class="cookie-settings-trigger hidden">🍪</div>
+  <main id="conteudo">
+    <section class="bv-hero" id="top">
+      <div class="bv-wrap bv-hero__texto">
+        <nav class="bv-migalha" aria-label="Você está em"><a href="/">Início</a> › LTCAT, LTIP e PPP</nav>
+        <h1 class="bv-h1-int">LTCAT online, LTIP e <em>PPP eletrônico</em></h1>
+        <p class="bv-hero__sub">Os agentes nocivos e as medições do inventário de riscos alimentam o LTCAT, os laudos de insalubridade e periculosidade e o S-2240, que forma o PPP eletrônico.</p>
+        <div class="bv-hero__ctas">
+          <a class="bv-btn bv-btn--pri bv-btn--g" href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="ltcat-online-sistema-hero">Testar grátis por 5 dias</a>
+          <a class="bv-btn bv-btn--sec bv-btn--g" href="https://wa.me/5547988805218?text=Quero%20ver%20o%20LTCAT%20do%20Bevart" data-cta="ltcat-online-sistema-demo">Ver uma demonstração</a>
+        </div>
+      </div>
+      <div class="bv-palco">
+        <div class="bv-janela">
+          <div class="bv-janela__barra" aria-hidden="true"><i></i><i></i><i></i><span class="bv-janela__url">profissionais.bevart.com.br</span></div>
+          <img src="assets/telas/v2/emissao-pgr-inventario-de-riscos.webp" width="1600" height="1000" fetchpriority="high" alt="Estúdio de documentos montando o PGR com o inventário de riscos por GHE">
+        </div>
+      </div>
+    </section>
+
+    <section class="bv-sec" id="contexto">
+      <div class="bv-wrap">
+        <div class="bv-cab bv-revela">
+          <span class="bv-sobre">Previdenciário</span>
+          <h2 class="bv-h2">Um cadastro de agentes, três entregas.</h2>
+          <p class="bv-lead">O mesmo risco, com o código da Tabela 24 e a medição, serve ao LTCAT, ao S-2240 e ao PPP.</p>
+        </div>
+        <div class="bv-grade bv-grade--3 bv-passos">
+          <div class="bv-passo bv-revela">
+            <h3>LTCAT</h3>
+            <p>Condições ambientais por GHE, agentes nocivos, avaliação quantitativa e conclusão sobre aposentadoria especial.</p>
+          </div>
+          <div class="bv-passo bv-revela">
+            <h3>LTIP</h3>
+            <p>Insalubridade (NR-15) e periculosidade (NR-16) com fundamentação por agente.</p>
+          </div>
+          <div class="bv-passo bv-revela">
+            <h3>PPP eletrônico</h3>
+            <p>Formado a partir do S-2240 enviado ao eSocial, com histórico de exposição.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bv-sec bv-sec--suave" id="como-funciona">
+      <div class="bv-wrap">
+        <div class="bv-cab bv-revela">
+          <span class="bv-sobre">No Bevart</span>
+          <h2 class="bv-h2">Como o laudo é montado</h2>
+        </div>
+        <article class="bv-recurso bv-revela">
+          <div class="bv-recurso__texto">
+            <span class="bv-sobre">Agentes</span>
+            <h3>Inventário com medições</h3>
+            <p>Intensidade, limite de tolerância, unidade e técnica de medição em cada risco, com indicação de LTCAT, insalubridade, periculosidade e aposentadoria especial.</p>
+          </div>
+          <div class="bv-tela">
+            <div class="bv-janela"><img src="assets/telas/v2/inventario-de-riscos-ghe-pgr.webp" width="1600" height="776" loading="lazy" alt="Inventário de riscos com tipo de risco, aplicações legais, nível pela matriz, GHE e plano de ação"></div>
+          </div>
+        </article>
+        <article class="bv-recurso bv-recurso--inv bv-revela">
+          <div class="bv-recurso__texto">
+            <span class="bv-sobre">Emissão</span>
+            <h3>Laudo com os dados reais da unidade</h3>
+            <p>No Estúdio de documentos o LTCAT nasce preenchido com empresa, GHEs e agentes. Revise e emita a revisão em PDF.</p>
+            <a class="bv-link" href="modelos-de-documentos-sst-pdf.html">Conheça a emissão de documentos <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6l6 6-6 6" /></svg></a>
+          </div>
+          <div class="bv-tela">
+            <div class="bv-janela"><img src="assets/telas/v2/emissao-pgr-ghe-documento.webp" width="1600" height="1000" loading="lazy" alt="Estúdio de documentos com a seção de grupos homogêneos de exposição do PGR"></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="bv-sec" id="video">
+      <div class="bv-wrap">
+        <div class="bv-cab bv-revela">
+          <span class="bv-sobre">Vídeo</span>
+          <h2 class="bv-h2">Veja o Bevart funcionando</h2>
+        </div>
+        <div class="bv-video bv-revela">
+          <iframe src="https://www.youtube-nocookie.com/embed/t8-l9NumdZU" title="Veja o Bevart funcionando" loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="bv-sec" id="faq">
+      <div class="bv-wrap">
+        <div class="bv-cab bv-revela">
+          <span class="bv-sobre">Perguntas frequentes</span>
+          <h2 class="bv-h2">LTCAT e PPP</h2>
+        </div>
+        <div class="bv-faq">
+          <details>
+            <summary>Qual a diferença entre LTCAT e PGR?</summary>
+            <p>O PGR gerencia todos os riscos ocupacionais com plano de ação (NR-01). O LTCAT é o laudo previdenciário sobre exposição a agentes nocivos, usado para a aposentadoria especial e o PPP.</p>
+          </details>
+          <details>
+            <summary>O PPP é gerado pelo sistema?</summary>
+            <p>O PPP eletrônico é formado pelo eSocial a partir dos eventos enviados, principalmente o S-2240. O Bevart mantém o S-2240 alinhado com o inventário de riscos.</p>
+          </details>
+          <details>
+            <summary>Dá para emitir laudo de insalubridade e periculosidade?</summary>
+            <p>Sim. Os riscos indicam insalubridade (NR-15) e periculosidade (NR-16), e os laudos são emitidos em PDF.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="bv-sec" id="relacionados">
+      <div class="bv-wrap">
+        <div class="bv-cab bv-cab--esq bv-revela">
+          <span class="bv-sobre">Continue lendo</span>
+          <h2 class="bv-h2" style="font-size:clamp(24px,3vw,32px)">Conteúdos relacionados</h2>
+        </div>
+        <div class="bv-grade bv-grade--3">
+          <a class="bv-mod bv-revela" href="sistema-pgr-online.html"><h3>Inventário de riscos e PGR</h3><p>Riscos por GHE, matriz própria e plano de ação conforme a NR-01.</p></a>
+          <a class="bv-mod bv-revela" href="blog/como-funciona-o-ppp-eletronico/"><h3>PPP eletrônico</h3><p>Como funciona e o que alimenta.</p></a>
+          <a class="bv-mod bv-revela" href="blog/gerando-documentos-sst-no-bevart-ltcat/"><h3>Gerando o LTCAT</h3><p>Passo a passo da emissão.</p></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bv-sec" style="padding-top:0" id="contato">
+      <div class="bv-wrap">
+        <div class="bv-final bv-revela">
+          <h2>Laudos e PPP coerentes com o eSocial.</h2>
+          <p>Cadastre os agentes uma vez e emita LTCAT, LTIP e S-2240 a partir deles.</p>
+          <div class="bv-hero__ctas">
+            <a class="bv-btn bv-btn--clara bv-btn--g" href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="ltcat-online-sistema-final">Criar conta grátis</a>
+            <a class="bv-btn bv-btn--contorno-claro bv-btn--g" href="/#planos">Ver planos</a>
+          </div>
+          <small>5 dias com acesso completo · sem cartão de crédito</small>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== RODAPÉ ==================== -->
+  <footer class="bv-rodape">
+    <div class="bv-wrap">
+      <div class="bv-rodape__grade">
+        <div class="bv-rodape__marca">
+          <img src="assets/img/logo bevart.svg" alt="Bevart" width="120" height="28" loading="lazy">
+          <p>Sistema de gestão de SST para consultorias, clínicas, SESMT e profissionais de segurança e saúde do trabalho. Do
+            inventário de riscos ao evento entregue no eSocial.</p>
+          <div class="bv-redes">
+            <a href="https://www.instagram.com/bevartsst/" aria-label="Instagram do Bevart" rel="noopener" target="_blank"><svg fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" fill="currentColor" /></svg></a>
+            <a href="https://www.youtube.com/@bevartsst6772" aria-label="Canal do Bevart no YouTube" rel="noopener" target="_blank"><svg fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="4" /><path d="M10 9.5v5l4.5-2.5z" fill="currentColor" /></svg></a>
+            <a href="https://wa.me/5547988805218?text=vim%20pelo%20site%20do%20bevart" aria-label="WhatsApp do Bevart" rel="noopener" target="_blank"><svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2 5.2 5.2 0 001.1 2.7 11.8 11.8 0 004.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 001.8-1.2 2.2 2.2 0 00.1-1.2c0-.1-.2-.2-.5-.3z" /></svg></a>
+          </div>
+        </div>
+        <div>
+          <h3>eSocial SST</h3>
+          <ul>
+            <li><a href="sst-no-esocial-como-enviar-eventos.html">Como enviar os eventos</a></li>
+            <li><a href="esocial-sst-para-empresas.html">eSocial SST para empresas</a></li>
+            <li><a href="esocial-sst-para-construtoras.html">eSocial para construtoras</a></li>
+            <li><a href="multa-esocial-sst-como-evitar.html">Como evitar multas</a></li>
+            <li><a href="blog/como-enviar-evento-s-2240-pelo-sistema-bevart/">S-2240 e PPP eletrônico</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Saúde e segurança</h3>
+          <ul>
+            <li><a href="controle-de-exames-periodicos.html">Exames periódicos</a></li>
+            <li><a href="sistema-pcmso-e-aso-online.html">PCMSO e ASO online</a></li>
+            <li><a href="sistema-pgr-online.html">Inventário de riscos e PGR</a></li>
+            <li><a href="modelos-de-documentos-sst-pdf.html">Emissão de documentos</a></li>
+            <li><a href="ltcat-online-sistema.html">LTCAT e LTIP</a></li>
+            <li><a href="controle-de-epi-com-reconhecimento-facial.html">Gestão de EPI</a></li>
+            <li><a href="gestao-de-riscos-psicossociais-no-trabalho.html">Riscos psicossociais</a></li>
+            <li><a href="gestao-de-treinamentos-sst.html">Treinamentos</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Bevart</h3>
+          <ul>
+            <li><a href="/#planos">Preços e planos</a></li>
+            <li><a href="/#faq">Perguntas frequentes</a></li>
+            <li><a href="blog/">Blog de SST</a></li>
+            <li><a href="modelos-de-documentos-sst-pdf.html">Modelos de documentos</a></li>
+            <li><a href="https://profissionais.bevart.com.br/app/marketplace/documentos/views/marketplace">Marketplace de documentos</a></li>
+            <li><a href="https://sstninjas.bevart.com.br/profissionais">SST Ninjas</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contato</h3>
+          <ul>
+            <li><a href="mailto:contato@bevart.com.br">contato@bevart.com.br</a></li>
+            <li><a href="https://wa.me/5547988805218?text=vim%20pelo%20site%20do%20bevart">(47) 98923-5660</a></li>
+            <li><a href="https://profissionais.bevart.com.br/app/src/login/views/login">Entrar no sistema</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bv-rodape__base">
+        <span>© <span data-ano>2026</span> Bevart. Todos os direitos reservados.</span>
+        <span><a href="termos-de-uso.html">Termos de uso</a> · <a href="privacidade.html">Privacidade</a> · <a href="lgpd.html">LGPD</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <a class="bv-zap" href="https://wa.me/5547988805218?text=vim%20pelo%20site%20do%20bevart" aria-label="Falar no WhatsApp" rel="noopener" target="_blank" data-cta="flutuante-whatsapp">
+    <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2 5.2 5.2 0 001.1 2.7 11.8 11.8 0 004.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 001.8-1.2 2.2 2.2 0 00.1-1.2c0-.1-.2-.2-.5-.3z" /></svg>
+  </a>
+
+  <div class="bv-barra-mob">
+    <a class="bv-btn bv-btn--sec" href="https://wa.me/5547988805218?text=vim%20pelo%20site%20do%20bevart" data-cta="barra-whatsapp">WhatsApp</a>
+    <a class="bv-btn bv-btn--pri" href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="barra-cadastro">Teste grátis</a>
+  </div>
+
+  <div class="bv-cookies" id="cookies" role="region" aria-label="Aviso de cookies" hidden>
+    <span>Usamos cookies para entender como o site é usado e melhorar sua experiência. <a href="privacidade.html">Saiba mais</a>.</span>
+    <button type="button" class="bv-btn bv-btn--pri" data-aceitar>Aceitar</button>
+  </div>
+
+  <script defer src="assets/js/home.js?v=20261027"></script>
+  <script>(function (d, s, id) { var js = d.createElement(s); js.src = "https://analytics.yggra.com.br/tracker.js?v=" + Date.now(); js.async = true; js.setAttribute('data-id', id); d.head.appendChild(js); })(document, 'script', 'SB-3C21C2');</script>
 </body>
 
 </html>
