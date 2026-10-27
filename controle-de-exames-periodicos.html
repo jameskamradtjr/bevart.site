@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Controle de Exames Periódicos com Convocação Automática (NR-07) | Bevart</title>
+  <meta name="description"
+    content="Sistema de controle de exames periódicos: vencimentos calculados pelo PCMSO do GHE, convocação automática por e-mail e WhatsApp, histórico de envios e encaminhamento para a clínica. Teste 5 dias grátis.">
+  <link rel="canonical" href="https://bevart.com.br/controle-de-exames-periodicos.html">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="theme-color" content="#3448e0">
+  <meta name="author" content="Bevart">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Bevart">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://bevart.com.br/controle-de-exames-periodicos.html">
+  <meta property="og:title" content="Controle de exames periódicos com convocação automática | Bevart">
+  <meta property="og:description"
+    content="Sistema de controle de exames periódicos: vencimentos calculados pelo PCMSO do GHE, convocação automática por e-mail e WhatsApp, histórico de envios e encaminhamento para a clínica. Teste 5 dias grátis.">
+  <meta property="og:image" content="https://bevart.com.br/assets/img/og-bevart-sst.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tela de exames periódicos do Bevart com a central de notificações aberta">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Controle de exames periódicos com convocação automática | Bevart">
+  <meta name="twitter:description"
+    content="Sistema de controle de exames periódicos: vencimentos calculados pelo PCMSO do GHE, convocação automática por e-mail e WhatsApp, histórico de envios e encaminhamento para a clínica. Teste 5 dias grátis.">
+  <meta name="twitter:image" content="https://bevart.com.br/assets/img/og-bevart-sst.png">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18382911934"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'AW-18382911934');
+    gtag('config', 'G-Z0RJMZR8R2');
+  </script>
+  <!-- Conversões do Google Ads (mesmos rótulos das páginas internas) -->
+  <script>
+    function gtag_report_conversion(url) {
+      if (typeof gtag !== 'function') {
+        if (typeof url !== 'undefined') { window.location = url; }
+        return false;
+      }
+      var callback = function () {
+        if (typeof url !== 'undefined') { window.location = url; }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-18382911934/DuxlCOjriPgcEL7z071E',
+        'event_callback': callback
+      });
+      return false;
+    }
+
+    function gtag_report_whatsapp_conversion() {
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18382911934/DuxlCOjriPgcEL7z071E',
+          'value': 1.0,
+          'currency': 'BRL'
+        });
+      }
+    }
+
+    document.addEventListener('click', function (e) {
+      var cadastro = e.target.closest('a[href*="profissionais.bevart.com.br/app/src/login/views/login"]');
+      if (cadastro) {
+        // Links que abrem em nova aba seguem sozinhos: só registramos a conversão.
+        if (cadastro.target === '_blank') {
+          gtag_report_conversion();
+        } else {
+          e.preventDefault();
+          gtag_report_conversion(cadastro.href);
+        }
+      }
+
+      if (e.target.closest('a[href*="wa.me"], a[href*="whatsapp.com"]')) {
+        gtag_report_whatsapp_conversion();
+      }
+    });
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="assets/css/home.css?v=20261027">
+  <link rel="preload" as="image" href="assets/telas/v2/exames-periodicos-vencimentos-pcmso.webp" fetchpriority="high">
+  <!-- Sem JS, a animação de entrada deixaria os blocos invisíveis. -->
+  <noscript>
+    <style>
+      .bv-revela {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    </style>
+  </noscript>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1004315305690659');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1004315305690659&amp;ev=PageView&amp;noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
+  <!-- Rastreamento de origem: anúncio -> site -> cadastro -->
+  <script src="assets/js/bev-tracking.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "BreadcrumbList", "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://bevart.com.br/" },
+        { "@type": "ListItem", "position": 2, "name": "Exames periódicos", "item": "https://bevart.com.br/controle-de-exames-periodicos.html" } ] },
+      { "@type": "WebPage", "@id": "https://bevart.com.br/controle-de-exames-periodicos.html#webpage", "url": "https://bevart.com.br/controle-de-exames-periodicos.html", "name": "Controle de Exames Periódicos com Convocação Automática (NR-07) | Bevart", "description": "Sistema de controle de exames periódicos: vencimentos calculados pelo PCMSO do GHE, convocação automática por e-mail e WhatsApp, histórico de envios e encaminhamento para a clínica. Teste 5 dias grátis.",
+        "isPartOf": { "@id": "https://bevart.com.br/#website" }, "about": { "@id": "https://bevart.com.br/#software" },
+        "primaryImageOfPage": "https://bevart.com.br/assets/telas/v2/exames-periodicos-vencimentos-pcmso.webp", "dateModified": "2026-10-27", "inLanguage": "pt-BR" }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+  <a href="#conteudo" class="bv-skip">Ir para o conteúdo</a>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="bv-header" id="header">
+    <div class="bv-wrap bv-header__in">
+      <a class="bv-marca" href="/" aria-label="Bevart: página inicial">
+        <img src="assets/img/logo bevart.svg" alt="Bevart" width="128" height="30">
+      </a>
+      <nav class="bv-nav" aria-label="Navegação principal">
+        <button type="button" class="bv-nav__btn" id="mega-gatilho" aria-expanded="false" aria-controls="mega-solucoes">
+          Soluções
+          <svg fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+        </button>
+        <a href="/#plataforma">Plataforma</a>
+        <a href="/#para-quem">Para quem</a>
+        <a href="/#planos">Preços</a>
+        <a href="blog/">Blog</a>
+        <a href="/#faq">Dúvidas</a>
+      </nav>
+      <div class="bv-header__acoes">
+        <a class="bv-entrar" href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="header-entrar">Entrar</a>
+        <a class="bv-btn bv-btn--pri" href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="header">Teste grátis</a>
+        <button type="button" class="bv-burger" id="burger" aria-expanded="false" aria-controls="gaveta" aria-label="Abrir menu">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16" /></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="bv-mega" id="mega-solucoes" role="region" aria-label="Soluções do Bevart">
+      <div class="bv-wrap bv-mega__grade">
+        <div>
+          <h3>eSocial SST</h3>
+          <a href="sst-no-esocial-como-enviar-eventos.html"><b>Envio de eventos de SST</b><span>S-2210, S-2220, S-2221 e S-2240 com certificado A1</span></a>
+          <a href="esocial-sst-para-empresas.html"><b>eSocial SST para empresas</b><span>Do cadastro ao recibo, com retificação</span></a>
+          <a href="esocial-sst-para-construtoras.html"><b>eSocial para construtoras</b><span>Obras, CNO e trabalhadores em campo</span></a>
+          <a href="multa-esocial-sst-como-evitar.html"><b>Como evitar multas</b><span>Prazos e penalidades dos eventos de SST</span></a>
+        </div>
+        <div>
+          <h3>Saúde ocupacional</h3>
+          <a href="controle-de-exames-periodicos.html"><b>Exames periódicos</b><span>Vencimentos pelo PCMSO e convocação automática</span></a>
+          <a href="sistema-pcmso-e-aso-online.html"><b>PCMSO e ASO online</b><span>Atendimento clínico, prontuário e ASO digital</span></a>
+          <a href="gestao-de-riscos-psicossociais-no-trabalho.html"><b>Riscos psicossociais</b><span>Questionários e canal de denúncias (NR-01)</span></a>
+        </div>
+        <div>
+          <h3>Segurança do trabalho</h3>
+          <a href="sistema-pgr-online.html"><b>PGR e inventário de riscos</b><span>Matriz de risco própria e plano de ação</span></a>
+          <a href="ltcat-online-sistema.html"><b>LTCAT, LTIP e PPP</b><span>Laudos e PPP eletrônico pelo S-2240</span></a>
+          <a href="controle-de-epi-com-reconhecimento-facial.html"><b>Gestão de EPI</b><span>Ficha de entrega com reconhecimento facial</span></a>
+          <a href="gestao-de-treinamentos-sst.html"><b>Treinamentos das NRs</b><span>Turmas, certificados e validade</span></a>
+        </div>
+        <div>
+          <h3>Recursos</h3>
+          <a href="modelos-de-documentos-sst-pdf.html"><b>Modelos de documentos</b><span>PGR, PCMSO, OS, APR e mais em PDF</span></a>
+          <a href="blog/api-de-integracao-sst-com-erp/index.html"><b>API e integrações</b><span>REST, webhooks, CSV e SFTP para seu ERP</span></a>
+          <a href="blog/"><b>Blog de SST</b><span>Guias práticos sobre NRs e eSocial</span></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- gaveta mobile -->
+  <div class="bv-gaveta" id="gaveta" aria-hidden="true">
+    <div class="bv-gaveta__fundo" data-fechar></div>
+    <div class="bv-gaveta__painel" role="dialog" aria-modal="true" aria-label="Menu">
+      <div class="bv-gaveta__topo">
+        <img src="assets/img/logo bevart.svg" alt="Bevart" width="108" height="26">
+        <button type="button" class="bv-burger" style="display:inline-flex" data-fechar aria-label="Fechar menu">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18" /></svg>
+        </button>
+      </div>
+      <nav class="bv-gaveta__corpo" aria-label="Menu do celular">
+        <a href="/#plataforma">Plataforma</a>
+        <a href="/#para-quem">Para quem</a>
+        <a href="/#planos">Preços</a>
+        <a href="/#faq">Dúvidas</a>
+        <a href="blog/">Blog</a>
+        <h3>Soluções</h3>
+        <a href="sst-no-esocial-como-enviar-eventos.html">eSocial SST</a>
+        <a href="controle-de-exames-periodicos.html">Exames periódicos</a>
+        <a href="sistema-pcmso-e-aso-online.html">PCMSO e ASO</a>
+        <a href="sistema-pgr-online.html">PGR e inventário de riscos</a>
+        <a href="controle-de-epi-com-reconhecimento-facial.html">Gestão de EPI</a>
+        <a href="gestao-de-riscos-psicossociais-no-trabalho.html">Riscos psicossociais</a>
+        <a href="gestao-de-treinamentos-sst.html">Treinamentos</a>
+        <a href="ltcat-online-sistema.html">LTCAT, LTIP e PPP</a>
+      </nav>
+      <div class="bv-gaveta__pe">
+        <a class="bv-btn bv-btn--pri bv-btn--bloco" href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="gaveta">Começar teste grátis</a>
+        <a class="bv-btn bv-btn--sec bv-btn--bloco" href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="gaveta-entrar">Entrar</a>
+      </div>
+    </div>
+  </div>
+
+    <main id="conteudo">
+    <section class="bv-hero" id="top">
+      <div class="bv-wrap bv-hero__texto">
+        <nav aria-label="Você está em" style="font-size:14px;color:var(--muted)"><a href="/">Início</a> › Exames periódicos</nav>
+        <h1 style="font-size:clamp(34px,5vw,56px)">Controle de exames periódicos <em>com convocação automática</em></h1>
+        <p class="bv-hero__sub">
+          O Bevart calcula o vencimento de cada exame pela regra do PCMSO no GHE da função e avisa o trabalhador e a empresa
+          por e-mail e WhatsApp antes do prazo. Nenhum periódico esquecido, nenhuma convocação sem registro.
+        </p>
+        <div class="bv-hero__ctas">
+          <a class="bv-btn bv-btn--pri bv-btn--g" href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="periodicos-hero">Testar grátis por 5 dias</a>
+          <a class="bv-btn bv-btn--sec bv-btn--g" href="https://wa.me/5547988805218?text=Quero%20ver%20o%20controle%20de%20exames%20peri%C3%B3dicos%20do%20Bevart" data-cta="periodicos-demo">Ver uma demonstração</a>
+        </div>
+      </div>
+      <div class="bv-palco">
+        <div class="bv-janela">
+          <div class="bv-janela__barra" aria-hidden="true"><i></i><i></i><i></i><span class="bv-janela__url">profissionais.bevart.com.br</span></div>
+          <img src="assets/telas/v2/exames-periodicos-vencimentos-pcmso.webp" width="1600" height="1000" fetchpriority="high"
+            alt="Painel de exames periódicos com trabalhadores vencidos, sem registro e vencendo em 30 e 60 dias">
+        </div>
+      </div>
+    </section>
+
+    <section class="bv-sec" id="problema">
+      <div class="bv-wrap">
+        <div class="bv-cab bv-revela">
+          <span class="bv-sobre">Por que importa</span>
+          <h2 class="bv-h2">Periódico vencido é risco para o trabalhador e para quem responde pelo PCMSO.</h2>
+          <p class="bv-lead">A NR-07 exige que o exame periódico seja feito na periodicidade definida no PCMSO. Quando o controle
+            depende de planilha, o vencimento passa sem ninguém ver, e a empresa fica sem provar que convocou.</p>
+        </div>
+        <div class="bv-grade bv-grade--3 bv-passos">
+          <div class="bv-passo bv-revela">
+            <h3>A regra vem do PCMSO</h3>
+            <p>Periodicidade, faixa etária e exames de cada GHE são os mesmos que você cadastrou no PCMSO. Mudou a função, mudou o calendário.</p>
+          </div>
+          <div class="bv-passo bv-revela">
+            <h3>O último exame conta de verdade</h3>
+            <p>Vale o atendimento finalizado, o resultado lançado ou o ASO emitido. Atendimento aberto e sem resultado não conta como feito.</p>
+          </div>
+          <div class="bv-passo bv-revela">
+            <h3>Cada aviso fica registrado</h3>
+            <p>Data, canal, destino e retorno de cada convocação. Se o envio falhar, o Bevart tenta de novo nas próximas execuções.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bv-sec bv-sec--suave" id="como-funciona">
+      <div class="bv-wrap">
+        <article class="bv-recurso bv-revela">
+          <div class="bv-recurso__texto">
+            <span class="bv-sobre">Por trabalhador</span>
+            <h3>Quem precisa fazer o exame, e quando</h3>
+            <p>Indicadores de vencidos, sem registro, sem regra de periódico, vencendo em até 30 dias e de 31 a 60 dias. Filtre por
+              unidade ou situação, abra o trabalhador e veja exame por exame, com o atendimento que comprovou o último.</p>
+            <ul class="bv-checks">
+              <li>Pendências de cadastro apontadas: função sem GHE, idade, exame sem data</li>
+              <li>Planilha dos vencimentos para auditoria</li>
+              <li>Histórico de atendimentos e exames realizados</li>
+            </ul>
+          </div>
+          <div class="bv-tela">
+            <div class="bv-janela">
+              <img src="assets/telas/v2/convocacao-exame-periodico-trabalhador.webp" width="1200" height="1111" loading="lazy"
+                alt="Detalhe da trabalhadora com exames do PCMSO, vencimentos e botão para convocar">
+            </div>
+          </div>
+        </article>
+
+        <article class="bv-recurso bv-recurso--inv bv-revela">
+          <div class="bv-recurso__texto">
+            <span class="bv-sobre">Convocação</span>
+            <h3>Avisos automáticos nas etapas que você escolher</h3>
+            <p>Por unidade, a empresa escolhe os avisos (30, 15, 7 e 1 dia antes, e 1, 7 e 30 dias depois do vencimento), os canais
+              e quem recebe: o próprio trabalhador e os contatos da unidade.</p>
+            <ul class="bv-checks">
+              <li>Sai só a etapa mais recente, sem disparar vários avisos de uma vez</li>
+              <li>Nada se repete no mesmo ciclo de vencimento</li>
+              <li>Contatos da unidade recebem um resumo, não uma mensagem por exame</li>
+              <li>Convocação manual de um trabalhador ou grupo, com prévia</li>
+            </ul>
+          </div>
+          <div class="bv-tela">
+            <div class="bv-janela">
+              <img src="assets/telas/v2/central-de-notificacoes-sst.webp" width="1600" height="1000" loading="lazy"
+                alt="Central de notificações do Bevart com pendências de eSocial e obrigações vencidas">
+            </div>
+          </div>
+        </article>
+
+        <article class="bv-recurso bv-revela">
+          <div class="bv-recurso__texto">
+            <span class="bv-sobre">Depois da convocação</span>
+            <h3>Encaminhamento e atendimento no mesmo fluxo</h3>
+            <p>Convocou, encaminhe: o Bevart monta os exames previstos, gera o kit de documentos e envia para a clínica. Na clínica, o
+              atendimento fecha com o ASO digital e o S-2220, e o vencimento seguinte já é recalculado.</p>
+            <ul class="bv-checks">
+              <li>Exames previstos pelo GHE, idade e periodicidade</li>
+              <li>ASO digital e S-2220 ao finalizar</li>
+              <li>Próximo periódico calculado sozinho</li>
+            </ul>
+            <a class="bv-link" href="sistema-pcmso-e-aso-online.html" style="margin-top:24px">Veja o PCMSO e ASO online <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6l6 6-6 6" /></svg></a>
+          </div>
+          <div class="bv-tela">
+            <div class="bv-janela">
+              <img src="assets/telas/v2/encaminhamento-exames-pcmso.webp" width="1200" height="965" loading="lazy"
+                alt="Encaminhamento com os exames previstos pelo PCMSO">
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="bv-sec" id="faq">
+      <div class="bv-wrap">
+        <div class="bv-cab bv-revela">
+          <span class="bv-sobre">Perguntas frequentes</span>
+          <h2 class="bv-h2">Exames periódicos no Bevart</h2>
+        </div>
+        <div class="bv-faq">
+          <details>
+            <summary>Qual é a periodicidade do exame periódico pela NR-07?</summary>
+            <p>A periodicidade é definida pelo médico responsável no PCMSO, considerando os riscos do inventário, a idade e as condições de saúde do trabalhador. No Bevart, cada exame do PCMSO é cadastrado no GHE com a periodicidade e a faixa etária, e o sistema usa exatamente essa regra para calcular o vencimento.</p>
+          </details>
+          <details>
+            <summary>Como o sistema sabe que o exame foi feito?</summary>
+            <p>Conta como realizado o exame de um atendimento finalizado, ou com resultado lançado, ou com ASO emitido. Também vale a data do último exame informada no cadastro do trabalhador, para quem está migrando de outro sistema.</p>
+          </details>
+          <details>
+            <summary>A convocação sai por WhatsApp?</summary>
+            <p>Sim. A convocação automática sai por e-mail e WhatsApp, conforme os canais que a empresa ativar para cada unidade. O trabalhador recebe a mensagem com os exames dele e os contatos da unidade recebem um resumo.</p>
+          </details>
+          <details>
+            <summary>E se o envio falhar?</summary>
+            <p>O envio que falhou é tentado de novo nas execuções seguintes, até 3 vezes, e cada tentativa fica registrada com o retorno do canal.</p>
+          </details>
+          <details>
+            <summary>Consigo convocar manualmente?</summary>
+            <p>Sim. Na tela de exames periódicos você marca um trabalhador ou um grupo, vê a prévia do que será enviado e convoca na hora. A convocação manual fica no mesmo histórico das automáticas.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="bv-sec" style="padding-top:0" id="contato">
+      <div class="bv-wrap">
+        <div class="bv-final bv-revela">
+          <h2>Pare de controlar periódicos em planilha.</h2>
+          <p>Cadastre o PCMSO uma vez e deixe o Bevart avisar quem precisa fazer exame, quando e por qual canal.</p>
+          <div class="bv-hero__ctas">
+            <a class="bv-btn bv-btn--clara bv-btn--g" href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="periodicos-final">Criar conta grátis</a>
+            <a class="bv-btn bv-btn--contorno-claro bv-btn--g" href="/#planos">Ver planos</a>
+          </div>
+          <small>5 dias com acesso completo · sem cartão de crédito</small>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== RODAPÉ ==================== -->
+  <footer class="bv-rodape">
+    <div class="bv-wrap">
+      <div class="bv-rodape__grade">
+        <div class="bv-rodape__marca">
+          <img src="assets/img/logo bevart.svg" alt="Bevart" width="120" height="28" loading="lazy">
+          <p>Sistema de gestão de SST para consultorias, clínicas, SESMT e profissionais de segurança e saúde do trabalho. Do
+            inventário de riscos ao evento entregue no eSocial.</p>
+          <div class="bv-redes">
+            <a href="https://www.instagram.com/bevartsst/" aria-label="Instagram do Bevart" rel="noopener" target="_blank"><svg fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" fill="currentColor" /></svg></a>
+            <a href="https://www.youtube.com/@bevartsst6772" aria-label="Canal do Bevart no YouTube" rel="noopener" target="_blank"><svg fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="4" /><path d="M10 9.5v5l4.5-2.5z" fill="currentColor" /></svg></a>
+            <a href="https://wa.me/5547988805218?text=vim%20pelo%20site%20do%20bevart" aria-label="WhatsApp do Bevart" rel="noopener" target="_blank"><svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2 5.2 5.2 0 001.1 2.7 11.8 11.8 0 004.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 001.8-1.2 2.2 2.2 0 00.1-1.2c0-.1-.2-.2-.5-.3z" /></svg></a>
+          </div>
+        </div>
+        <div>
+          <h3>eSocial SST</h3>
+          <ul>
+            <li><a href="sst-no-esocial-como-enviar-eventos.html">Como enviar os eventos</a></li>
+            <li><a href="esocial-sst-para-empresas.html">eSocial SST para empresas</a></li>
+            <li><a href="esocial-sst-para-construtoras.html">eSocial para construtoras</a></li>
+            <li><a href="multa-esocial-sst-como-evitar.html">Como evitar multas</a></li>
+            <li><a href="blog/como-enviar-evento-s-2240-pelo-sistema-bevart/">S-2240 e PPP eletrônico</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Saúde e segurança</h3>
+          <ul>
+            <li><a href="controle-de-exames-periodicos.html">Exames periódicos</a></li>
+            <li><a href="sistema-pcmso-e-aso-online.html">PCMSO e ASO online</a></li>
+            <li><a href="sistema-pgr-online.html">Sistema de PGR online</a></li>
+            <li><a href="ltcat-online-sistema.html">LTCAT e LTIP</a></li>
+            <li><a href="controle-de-epi-com-reconhecimento-facial.html">Gestão de EPI</a></li>
+            <li><a href="gestao-de-riscos-psicossociais-no-trabalho.html">Riscos psicossociais</a></li>
+            <li><a href="gestao-de-treinamentos-sst.html">Treinamentos</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Bevart</h3>
+          <ul>
+            <li><a href="/#planos">Preços e planos</a></li>
+            <li><a href="/#faq">Perguntas frequentes</a></li>
+            <li><a href="blog/">Blog de SST</a></li>
+            <li><a href="modelos-de-documentos-sst-pdf.html">Modelos de documentos</a></li>
+            <li><a href="https://profissionais.bevart.com.br/app/marketplace/documentos/views/marketplace">Marketplace de documentos</a></li>
+            <li><a href="https://sstninjas.bevart.com.br/profissionais">SST Ninjas</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contato</h3>
+          <ul>
+            <li><a href="mailto:contato@bevart.com.br">contato@bevart.com.br</a></li>
+            <li><a href="https://wa.me/5547988805218?text=vim%20pelo%20site%20do%20bevart">(47) 98923-5660</a></li>
+            <li><a href="https://profissionais.bevart.com.br/app/src/login/views/login">Entrar no sistema</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bv-rodape__base">
+        <span>© <span data-ano>2026</span> Bevart. Todos os direitos reservados.</span>
+        <span><a href="termos-de-uso.html">Termos de uso</a> · <a href="privacidade.html">Privacidade</a> · <a href="lgpd.html">LGPD</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <a class="bv-zap" href="https://wa.me/5547988805218?text=vim%20pelo%20site%20do%20bevart" aria-label="Falar no WhatsApp" rel="noopener" target="_blank" data-cta="flutuante-whatsapp">
+    <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2 5.2 5.2 0 001.1 2.7 11.8 11.8 0 004.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 001.8-1.2 2.2 2.2 0 00.1-1.2c0-.1-.2-.2-.5-.3z" /></svg>
+  </a>
+
+  <div class="bv-barra-mob">
+    <a class="bv-btn bv-btn--sec" href="https://wa.me/5547988805218?text=vim%20pelo%20site%20do%20bevart" data-cta="barra-whatsapp">WhatsApp</a>
+    <a class="bv-btn bv-btn--pri" href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="barra-cadastro">Teste grátis</a>
+  </div>
+
+  <div class="bv-cookies" id="cookies" role="region" aria-label="Aviso de cookies" hidden>
+    <span>Usamos cookies para entender como o site é usado e melhorar sua experiência. <a href="privacidade.html">Saiba mais</a>.</span>
+    <button type="button" class="bv-btn bv-btn--pri" data-aceitar>Aceitar</button>
+  </div>
+
+  <script type="application/ld+json" id="faq-jsonld">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Qual é a periodicidade do exame periódico pela NR-07?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A periodicidade é definida pelo médico responsável no PCMSO, considerando os riscos do inventário, a idade e as condições de saúde do trabalhador. No Bevart, cada exame do PCMSO é cadastrado no GHE com a periodicidade e a faixa etária, e o sistema usa exatamente essa regra para calcular o vencimento."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como o sistema sabe que o exame foi feito?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Conta como realizado o exame de um atendimento finalizado, ou com resultado lançado, ou com ASO emitido. Também vale a data do último exame informada no cadastro do trabalhador, para quem está migrando de outro sistema."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "A convocação sai por WhatsApp?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. A convocação automática sai por e-mail e WhatsApp, conforme os canais que a empresa ativar para cada unidade. O trabalhador recebe a mensagem com os exames dele e os contatos da unidade recebem um resumo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "E se o envio falhar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O envio que falhou é tentado de novo nas execuções seguintes, até 3 vezes, e cada tentativa fica registrada com o retorno do canal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Consigo convocar manualmente?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Na tela de exames periódicos você marca um trabalhador ou um grupo, vê a prévia do que será enviado e convoca na hora. A convocação manual fica no mesmo histórico das automáticas."
+      }
+    }
+  ]
+}
+  </script>
+
+  <script defer src="assets/js/home.js?v=20261027"></script>
+  <script>(function (d, s, id) { var js = d.createElement(s); js.src = "https://analytics.yggra.com.br/tracker.js?v=" + Date.now(); js.async = true; js.setAttribute('data-id', id); d.head.appendChild(js); })(document, 'script', 'SB-3C21C2');</script>
+</body>
+
+</html>
