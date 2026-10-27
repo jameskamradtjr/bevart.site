@@ -1612,6 +1612,11 @@ a.bv-mod:hover {
     display: inline-flex;
   }
 
+  /* o menu de soluções é só do desktop; escondido, ele ainda alargava a página no celular */
+  .bv-mega {
+    display: none;
+  }
+
   .bv-grade--4,
   .bv-cobertura {
     grid-template-columns: repeat(2, minmax(0, 1fr));
