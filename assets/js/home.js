@@ -97,6 +97,28 @@
     }
   }
 
+  // ---- simulador do plano por vidas (mesmas faixas de PrecoVidas.php no sistema)
+  var sim = document.querySelector('[data-vidas]');
+  if (sim) {
+    var faixas = [[100, 80], [300, 60], [500, 45], [1000, 35], [Infinity, 25]];
+    var centavos = function (v) {
+      var total = 9900, de = 20;
+      faixas.forEach(function (f) { if (v > de) { total += (Math.min(v, f[0]) - de) * f[1]; } de = f[0]; });
+      return total;
+    };
+    var brl = function (c) { return 'R$ ' + (c / 100).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); };
+    var faixa = sim.querySelector('#bv-vidas-r'), num = sim.querySelector('#bv-vidas-n');
+    var mostrar = function (v) {
+      v = Math.max(20, Math.min(100000, Math.round(Number(v)) || 20));
+      var c = centavos(v);
+      sim.querySelector('[data-vidas-total]').textContent = brl(c);
+      sim.querySelector('[data-vidas-media]').textContent = v.toLocaleString('pt-BR') + ' vidas · média de ' + brl(c / v) + ' por vida';
+    };
+    faixa.addEventListener('input', function () { num.value = faixa.value; mostrar(faixa.value); });
+    num.addEventListener('input', function () { faixa.value = Math.min(5000, Number(num.value) || 20); mostrar(num.value); });
+    mostrar(num.value);
+  }
+
   // ---- ano no rodapé
   document.querySelectorAll('[data-ano]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
 })();

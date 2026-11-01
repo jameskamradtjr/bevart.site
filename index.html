@@ -88,7 +88,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
-  <link rel="stylesheet" href="assets/css/home.css?v=20261027b">
+  <link rel="stylesheet" href="assets/css/home.css?v=20261101">
   <link rel="preload" as="image" href="assets/telas/v2/central-de-notificacoes-sst.webp" fetchpriority="high">
   <!-- Sem JS, a animação de entrada deixaria os blocos invisíveis. -->
   <noscript>
@@ -206,8 +206,7 @@
           "API REST e webhooks para integração com ERPs de RH e folha (Senior, TOTVS, SAP)"
         ],
         "offers": [
-          { "@type": "Offer", "name": "Plano 400", "price": "349.00", "priceCurrency": "BRL", "url": "https://bevart.com.br/#planos" },
-          { "@type": "Offer", "name": "Plano Ilimitado", "price": "899.00", "priceCurrency": "BRL", "url": "https://bevart.com.br/#planos" },
+          { "@type": "Offer", "name": "Plano por vidas (até 20 vidas)", "price": "99.00", "priceCurrency": "BRL", "url": "https://bevart.com.br/#planos" },
           { "@type": "Offer", "name": "Plano Vitalício", "price": "7500.00", "priceCurrency": "BRL", "url": "https://bevart.com.br/#planos" }
         ]
       }
@@ -679,7 +678,7 @@
             <ul>
               <li>Matriz de risco e modelos próprios</li>
               <li>Área do cliente por unidade</li>
-              <li>Marca branca no plano Ilimitado</li>
+              <li>Documentos com o logo da consultoria</li>
             </ul>
           </div>
           <div class="bv-perfil bv-revela">
@@ -705,7 +704,7 @@
             <p>Comece pelo evento que está travado e cresça com o sistema.</p>
             <ul>
               <li>Formulários rápidos de eSocial</li>
-              <li>Plano a partir de R$ 349/mês</li>
+              <li>A partir de R$ 99/mês com até 20 vidas</li>
               <li>Sem implantação e sem fidelidade</li>
             </ul>
           </div>
@@ -868,36 +867,46 @@
         <div class="bv-cab bv-revela">
           <span class="bv-sobre">Planos</span>
           <h2 class="bv-h2">Preço por vidas, não por módulo.</h2>
-          <p class="bv-lead">Todos os planos incluem todos os módulos, todas as NRs e a integração completa com o eSocial.
-            Comece com 5 dias grátis e assine depois.</p>
+          <p class="bv-lead">Todos os módulos, todas as NRs e a integração completa com o eSocial, em qualquer plano.
+            Você paga pelo número de funcionários ativos. Comece com 5 dias grátis e assine depois.</p>
         </div>
-        <div class="bv-grade bv-grade--3">
-          <div class="bv-plano bv-revela">
-            <h3>Plano 400</h3>
-            <p class="bv-plano__desc">Para quem está começando ou atende poucas empresas</p>
-            <p class="bv-plano__preco"><span class="bv-price__value">R$ 349</span><span class="bv-price__period">/mês</span></p>
+        <div class="bv-grade bv-grade--planos">
+          <div class="bv-plano bv-plano--dest bv-plano--vidas bv-revela">
+            <span class="bv-plano__selo">Pague só pelo que usa</span>
+            <h3>Plano por vidas</h3>
+            <p class="bv-plano__desc">Cada vida é um funcionário ativo. Quanto mais vidas, menor o valor por vida.</p>
+            <p class="bv-plano__preco"><span class="bv-bf-de">a partir de</span><span class="bv-price__value">R$ 99</span><span class="bv-price__period">/mês com até 20 vidas</span></p>
+            <div class="bv-vidas" data-vidas>
+              <label for="bv-vidas-n">Simule: quantas vidas você atende?</label>
+              <div class="bv-vidas__entrada">
+                <input type="range" id="bv-vidas-r" min="20" max="5000" step="10" value="100" aria-label="Número de vidas">
+                <input type="number" id="bv-vidas-n" min="20" max="100000" value="100" inputmode="numeric">
+              </div>
+              <p class="bv-vidas__total"><b data-vidas-total>R$ 163,00</b><span>/mês</span> <small data-vidas-media>média de R$ 1,63 por vida</small></p>
+            </div>
             <ul class="bv-checks">
-              <li>Até 400 vidas</li>
-              <li>Todos os módulos e NRs</li>
+              <li>Todos os módulos e NRs, em qualquer quantidade de vidas</li>
               <li>Integração completa com o eSocial</li>
-              <li>Suporte por chat e e-mail</li>
+              <li>Mensalidade por Pix, liberação na hora</li>
+              <li>Adicione vidas quando precisar, pagando só a diferença</li>
               <li>Sem implantação e sem fidelidade</li>
             </ul>
-            <a class="bv-btn bv-btn--sec bv-btn--bloco" href="https://pay.kiwify.com.br/rpo4YEJ" data-cta="plano-400">Assinar o Plano 400</a>
-          </div>
-          <div class="bv-plano bv-plano--dest bv-revela">
-            <span class="bv-plano__selo">Mais escolhido por consultorias</span>
-            <h3>Plano Ilimitado</h3>
-            <p class="bv-plano__desc">Para consultorias e empresas de maior porte</p>
-            <p class="bv-plano__preco"><span class="bv-price__value">R$ 899</span><span class="bv-price__period">/mês</span></p>
-            <ul class="bv-checks">
-              <li>Vidas ilimitadas</li>
-              <li>Usuários administrativos ilimitados</li>
-              <li>Marca branca (white label)</li>
-              <li>Suporte prioritário</li>
-              <li>Sem implantação e sem fidelidade</li>
-            </ul>
-            <a class="bv-btn bv-btn--pri bv-btn--bloco" href="https://pay.kiwify.com.br/UJrDg4p" data-cta="plano-ilimitado">Assinar o Plano Ilimitado</a>
+            <details class="bv-vidas__tabela">
+              <summary>Ver exemplos de mensalidade</summary>
+              <table>
+                <thead><tr><th>Vidas</th><th>Mensalidade</th><th>Média por vida</th></tr></thead>
+                <tbody>
+                <tr><td>20</td><td>R$ 99,00</td><td>R$ 4,95</td></tr>
+                <tr><td>100</td><td>R$ 163,00</td><td>R$ 1,63</td></tr>
+                <tr><td>300</td><td>R$ 283,00</td><td>R$ 0,94</td></tr>
+                <tr><td>500</td><td>R$ 373,00</td><td>R$ 0,75</td></tr>
+                <tr><td>1.000</td><td>R$ 548,00</td><td>R$ 0,55</td></tr>
+                <tr><td>2.000</td><td>R$ 798,00</td><td>R$ 0,40</td></tr>
+                <tr><td>5.000</td><td>R$ 1.548,00</td><td>R$ 0,31</td></tr>
+                </tbody>
+              </table>
+            </details>
+            <a class="bv-btn bv-btn--pri bv-btn--bloco" href="https://profissionais.bevart.com.br/app/src/login/views/login" data-cta="plano-vidas">Começar teste grátis</a>
           </div>
           <div class="bv-plano bv-revela">
             <span class="bv-plano__selo bv-plano__selo--esc" id="bv-vit-badge">Por tempo limitado</span>
@@ -914,9 +923,8 @@
             <a class="bv-btn bv-btn--sec bv-btn--bloco" id="bv-vit-botao" href="https://pay.kiwify.com.br/8PVA24V" data-cta="plano-vitalicio">Quero o acesso vitalício</a>
           </div>
         </div>
-        <p class="bv-pos bv-revela">Assim que o pagamento é identificado, você recebe por e-mail o login, o link da plataforma e o
-          vídeo de treinamento. Também dá para assinar por dentro do sistema, em <b>Meu plano</b>, com cartão de crédito ou
-          boleto com Pix.</p>
+        <p class="bv-pos bv-revela">O plano por vidas é contratado dentro do sistema, em <b>Meu plano</b>: crie a conta, use 5 dias grátis e
+          assine com o número de vidas que precisa. A mensalidade é paga por Pix e o acesso é liberado na hora.</p>
       </div>
     </section>
 
@@ -994,7 +1002,11 @@
           </details>
           <details>
             <summary>Como funciona o teste grátis e a contratação?</summary>
-            <p>Você cria a conta gratuitamente e tem acesso a todos os recursos por 5 dias, sem cartão de crédito no cadastro. O vídeo de treinamento já está lá dentro. Depois, a assinatura pode ser feita pelos links desta página ou dentro da plataforma, no menu Meu plano, com cartão de crédito ou boleto com Pix. Não há taxa de implantação nem fidelidade.</p>
+            <p>Você cria a conta gratuitamente e tem acesso a todos os recursos por 5 dias, sem cartão de crédito no cadastro. O vídeo de treinamento já está lá dentro. Depois, você assina dentro da plataforma, no menu Meu plano: escolhe o número de vidas e paga a mensalidade por Pix, com liberação na hora. Não há taxa de implantação nem fidelidade.</p>
+          </details>
+          <details>
+            <summary>Como funciona o preço por vidas?</summary>
+            <p>O plano parte de R$ 99 por mês com até 20 vidas (funcionários ativos). Cada vida a mais custa de R$ 0,80 a R$ 0,25, ficando mais barata conforme a conta cresce: 100 vidas saem por R$ 163/mês, 500 vidas por R$ 373/mês e 1.000 vidas por R$ 548/mês. Precisa de mais vidas? Adicione pelo Meu plano e pague só a diferença proporcional do mês. Funcionários inativos ou desligados não contam.</p>
           </details>
         </div>
       </div>
@@ -1233,14 +1245,22 @@
       "name": "Como funciona o teste grátis e a contratação?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Você cria a conta gratuitamente e tem acesso a todos os recursos por 5 dias, sem cartão de crédito no cadastro. O vídeo de treinamento já está lá dentro. Depois, a assinatura pode ser feita pelos links desta página ou dentro da plataforma, no menu Meu plano, com cartão de crédito ou boleto com Pix. Não há taxa de implantação nem fidelidade."
+        "text": "Você cria a conta gratuitamente e tem acesso a todos os recursos por 5 dias, sem cartão de crédito no cadastro. O vídeo de treinamento já está lá dentro. Depois, você assina dentro da plataforma, no menu Meu plano: escolhe o número de vidas e paga a mensalidade por Pix, com liberação na hora. Não há taxa de implantação nem fidelidade."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como funciona o preço por vidas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O plano parte de R$ 99 por mês com até 20 vidas (funcionários ativos). Cada vida a mais custa de R$ 0,80 a R$ 0,25, ficando mais barata conforme a conta cresce: 100 vidas saem por R$ 163/mês, 500 vidas por R$ 373/mês e 1.000 vidas por R$ 548/mês. Precisa de mais vidas? Adicione pelo Meu plano e pague só a diferença proporcional do mês. Funcionários inativos ou desligados não contam."
       }
     }
   ]
 }
   </script>
 
-  <script defer src="assets/js/home.js?v=20261027"></script>
+  <script defer src="assets/js/home.js?v=20261101"></script>
   <script defer src="assets/js/blackfriday.js"></script>
   <script>(function (d, s, id) { var js = d.createElement(s); js.src = "https://analytics.yggra.com.br/tracker.js?v=" + Date.now(); js.async = true; js.setAttribute('data-id', id); d.head.appendChild(js); })(document, 'script', 'SB-3C21C2');</script>
 </body>
