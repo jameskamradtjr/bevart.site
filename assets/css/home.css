@@ -1352,8 +1352,25 @@ a.bv-mod:hover {
   align-items: start;
 }
 
+.bv-vidas__cresce {
+  margin: -6px 0 18px;
+  padding: 14px 16px;
+  border-left: 3px solid var(--marca);
+  border-radius: 0 var(--raio) var(--raio) 0;
+  background: rgba(52, 72, 224, .06);
+  color: var(--texto);
+  font-size: 14.5px;
+  line-height: 1.55;
+}
+
+.bv-vidas__cresce b {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--ink);
+}
+
 .bv-vidas {
-  margin: -6px 0 24px;
+  margin: 0 0 24px;
   padding: 18px;
   border-radius: var(--raio);
   background: var(--suave);
