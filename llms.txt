@@ -85,6 +85,7 @@ Blog Bevart, guias práticos de SST: [https://bevart.com.br/blog/](https://bevar
 - [Gestão de SST](https://bevart.com.br/blog/categoria/gestao-de-sst/): Produtividade, precificação e organização de consultorias e equipes de segurança.
 - [Tutoriais](https://bevart.com.br/blog/categoria/tutoriais/): Passo a passo do Bevart com telas reais, do cadastro ao resultado.
 
+- [Riscos psicossociais na NR-1: AGU abre consulta e o que fazer agora](https://bevart.com.br/blog/agu-consulta-riscos-psicossociais-nr-1/): AGU abre consulta sobre riscos psicossociais na NR-1. Veja o que é debate e o que é obrigação vigente, e um roteiro para revisar processos e registrar.
 - [Tutorial: avaliação de riscos psicossociais no Bevart, do link ao PGR](https://bevart.com.br/blog/tutorial-avaliacao-riscos-psicossociais-bevart/): Tutorial com telas reais da avaliação de riscos psicossociais no Bevart: questionário anônimo, resultado por ambiente e risco no inventário e no PGR.
 - [Gestão de treinamentos no Bevart: tutorial do catálogo ao certificado](https://bevart.com.br/blog/tutorial-gestao-de-treinamentos-bevart/): Tutorial de gestão de treinamentos no Bevart com telas reais: catálogo por NR, quem precisa, turma, assinatura, certificado e reciclagem.
 - [Tutorial: como enviar o eSocial SST no Bevart, do cadastro ao S-2240](https://bevart.com.br/blog/tutorial-enviar-esocial-sst-passo-a-passo/): Passo a passo com telas reais para enviar o eSocial SST no Bevart: empresa, transmissor, setor, função, inventário de riscos e S-2240.
