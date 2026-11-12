@@ -1423,6 +1423,37 @@ a.bv-mod:hover {
   font-size: 13px;
 }
 
+.bv-vidas__regra {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.bv-vidas__conta {
+  width: 100%;
+  margin-top: 6px;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.bv-vidas__conta td {
+  padding: 5px 0;
+  border-bottom: 1px solid var(--linha-2);
+  color: var(--muted);
+}
+
+.bv-vidas__conta td:last-child {
+  text-align: right;
+  white-space: nowrap;
+  padding-left: 12px;
+}
+
+.bv-vidas__conta .bv-vidas__soma td {
+  border-bottom: 0;
+  color: var(--ink);
+  font-weight: 700;
+}
+
 .bv-vidas__tabela {
   margin: -12px 0 24px;
   font-size: 14px;

@@ -113,6 +113,18 @@
       var c = centavos(v);
       sim.querySelector('[data-vidas-total]').textContent = brl(c);
       sim.querySelector('[data-vidas-media]').textContent = v.toLocaleString('pt-BR') + ' vidas · média de ' + brl(c / v) + ' por vida';
+      // memória de cálculo: o preço é progressivo, cada faixa vale só para as vidas dentro dela
+      var linhas = '<tr><td>20 primeiras vidas</td><td>' + brl(9900) + '</td></tr>', de = 20;
+      faixas.forEach(function (f) {
+        if (v > de) {
+          var q = Math.min(v, f[0]) - de;
+          var nome = f[0] === Infinity ? 'acima de ' + de.toLocaleString('pt-BR') : 'da ' + (de + 1).toLocaleString('pt-BR') + 'ª à ' + f[0].toLocaleString('pt-BR') + 'ª';
+          linhas += '<tr><td>' + nome + ': ' + q.toLocaleString('pt-BR') + ' × ' + brl(f[1]) + '</td><td>' + brl(q * f[1]) + '</td></tr>';
+        }
+        de = f[0];
+      });
+      var conta = sim.querySelector('[data-vidas-conta]');
+      if (conta) { conta.innerHTML = linhas + '<tr class="bv-vidas__soma"><td>Total para ' + v.toLocaleString('pt-BR') + ' vidas</td><td>' + brl(c) + '/mês</td></tr>'; }
     };
     faixa.addEventListener('input', function () { num.value = faixa.value; mostrar(faixa.value); });
     num.addEventListener('input', function () { faixa.value = Math.min(5000, Number(num.value) || 20); mostrar(num.value); });

@@ -88,7 +88,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
-  <link rel="stylesheet" href="assets/css/home.css?v=20261101b">
+  <link rel="stylesheet" href="assets/css/home.css?v=20261112">
   <link rel="preload" as="image" href="assets/telas/v2/central-de-notificacoes-sst.webp" fetchpriority="high">
   <!-- Sem JS, a animação de entrada deixaria os blocos invisíveis. -->
   <noscript>
@@ -886,6 +886,8 @@
                 <input type="number" id="bv-vidas-n" min="20" max="100000" value="100" inputmode="numeric">
               </div>
               <p class="bv-vidas__total"><b data-vidas-total>R$ 163,00</b><span>/mês</span> <small data-vidas-media>média de R$ 1,63 por vida</small></p>
+              <p class="bv-vidas__regra">O preço é progressivo: cada faixa de valor vale só para as vidas dentro dela, não para todas.</p>
+              <table class="bv-vidas__conta" aria-label="Como chegamos nesse valor"><tbody data-vidas-conta></tbody></table>
             </div>
             <ul class="bv-checks">
               <li>Todos os módulos e NRs, em qualquer quantidade de vidas</li>
@@ -1263,7 +1265,7 @@
 }
   </script>
 
-  <script defer src="assets/js/home.js?v=20261101"></script>
+  <script defer src="assets/js/home.js?v=20261112"></script>
   <script defer src="assets/js/blackfriday.js"></script>
   <script>(function (d, s, id) { var js = d.createElement(s); js.src = "https://analytics.yggra.com.br/tracker.js?v=" + Date.now(); js.async = true; js.setAttribute('data-id', id); d.head.appendChild(js); })(document, 'script', 'SB-3C21C2');</script>
 </body>
