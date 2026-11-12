@@ -92,6 +92,35 @@
   ],
   "posts": [
     {
+      "slug": "agu-consulta-riscos-psicossociais-nr-1",
+      "titulo": "Riscos psicossociais na NR-1: AGU abre consulta e o que fazer agora",
+      "breadcrumb": "AGU e riscos psicossociais",
+      "dek": "A AGU abriu uma consulta sobre riscos psicossociais no contexto da NR-1. Veja como separar debate de obrigação vigente e o que revisar e registrar enquanto acompanha o tema.",
+      "descricao": "AGU abre consulta sobre riscos psicossociais na NR-1. Veja o que é debate e o que é obrigação vigente, e um roteiro para revisar processos e registrar.",
+      "categoria": "legislacao-e-nrs",
+      "tags": [
+        "NR-1",
+        "AGU",
+        "riscos psicossociais",
+        "PGR",
+        "GRO"
+      ],
+      "palavraChave": "riscos psicossociais na NR-1",
+      "autor": "equipe-bevart",
+      "publicado": "2026-11-06",
+      "atualizado": "2026-11-06",
+      "tempoLeitura": 5,
+      "capa": "assets/capa.jpg",
+      "capaAlt": "Mesa de trabalho com documentos de SST, caderno de anotações e computador, representando o acompanhamento de uma consulta pública sobre riscos psicossociais",
+      "destaque": false,
+      "rascunho": false,
+      "sidebar": "Registre avaliação, inventário e plano de ação psicossocial no Bevart, com histórico de evidências.",
+      "cta": {
+        "titulo": "Riscos psicossociais com registro em dia",
+        "texto": "Avaliação anônima, inventário e plano de ação no mesmo sistema. Teste 5 dias, sem cartão."
+      }
+    },
+    {
       "slug": "tutorial-avaliacao-riscos-psicossociais-bevart",
       "titulo": "Tutorial: avaliação de riscos psicossociais no Bevart, do link ao PGR",
       "dek": "Abra uma avaliação anônima, envie o link, veja a exposição por fator e por ambiente e leve o risco ao inventário com plano de ação. Com telas reais.",
